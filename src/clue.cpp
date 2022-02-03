@@ -38,8 +38,6 @@ class CLUEWrapper {
       return Connection(connect_ptr);
     }
 
-    int getPort() { return 99123; }
-
   protected:
     std::unique_ptr<clue::CLUE> clue_;
 };
