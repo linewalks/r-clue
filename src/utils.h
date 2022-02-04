@@ -1,3 +1,5 @@
+#ifndef UTILS_H
+#define UTILS_H
 #include <Rcpp.h>
 #include <google/protobuf/message.h>
 
@@ -37,3 +39,4 @@ DataFrame convert_to_dataframe(std::vector<Message> message_vector) {
   }
   return df;
 }
+#endif

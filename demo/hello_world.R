@@ -14,3 +14,9 @@ print(conn)
 
 res <- conn$GetCohortList(1, 10, "")
 print(res)
+
+stream <- conn$GetCohortPersonTable(527)
+print(stream)
+
+print(stream$Fetch(10))
+print(stream$Fetch(5))
