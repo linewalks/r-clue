@@ -56,6 +56,87 @@ class CLUE final {
     std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::PersonInfo>> PrepareAsyncGetCohortPersonTable(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::PersonInfo>>(PrepareAsyncGetCohortPersonTableRaw(context, cq));
     }
+    std::unique_ptr< ::grpc::ClientReaderWriterInterface< ::RequestCohortStream, ::ConditionOccurrenceInfo>> GetCohortConditionOccurrenceTable(::grpc::ClientContext* context) {
+      return std::unique_ptr< ::grpc::ClientReaderWriterInterface< ::RequestCohortStream, ::ConditionOccurrenceInfo>>(GetCohortConditionOccurrenceTableRaw(context));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::ConditionOccurrenceInfo>> AsyncGetCohortConditionOccurrenceTable(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::ConditionOccurrenceInfo>>(AsyncGetCohortConditionOccurrenceTableRaw(context, cq, tag));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::ConditionOccurrenceInfo>> PrepareAsyncGetCohortConditionOccurrenceTable(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::ConditionOccurrenceInfo>>(PrepareAsyncGetCohortConditionOccurrenceTableRaw(context, cq));
+    }
+    std::unique_ptr< ::grpc::ClientReaderWriterInterface< ::RequestCohortStream, ::DeathInfo>> GetCohortDeathTable(::grpc::ClientContext* context) {
+      return std::unique_ptr< ::grpc::ClientReaderWriterInterface< ::RequestCohortStream, ::DeathInfo>>(GetCohortDeathTableRaw(context));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::DeathInfo>> AsyncGetCohortDeathTable(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::DeathInfo>>(AsyncGetCohortDeathTableRaw(context, cq, tag));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::DeathInfo>> PrepareAsyncGetCohortDeathTable(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::DeathInfo>>(PrepareAsyncGetCohortDeathTableRaw(context, cq));
+    }
+    std::unique_ptr< ::grpc::ClientReaderWriterInterface< ::RequestCohortStream, ::DeviceExposureInfo>> GetCohortDeviceExposureTable(::grpc::ClientContext* context) {
+      return std::unique_ptr< ::grpc::ClientReaderWriterInterface< ::RequestCohortStream, ::DeviceExposureInfo>>(GetCohortDeviceExposureTableRaw(context));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::DeviceExposureInfo>> AsyncGetCohortDeviceExposureTable(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::DeviceExposureInfo>>(AsyncGetCohortDeviceExposureTableRaw(context, cq, tag));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::DeviceExposureInfo>> PrepareAsyncGetCohortDeviceExposureTable(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::DeviceExposureInfo>>(PrepareAsyncGetCohortDeviceExposureTableRaw(context, cq));
+    }
+    std::unique_ptr< ::grpc::ClientReaderWriterInterface< ::RequestCohortStream, ::DrugExposureInfo>> GetCohortDrugExposureTable(::grpc::ClientContext* context) {
+      return std::unique_ptr< ::grpc::ClientReaderWriterInterface< ::RequestCohortStream, ::DrugExposureInfo>>(GetCohortDrugExposureTableRaw(context));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::DrugExposureInfo>> AsyncGetCohortDrugExposureTable(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::DrugExposureInfo>>(AsyncGetCohortDrugExposureTableRaw(context, cq, tag));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::DrugExposureInfo>> PrepareAsyncGetCohortDrugExposureTable(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::DrugExposureInfo>>(PrepareAsyncGetCohortDrugExposureTableRaw(context, cq));
+    }
+    std::unique_ptr< ::grpc::ClientReaderWriterInterface< ::RequestCohortStream, ::MeasurementInfo>> GetCohortMeasurementTable(::grpc::ClientContext* context) {
+      return std::unique_ptr< ::grpc::ClientReaderWriterInterface< ::RequestCohortStream, ::MeasurementInfo>>(GetCohortMeasurementTableRaw(context));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::MeasurementInfo>> AsyncGetCohortMeasurementTable(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::MeasurementInfo>>(AsyncGetCohortMeasurementTableRaw(context, cq, tag));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::MeasurementInfo>> PrepareAsyncGetCohortMeasurementTable(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::MeasurementInfo>>(PrepareAsyncGetCohortMeasurementTableRaw(context, cq));
+    }
+    std::unique_ptr< ::grpc::ClientReaderWriterInterface< ::RequestCohortStream, ::ObservationPeriodInfo>> GetCohortObservationPeriodTable(::grpc::ClientContext* context) {
+      return std::unique_ptr< ::grpc::ClientReaderWriterInterface< ::RequestCohortStream, ::ObservationPeriodInfo>>(GetCohortObservationPeriodTableRaw(context));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::ObservationPeriodInfo>> AsyncGetCohortObservationPeriodTable(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::ObservationPeriodInfo>>(AsyncGetCohortObservationPeriodTableRaw(context, cq, tag));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::ObservationPeriodInfo>> PrepareAsyncGetCohortObservationPeriodTable(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::ObservationPeriodInfo>>(PrepareAsyncGetCohortObservationPeriodTableRaw(context, cq));
+    }
+    std::unique_ptr< ::grpc::ClientReaderWriterInterface< ::RequestCohortStream, ::ObservationInfo>> GetCohortObservationTable(::grpc::ClientContext* context) {
+      return std::unique_ptr< ::grpc::ClientReaderWriterInterface< ::RequestCohortStream, ::ObservationInfo>>(GetCohortObservationTableRaw(context));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::ObservationInfo>> AsyncGetCohortObservationTable(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::ObservationInfo>>(AsyncGetCohortObservationTableRaw(context, cq, tag));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::ObservationInfo>> PrepareAsyncGetCohortObservationTable(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::ObservationInfo>>(PrepareAsyncGetCohortObservationTableRaw(context, cq));
+    }
+    std::unique_ptr< ::grpc::ClientReaderWriterInterface< ::RequestCohortStream, ::ProcedureOccurrenceInfo>> GetCohortProcedureOccurrenceTable(::grpc::ClientContext* context) {
+      return std::unique_ptr< ::grpc::ClientReaderWriterInterface< ::RequestCohortStream, ::ProcedureOccurrenceInfo>>(GetCohortProcedureOccurrenceTableRaw(context));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::ProcedureOccurrenceInfo>> AsyncGetCohortProcedureOccurrenceTable(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::ProcedureOccurrenceInfo>>(AsyncGetCohortProcedureOccurrenceTableRaw(context, cq, tag));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::ProcedureOccurrenceInfo>> PrepareAsyncGetCohortProcedureOccurrenceTable(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::ProcedureOccurrenceInfo>>(PrepareAsyncGetCohortProcedureOccurrenceTableRaw(context, cq));
+    }
+    std::unique_ptr< ::grpc::ClientReaderWriterInterface< ::RequestCohortStream, ::VisitOccurrenceInfo>> GetCohortVisitOccurrenceTable(::grpc::ClientContext* context) {
+      return std::unique_ptr< ::grpc::ClientReaderWriterInterface< ::RequestCohortStream, ::VisitOccurrenceInfo>>(GetCohortVisitOccurrenceTableRaw(context));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::VisitOccurrenceInfo>> AsyncGetCohortVisitOccurrenceTable(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::VisitOccurrenceInfo>>(AsyncGetCohortVisitOccurrenceTableRaw(context, cq, tag));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::VisitOccurrenceInfo>> PrepareAsyncGetCohortVisitOccurrenceTable(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::VisitOccurrenceInfo>>(PrepareAsyncGetCohortVisitOccurrenceTableRaw(context, cq));
+    }
     class async_interface {
      public:
       virtual ~async_interface() {}
@@ -64,6 +145,15 @@ class CLUE final {
       virtual void GetCohortList(::grpc::ClientContext* context, const ::RequestCohortList* request, ::ResponseCohortList* response, std::function<void(::grpc::Status)>) = 0;
       virtual void GetCohortList(::grpc::ClientContext* context, const ::RequestCohortList* request, ::ResponseCohortList* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       virtual void GetCohortPersonTable(::grpc::ClientContext* context, ::grpc::ClientBidiReactor< ::RequestCohortStream,::PersonInfo>* reactor) = 0;
+      virtual void GetCohortConditionOccurrenceTable(::grpc::ClientContext* context, ::grpc::ClientBidiReactor< ::RequestCohortStream,::ConditionOccurrenceInfo>* reactor) = 0;
+      virtual void GetCohortDeathTable(::grpc::ClientContext* context, ::grpc::ClientBidiReactor< ::RequestCohortStream,::DeathInfo>* reactor) = 0;
+      virtual void GetCohortDeviceExposureTable(::grpc::ClientContext* context, ::grpc::ClientBidiReactor< ::RequestCohortStream,::DeviceExposureInfo>* reactor) = 0;
+      virtual void GetCohortDrugExposureTable(::grpc::ClientContext* context, ::grpc::ClientBidiReactor< ::RequestCohortStream,::DrugExposureInfo>* reactor) = 0;
+      virtual void GetCohortMeasurementTable(::grpc::ClientContext* context, ::grpc::ClientBidiReactor< ::RequestCohortStream,::MeasurementInfo>* reactor) = 0;
+      virtual void GetCohortObservationPeriodTable(::grpc::ClientContext* context, ::grpc::ClientBidiReactor< ::RequestCohortStream,::ObservationPeriodInfo>* reactor) = 0;
+      virtual void GetCohortObservationTable(::grpc::ClientContext* context, ::grpc::ClientBidiReactor< ::RequestCohortStream,::ObservationInfo>* reactor) = 0;
+      virtual void GetCohortProcedureOccurrenceTable(::grpc::ClientContext* context, ::grpc::ClientBidiReactor< ::RequestCohortStream,::ProcedureOccurrenceInfo>* reactor) = 0;
+      virtual void GetCohortVisitOccurrenceTable(::grpc::ClientContext* context, ::grpc::ClientBidiReactor< ::RequestCohortStream,::VisitOccurrenceInfo>* reactor) = 0;
     };
     typedef class async_interface experimental_async_interface;
     virtual class async_interface* async() { return nullptr; }
@@ -76,6 +166,33 @@ class CLUE final {
     virtual ::grpc::ClientReaderWriterInterface< ::RequestCohortStream, ::PersonInfo>* GetCohortPersonTableRaw(::grpc::ClientContext* context) = 0;
     virtual ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::PersonInfo>* AsyncGetCohortPersonTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) = 0;
     virtual ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::PersonInfo>* PrepareAsyncGetCohortPersonTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientReaderWriterInterface< ::RequestCohortStream, ::ConditionOccurrenceInfo>* GetCohortConditionOccurrenceTableRaw(::grpc::ClientContext* context) = 0;
+    virtual ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::ConditionOccurrenceInfo>* AsyncGetCohortConditionOccurrenceTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) = 0;
+    virtual ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::ConditionOccurrenceInfo>* PrepareAsyncGetCohortConditionOccurrenceTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientReaderWriterInterface< ::RequestCohortStream, ::DeathInfo>* GetCohortDeathTableRaw(::grpc::ClientContext* context) = 0;
+    virtual ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::DeathInfo>* AsyncGetCohortDeathTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) = 0;
+    virtual ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::DeathInfo>* PrepareAsyncGetCohortDeathTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientReaderWriterInterface< ::RequestCohortStream, ::DeviceExposureInfo>* GetCohortDeviceExposureTableRaw(::grpc::ClientContext* context) = 0;
+    virtual ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::DeviceExposureInfo>* AsyncGetCohortDeviceExposureTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) = 0;
+    virtual ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::DeviceExposureInfo>* PrepareAsyncGetCohortDeviceExposureTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientReaderWriterInterface< ::RequestCohortStream, ::DrugExposureInfo>* GetCohortDrugExposureTableRaw(::grpc::ClientContext* context) = 0;
+    virtual ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::DrugExposureInfo>* AsyncGetCohortDrugExposureTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) = 0;
+    virtual ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::DrugExposureInfo>* PrepareAsyncGetCohortDrugExposureTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientReaderWriterInterface< ::RequestCohortStream, ::MeasurementInfo>* GetCohortMeasurementTableRaw(::grpc::ClientContext* context) = 0;
+    virtual ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::MeasurementInfo>* AsyncGetCohortMeasurementTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) = 0;
+    virtual ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::MeasurementInfo>* PrepareAsyncGetCohortMeasurementTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientReaderWriterInterface< ::RequestCohortStream, ::ObservationPeriodInfo>* GetCohortObservationPeriodTableRaw(::grpc::ClientContext* context) = 0;
+    virtual ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::ObservationPeriodInfo>* AsyncGetCohortObservationPeriodTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) = 0;
+    virtual ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::ObservationPeriodInfo>* PrepareAsyncGetCohortObservationPeriodTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientReaderWriterInterface< ::RequestCohortStream, ::ObservationInfo>* GetCohortObservationTableRaw(::grpc::ClientContext* context) = 0;
+    virtual ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::ObservationInfo>* AsyncGetCohortObservationTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) = 0;
+    virtual ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::ObservationInfo>* PrepareAsyncGetCohortObservationTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientReaderWriterInterface< ::RequestCohortStream, ::ProcedureOccurrenceInfo>* GetCohortProcedureOccurrenceTableRaw(::grpc::ClientContext* context) = 0;
+    virtual ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::ProcedureOccurrenceInfo>* AsyncGetCohortProcedureOccurrenceTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) = 0;
+    virtual ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::ProcedureOccurrenceInfo>* PrepareAsyncGetCohortProcedureOccurrenceTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientReaderWriterInterface< ::RequestCohortStream, ::VisitOccurrenceInfo>* GetCohortVisitOccurrenceTableRaw(::grpc::ClientContext* context) = 0;
+    virtual ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::VisitOccurrenceInfo>* AsyncGetCohortVisitOccurrenceTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) = 0;
+    virtual ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::VisitOccurrenceInfo>* PrepareAsyncGetCohortVisitOccurrenceTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
    public:
@@ -103,6 +220,87 @@ class CLUE final {
     std::unique_ptr<  ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::PersonInfo>> PrepareAsyncGetCohortPersonTable(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::PersonInfo>>(PrepareAsyncGetCohortPersonTableRaw(context, cq));
     }
+    std::unique_ptr< ::grpc::ClientReaderWriter< ::RequestCohortStream, ::ConditionOccurrenceInfo>> GetCohortConditionOccurrenceTable(::grpc::ClientContext* context) {
+      return std::unique_ptr< ::grpc::ClientReaderWriter< ::RequestCohortStream, ::ConditionOccurrenceInfo>>(GetCohortConditionOccurrenceTableRaw(context));
+    }
+    std::unique_ptr<  ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::ConditionOccurrenceInfo>> AsyncGetCohortConditionOccurrenceTable(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::ConditionOccurrenceInfo>>(AsyncGetCohortConditionOccurrenceTableRaw(context, cq, tag));
+    }
+    std::unique_ptr<  ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::ConditionOccurrenceInfo>> PrepareAsyncGetCohortConditionOccurrenceTable(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::ConditionOccurrenceInfo>>(PrepareAsyncGetCohortConditionOccurrenceTableRaw(context, cq));
+    }
+    std::unique_ptr< ::grpc::ClientReaderWriter< ::RequestCohortStream, ::DeathInfo>> GetCohortDeathTable(::grpc::ClientContext* context) {
+      return std::unique_ptr< ::grpc::ClientReaderWriter< ::RequestCohortStream, ::DeathInfo>>(GetCohortDeathTableRaw(context));
+    }
+    std::unique_ptr<  ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::DeathInfo>> AsyncGetCohortDeathTable(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::DeathInfo>>(AsyncGetCohortDeathTableRaw(context, cq, tag));
+    }
+    std::unique_ptr<  ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::DeathInfo>> PrepareAsyncGetCohortDeathTable(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::DeathInfo>>(PrepareAsyncGetCohortDeathTableRaw(context, cq));
+    }
+    std::unique_ptr< ::grpc::ClientReaderWriter< ::RequestCohortStream, ::DeviceExposureInfo>> GetCohortDeviceExposureTable(::grpc::ClientContext* context) {
+      return std::unique_ptr< ::grpc::ClientReaderWriter< ::RequestCohortStream, ::DeviceExposureInfo>>(GetCohortDeviceExposureTableRaw(context));
+    }
+    std::unique_ptr<  ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::DeviceExposureInfo>> AsyncGetCohortDeviceExposureTable(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::DeviceExposureInfo>>(AsyncGetCohortDeviceExposureTableRaw(context, cq, tag));
+    }
+    std::unique_ptr<  ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::DeviceExposureInfo>> PrepareAsyncGetCohortDeviceExposureTable(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::DeviceExposureInfo>>(PrepareAsyncGetCohortDeviceExposureTableRaw(context, cq));
+    }
+    std::unique_ptr< ::grpc::ClientReaderWriter< ::RequestCohortStream, ::DrugExposureInfo>> GetCohortDrugExposureTable(::grpc::ClientContext* context) {
+      return std::unique_ptr< ::grpc::ClientReaderWriter< ::RequestCohortStream, ::DrugExposureInfo>>(GetCohortDrugExposureTableRaw(context));
+    }
+    std::unique_ptr<  ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::DrugExposureInfo>> AsyncGetCohortDrugExposureTable(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::DrugExposureInfo>>(AsyncGetCohortDrugExposureTableRaw(context, cq, tag));
+    }
+    std::unique_ptr<  ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::DrugExposureInfo>> PrepareAsyncGetCohortDrugExposureTable(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::DrugExposureInfo>>(PrepareAsyncGetCohortDrugExposureTableRaw(context, cq));
+    }
+    std::unique_ptr< ::grpc::ClientReaderWriter< ::RequestCohortStream, ::MeasurementInfo>> GetCohortMeasurementTable(::grpc::ClientContext* context) {
+      return std::unique_ptr< ::grpc::ClientReaderWriter< ::RequestCohortStream, ::MeasurementInfo>>(GetCohortMeasurementTableRaw(context));
+    }
+    std::unique_ptr<  ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::MeasurementInfo>> AsyncGetCohortMeasurementTable(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::MeasurementInfo>>(AsyncGetCohortMeasurementTableRaw(context, cq, tag));
+    }
+    std::unique_ptr<  ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::MeasurementInfo>> PrepareAsyncGetCohortMeasurementTable(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::MeasurementInfo>>(PrepareAsyncGetCohortMeasurementTableRaw(context, cq));
+    }
+    std::unique_ptr< ::grpc::ClientReaderWriter< ::RequestCohortStream, ::ObservationPeriodInfo>> GetCohortObservationPeriodTable(::grpc::ClientContext* context) {
+      return std::unique_ptr< ::grpc::ClientReaderWriter< ::RequestCohortStream, ::ObservationPeriodInfo>>(GetCohortObservationPeriodTableRaw(context));
+    }
+    std::unique_ptr<  ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::ObservationPeriodInfo>> AsyncGetCohortObservationPeriodTable(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::ObservationPeriodInfo>>(AsyncGetCohortObservationPeriodTableRaw(context, cq, tag));
+    }
+    std::unique_ptr<  ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::ObservationPeriodInfo>> PrepareAsyncGetCohortObservationPeriodTable(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::ObservationPeriodInfo>>(PrepareAsyncGetCohortObservationPeriodTableRaw(context, cq));
+    }
+    std::unique_ptr< ::grpc::ClientReaderWriter< ::RequestCohortStream, ::ObservationInfo>> GetCohortObservationTable(::grpc::ClientContext* context) {
+      return std::unique_ptr< ::grpc::ClientReaderWriter< ::RequestCohortStream, ::ObservationInfo>>(GetCohortObservationTableRaw(context));
+    }
+    std::unique_ptr<  ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::ObservationInfo>> AsyncGetCohortObservationTable(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::ObservationInfo>>(AsyncGetCohortObservationTableRaw(context, cq, tag));
+    }
+    std::unique_ptr<  ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::ObservationInfo>> PrepareAsyncGetCohortObservationTable(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::ObservationInfo>>(PrepareAsyncGetCohortObservationTableRaw(context, cq));
+    }
+    std::unique_ptr< ::grpc::ClientReaderWriter< ::RequestCohortStream, ::ProcedureOccurrenceInfo>> GetCohortProcedureOccurrenceTable(::grpc::ClientContext* context) {
+      return std::unique_ptr< ::grpc::ClientReaderWriter< ::RequestCohortStream, ::ProcedureOccurrenceInfo>>(GetCohortProcedureOccurrenceTableRaw(context));
+    }
+    std::unique_ptr<  ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::ProcedureOccurrenceInfo>> AsyncGetCohortProcedureOccurrenceTable(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::ProcedureOccurrenceInfo>>(AsyncGetCohortProcedureOccurrenceTableRaw(context, cq, tag));
+    }
+    std::unique_ptr<  ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::ProcedureOccurrenceInfo>> PrepareAsyncGetCohortProcedureOccurrenceTable(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::ProcedureOccurrenceInfo>>(PrepareAsyncGetCohortProcedureOccurrenceTableRaw(context, cq));
+    }
+    std::unique_ptr< ::grpc::ClientReaderWriter< ::RequestCohortStream, ::VisitOccurrenceInfo>> GetCohortVisitOccurrenceTable(::grpc::ClientContext* context) {
+      return std::unique_ptr< ::grpc::ClientReaderWriter< ::RequestCohortStream, ::VisitOccurrenceInfo>>(GetCohortVisitOccurrenceTableRaw(context));
+    }
+    std::unique_ptr<  ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::VisitOccurrenceInfo>> AsyncGetCohortVisitOccurrenceTable(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::VisitOccurrenceInfo>>(AsyncGetCohortVisitOccurrenceTableRaw(context, cq, tag));
+    }
+    std::unique_ptr<  ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::VisitOccurrenceInfo>> PrepareAsyncGetCohortVisitOccurrenceTable(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::VisitOccurrenceInfo>>(PrepareAsyncGetCohortVisitOccurrenceTableRaw(context, cq));
+    }
     class async final :
       public StubInterface::async_interface {
      public:
@@ -111,6 +309,15 @@ class CLUE final {
       void GetCohortList(::grpc::ClientContext* context, const ::RequestCohortList* request, ::ResponseCohortList* response, std::function<void(::grpc::Status)>) override;
       void GetCohortList(::grpc::ClientContext* context, const ::RequestCohortList* request, ::ResponseCohortList* response, ::grpc::ClientUnaryReactor* reactor) override;
       void GetCohortPersonTable(::grpc::ClientContext* context, ::grpc::ClientBidiReactor< ::RequestCohortStream,::PersonInfo>* reactor) override;
+      void GetCohortConditionOccurrenceTable(::grpc::ClientContext* context, ::grpc::ClientBidiReactor< ::RequestCohortStream,::ConditionOccurrenceInfo>* reactor) override;
+      void GetCohortDeathTable(::grpc::ClientContext* context, ::grpc::ClientBidiReactor< ::RequestCohortStream,::DeathInfo>* reactor) override;
+      void GetCohortDeviceExposureTable(::grpc::ClientContext* context, ::grpc::ClientBidiReactor< ::RequestCohortStream,::DeviceExposureInfo>* reactor) override;
+      void GetCohortDrugExposureTable(::grpc::ClientContext* context, ::grpc::ClientBidiReactor< ::RequestCohortStream,::DrugExposureInfo>* reactor) override;
+      void GetCohortMeasurementTable(::grpc::ClientContext* context, ::grpc::ClientBidiReactor< ::RequestCohortStream,::MeasurementInfo>* reactor) override;
+      void GetCohortObservationPeriodTable(::grpc::ClientContext* context, ::grpc::ClientBidiReactor< ::RequestCohortStream,::ObservationPeriodInfo>* reactor) override;
+      void GetCohortObservationTable(::grpc::ClientContext* context, ::grpc::ClientBidiReactor< ::RequestCohortStream,::ObservationInfo>* reactor) override;
+      void GetCohortProcedureOccurrenceTable(::grpc::ClientContext* context, ::grpc::ClientBidiReactor< ::RequestCohortStream,::ProcedureOccurrenceInfo>* reactor) override;
+      void GetCohortVisitOccurrenceTable(::grpc::ClientContext* context, ::grpc::ClientBidiReactor< ::RequestCohortStream,::VisitOccurrenceInfo>* reactor) override;
      private:
       friend class Stub;
       explicit async(Stub* stub): stub_(stub) { }
@@ -129,9 +336,45 @@ class CLUE final {
     ::grpc::ClientReaderWriter< ::RequestCohortStream, ::PersonInfo>* GetCohortPersonTableRaw(::grpc::ClientContext* context) override;
     ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::PersonInfo>* AsyncGetCohortPersonTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) override;
     ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::PersonInfo>* PrepareAsyncGetCohortPersonTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientReaderWriter< ::RequestCohortStream, ::ConditionOccurrenceInfo>* GetCohortConditionOccurrenceTableRaw(::grpc::ClientContext* context) override;
+    ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::ConditionOccurrenceInfo>* AsyncGetCohortConditionOccurrenceTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) override;
+    ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::ConditionOccurrenceInfo>* PrepareAsyncGetCohortConditionOccurrenceTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientReaderWriter< ::RequestCohortStream, ::DeathInfo>* GetCohortDeathTableRaw(::grpc::ClientContext* context) override;
+    ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::DeathInfo>* AsyncGetCohortDeathTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) override;
+    ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::DeathInfo>* PrepareAsyncGetCohortDeathTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientReaderWriter< ::RequestCohortStream, ::DeviceExposureInfo>* GetCohortDeviceExposureTableRaw(::grpc::ClientContext* context) override;
+    ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::DeviceExposureInfo>* AsyncGetCohortDeviceExposureTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) override;
+    ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::DeviceExposureInfo>* PrepareAsyncGetCohortDeviceExposureTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientReaderWriter< ::RequestCohortStream, ::DrugExposureInfo>* GetCohortDrugExposureTableRaw(::grpc::ClientContext* context) override;
+    ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::DrugExposureInfo>* AsyncGetCohortDrugExposureTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) override;
+    ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::DrugExposureInfo>* PrepareAsyncGetCohortDrugExposureTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientReaderWriter< ::RequestCohortStream, ::MeasurementInfo>* GetCohortMeasurementTableRaw(::grpc::ClientContext* context) override;
+    ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::MeasurementInfo>* AsyncGetCohortMeasurementTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) override;
+    ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::MeasurementInfo>* PrepareAsyncGetCohortMeasurementTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientReaderWriter< ::RequestCohortStream, ::ObservationPeriodInfo>* GetCohortObservationPeriodTableRaw(::grpc::ClientContext* context) override;
+    ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::ObservationPeriodInfo>* AsyncGetCohortObservationPeriodTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) override;
+    ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::ObservationPeriodInfo>* PrepareAsyncGetCohortObservationPeriodTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientReaderWriter< ::RequestCohortStream, ::ObservationInfo>* GetCohortObservationTableRaw(::grpc::ClientContext* context) override;
+    ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::ObservationInfo>* AsyncGetCohortObservationTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) override;
+    ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::ObservationInfo>* PrepareAsyncGetCohortObservationTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientReaderWriter< ::RequestCohortStream, ::ProcedureOccurrenceInfo>* GetCohortProcedureOccurrenceTableRaw(::grpc::ClientContext* context) override;
+    ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::ProcedureOccurrenceInfo>* AsyncGetCohortProcedureOccurrenceTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) override;
+    ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::ProcedureOccurrenceInfo>* PrepareAsyncGetCohortProcedureOccurrenceTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientReaderWriter< ::RequestCohortStream, ::VisitOccurrenceInfo>* GetCohortVisitOccurrenceTableRaw(::grpc::ClientContext* context) override;
+    ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::VisitOccurrenceInfo>* AsyncGetCohortVisitOccurrenceTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) override;
+    ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::VisitOccurrenceInfo>* PrepareAsyncGetCohortVisitOccurrenceTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) override;
     const ::grpc::internal::RpcMethod rpcmethod_AuthLogin_;
     const ::grpc::internal::RpcMethod rpcmethod_GetCohortList_;
     const ::grpc::internal::RpcMethod rpcmethod_GetCohortPersonTable_;
+    const ::grpc::internal::RpcMethod rpcmethod_GetCohortConditionOccurrenceTable_;
+    const ::grpc::internal::RpcMethod rpcmethod_GetCohortDeathTable_;
+    const ::grpc::internal::RpcMethod rpcmethod_GetCohortDeviceExposureTable_;
+    const ::grpc::internal::RpcMethod rpcmethod_GetCohortDrugExposureTable_;
+    const ::grpc::internal::RpcMethod rpcmethod_GetCohortMeasurementTable_;
+    const ::grpc::internal::RpcMethod rpcmethod_GetCohortObservationPeriodTable_;
+    const ::grpc::internal::RpcMethod rpcmethod_GetCohortObservationTable_;
+    const ::grpc::internal::RpcMethod rpcmethod_GetCohortProcedureOccurrenceTable_;
+    const ::grpc::internal::RpcMethod rpcmethod_GetCohortVisitOccurrenceTable_;
   };
   static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
 
@@ -142,6 +385,15 @@ class CLUE final {
     virtual ::grpc::Status AuthLogin(::grpc::ServerContext* context, const ::RequestLogin* request, ::ResponseLogin* response);
     virtual ::grpc::Status GetCohortList(::grpc::ServerContext* context, const ::RequestCohortList* request, ::ResponseCohortList* response);
     virtual ::grpc::Status GetCohortPersonTable(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::PersonInfo, ::RequestCohortStream>* stream);
+    virtual ::grpc::Status GetCohortConditionOccurrenceTable(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::ConditionOccurrenceInfo, ::RequestCohortStream>* stream);
+    virtual ::grpc::Status GetCohortDeathTable(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::DeathInfo, ::RequestCohortStream>* stream);
+    virtual ::grpc::Status GetCohortDeviceExposureTable(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::DeviceExposureInfo, ::RequestCohortStream>* stream);
+    virtual ::grpc::Status GetCohortDrugExposureTable(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::DrugExposureInfo, ::RequestCohortStream>* stream);
+    virtual ::grpc::Status GetCohortMeasurementTable(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::MeasurementInfo, ::RequestCohortStream>* stream);
+    virtual ::grpc::Status GetCohortObservationPeriodTable(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::ObservationPeriodInfo, ::RequestCohortStream>* stream);
+    virtual ::grpc::Status GetCohortObservationTable(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::ObservationInfo, ::RequestCohortStream>* stream);
+    virtual ::grpc::Status GetCohortProcedureOccurrenceTable(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::ProcedureOccurrenceInfo, ::RequestCohortStream>* stream);
+    virtual ::grpc::Status GetCohortVisitOccurrenceTable(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::VisitOccurrenceInfo, ::RequestCohortStream>* stream);
   };
   template <class BaseClass>
   class WithAsyncMethod_AuthLogin : public BaseClass {
@@ -203,7 +455,187 @@ class CLUE final {
       ::grpc::Service::RequestAsyncBidiStreaming(2, context, stream, new_call_cq, notification_cq, tag);
     }
   };
-  typedef WithAsyncMethod_AuthLogin<WithAsyncMethod_GetCohortList<WithAsyncMethod_GetCohortPersonTable<Service > > > AsyncService;
+  template <class BaseClass>
+  class WithAsyncMethod_GetCohortConditionOccurrenceTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_GetCohortConditionOccurrenceTable() {
+      ::grpc::Service::MarkMethodAsync(3);
+    }
+    ~WithAsyncMethod_GetCohortConditionOccurrenceTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortConditionOccurrenceTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::ConditionOccurrenceInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetCohortConditionOccurrenceTable(::grpc::ServerContext* context, ::grpc::ServerAsyncReaderWriter< ::ConditionOccurrenceInfo, ::RequestCohortStream>* stream, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncBidiStreaming(3, context, stream, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_GetCohortDeathTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_GetCohortDeathTable() {
+      ::grpc::Service::MarkMethodAsync(4);
+    }
+    ~WithAsyncMethod_GetCohortDeathTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortDeathTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::DeathInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetCohortDeathTable(::grpc::ServerContext* context, ::grpc::ServerAsyncReaderWriter< ::DeathInfo, ::RequestCohortStream>* stream, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncBidiStreaming(4, context, stream, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_GetCohortDeviceExposureTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_GetCohortDeviceExposureTable() {
+      ::grpc::Service::MarkMethodAsync(5);
+    }
+    ~WithAsyncMethod_GetCohortDeviceExposureTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortDeviceExposureTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::DeviceExposureInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetCohortDeviceExposureTable(::grpc::ServerContext* context, ::grpc::ServerAsyncReaderWriter< ::DeviceExposureInfo, ::RequestCohortStream>* stream, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncBidiStreaming(5, context, stream, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_GetCohortDrugExposureTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_GetCohortDrugExposureTable() {
+      ::grpc::Service::MarkMethodAsync(6);
+    }
+    ~WithAsyncMethod_GetCohortDrugExposureTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortDrugExposureTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::DrugExposureInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetCohortDrugExposureTable(::grpc::ServerContext* context, ::grpc::ServerAsyncReaderWriter< ::DrugExposureInfo, ::RequestCohortStream>* stream, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncBidiStreaming(6, context, stream, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_GetCohortMeasurementTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_GetCohortMeasurementTable() {
+      ::grpc::Service::MarkMethodAsync(7);
+    }
+    ~WithAsyncMethod_GetCohortMeasurementTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortMeasurementTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::MeasurementInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetCohortMeasurementTable(::grpc::ServerContext* context, ::grpc::ServerAsyncReaderWriter< ::MeasurementInfo, ::RequestCohortStream>* stream, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncBidiStreaming(7, context, stream, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_GetCohortObservationPeriodTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_GetCohortObservationPeriodTable() {
+      ::grpc::Service::MarkMethodAsync(8);
+    }
+    ~WithAsyncMethod_GetCohortObservationPeriodTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortObservationPeriodTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::ObservationPeriodInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetCohortObservationPeriodTable(::grpc::ServerContext* context, ::grpc::ServerAsyncReaderWriter< ::ObservationPeriodInfo, ::RequestCohortStream>* stream, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncBidiStreaming(8, context, stream, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_GetCohortObservationTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_GetCohortObservationTable() {
+      ::grpc::Service::MarkMethodAsync(9);
+    }
+    ~WithAsyncMethod_GetCohortObservationTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortObservationTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::ObservationInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetCohortObservationTable(::grpc::ServerContext* context, ::grpc::ServerAsyncReaderWriter< ::ObservationInfo, ::RequestCohortStream>* stream, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncBidiStreaming(9, context, stream, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_GetCohortProcedureOccurrenceTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_GetCohortProcedureOccurrenceTable() {
+      ::grpc::Service::MarkMethodAsync(10);
+    }
+    ~WithAsyncMethod_GetCohortProcedureOccurrenceTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortProcedureOccurrenceTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::ProcedureOccurrenceInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetCohortProcedureOccurrenceTable(::grpc::ServerContext* context, ::grpc::ServerAsyncReaderWriter< ::ProcedureOccurrenceInfo, ::RequestCohortStream>* stream, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncBidiStreaming(10, context, stream, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_GetCohortVisitOccurrenceTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_GetCohortVisitOccurrenceTable() {
+      ::grpc::Service::MarkMethodAsync(11);
+    }
+    ~WithAsyncMethod_GetCohortVisitOccurrenceTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortVisitOccurrenceTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::VisitOccurrenceInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetCohortVisitOccurrenceTable(::grpc::ServerContext* context, ::grpc::ServerAsyncReaderWriter< ::VisitOccurrenceInfo, ::RequestCohortStream>* stream, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncBidiStreaming(11, context, stream, new_call_cq, notification_cq, tag);
+    }
+  };
+  typedef WithAsyncMethod_AuthLogin<WithAsyncMethod_GetCohortList<WithAsyncMethod_GetCohortPersonTable<WithAsyncMethod_GetCohortConditionOccurrenceTable<WithAsyncMethod_GetCohortDeathTable<WithAsyncMethod_GetCohortDeviceExposureTable<WithAsyncMethod_GetCohortDrugExposureTable<WithAsyncMethod_GetCohortMeasurementTable<WithAsyncMethod_GetCohortObservationPeriodTable<WithAsyncMethod_GetCohortObservationTable<WithAsyncMethod_GetCohortProcedureOccurrenceTable<WithAsyncMethod_GetCohortVisitOccurrenceTable<Service > > > > > > > > > > > > AsyncService;
   template <class BaseClass>
   class WithCallbackMethod_AuthLogin : public BaseClass {
    private:
@@ -281,7 +713,214 @@ class CLUE final {
       ::grpc::CallbackServerContext* /*context*/)
       { return nullptr; }
   };
-  typedef WithCallbackMethod_AuthLogin<WithCallbackMethod_GetCohortList<WithCallbackMethod_GetCohortPersonTable<Service > > > CallbackService;
+  template <class BaseClass>
+  class WithCallbackMethod_GetCohortConditionOccurrenceTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_GetCohortConditionOccurrenceTable() {
+      ::grpc::Service::MarkMethodCallback(3,
+          new ::grpc::internal::CallbackBidiHandler< ::RequestCohortStream, ::ConditionOccurrenceInfo>(
+            [this](
+                   ::grpc::CallbackServerContext* context) { return this->GetCohortConditionOccurrenceTable(context); }));
+    }
+    ~WithCallbackMethod_GetCohortConditionOccurrenceTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortConditionOccurrenceTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::ConditionOccurrenceInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerBidiReactor< ::RequestCohortStream, ::ConditionOccurrenceInfo>* GetCohortConditionOccurrenceTable(
+      ::grpc::CallbackServerContext* /*context*/)
+      { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithCallbackMethod_GetCohortDeathTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_GetCohortDeathTable() {
+      ::grpc::Service::MarkMethodCallback(4,
+          new ::grpc::internal::CallbackBidiHandler< ::RequestCohortStream, ::DeathInfo>(
+            [this](
+                   ::grpc::CallbackServerContext* context) { return this->GetCohortDeathTable(context); }));
+    }
+    ~WithCallbackMethod_GetCohortDeathTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortDeathTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::DeathInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerBidiReactor< ::RequestCohortStream, ::DeathInfo>* GetCohortDeathTable(
+      ::grpc::CallbackServerContext* /*context*/)
+      { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithCallbackMethod_GetCohortDeviceExposureTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_GetCohortDeviceExposureTable() {
+      ::grpc::Service::MarkMethodCallback(5,
+          new ::grpc::internal::CallbackBidiHandler< ::RequestCohortStream, ::DeviceExposureInfo>(
+            [this](
+                   ::grpc::CallbackServerContext* context) { return this->GetCohortDeviceExposureTable(context); }));
+    }
+    ~WithCallbackMethod_GetCohortDeviceExposureTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortDeviceExposureTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::DeviceExposureInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerBidiReactor< ::RequestCohortStream, ::DeviceExposureInfo>* GetCohortDeviceExposureTable(
+      ::grpc::CallbackServerContext* /*context*/)
+      { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithCallbackMethod_GetCohortDrugExposureTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_GetCohortDrugExposureTable() {
+      ::grpc::Service::MarkMethodCallback(6,
+          new ::grpc::internal::CallbackBidiHandler< ::RequestCohortStream, ::DrugExposureInfo>(
+            [this](
+                   ::grpc::CallbackServerContext* context) { return this->GetCohortDrugExposureTable(context); }));
+    }
+    ~WithCallbackMethod_GetCohortDrugExposureTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortDrugExposureTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::DrugExposureInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerBidiReactor< ::RequestCohortStream, ::DrugExposureInfo>* GetCohortDrugExposureTable(
+      ::grpc::CallbackServerContext* /*context*/)
+      { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithCallbackMethod_GetCohortMeasurementTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_GetCohortMeasurementTable() {
+      ::grpc::Service::MarkMethodCallback(7,
+          new ::grpc::internal::CallbackBidiHandler< ::RequestCohortStream, ::MeasurementInfo>(
+            [this](
+                   ::grpc::CallbackServerContext* context) { return this->GetCohortMeasurementTable(context); }));
+    }
+    ~WithCallbackMethod_GetCohortMeasurementTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortMeasurementTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::MeasurementInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerBidiReactor< ::RequestCohortStream, ::MeasurementInfo>* GetCohortMeasurementTable(
+      ::grpc::CallbackServerContext* /*context*/)
+      { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithCallbackMethod_GetCohortObservationPeriodTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_GetCohortObservationPeriodTable() {
+      ::grpc::Service::MarkMethodCallback(8,
+          new ::grpc::internal::CallbackBidiHandler< ::RequestCohortStream, ::ObservationPeriodInfo>(
+            [this](
+                   ::grpc::CallbackServerContext* context) { return this->GetCohortObservationPeriodTable(context); }));
+    }
+    ~WithCallbackMethod_GetCohortObservationPeriodTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortObservationPeriodTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::ObservationPeriodInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerBidiReactor< ::RequestCohortStream, ::ObservationPeriodInfo>* GetCohortObservationPeriodTable(
+      ::grpc::CallbackServerContext* /*context*/)
+      { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithCallbackMethod_GetCohortObservationTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_GetCohortObservationTable() {
+      ::grpc::Service::MarkMethodCallback(9,
+          new ::grpc::internal::CallbackBidiHandler< ::RequestCohortStream, ::ObservationInfo>(
+            [this](
+                   ::grpc::CallbackServerContext* context) { return this->GetCohortObservationTable(context); }));
+    }
+    ~WithCallbackMethod_GetCohortObservationTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortObservationTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::ObservationInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerBidiReactor< ::RequestCohortStream, ::ObservationInfo>* GetCohortObservationTable(
+      ::grpc::CallbackServerContext* /*context*/)
+      { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithCallbackMethod_GetCohortProcedureOccurrenceTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_GetCohortProcedureOccurrenceTable() {
+      ::grpc::Service::MarkMethodCallback(10,
+          new ::grpc::internal::CallbackBidiHandler< ::RequestCohortStream, ::ProcedureOccurrenceInfo>(
+            [this](
+                   ::grpc::CallbackServerContext* context) { return this->GetCohortProcedureOccurrenceTable(context); }));
+    }
+    ~WithCallbackMethod_GetCohortProcedureOccurrenceTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortProcedureOccurrenceTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::ProcedureOccurrenceInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerBidiReactor< ::RequestCohortStream, ::ProcedureOccurrenceInfo>* GetCohortProcedureOccurrenceTable(
+      ::grpc::CallbackServerContext* /*context*/)
+      { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithCallbackMethod_GetCohortVisitOccurrenceTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_GetCohortVisitOccurrenceTable() {
+      ::grpc::Service::MarkMethodCallback(11,
+          new ::grpc::internal::CallbackBidiHandler< ::RequestCohortStream, ::VisitOccurrenceInfo>(
+            [this](
+                   ::grpc::CallbackServerContext* context) { return this->GetCohortVisitOccurrenceTable(context); }));
+    }
+    ~WithCallbackMethod_GetCohortVisitOccurrenceTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortVisitOccurrenceTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::VisitOccurrenceInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerBidiReactor< ::RequestCohortStream, ::VisitOccurrenceInfo>* GetCohortVisitOccurrenceTable(
+      ::grpc::CallbackServerContext* /*context*/)
+      { return nullptr; }
+  };
+  typedef WithCallbackMethod_AuthLogin<WithCallbackMethod_GetCohortList<WithCallbackMethod_GetCohortPersonTable<WithCallbackMethod_GetCohortConditionOccurrenceTable<WithCallbackMethod_GetCohortDeathTable<WithCallbackMethod_GetCohortDeviceExposureTable<WithCallbackMethod_GetCohortDrugExposureTable<WithCallbackMethod_GetCohortMeasurementTable<WithCallbackMethod_GetCohortObservationPeriodTable<WithCallbackMethod_GetCohortObservationTable<WithCallbackMethod_GetCohortProcedureOccurrenceTable<WithCallbackMethod_GetCohortVisitOccurrenceTable<Service > > > > > > > > > > > > CallbackService;
   typedef CallbackService ExperimentalCallbackService;
   template <class BaseClass>
   class WithGenericMethod_AuthLogin : public BaseClass {
@@ -330,6 +969,159 @@ class CLUE final {
     }
     // disable synchronous version of this method
     ::grpc::Status GetCohortPersonTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::PersonInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_GetCohortConditionOccurrenceTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_GetCohortConditionOccurrenceTable() {
+      ::grpc::Service::MarkMethodGeneric(3);
+    }
+    ~WithGenericMethod_GetCohortConditionOccurrenceTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortConditionOccurrenceTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::ConditionOccurrenceInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_GetCohortDeathTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_GetCohortDeathTable() {
+      ::grpc::Service::MarkMethodGeneric(4);
+    }
+    ~WithGenericMethod_GetCohortDeathTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortDeathTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::DeathInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_GetCohortDeviceExposureTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_GetCohortDeviceExposureTable() {
+      ::grpc::Service::MarkMethodGeneric(5);
+    }
+    ~WithGenericMethod_GetCohortDeviceExposureTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortDeviceExposureTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::DeviceExposureInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_GetCohortDrugExposureTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_GetCohortDrugExposureTable() {
+      ::grpc::Service::MarkMethodGeneric(6);
+    }
+    ~WithGenericMethod_GetCohortDrugExposureTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortDrugExposureTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::DrugExposureInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_GetCohortMeasurementTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_GetCohortMeasurementTable() {
+      ::grpc::Service::MarkMethodGeneric(7);
+    }
+    ~WithGenericMethod_GetCohortMeasurementTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortMeasurementTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::MeasurementInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_GetCohortObservationPeriodTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_GetCohortObservationPeriodTable() {
+      ::grpc::Service::MarkMethodGeneric(8);
+    }
+    ~WithGenericMethod_GetCohortObservationPeriodTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortObservationPeriodTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::ObservationPeriodInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_GetCohortObservationTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_GetCohortObservationTable() {
+      ::grpc::Service::MarkMethodGeneric(9);
+    }
+    ~WithGenericMethod_GetCohortObservationTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortObservationTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::ObservationInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_GetCohortProcedureOccurrenceTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_GetCohortProcedureOccurrenceTable() {
+      ::grpc::Service::MarkMethodGeneric(10);
+    }
+    ~WithGenericMethod_GetCohortProcedureOccurrenceTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortProcedureOccurrenceTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::ProcedureOccurrenceInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_GetCohortVisitOccurrenceTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_GetCohortVisitOccurrenceTable() {
+      ::grpc::Service::MarkMethodGeneric(11);
+    }
+    ~WithGenericMethod_GetCohortVisitOccurrenceTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortVisitOccurrenceTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::VisitOccurrenceInfo, ::RequestCohortStream>* /*stream*/)  override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -392,6 +1184,186 @@ class CLUE final {
     }
     void RequestGetCohortPersonTable(::grpc::ServerContext* context, ::grpc::ServerAsyncReaderWriter< ::grpc::ByteBuffer, ::grpc::ByteBuffer>* stream, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncBidiStreaming(2, context, stream, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_GetCohortConditionOccurrenceTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_GetCohortConditionOccurrenceTable() {
+      ::grpc::Service::MarkMethodRaw(3);
+    }
+    ~WithRawMethod_GetCohortConditionOccurrenceTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortConditionOccurrenceTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::ConditionOccurrenceInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetCohortConditionOccurrenceTable(::grpc::ServerContext* context, ::grpc::ServerAsyncReaderWriter< ::grpc::ByteBuffer, ::grpc::ByteBuffer>* stream, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncBidiStreaming(3, context, stream, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_GetCohortDeathTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_GetCohortDeathTable() {
+      ::grpc::Service::MarkMethodRaw(4);
+    }
+    ~WithRawMethod_GetCohortDeathTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortDeathTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::DeathInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetCohortDeathTable(::grpc::ServerContext* context, ::grpc::ServerAsyncReaderWriter< ::grpc::ByteBuffer, ::grpc::ByteBuffer>* stream, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncBidiStreaming(4, context, stream, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_GetCohortDeviceExposureTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_GetCohortDeviceExposureTable() {
+      ::grpc::Service::MarkMethodRaw(5);
+    }
+    ~WithRawMethod_GetCohortDeviceExposureTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortDeviceExposureTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::DeviceExposureInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetCohortDeviceExposureTable(::grpc::ServerContext* context, ::grpc::ServerAsyncReaderWriter< ::grpc::ByteBuffer, ::grpc::ByteBuffer>* stream, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncBidiStreaming(5, context, stream, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_GetCohortDrugExposureTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_GetCohortDrugExposureTable() {
+      ::grpc::Service::MarkMethodRaw(6);
+    }
+    ~WithRawMethod_GetCohortDrugExposureTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortDrugExposureTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::DrugExposureInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetCohortDrugExposureTable(::grpc::ServerContext* context, ::grpc::ServerAsyncReaderWriter< ::grpc::ByteBuffer, ::grpc::ByteBuffer>* stream, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncBidiStreaming(6, context, stream, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_GetCohortMeasurementTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_GetCohortMeasurementTable() {
+      ::grpc::Service::MarkMethodRaw(7);
+    }
+    ~WithRawMethod_GetCohortMeasurementTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortMeasurementTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::MeasurementInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetCohortMeasurementTable(::grpc::ServerContext* context, ::grpc::ServerAsyncReaderWriter< ::grpc::ByteBuffer, ::grpc::ByteBuffer>* stream, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncBidiStreaming(7, context, stream, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_GetCohortObservationPeriodTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_GetCohortObservationPeriodTable() {
+      ::grpc::Service::MarkMethodRaw(8);
+    }
+    ~WithRawMethod_GetCohortObservationPeriodTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortObservationPeriodTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::ObservationPeriodInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetCohortObservationPeriodTable(::grpc::ServerContext* context, ::grpc::ServerAsyncReaderWriter< ::grpc::ByteBuffer, ::grpc::ByteBuffer>* stream, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncBidiStreaming(8, context, stream, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_GetCohortObservationTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_GetCohortObservationTable() {
+      ::grpc::Service::MarkMethodRaw(9);
+    }
+    ~WithRawMethod_GetCohortObservationTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortObservationTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::ObservationInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetCohortObservationTable(::grpc::ServerContext* context, ::grpc::ServerAsyncReaderWriter< ::grpc::ByteBuffer, ::grpc::ByteBuffer>* stream, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncBidiStreaming(9, context, stream, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_GetCohortProcedureOccurrenceTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_GetCohortProcedureOccurrenceTable() {
+      ::grpc::Service::MarkMethodRaw(10);
+    }
+    ~WithRawMethod_GetCohortProcedureOccurrenceTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortProcedureOccurrenceTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::ProcedureOccurrenceInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetCohortProcedureOccurrenceTable(::grpc::ServerContext* context, ::grpc::ServerAsyncReaderWriter< ::grpc::ByteBuffer, ::grpc::ByteBuffer>* stream, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncBidiStreaming(10, context, stream, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_GetCohortVisitOccurrenceTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_GetCohortVisitOccurrenceTable() {
+      ::grpc::Service::MarkMethodRaw(11);
+    }
+    ~WithRawMethod_GetCohortVisitOccurrenceTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortVisitOccurrenceTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::VisitOccurrenceInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetCohortVisitOccurrenceTable(::grpc::ServerContext* context, ::grpc::ServerAsyncReaderWriter< ::grpc::ByteBuffer, ::grpc::ByteBuffer>* stream, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncBidiStreaming(11, context, stream, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -458,6 +1430,213 @@ class CLUE final {
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     virtual ::grpc::ServerBidiReactor< ::grpc::ByteBuffer, ::grpc::ByteBuffer>* GetCohortPersonTable(
+      ::grpc::CallbackServerContext* /*context*/)
+      { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_GetCohortConditionOccurrenceTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_GetCohortConditionOccurrenceTable() {
+      ::grpc::Service::MarkMethodRawCallback(3,
+          new ::grpc::internal::CallbackBidiHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context) { return this->GetCohortConditionOccurrenceTable(context); }));
+    }
+    ~WithRawCallbackMethod_GetCohortConditionOccurrenceTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortConditionOccurrenceTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::ConditionOccurrenceInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerBidiReactor< ::grpc::ByteBuffer, ::grpc::ByteBuffer>* GetCohortConditionOccurrenceTable(
+      ::grpc::CallbackServerContext* /*context*/)
+      { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_GetCohortDeathTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_GetCohortDeathTable() {
+      ::grpc::Service::MarkMethodRawCallback(4,
+          new ::grpc::internal::CallbackBidiHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context) { return this->GetCohortDeathTable(context); }));
+    }
+    ~WithRawCallbackMethod_GetCohortDeathTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortDeathTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::DeathInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerBidiReactor< ::grpc::ByteBuffer, ::grpc::ByteBuffer>* GetCohortDeathTable(
+      ::grpc::CallbackServerContext* /*context*/)
+      { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_GetCohortDeviceExposureTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_GetCohortDeviceExposureTable() {
+      ::grpc::Service::MarkMethodRawCallback(5,
+          new ::grpc::internal::CallbackBidiHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context) { return this->GetCohortDeviceExposureTable(context); }));
+    }
+    ~WithRawCallbackMethod_GetCohortDeviceExposureTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortDeviceExposureTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::DeviceExposureInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerBidiReactor< ::grpc::ByteBuffer, ::grpc::ByteBuffer>* GetCohortDeviceExposureTable(
+      ::grpc::CallbackServerContext* /*context*/)
+      { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_GetCohortDrugExposureTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_GetCohortDrugExposureTable() {
+      ::grpc::Service::MarkMethodRawCallback(6,
+          new ::grpc::internal::CallbackBidiHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context) { return this->GetCohortDrugExposureTable(context); }));
+    }
+    ~WithRawCallbackMethod_GetCohortDrugExposureTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortDrugExposureTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::DrugExposureInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerBidiReactor< ::grpc::ByteBuffer, ::grpc::ByteBuffer>* GetCohortDrugExposureTable(
+      ::grpc::CallbackServerContext* /*context*/)
+      { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_GetCohortMeasurementTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_GetCohortMeasurementTable() {
+      ::grpc::Service::MarkMethodRawCallback(7,
+          new ::grpc::internal::CallbackBidiHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context) { return this->GetCohortMeasurementTable(context); }));
+    }
+    ~WithRawCallbackMethod_GetCohortMeasurementTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortMeasurementTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::MeasurementInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerBidiReactor< ::grpc::ByteBuffer, ::grpc::ByteBuffer>* GetCohortMeasurementTable(
+      ::grpc::CallbackServerContext* /*context*/)
+      { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_GetCohortObservationPeriodTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_GetCohortObservationPeriodTable() {
+      ::grpc::Service::MarkMethodRawCallback(8,
+          new ::grpc::internal::CallbackBidiHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context) { return this->GetCohortObservationPeriodTable(context); }));
+    }
+    ~WithRawCallbackMethod_GetCohortObservationPeriodTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortObservationPeriodTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::ObservationPeriodInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerBidiReactor< ::grpc::ByteBuffer, ::grpc::ByteBuffer>* GetCohortObservationPeriodTable(
+      ::grpc::CallbackServerContext* /*context*/)
+      { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_GetCohortObservationTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_GetCohortObservationTable() {
+      ::grpc::Service::MarkMethodRawCallback(9,
+          new ::grpc::internal::CallbackBidiHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context) { return this->GetCohortObservationTable(context); }));
+    }
+    ~WithRawCallbackMethod_GetCohortObservationTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortObservationTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::ObservationInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerBidiReactor< ::grpc::ByteBuffer, ::grpc::ByteBuffer>* GetCohortObservationTable(
+      ::grpc::CallbackServerContext* /*context*/)
+      { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_GetCohortProcedureOccurrenceTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_GetCohortProcedureOccurrenceTable() {
+      ::grpc::Service::MarkMethodRawCallback(10,
+          new ::grpc::internal::CallbackBidiHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context) { return this->GetCohortProcedureOccurrenceTable(context); }));
+    }
+    ~WithRawCallbackMethod_GetCohortProcedureOccurrenceTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortProcedureOccurrenceTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::ProcedureOccurrenceInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerBidiReactor< ::grpc::ByteBuffer, ::grpc::ByteBuffer>* GetCohortProcedureOccurrenceTable(
+      ::grpc::CallbackServerContext* /*context*/)
+      { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_GetCohortVisitOccurrenceTable : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_GetCohortVisitOccurrenceTable() {
+      ::grpc::Service::MarkMethodRawCallback(11,
+          new ::grpc::internal::CallbackBidiHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context) { return this->GetCohortVisitOccurrenceTable(context); }));
+    }
+    ~WithRawCallbackMethod_GetCohortVisitOccurrenceTable() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortVisitOccurrenceTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::VisitOccurrenceInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerBidiReactor< ::grpc::ByteBuffer, ::grpc::ByteBuffer>* GetCohortVisitOccurrenceTable(
       ::grpc::CallbackServerContext* /*context*/)
       { return nullptr; }
   };
