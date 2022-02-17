@@ -17,6 +17,10 @@ class Stream {
       return convert_to_dataframe<Response>(response_vector);
     }
 
+    void Close() {
+      stream_->Close();
+    }
+
   protected:
     std::shared_ptr<clue::Stream<Request, Response>> stream_;
 };

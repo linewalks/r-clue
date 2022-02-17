@@ -5,7 +5,7 @@ devtools::load_all()
 library(rclue)
 # library(Rcpp)
 
-clue <- new(CLUEWrapper, "localhost", 9999, "test@linewalks.com", "q1w2e3r4!")
+clue <- new(CLUEWrapper, "192.168.0.69", 8889, "test@linewalks.com", "q1w2e3r4!")
 
 print(clue)
 
@@ -17,6 +17,12 @@ print(res)
 
 stream <- conn$GetCohortPersonTable(527)
 print(stream)
-
 print(stream$Fetch(10))
 print(stream$Fetch(5))
+stream$Close()
+
+Sys.sleep(1)
+
+stream <- conn$GetCohortDeathTable(527)
+print(stream$Fetch(10))
+stream$Close()
