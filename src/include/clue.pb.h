@@ -1288,11 +1288,7 @@ class PersonInfo final :
     kRaceSourceConceptIdFieldNumber = 16,
     kEthnicitySourceConceptIdFieldNumber = 18,
   };
-  // optional string birth_datetime = 8;
-  bool has_birth_datetime() const;
-  private:
-  bool _internal_has_birth_datetime() const;
-  public:
+  // string birth_datetime = 8;
   void clear_birth_datetime();
   const std::string& birth_datetime() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1306,11 +1302,7 @@ class PersonInfo final :
   std::string* _internal_mutable_birth_datetime();
   public:
 
-  // optional string person_source_value = 12;
-  bool has_person_source_value() const;
-  private:
-  bool _internal_has_person_source_value() const;
-  public:
+  // string person_source_value = 12;
   void clear_person_source_value();
   const std::string& person_source_value() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1324,11 +1316,7 @@ class PersonInfo final :
   std::string* _internal_mutable_person_source_value();
   public:
 
-  // optional string gender_source_value = 13;
-  bool has_gender_source_value() const;
-  private:
-  bool _internal_has_gender_source_value() const;
-  public:
+  // string gender_source_value = 13;
   void clear_gender_source_value();
   const std::string& gender_source_value() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1342,11 +1330,7 @@ class PersonInfo final :
   std::string* _internal_mutable_gender_source_value();
   public:
 
-  // optional string race_source_value = 15;
-  bool has_race_source_value() const;
-  private:
-  bool _internal_has_race_source_value() const;
-  public:
+  // string race_source_value = 15;
   void clear_race_source_value();
   const std::string& race_source_value() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1360,11 +1344,7 @@ class PersonInfo final :
   std::string* _internal_mutable_race_source_value();
   public:
 
-  // optional string ethnicity_source_value = 17;
-  bool has_ethnicity_source_value() const;
-  private:
-  bool _internal_has_ethnicity_source_value() const;
-  public:
+  // string ethnicity_source_value = 17;
   void clear_ethnicity_source_value();
   const std::string& ethnicity_source_value() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1423,11 +1403,7 @@ class PersonInfo final :
   void _internal_set_ethnicity_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 month_of_birth = 6;
-  bool has_month_of_birth() const;
-  private:
-  bool _internal_has_month_of_birth() const;
-  public:
+  // int32 month_of_birth = 6;
   void clear_month_of_birth();
   ::PROTOBUF_NAMESPACE_ID::int32 month_of_birth() const;
   void set_month_of_birth(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -1436,11 +1412,7 @@ class PersonInfo final :
   void _internal_set_month_of_birth(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 day_of_birth = 7;
-  bool has_day_of_birth() const;
-  private:
-  bool _internal_has_day_of_birth() const;
-  public:
+  // int32 day_of_birth = 7;
   void clear_day_of_birth();
   ::PROTOBUF_NAMESPACE_ID::int32 day_of_birth() const;
   void set_day_of_birth(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -1449,11 +1421,7 @@ class PersonInfo final :
   void _internal_set_day_of_birth(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 location_id = 9;
-  bool has_location_id() const;
-  private:
-  bool _internal_has_location_id() const;
-  public:
+  // int32 location_id = 9;
   void clear_location_id();
   ::PROTOBUF_NAMESPACE_ID::int32 location_id() const;
   void set_location_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -1462,11 +1430,7 @@ class PersonInfo final :
   void _internal_set_location_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 provider_id = 10;
-  bool has_provider_id() const;
-  private:
-  bool _internal_has_provider_id() const;
-  public:
+  // int32 provider_id = 10;
   void clear_provider_id();
   ::PROTOBUF_NAMESPACE_ID::int32 provider_id() const;
   void set_provider_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -1475,11 +1439,7 @@ class PersonInfo final :
   void _internal_set_provider_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 care_site_id = 11;
-  bool has_care_site_id() const;
-  private:
-  bool _internal_has_care_site_id() const;
-  public:
+  // int32 care_site_id = 11;
   void clear_care_site_id();
   ::PROTOBUF_NAMESPACE_ID::int32 care_site_id() const;
   void set_care_site_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -1488,11 +1448,7 @@ class PersonInfo final :
   void _internal_set_care_site_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 gender_source_concept_id = 14;
-  bool has_gender_source_concept_id() const;
-  private:
-  bool _internal_has_gender_source_concept_id() const;
-  public:
+  // int32 gender_source_concept_id = 14;
   void clear_gender_source_concept_id();
   ::PROTOBUF_NAMESPACE_ID::int32 gender_source_concept_id() const;
   void set_gender_source_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -1501,11 +1457,7 @@ class PersonInfo final :
   void _internal_set_gender_source_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 race_source_concept_id = 16;
-  bool has_race_source_concept_id() const;
-  private:
-  bool _internal_has_race_source_concept_id() const;
-  public:
+  // int32 race_source_concept_id = 16;
   void clear_race_source_concept_id();
   ::PROTOBUF_NAMESPACE_ID::int32 race_source_concept_id() const;
   void set_race_source_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -1514,11 +1466,7 @@ class PersonInfo final :
   void _internal_set_race_source_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 ethnicity_source_concept_id = 18;
-  bool has_ethnicity_source_concept_id() const;
-  private:
-  bool _internal_has_ethnicity_source_concept_id() const;
-  public:
+  // int32 ethnicity_source_concept_id = 18;
   void clear_ethnicity_source_concept_id();
   ::PROTOBUF_NAMESPACE_ID::int32 ethnicity_source_concept_id() const;
   void set_ethnicity_source_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -1534,8 +1482,6 @@ class PersonInfo final :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr birth_datetime_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr person_source_value_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr gender_source_value_;
@@ -1554,6 +1500,7 @@ class PersonInfo final :
   ::PROTOBUF_NAMESPACE_ID::int32 gender_source_concept_id_;
   ::PROTOBUF_NAMESPACE_ID::int32 race_source_concept_id_;
   ::PROTOBUF_NAMESPACE_ID::int32 ethnicity_source_concept_id_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_clue_2eproto;
 };
 // -------------------------------------------------------------------
@@ -1708,11 +1655,7 @@ class ConditionOccurrenceInfo final :
   std::string* _internal_mutable_condition_start_date();
   public:
 
-  // optional string condition_start_datetime = 6;
-  bool has_condition_start_datetime() const;
-  private:
-  bool _internal_has_condition_start_datetime() const;
-  public:
+  // string condition_start_datetime = 6;
   void clear_condition_start_datetime();
   const std::string& condition_start_datetime() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1726,11 +1669,7 @@ class ConditionOccurrenceInfo final :
   std::string* _internal_mutable_condition_start_datetime();
   public:
 
-  // optional string condition_end_date = 7;
-  bool has_condition_end_date() const;
-  private:
-  bool _internal_has_condition_end_date() const;
-  public:
+  // string condition_end_date = 7;
   void clear_condition_end_date();
   const std::string& condition_end_date() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1744,11 +1683,7 @@ class ConditionOccurrenceInfo final :
   std::string* _internal_mutable_condition_end_date();
   public:
 
-  // optional string condition_end_datetime = 8;
-  bool has_condition_end_datetime() const;
-  private:
-  bool _internal_has_condition_end_datetime() const;
-  public:
+  // string condition_end_datetime = 8;
   void clear_condition_end_datetime();
   const std::string& condition_end_datetime() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1762,11 +1697,7 @@ class ConditionOccurrenceInfo final :
   std::string* _internal_mutable_condition_end_datetime();
   public:
 
-  // optional string stop_reason = 10;
-  bool has_stop_reason() const;
-  private:
-  bool _internal_has_stop_reason() const;
-  public:
+  // string stop_reason = 10;
   void clear_stop_reason();
   const std::string& stop_reason() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1780,11 +1711,7 @@ class ConditionOccurrenceInfo final :
   std::string* _internal_mutable_stop_reason();
   public:
 
-  // optional string condition_source_value = 14;
-  bool has_condition_source_value() const;
-  private:
-  bool _internal_has_condition_source_value() const;
-  public:
+  // string condition_source_value = 14;
   void clear_condition_source_value();
   const std::string& condition_source_value() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1798,11 +1725,7 @@ class ConditionOccurrenceInfo final :
   std::string* _internal_mutable_condition_source_value();
   public:
 
-  // optional string condition_status_source_value = 16;
-  bool has_condition_status_source_value() const;
-  private:
-  bool _internal_has_condition_status_source_value() const;
-  public:
+  // string condition_status_source_value = 16;
   void clear_condition_status_source_value();
   const std::string& condition_status_source_value() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -1852,11 +1775,7 @@ class ConditionOccurrenceInfo final :
   void _internal_set_condition_type_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 condition_status_concept_id = 9;
-  bool has_condition_status_concept_id() const;
-  private:
-  bool _internal_has_condition_status_concept_id() const;
-  public:
+  // int32 condition_status_concept_id = 9;
   void clear_condition_status_concept_id();
   ::PROTOBUF_NAMESPACE_ID::int32 condition_status_concept_id() const;
   void set_condition_status_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -1865,11 +1784,7 @@ class ConditionOccurrenceInfo final :
   void _internal_set_condition_status_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 provider_id = 11;
-  bool has_provider_id() const;
-  private:
-  bool _internal_has_provider_id() const;
-  public:
+  // int32 provider_id = 11;
   void clear_provider_id();
   ::PROTOBUF_NAMESPACE_ID::int32 provider_id() const;
   void set_provider_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -1878,11 +1793,7 @@ class ConditionOccurrenceInfo final :
   void _internal_set_provider_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 visit_occurrence_id = 12;
-  bool has_visit_occurrence_id() const;
-  private:
-  bool _internal_has_visit_occurrence_id() const;
-  public:
+  // int32 visit_occurrence_id = 12;
   void clear_visit_occurrence_id();
   ::PROTOBUF_NAMESPACE_ID::int32 visit_occurrence_id() const;
   void set_visit_occurrence_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -1891,11 +1802,7 @@ class ConditionOccurrenceInfo final :
   void _internal_set_visit_occurrence_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 visit_detail_id = 13;
-  bool has_visit_detail_id() const;
-  private:
-  bool _internal_has_visit_detail_id() const;
-  public:
+  // int32 visit_detail_id = 13;
   void clear_visit_detail_id();
   ::PROTOBUF_NAMESPACE_ID::int32 visit_detail_id() const;
   void set_visit_detail_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -1904,11 +1811,7 @@ class ConditionOccurrenceInfo final :
   void _internal_set_visit_detail_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 condition_source_concept_id = 15;
-  bool has_condition_source_concept_id() const;
-  private:
-  bool _internal_has_condition_source_concept_id() const;
-  public:
+  // int32 condition_source_concept_id = 15;
   void clear_condition_source_concept_id();
   ::PROTOBUF_NAMESPACE_ID::int32 condition_source_concept_id() const;
   void set_condition_source_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -1924,8 +1827,6 @@ class ConditionOccurrenceInfo final :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr condition_start_date_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr condition_start_datetime_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr condition_end_date_;
@@ -1942,6 +1843,7 @@ class ConditionOccurrenceInfo final :
   ::PROTOBUF_NAMESPACE_ID::int32 visit_occurrence_id_;
   ::PROTOBUF_NAMESPACE_ID::int32 visit_detail_id_;
   ::PROTOBUF_NAMESPACE_ID::int32 condition_source_concept_id_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_clue_2eproto;
 };
 // -------------------------------------------------------------------
@@ -2087,11 +1989,7 @@ class DeathInfo final :
   std::string* _internal_mutable_death_date();
   public:
 
-  // optional string death_datetime = 3;
-  bool has_death_datetime() const;
-  private:
-  bool _internal_has_death_datetime() const;
-  public:
+  // string death_datetime = 3;
   void clear_death_datetime();
   const std::string& death_datetime() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2105,11 +2003,7 @@ class DeathInfo final :
   std::string* _internal_mutable_death_datetime();
   public:
 
-  // optional string cause_concept_id = 5;
-  bool has_cause_concept_id() const;
-  private:
-  bool _internal_has_cause_concept_id() const;
-  public:
+  // string cause_concept_id = 5;
   void clear_cause_concept_id();
   const std::string& cause_concept_id() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2123,11 +2017,7 @@ class DeathInfo final :
   std::string* _internal_mutable_cause_concept_id();
   public:
 
-  // optional string cause_source_value = 6;
-  bool has_cause_source_value() const;
-  private:
-  bool _internal_has_cause_source_value() const;
-  public:
+  // string cause_source_value = 6;
   void clear_cause_source_value();
   const std::string& cause_source_value() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2150,11 +2040,7 @@ class DeathInfo final :
   void _internal_set_person_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 death_type_concept_id = 4;
-  bool has_death_type_concept_id() const;
-  private:
-  bool _internal_has_death_type_concept_id() const;
-  public:
+  // int32 death_type_concept_id = 4;
   void clear_death_type_concept_id();
   ::PROTOBUF_NAMESPACE_ID::int32 death_type_concept_id() const;
   void set_death_type_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -2163,11 +2049,7 @@ class DeathInfo final :
   void _internal_set_death_type_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 cause_source_concept_id = 7;
-  bool has_cause_source_concept_id() const;
-  private:
-  bool _internal_has_cause_source_concept_id() const;
-  public:
+  // int32 cause_source_concept_id = 7;
   void clear_cause_source_concept_id();
   ::PROTOBUF_NAMESPACE_ID::int32 cause_source_concept_id() const;
   void set_cause_source_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -2183,8 +2065,6 @@ class DeathInfo final :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr death_date_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr death_datetime_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr cause_concept_id_;
@@ -2192,6 +2072,7 @@ class DeathInfo final :
   ::PROTOBUF_NAMESPACE_ID::int32 person_id_;
   ::PROTOBUF_NAMESPACE_ID::int32 death_type_concept_id_;
   ::PROTOBUF_NAMESPACE_ID::int32 cause_source_concept_id_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_clue_2eproto;
 };
 // -------------------------------------------------------------------
@@ -2345,11 +2226,7 @@ class DeviceExposureInfo final :
   std::string* _internal_mutable_device_exposure_start_date();
   public:
 
-  // optional string device_exposure_start_datetime = 6;
-  bool has_device_exposure_start_datetime() const;
-  private:
-  bool _internal_has_device_exposure_start_datetime() const;
-  public:
+  // string device_exposure_start_datetime = 6;
   void clear_device_exposure_start_datetime();
   const std::string& device_exposure_start_datetime() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2363,11 +2240,7 @@ class DeviceExposureInfo final :
   std::string* _internal_mutable_device_exposure_start_datetime();
   public:
 
-  // optional string device_exposure_end_date = 7;
-  bool has_device_exposure_end_date() const;
-  private:
-  bool _internal_has_device_exposure_end_date() const;
-  public:
+  // string device_exposure_end_date = 7;
   void clear_device_exposure_end_date();
   const std::string& device_exposure_end_date() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2381,11 +2254,7 @@ class DeviceExposureInfo final :
   std::string* _internal_mutable_device_exposure_end_date();
   public:
 
-  // optional string device_exposure_end_datetime = 8;
-  bool has_device_exposure_end_datetime() const;
-  private:
-  bool _internal_has_device_exposure_end_datetime() const;
-  public:
+  // string device_exposure_end_datetime = 8;
   void clear_device_exposure_end_datetime();
   const std::string& device_exposure_end_datetime() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2399,11 +2268,7 @@ class DeviceExposureInfo final :
   std::string* _internal_mutable_device_exposure_end_datetime();
   public:
 
-  // optional string unique_device_id = 9;
-  bool has_unique_device_id() const;
-  private:
-  bool _internal_has_unique_device_id() const;
-  public:
+  // string unique_device_id = 9;
   void clear_unique_device_id();
   const std::string& unique_device_id() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2417,11 +2282,7 @@ class DeviceExposureInfo final :
   std::string* _internal_mutable_unique_device_id();
   public:
 
-  // optional string device_source_value = 14;
-  bool has_device_source_value() const;
-  private:
-  bool _internal_has_device_source_value() const;
-  public:
+  // string device_source_value = 14;
   void clear_device_source_value();
   const std::string& device_source_value() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2471,11 +2332,7 @@ class DeviceExposureInfo final :
   void _internal_set_device_type_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 quantity = 10;
-  bool has_quantity() const;
-  private:
-  bool _internal_has_quantity() const;
-  public:
+  // int32 quantity = 10;
   void clear_quantity();
   ::PROTOBUF_NAMESPACE_ID::int32 quantity() const;
   void set_quantity(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -2484,11 +2341,7 @@ class DeviceExposureInfo final :
   void _internal_set_quantity(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 provider_id = 11;
-  bool has_provider_id() const;
-  private:
-  bool _internal_has_provider_id() const;
-  public:
+  // int32 provider_id = 11;
   void clear_provider_id();
   ::PROTOBUF_NAMESPACE_ID::int32 provider_id() const;
   void set_provider_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -2497,11 +2350,7 @@ class DeviceExposureInfo final :
   void _internal_set_provider_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 visit_occurrence_id = 12;
-  bool has_visit_occurrence_id() const;
-  private:
-  bool _internal_has_visit_occurrence_id() const;
-  public:
+  // int32 visit_occurrence_id = 12;
   void clear_visit_occurrence_id();
   ::PROTOBUF_NAMESPACE_ID::int32 visit_occurrence_id() const;
   void set_visit_occurrence_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -2510,11 +2359,7 @@ class DeviceExposureInfo final :
   void _internal_set_visit_occurrence_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 visit_detail_id = 13;
-  bool has_visit_detail_id() const;
-  private:
-  bool _internal_has_visit_detail_id() const;
-  public:
+  // int32 visit_detail_id = 13;
   void clear_visit_detail_id();
   ::PROTOBUF_NAMESPACE_ID::int32 visit_detail_id() const;
   void set_visit_detail_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -2523,11 +2368,7 @@ class DeviceExposureInfo final :
   void _internal_set_visit_detail_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 device_source_concept_id = 15;
-  bool has_device_source_concept_id() const;
-  private:
-  bool _internal_has_device_source_concept_id() const;
-  public:
+  // int32 device_source_concept_id = 15;
   void clear_device_source_concept_id();
   ::PROTOBUF_NAMESPACE_ID::int32 device_source_concept_id() const;
   void set_device_source_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -2543,8 +2384,6 @@ class DeviceExposureInfo final :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr device_exposure_start_date_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr device_exposure_start_datetime_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr device_exposure_end_date_;
@@ -2560,6 +2399,7 @@ class DeviceExposureInfo final :
   ::PROTOBUF_NAMESPACE_ID::int32 visit_occurrence_id_;
   ::PROTOBUF_NAMESPACE_ID::int32 visit_detail_id_;
   ::PROTOBUF_NAMESPACE_ID::int32 device_source_concept_id_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_clue_2eproto;
 };
 // -------------------------------------------------------------------
@@ -2735,11 +2575,7 @@ class DrugExposureInfo final :
   std::string* _internal_mutable_drug_exposure_end_date();
   public:
 
-  // optional string drug_exposure_start_datetime = 7;
-  bool has_drug_exposure_start_datetime() const;
-  private:
-  bool _internal_has_drug_exposure_start_datetime() const;
-  public:
+  // string drug_exposure_start_datetime = 7;
   void clear_drug_exposure_start_datetime();
   const std::string& drug_exposure_start_datetime() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2753,11 +2589,7 @@ class DrugExposureInfo final :
   std::string* _internal_mutable_drug_exposure_start_datetime();
   public:
 
-  // optional string drug_exposure_end_datetime = 8;
-  bool has_drug_exposure_end_datetime() const;
-  private:
-  bool _internal_has_drug_exposure_end_datetime() const;
-  public:
+  // string drug_exposure_end_datetime = 8;
   void clear_drug_exposure_end_datetime();
   const std::string& drug_exposure_end_datetime() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2771,11 +2603,7 @@ class DrugExposureInfo final :
   std::string* _internal_mutable_drug_exposure_end_datetime();
   public:
 
-  // optional string verbatim_end_date = 9;
-  bool has_verbatim_end_date() const;
-  private:
-  bool _internal_has_verbatim_end_date() const;
-  public:
+  // string verbatim_end_date = 9;
   void clear_verbatim_end_date();
   const std::string& verbatim_end_date() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2789,11 +2617,7 @@ class DrugExposureInfo final :
   std::string* _internal_mutable_verbatim_end_date();
   public:
 
-  // optional string stop_reason = 10;
-  bool has_stop_reason() const;
-  private:
-  bool _internal_has_stop_reason() const;
-  public:
+  // string stop_reason = 10;
   void clear_stop_reason();
   const std::string& stop_reason() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2807,11 +2631,7 @@ class DrugExposureInfo final :
   std::string* _internal_mutable_stop_reason();
   public:
 
-  // optional string sig = 14;
-  bool has_sig() const;
-  private:
-  bool _internal_has_sig() const;
-  public:
+  // string sig = 14;
   void clear_sig();
   const std::string& sig() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2825,11 +2645,7 @@ class DrugExposureInfo final :
   std::string* _internal_mutable_sig();
   public:
 
-  // optional string lot_number = 16;
-  bool has_lot_number() const;
-  private:
-  bool _internal_has_lot_number() const;
-  public:
+  // string lot_number = 16;
   void clear_lot_number();
   const std::string& lot_number() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2843,11 +2659,7 @@ class DrugExposureInfo final :
   std::string* _internal_mutable_lot_number();
   public:
 
-  // optional string drug_source_value = 20;
-  bool has_drug_source_value() const;
-  private:
-  bool _internal_has_drug_source_value() const;
-  public:
+  // string drug_source_value = 20;
   void clear_drug_source_value();
   const std::string& drug_source_value() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2861,11 +2673,7 @@ class DrugExposureInfo final :
   std::string* _internal_mutable_drug_source_value();
   public:
 
-  // optional string route_source_value = 22;
-  bool has_route_source_value() const;
-  private:
-  bool _internal_has_route_source_value() const;
-  public:
+  // string route_source_value = 22;
   void clear_route_source_value();
   const std::string& route_source_value() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2879,11 +2687,7 @@ class DrugExposureInfo final :
   std::string* _internal_mutable_route_source_value();
   public:
 
-  // optional string dose_unit_source_value = 23;
-  bool has_dose_unit_source_value() const;
-  private:
-  bool _internal_has_dose_unit_source_value() const;
-  public:
+  // string dose_unit_source_value = 23;
   void clear_dose_unit_source_value();
   const std::string& dose_unit_source_value() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -2933,11 +2737,7 @@ class DrugExposureInfo final :
   void _internal_set_drug_type_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 refills = 11;
-  bool has_refills() const;
-  private:
-  bool _internal_has_refills() const;
-  public:
+  // int32 refills = 11;
   void clear_refills();
   ::PROTOBUF_NAMESPACE_ID::int32 refills() const;
   void set_refills(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -2946,11 +2746,7 @@ class DrugExposureInfo final :
   void _internal_set_refills(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional float quantity = 12;
-  bool has_quantity() const;
-  private:
-  bool _internal_has_quantity() const;
-  public:
+  // float quantity = 12;
   void clear_quantity();
   float quantity() const;
   void set_quantity(float value);
@@ -2959,11 +2755,7 @@ class DrugExposureInfo final :
   void _internal_set_quantity(float value);
   public:
 
-  // optional int32 days_supply = 13;
-  bool has_days_supply() const;
-  private:
-  bool _internal_has_days_supply() const;
-  public:
+  // int32 days_supply = 13;
   void clear_days_supply();
   ::PROTOBUF_NAMESPACE_ID::int32 days_supply() const;
   void set_days_supply(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -2972,11 +2764,7 @@ class DrugExposureInfo final :
   void _internal_set_days_supply(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 route_concept_id = 15;
-  bool has_route_concept_id() const;
-  private:
-  bool _internal_has_route_concept_id() const;
-  public:
+  // int32 route_concept_id = 15;
   void clear_route_concept_id();
   ::PROTOBUF_NAMESPACE_ID::int32 route_concept_id() const;
   void set_route_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -2985,11 +2773,7 @@ class DrugExposureInfo final :
   void _internal_set_route_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 provider_id = 17;
-  bool has_provider_id() const;
-  private:
-  bool _internal_has_provider_id() const;
-  public:
+  // int32 provider_id = 17;
   void clear_provider_id();
   ::PROTOBUF_NAMESPACE_ID::int32 provider_id() const;
   void set_provider_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -2998,11 +2782,7 @@ class DrugExposureInfo final :
   void _internal_set_provider_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 visit_occurrence_id = 18;
-  bool has_visit_occurrence_id() const;
-  private:
-  bool _internal_has_visit_occurrence_id() const;
-  public:
+  // int32 visit_occurrence_id = 18;
   void clear_visit_occurrence_id();
   ::PROTOBUF_NAMESPACE_ID::int32 visit_occurrence_id() const;
   void set_visit_occurrence_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -3011,11 +2791,7 @@ class DrugExposureInfo final :
   void _internal_set_visit_occurrence_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 visit_detail_id = 19;
-  bool has_visit_detail_id() const;
-  private:
-  bool _internal_has_visit_detail_id() const;
-  public:
+  // int32 visit_detail_id = 19;
   void clear_visit_detail_id();
   ::PROTOBUF_NAMESPACE_ID::int32 visit_detail_id() const;
   void set_visit_detail_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -3024,11 +2800,7 @@ class DrugExposureInfo final :
   void _internal_set_visit_detail_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 drug_source_concept_id = 21;
-  bool has_drug_source_concept_id() const;
-  private:
-  bool _internal_has_drug_source_concept_id() const;
-  public:
+  // int32 drug_source_concept_id = 21;
   void clear_drug_source_concept_id();
   ::PROTOBUF_NAMESPACE_ID::int32 drug_source_concept_id() const;
   void set_drug_source_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -3044,8 +2816,6 @@ class DrugExposureInfo final :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr drug_exposure_start_date_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr drug_exposure_end_date_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr drug_exposure_start_datetime_;
@@ -3069,6 +2839,7 @@ class DrugExposureInfo final :
   ::PROTOBUF_NAMESPACE_ID::int32 visit_occurrence_id_;
   ::PROTOBUF_NAMESPACE_ID::int32 visit_detail_id_;
   ::PROTOBUF_NAMESPACE_ID::int32 drug_source_concept_id_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_clue_2eproto;
 };
 // -------------------------------------------------------------------
@@ -3227,11 +2998,7 @@ class MeasurementInfo final :
   std::string* _internal_mutable_measurement_date();
   public:
 
-  // optional string measurement_datetime = 6;
-  bool has_measurement_datetime() const;
-  private:
-  bool _internal_has_measurement_datetime() const;
-  public:
+  // string measurement_datetime = 6;
   void clear_measurement_datetime();
   const std::string& measurement_datetime() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3245,11 +3012,7 @@ class MeasurementInfo final :
   std::string* _internal_mutable_measurement_datetime();
   public:
 
-  // optional string measurement_time = 7;
-  bool has_measurement_time() const;
-  private:
-  bool _internal_has_measurement_time() const;
-  public:
+  // string measurement_time = 7;
   void clear_measurement_time();
   const std::string& measurement_time() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3263,11 +3026,7 @@ class MeasurementInfo final :
   std::string* _internal_mutable_measurement_time();
   public:
 
-  // optional string measurement_source_value = 17;
-  bool has_measurement_source_value() const;
-  private:
-  bool _internal_has_measurement_source_value() const;
-  public:
+  // string measurement_source_value = 17;
   void clear_measurement_source_value();
   const std::string& measurement_source_value() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3281,11 +3040,7 @@ class MeasurementInfo final :
   std::string* _internal_mutable_measurement_source_value();
   public:
 
-  // optional string unit_source_value = 19;
-  bool has_unit_source_value() const;
-  private:
-  bool _internal_has_unit_source_value() const;
-  public:
+  // string unit_source_value = 19;
   void clear_unit_source_value();
   const std::string& unit_source_value() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3299,11 +3054,7 @@ class MeasurementInfo final :
   std::string* _internal_mutable_unit_source_value();
   public:
 
-  // optional string value_source_value = 20;
-  bool has_value_source_value() const;
-  private:
-  bool _internal_has_value_source_value() const;
-  public:
+  // string value_source_value = 20;
   void clear_value_source_value();
   const std::string& value_source_value() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3353,11 +3104,7 @@ class MeasurementInfo final :
   void _internal_set_measurement_type_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 operator_concept_id = 8;
-  bool has_operator_concept_id() const;
-  private:
-  bool _internal_has_operator_concept_id() const;
-  public:
+  // int32 operator_concept_id = 8;
   void clear_operator_concept_id();
   ::PROTOBUF_NAMESPACE_ID::int32 operator_concept_id() const;
   void set_operator_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -3366,11 +3113,7 @@ class MeasurementInfo final :
   void _internal_set_operator_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional float value_as_number = 9;
-  bool has_value_as_number() const;
-  private:
-  bool _internal_has_value_as_number() const;
-  public:
+  // float value_as_number = 9;
   void clear_value_as_number();
   float value_as_number() const;
   void set_value_as_number(float value);
@@ -3379,11 +3122,7 @@ class MeasurementInfo final :
   void _internal_set_value_as_number(float value);
   public:
 
-  // optional int32 value_as_concept_id = 10;
-  bool has_value_as_concept_id() const;
-  private:
-  bool _internal_has_value_as_concept_id() const;
-  public:
+  // int32 value_as_concept_id = 10;
   void clear_value_as_concept_id();
   ::PROTOBUF_NAMESPACE_ID::int32 value_as_concept_id() const;
   void set_value_as_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -3392,11 +3131,7 @@ class MeasurementInfo final :
   void _internal_set_value_as_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 unit_concept_id = 11;
-  bool has_unit_concept_id() const;
-  private:
-  bool _internal_has_unit_concept_id() const;
-  public:
+  // int32 unit_concept_id = 11;
   void clear_unit_concept_id();
   ::PROTOBUF_NAMESPACE_ID::int32 unit_concept_id() const;
   void set_unit_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -3405,11 +3140,7 @@ class MeasurementInfo final :
   void _internal_set_unit_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional float range_low = 12;
-  bool has_range_low() const;
-  private:
-  bool _internal_has_range_low() const;
-  public:
+  // float range_low = 12;
   void clear_range_low();
   float range_low() const;
   void set_range_low(float value);
@@ -3418,11 +3149,7 @@ class MeasurementInfo final :
   void _internal_set_range_low(float value);
   public:
 
-  // optional float range_high = 13;
-  bool has_range_high() const;
-  private:
-  bool _internal_has_range_high() const;
-  public:
+  // float range_high = 13;
   void clear_range_high();
   float range_high() const;
   void set_range_high(float value);
@@ -3431,11 +3158,7 @@ class MeasurementInfo final :
   void _internal_set_range_high(float value);
   public:
 
-  // optional int32 provider_id = 14;
-  bool has_provider_id() const;
-  private:
-  bool _internal_has_provider_id() const;
-  public:
+  // int32 provider_id = 14;
   void clear_provider_id();
   ::PROTOBUF_NAMESPACE_ID::int32 provider_id() const;
   void set_provider_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -3444,11 +3167,7 @@ class MeasurementInfo final :
   void _internal_set_provider_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 visit_occurrence_id = 15;
-  bool has_visit_occurrence_id() const;
-  private:
-  bool _internal_has_visit_occurrence_id() const;
-  public:
+  // int32 visit_occurrence_id = 15;
   void clear_visit_occurrence_id();
   ::PROTOBUF_NAMESPACE_ID::int32 visit_occurrence_id() const;
   void set_visit_occurrence_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -3457,11 +3176,7 @@ class MeasurementInfo final :
   void _internal_set_visit_occurrence_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 visit_detail_id = 16;
-  bool has_visit_detail_id() const;
-  private:
-  bool _internal_has_visit_detail_id() const;
-  public:
+  // int32 visit_detail_id = 16;
   void clear_visit_detail_id();
   ::PROTOBUF_NAMESPACE_ID::int32 visit_detail_id() const;
   void set_visit_detail_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -3470,11 +3185,7 @@ class MeasurementInfo final :
   void _internal_set_visit_detail_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 measurement_source_concept_id = 18;
-  bool has_measurement_source_concept_id() const;
-  private:
-  bool _internal_has_measurement_source_concept_id() const;
-  public:
+  // int32 measurement_source_concept_id = 18;
   void clear_measurement_source_concept_id();
   ::PROTOBUF_NAMESPACE_ID::int32 measurement_source_concept_id() const;
   void set_measurement_source_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -3490,8 +3201,6 @@ class MeasurementInfo final :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr measurement_date_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr measurement_datetime_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr measurement_time_;
@@ -3512,6 +3221,7 @@ class MeasurementInfo final :
   ::PROTOBUF_NAMESPACE_ID::int32 visit_occurrence_id_;
   ::PROTOBUF_NAMESPACE_ID::int32 visit_detail_id_;
   ::PROTOBUF_NAMESPACE_ID::int32 measurement_source_concept_id_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_clue_2eproto;
 };
 // -------------------------------------------------------------------
@@ -3865,11 +3575,7 @@ class ObservationInfo final :
   std::string* _internal_mutable_observation_date();
   public:
 
-  // optional string observation_datetime = 6;
-  bool has_observation_datetime() const;
-  private:
-  bool _internal_has_observation_datetime() const;
-  public:
+  // string observation_datetime = 6;
   void clear_observation_datetime();
   const std::string& observation_datetime() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3883,11 +3589,7 @@ class ObservationInfo final :
   std::string* _internal_mutable_observation_datetime();
   public:
 
-  // optional string value_as_string = 8;
-  bool has_value_as_string() const;
-  private:
-  bool _internal_has_value_as_string() const;
-  public:
+  // string value_as_string = 8;
   void clear_value_as_string();
   const std::string& value_as_string() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3901,11 +3603,7 @@ class ObservationInfo final :
   std::string* _internal_mutable_value_as_string();
   public:
 
-  // optional string observation_source_value = 15;
-  bool has_observation_source_value() const;
-  private:
-  bool _internal_has_observation_source_value() const;
-  public:
+  // string observation_source_value = 15;
   void clear_observation_source_value();
   const std::string& observation_source_value() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3919,11 +3617,7 @@ class ObservationInfo final :
   std::string* _internal_mutable_observation_source_value();
   public:
 
-  // optional string unit_source_value = 17;
-  bool has_unit_source_value() const;
-  private:
-  bool _internal_has_unit_source_value() const;
-  public:
+  // string unit_source_value = 17;
   void clear_unit_source_value();
   const std::string& unit_source_value() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -3973,11 +3667,7 @@ class ObservationInfo final :
   void _internal_set_observation_type_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional float value_as_number = 7;
-  bool has_value_as_number() const;
-  private:
-  bool _internal_has_value_as_number() const;
-  public:
+  // float value_as_number = 7;
   void clear_value_as_number();
   float value_as_number() const;
   void set_value_as_number(float value);
@@ -3986,11 +3676,7 @@ class ObservationInfo final :
   void _internal_set_value_as_number(float value);
   public:
 
-  // optional int32 value_as_concept_id = 9;
-  bool has_value_as_concept_id() const;
-  private:
-  bool _internal_has_value_as_concept_id() const;
-  public:
+  // int32 value_as_concept_id = 9;
   void clear_value_as_concept_id();
   ::PROTOBUF_NAMESPACE_ID::int32 value_as_concept_id() const;
   void set_value_as_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -3999,11 +3685,7 @@ class ObservationInfo final :
   void _internal_set_value_as_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 qualifier_concept_id = 10;
-  bool has_qualifier_concept_id() const;
-  private:
-  bool _internal_has_qualifier_concept_id() const;
-  public:
+  // int32 qualifier_concept_id = 10;
   void clear_qualifier_concept_id();
   ::PROTOBUF_NAMESPACE_ID::int32 qualifier_concept_id() const;
   void set_qualifier_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -4012,11 +3694,7 @@ class ObservationInfo final :
   void _internal_set_qualifier_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 unit_concept_id = 11;
-  bool has_unit_concept_id() const;
-  private:
-  bool _internal_has_unit_concept_id() const;
-  public:
+  // int32 unit_concept_id = 11;
   void clear_unit_concept_id();
   ::PROTOBUF_NAMESPACE_ID::int32 unit_concept_id() const;
   void set_unit_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -4025,11 +3703,7 @@ class ObservationInfo final :
   void _internal_set_unit_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 provider_id = 12;
-  bool has_provider_id() const;
-  private:
-  bool _internal_has_provider_id() const;
-  public:
+  // int32 provider_id = 12;
   void clear_provider_id();
   ::PROTOBUF_NAMESPACE_ID::int32 provider_id() const;
   void set_provider_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -4038,11 +3712,7 @@ class ObservationInfo final :
   void _internal_set_provider_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 visit_occurrence_id = 13;
-  bool has_visit_occurrence_id() const;
-  private:
-  bool _internal_has_visit_occurrence_id() const;
-  public:
+  // int32 visit_occurrence_id = 13;
   void clear_visit_occurrence_id();
   ::PROTOBUF_NAMESPACE_ID::int32 visit_occurrence_id() const;
   void set_visit_occurrence_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -4051,11 +3721,7 @@ class ObservationInfo final :
   void _internal_set_visit_occurrence_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 visit_detail_id = 14;
-  bool has_visit_detail_id() const;
-  private:
-  bool _internal_has_visit_detail_id() const;
-  public:
+  // int32 visit_detail_id = 14;
   void clear_visit_detail_id();
   ::PROTOBUF_NAMESPACE_ID::int32 visit_detail_id() const;
   void set_visit_detail_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -4064,11 +3730,7 @@ class ObservationInfo final :
   void _internal_set_visit_detail_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 observation_source_concept_id = 16;
-  bool has_observation_source_concept_id() const;
-  private:
-  bool _internal_has_observation_source_concept_id() const;
-  public:
+  // int32 observation_source_concept_id = 16;
   void clear_observation_source_concept_id();
   ::PROTOBUF_NAMESPACE_ID::int32 observation_source_concept_id() const;
   void set_observation_source_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -4077,11 +3739,7 @@ class ObservationInfo final :
   void _internal_set_observation_source_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 qualifier_source_value = 18;
-  bool has_qualifier_source_value() const;
-  private:
-  bool _internal_has_qualifier_source_value() const;
-  public:
+  // int32 qualifier_source_value = 18;
   void clear_qualifier_source_value();
   ::PROTOBUF_NAMESPACE_ID::int32 qualifier_source_value() const;
   void set_qualifier_source_value(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -4097,8 +3755,6 @@ class ObservationInfo final :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr observation_date_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr observation_datetime_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr value_as_string_;
@@ -4117,6 +3773,7 @@ class ObservationInfo final :
   ::PROTOBUF_NAMESPACE_ID::int32 visit_detail_id_;
   ::PROTOBUF_NAMESPACE_ID::int32 observation_source_concept_id_;
   ::PROTOBUF_NAMESPACE_ID::int32 qualifier_source_value_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_clue_2eproto;
 };
 // -------------------------------------------------------------------
@@ -4269,11 +3926,7 @@ class ProcedureOccurrenceInfo final :
   std::string* _internal_mutable_procedure_date();
   public:
 
-  // optional string procedure_datetime = 6;
-  bool has_procedure_datetime() const;
-  private:
-  bool _internal_has_procedure_datetime() const;
-  public:
+  // string procedure_datetime = 6;
   void clear_procedure_datetime();
   const std::string& procedure_datetime() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4287,11 +3940,7 @@ class ProcedureOccurrenceInfo final :
   std::string* _internal_mutable_procedure_datetime();
   public:
 
-  // optional string procedure_source_value = 12;
-  bool has_procedure_source_value() const;
-  private:
-  bool _internal_has_procedure_source_value() const;
-  public:
+  // string procedure_source_value = 12;
   void clear_procedure_source_value();
   const std::string& procedure_source_value() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4305,11 +3954,7 @@ class ProcedureOccurrenceInfo final :
   std::string* _internal_mutable_procedure_source_value();
   public:
 
-  // optional string modifier_source_value = 14;
-  bool has_modifier_source_value() const;
-  private:
-  bool _internal_has_modifier_source_value() const;
-  public:
+  // string modifier_source_value = 14;
   void clear_modifier_source_value();
   const std::string& modifier_source_value() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4359,11 +4004,7 @@ class ProcedureOccurrenceInfo final :
   void _internal_set_procedure_type_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 modifier_concept_id = 7;
-  bool has_modifier_concept_id() const;
-  private:
-  bool _internal_has_modifier_concept_id() const;
-  public:
+  // int32 modifier_concept_id = 7;
   void clear_modifier_concept_id();
   ::PROTOBUF_NAMESPACE_ID::int32 modifier_concept_id() const;
   void set_modifier_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -4372,11 +4013,7 @@ class ProcedureOccurrenceInfo final :
   void _internal_set_modifier_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 quantity = 8;
-  bool has_quantity() const;
-  private:
-  bool _internal_has_quantity() const;
-  public:
+  // int32 quantity = 8;
   void clear_quantity();
   ::PROTOBUF_NAMESPACE_ID::int32 quantity() const;
   void set_quantity(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -4385,11 +4022,7 @@ class ProcedureOccurrenceInfo final :
   void _internal_set_quantity(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 provider_id = 9;
-  bool has_provider_id() const;
-  private:
-  bool _internal_has_provider_id() const;
-  public:
+  // int32 provider_id = 9;
   void clear_provider_id();
   ::PROTOBUF_NAMESPACE_ID::int32 provider_id() const;
   void set_provider_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -4398,11 +4031,7 @@ class ProcedureOccurrenceInfo final :
   void _internal_set_provider_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 visit_occurrence_id = 10;
-  bool has_visit_occurrence_id() const;
-  private:
-  bool _internal_has_visit_occurrence_id() const;
-  public:
+  // int32 visit_occurrence_id = 10;
   void clear_visit_occurrence_id();
   ::PROTOBUF_NAMESPACE_ID::int32 visit_occurrence_id() const;
   void set_visit_occurrence_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -4411,11 +4040,7 @@ class ProcedureOccurrenceInfo final :
   void _internal_set_visit_occurrence_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 visit_detail_id = 11;
-  bool has_visit_detail_id() const;
-  private:
-  bool _internal_has_visit_detail_id() const;
-  public:
+  // int32 visit_detail_id = 11;
   void clear_visit_detail_id();
   ::PROTOBUF_NAMESPACE_ID::int32 visit_detail_id() const;
   void set_visit_detail_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -4424,11 +4049,7 @@ class ProcedureOccurrenceInfo final :
   void _internal_set_visit_detail_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 procedure_source_concept_id = 13;
-  bool has_procedure_source_concept_id() const;
-  private:
-  bool _internal_has_procedure_source_concept_id() const;
-  public:
+  // int32 procedure_source_concept_id = 13;
   void clear_procedure_source_concept_id();
   ::PROTOBUF_NAMESPACE_ID::int32 procedure_source_concept_id() const;
   void set_procedure_source_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -4444,8 +4065,6 @@ class ProcedureOccurrenceInfo final :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr procedure_date_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr procedure_datetime_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr procedure_source_value_;
@@ -4460,6 +4079,7 @@ class ProcedureOccurrenceInfo final :
   ::PROTOBUF_NAMESPACE_ID::int32 visit_occurrence_id_;
   ::PROTOBUF_NAMESPACE_ID::int32 visit_detail_id_;
   ::PROTOBUF_NAMESPACE_ID::int32 procedure_source_concept_id_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_clue_2eproto;
 };
 // -------------------------------------------------------------------
@@ -4629,11 +4249,7 @@ class VisitOccurrenceInfo final :
   std::string* _internal_mutable_visit_end_date();
   public:
 
-  // optional string visit_start_datetime = 7;
-  bool has_visit_start_datetime() const;
-  private:
-  bool _internal_has_visit_start_datetime() const;
-  public:
+  // string visit_start_datetime = 7;
   void clear_visit_start_datetime();
   const std::string& visit_start_datetime() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4647,11 +4263,7 @@ class VisitOccurrenceInfo final :
   std::string* _internal_mutable_visit_start_datetime();
   public:
 
-  // optional string visit_end_datetime = 8;
-  bool has_visit_end_datetime() const;
-  private:
-  bool _internal_has_visit_end_datetime() const;
-  public:
+  // string visit_end_datetime = 8;
   void clear_visit_end_datetime();
   const std::string& visit_end_datetime() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4665,11 +4277,7 @@ class VisitOccurrenceInfo final :
   std::string* _internal_mutable_visit_end_datetime();
   public:
 
-  // optional string visit_source_value = 11;
-  bool has_visit_source_value() const;
-  private:
-  bool _internal_has_visit_source_value() const;
-  public:
+  // string visit_source_value = 11;
   void clear_visit_source_value();
   const std::string& visit_source_value() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4683,11 +4291,7 @@ class VisitOccurrenceInfo final :
   std::string* _internal_mutable_visit_source_value();
   public:
 
-  // optional string admitting_source_value = 14;
-  bool has_admitting_source_value() const;
-  private:
-  bool _internal_has_admitting_source_value() const;
-  public:
+  // string admitting_source_value = 14;
   void clear_admitting_source_value();
   const std::string& admitting_source_value() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4701,11 +4305,7 @@ class VisitOccurrenceInfo final :
   std::string* _internal_mutable_admitting_source_value();
   public:
 
-  // optional string discharge_to_source_value = 16;
-  bool has_discharge_to_source_value() const;
-  private:
-  bool _internal_has_discharge_to_source_value() const;
-  public:
+  // string discharge_to_source_value = 16;
   void clear_discharge_to_source_value();
   const std::string& discharge_to_source_value() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
@@ -4755,11 +4355,7 @@ class VisitOccurrenceInfo final :
   void _internal_set_visit_type_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 provider_id = 9;
-  bool has_provider_id() const;
-  private:
-  bool _internal_has_provider_id() const;
-  public:
+  // int32 provider_id = 9;
   void clear_provider_id();
   ::PROTOBUF_NAMESPACE_ID::int32 provider_id() const;
   void set_provider_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -4768,11 +4364,7 @@ class VisitOccurrenceInfo final :
   void _internal_set_provider_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 care_site_id = 10;
-  bool has_care_site_id() const;
-  private:
-  bool _internal_has_care_site_id() const;
-  public:
+  // int32 care_site_id = 10;
   void clear_care_site_id();
   ::PROTOBUF_NAMESPACE_ID::int32 care_site_id() const;
   void set_care_site_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -4781,11 +4373,7 @@ class VisitOccurrenceInfo final :
   void _internal_set_care_site_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 visit_source_concept_id = 12;
-  bool has_visit_source_concept_id() const;
-  private:
-  bool _internal_has_visit_source_concept_id() const;
-  public:
+  // int32 visit_source_concept_id = 12;
   void clear_visit_source_concept_id();
   ::PROTOBUF_NAMESPACE_ID::int32 visit_source_concept_id() const;
   void set_visit_source_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -4794,11 +4382,7 @@ class VisitOccurrenceInfo final :
   void _internal_set_visit_source_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 admitting_source_concept_id = 13;
-  bool has_admitting_source_concept_id() const;
-  private:
-  bool _internal_has_admitting_source_concept_id() const;
-  public:
+  // int32 admitting_source_concept_id = 13;
   void clear_admitting_source_concept_id();
   ::PROTOBUF_NAMESPACE_ID::int32 admitting_source_concept_id() const;
   void set_admitting_source_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -4807,11 +4391,7 @@ class VisitOccurrenceInfo final :
   void _internal_set_admitting_source_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 discharge_to_concept_id = 15;
-  bool has_discharge_to_concept_id() const;
-  private:
-  bool _internal_has_discharge_to_concept_id() const;
-  public:
+  // int32 discharge_to_concept_id = 15;
   void clear_discharge_to_concept_id();
   ::PROTOBUF_NAMESPACE_ID::int32 discharge_to_concept_id() const;
   void set_discharge_to_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -4820,11 +4400,7 @@ class VisitOccurrenceInfo final :
   void _internal_set_discharge_to_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // optional int32 preceding_visit_occurrence_id = 17;
-  bool has_preceding_visit_occurrence_id() const;
-  private:
-  bool _internal_has_preceding_visit_occurrence_id() const;
-  public:
+  // int32 preceding_visit_occurrence_id = 17;
   void clear_preceding_visit_occurrence_id();
   ::PROTOBUF_NAMESPACE_ID::int32 preceding_visit_occurrence_id() const;
   void set_preceding_visit_occurrence_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -4840,8 +4416,6 @@ class VisitOccurrenceInfo final :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr visit_start_date_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr visit_end_date_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr visit_start_datetime_;
@@ -4859,6 +4433,7 @@ class VisitOccurrenceInfo final :
   ::PROTOBUF_NAMESPACE_ID::int32 admitting_source_concept_id_;
   ::PROTOBUF_NAMESPACE_ID::int32 discharge_to_concept_id_;
   ::PROTOBUF_NAMESPACE_ID::int32 preceding_visit_occurrence_id_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_clue_2eproto;
 };
 // ===================================================================
@@ -5564,17 +5139,9 @@ inline void PersonInfo::set_ethnicity_concept_id(::PROTOBUF_NAMESPACE_ID::int32 
   // @@protoc_insertion_point(field_set:PersonInfo.ethnicity_concept_id)
 }
 
-// optional int32 month_of_birth = 6;
-inline bool PersonInfo::_internal_has_month_of_birth() const {
-  bool value = (_has_bits_[0] & 0x00000020u) != 0;
-  return value;
-}
-inline bool PersonInfo::has_month_of_birth() const {
-  return _internal_has_month_of_birth();
-}
+// int32 month_of_birth = 6;
 inline void PersonInfo::clear_month_of_birth() {
   month_of_birth_ = 0;
-  _has_bits_[0] &= ~0x00000020u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 PersonInfo::_internal_month_of_birth() const {
   return month_of_birth_;
@@ -5584,7 +5151,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 PersonInfo::month_of_birth() const {
   return _internal_month_of_birth();
 }
 inline void PersonInfo::_internal_set_month_of_birth(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000020u;
+  
   month_of_birth_ = value;
 }
 inline void PersonInfo::set_month_of_birth(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -5592,17 +5159,9 @@ inline void PersonInfo::set_month_of_birth(::PROTOBUF_NAMESPACE_ID::int32 value)
   // @@protoc_insertion_point(field_set:PersonInfo.month_of_birth)
 }
 
-// optional int32 day_of_birth = 7;
-inline bool PersonInfo::_internal_has_day_of_birth() const {
-  bool value = (_has_bits_[0] & 0x00000040u) != 0;
-  return value;
-}
-inline bool PersonInfo::has_day_of_birth() const {
-  return _internal_has_day_of_birth();
-}
+// int32 day_of_birth = 7;
 inline void PersonInfo::clear_day_of_birth() {
   day_of_birth_ = 0;
-  _has_bits_[0] &= ~0x00000040u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 PersonInfo::_internal_day_of_birth() const {
   return day_of_birth_;
@@ -5612,7 +5171,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 PersonInfo::day_of_birth() const {
   return _internal_day_of_birth();
 }
 inline void PersonInfo::_internal_set_day_of_birth(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000040u;
+  
   day_of_birth_ = value;
 }
 inline void PersonInfo::set_day_of_birth(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -5620,17 +5179,9 @@ inline void PersonInfo::set_day_of_birth(::PROTOBUF_NAMESPACE_ID::int32 value) {
   // @@protoc_insertion_point(field_set:PersonInfo.day_of_birth)
 }
 
-// optional string birth_datetime = 8;
-inline bool PersonInfo::_internal_has_birth_datetime() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool PersonInfo::has_birth_datetime() const {
-  return _internal_has_birth_datetime();
-}
+// string birth_datetime = 8;
 inline void PersonInfo::clear_birth_datetime() {
   birth_datetime_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& PersonInfo::birth_datetime() const {
   // @@protoc_insertion_point(field_get:PersonInfo.birth_datetime)
@@ -5639,7 +5190,7 @@ inline const std::string& PersonInfo::birth_datetime() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void PersonInfo::set_birth_datetime(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000001u;
+ 
  birth_datetime_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:PersonInfo.birth_datetime)
 }
@@ -5652,43 +5203,31 @@ inline const std::string& PersonInfo::_internal_birth_datetime() const {
   return birth_datetime_.Get();
 }
 inline void PersonInfo::_internal_set_birth_datetime(const std::string& value) {
-  _has_bits_[0] |= 0x00000001u;
+  
   birth_datetime_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* PersonInfo::_internal_mutable_birth_datetime() {
-  _has_bits_[0] |= 0x00000001u;
+  
   return birth_datetime_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* PersonInfo::release_birth_datetime() {
   // @@protoc_insertion_point(field_release:PersonInfo.birth_datetime)
-  if (!_internal_has_birth_datetime()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000001u;
-  return birth_datetime_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return birth_datetime_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void PersonInfo::set_allocated_birth_datetime(std::string* birth_datetime) {
   if (birth_datetime != nullptr) {
-    _has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000001u;
+    
   }
   birth_datetime_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), birth_datetime,
       GetArenaForAllocation());
   // @@protoc_insertion_point(field_set_allocated:PersonInfo.birth_datetime)
 }
 
-// optional int32 location_id = 9;
-inline bool PersonInfo::_internal_has_location_id() const {
-  bool value = (_has_bits_[0] & 0x00000080u) != 0;
-  return value;
-}
-inline bool PersonInfo::has_location_id() const {
-  return _internal_has_location_id();
-}
+// int32 location_id = 9;
 inline void PersonInfo::clear_location_id() {
   location_id_ = 0;
-  _has_bits_[0] &= ~0x00000080u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 PersonInfo::_internal_location_id() const {
   return location_id_;
@@ -5698,7 +5237,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 PersonInfo::location_id() const {
   return _internal_location_id();
 }
 inline void PersonInfo::_internal_set_location_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000080u;
+  
   location_id_ = value;
 }
 inline void PersonInfo::set_location_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -5706,17 +5245,9 @@ inline void PersonInfo::set_location_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
   // @@protoc_insertion_point(field_set:PersonInfo.location_id)
 }
 
-// optional int32 provider_id = 10;
-inline bool PersonInfo::_internal_has_provider_id() const {
-  bool value = (_has_bits_[0] & 0x00000100u) != 0;
-  return value;
-}
-inline bool PersonInfo::has_provider_id() const {
-  return _internal_has_provider_id();
-}
+// int32 provider_id = 10;
 inline void PersonInfo::clear_provider_id() {
   provider_id_ = 0;
-  _has_bits_[0] &= ~0x00000100u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 PersonInfo::_internal_provider_id() const {
   return provider_id_;
@@ -5726,7 +5257,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 PersonInfo::provider_id() const {
   return _internal_provider_id();
 }
 inline void PersonInfo::_internal_set_provider_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000100u;
+  
   provider_id_ = value;
 }
 inline void PersonInfo::set_provider_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -5734,17 +5265,9 @@ inline void PersonInfo::set_provider_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
   // @@protoc_insertion_point(field_set:PersonInfo.provider_id)
 }
 
-// optional int32 care_site_id = 11;
-inline bool PersonInfo::_internal_has_care_site_id() const {
-  bool value = (_has_bits_[0] & 0x00000200u) != 0;
-  return value;
-}
-inline bool PersonInfo::has_care_site_id() const {
-  return _internal_has_care_site_id();
-}
+// int32 care_site_id = 11;
 inline void PersonInfo::clear_care_site_id() {
   care_site_id_ = 0;
-  _has_bits_[0] &= ~0x00000200u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 PersonInfo::_internal_care_site_id() const {
   return care_site_id_;
@@ -5754,7 +5277,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 PersonInfo::care_site_id() const {
   return _internal_care_site_id();
 }
 inline void PersonInfo::_internal_set_care_site_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000200u;
+  
   care_site_id_ = value;
 }
 inline void PersonInfo::set_care_site_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -5762,17 +5285,9 @@ inline void PersonInfo::set_care_site_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
   // @@protoc_insertion_point(field_set:PersonInfo.care_site_id)
 }
 
-// optional string person_source_value = 12;
-inline bool PersonInfo::_internal_has_person_source_value() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool PersonInfo::has_person_source_value() const {
-  return _internal_has_person_source_value();
-}
+// string person_source_value = 12;
 inline void PersonInfo::clear_person_source_value() {
   person_source_value_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& PersonInfo::person_source_value() const {
   // @@protoc_insertion_point(field_get:PersonInfo.person_source_value)
@@ -5781,7 +5296,7 @@ inline const std::string& PersonInfo::person_source_value() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void PersonInfo::set_person_source_value(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000002u;
+ 
  person_source_value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:PersonInfo.person_source_value)
 }
@@ -5794,43 +5309,31 @@ inline const std::string& PersonInfo::_internal_person_source_value() const {
   return person_source_value_.Get();
 }
 inline void PersonInfo::_internal_set_person_source_value(const std::string& value) {
-  _has_bits_[0] |= 0x00000002u;
+  
   person_source_value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* PersonInfo::_internal_mutable_person_source_value() {
-  _has_bits_[0] |= 0x00000002u;
+  
   return person_source_value_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* PersonInfo::release_person_source_value() {
   // @@protoc_insertion_point(field_release:PersonInfo.person_source_value)
-  if (!_internal_has_person_source_value()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000002u;
-  return person_source_value_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return person_source_value_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void PersonInfo::set_allocated_person_source_value(std::string* person_source_value) {
   if (person_source_value != nullptr) {
-    _has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000002u;
+    
   }
   person_source_value_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), person_source_value,
       GetArenaForAllocation());
   // @@protoc_insertion_point(field_set_allocated:PersonInfo.person_source_value)
 }
 
-// optional string gender_source_value = 13;
-inline bool PersonInfo::_internal_has_gender_source_value() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool PersonInfo::has_gender_source_value() const {
-  return _internal_has_gender_source_value();
-}
+// string gender_source_value = 13;
 inline void PersonInfo::clear_gender_source_value() {
   gender_source_value_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& PersonInfo::gender_source_value() const {
   // @@protoc_insertion_point(field_get:PersonInfo.gender_source_value)
@@ -5839,7 +5342,7 @@ inline const std::string& PersonInfo::gender_source_value() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void PersonInfo::set_gender_source_value(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000004u;
+ 
  gender_source_value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:PersonInfo.gender_source_value)
 }
@@ -5852,43 +5355,31 @@ inline const std::string& PersonInfo::_internal_gender_source_value() const {
   return gender_source_value_.Get();
 }
 inline void PersonInfo::_internal_set_gender_source_value(const std::string& value) {
-  _has_bits_[0] |= 0x00000004u;
+  
   gender_source_value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* PersonInfo::_internal_mutable_gender_source_value() {
-  _has_bits_[0] |= 0x00000004u;
+  
   return gender_source_value_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* PersonInfo::release_gender_source_value() {
   // @@protoc_insertion_point(field_release:PersonInfo.gender_source_value)
-  if (!_internal_has_gender_source_value()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000004u;
-  return gender_source_value_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return gender_source_value_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void PersonInfo::set_allocated_gender_source_value(std::string* gender_source_value) {
   if (gender_source_value != nullptr) {
-    _has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000004u;
+    
   }
   gender_source_value_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), gender_source_value,
       GetArenaForAllocation());
   // @@protoc_insertion_point(field_set_allocated:PersonInfo.gender_source_value)
 }
 
-// optional int32 gender_source_concept_id = 14;
-inline bool PersonInfo::_internal_has_gender_source_concept_id() const {
-  bool value = (_has_bits_[0] & 0x00000400u) != 0;
-  return value;
-}
-inline bool PersonInfo::has_gender_source_concept_id() const {
-  return _internal_has_gender_source_concept_id();
-}
+// int32 gender_source_concept_id = 14;
 inline void PersonInfo::clear_gender_source_concept_id() {
   gender_source_concept_id_ = 0;
-  _has_bits_[0] &= ~0x00000400u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 PersonInfo::_internal_gender_source_concept_id() const {
   return gender_source_concept_id_;
@@ -5898,7 +5389,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 PersonInfo::gender_source_concept_id() con
   return _internal_gender_source_concept_id();
 }
 inline void PersonInfo::_internal_set_gender_source_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000400u;
+  
   gender_source_concept_id_ = value;
 }
 inline void PersonInfo::set_gender_source_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -5906,17 +5397,9 @@ inline void PersonInfo::set_gender_source_concept_id(::PROTOBUF_NAMESPACE_ID::in
   // @@protoc_insertion_point(field_set:PersonInfo.gender_source_concept_id)
 }
 
-// optional string race_source_value = 15;
-inline bool PersonInfo::_internal_has_race_source_value() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool PersonInfo::has_race_source_value() const {
-  return _internal_has_race_source_value();
-}
+// string race_source_value = 15;
 inline void PersonInfo::clear_race_source_value() {
   race_source_value_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000008u;
 }
 inline const std::string& PersonInfo::race_source_value() const {
   // @@protoc_insertion_point(field_get:PersonInfo.race_source_value)
@@ -5925,7 +5408,7 @@ inline const std::string& PersonInfo::race_source_value() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void PersonInfo::set_race_source_value(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000008u;
+ 
  race_source_value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:PersonInfo.race_source_value)
 }
@@ -5938,43 +5421,31 @@ inline const std::string& PersonInfo::_internal_race_source_value() const {
   return race_source_value_.Get();
 }
 inline void PersonInfo::_internal_set_race_source_value(const std::string& value) {
-  _has_bits_[0] |= 0x00000008u;
+  
   race_source_value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* PersonInfo::_internal_mutable_race_source_value() {
-  _has_bits_[0] |= 0x00000008u;
+  
   return race_source_value_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* PersonInfo::release_race_source_value() {
   // @@protoc_insertion_point(field_release:PersonInfo.race_source_value)
-  if (!_internal_has_race_source_value()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000008u;
-  return race_source_value_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return race_source_value_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void PersonInfo::set_allocated_race_source_value(std::string* race_source_value) {
   if (race_source_value != nullptr) {
-    _has_bits_[0] |= 0x00000008u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000008u;
+    
   }
   race_source_value_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), race_source_value,
       GetArenaForAllocation());
   // @@protoc_insertion_point(field_set_allocated:PersonInfo.race_source_value)
 }
 
-// optional int32 race_source_concept_id = 16;
-inline bool PersonInfo::_internal_has_race_source_concept_id() const {
-  bool value = (_has_bits_[0] & 0x00000800u) != 0;
-  return value;
-}
-inline bool PersonInfo::has_race_source_concept_id() const {
-  return _internal_has_race_source_concept_id();
-}
+// int32 race_source_concept_id = 16;
 inline void PersonInfo::clear_race_source_concept_id() {
   race_source_concept_id_ = 0;
-  _has_bits_[0] &= ~0x00000800u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 PersonInfo::_internal_race_source_concept_id() const {
   return race_source_concept_id_;
@@ -5984,7 +5455,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 PersonInfo::race_source_concept_id() const
   return _internal_race_source_concept_id();
 }
 inline void PersonInfo::_internal_set_race_source_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000800u;
+  
   race_source_concept_id_ = value;
 }
 inline void PersonInfo::set_race_source_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -5992,17 +5463,9 @@ inline void PersonInfo::set_race_source_concept_id(::PROTOBUF_NAMESPACE_ID::int3
   // @@protoc_insertion_point(field_set:PersonInfo.race_source_concept_id)
 }
 
-// optional string ethnicity_source_value = 17;
-inline bool PersonInfo::_internal_has_ethnicity_source_value() const {
-  bool value = (_has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool PersonInfo::has_ethnicity_source_value() const {
-  return _internal_has_ethnicity_source_value();
-}
+// string ethnicity_source_value = 17;
 inline void PersonInfo::clear_ethnicity_source_value() {
   ethnicity_source_value_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000010u;
 }
 inline const std::string& PersonInfo::ethnicity_source_value() const {
   // @@protoc_insertion_point(field_get:PersonInfo.ethnicity_source_value)
@@ -6011,7 +5474,7 @@ inline const std::string& PersonInfo::ethnicity_source_value() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void PersonInfo::set_ethnicity_source_value(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000010u;
+ 
  ethnicity_source_value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:PersonInfo.ethnicity_source_value)
 }
@@ -6024,43 +5487,31 @@ inline const std::string& PersonInfo::_internal_ethnicity_source_value() const {
   return ethnicity_source_value_.Get();
 }
 inline void PersonInfo::_internal_set_ethnicity_source_value(const std::string& value) {
-  _has_bits_[0] |= 0x00000010u;
+  
   ethnicity_source_value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* PersonInfo::_internal_mutable_ethnicity_source_value() {
-  _has_bits_[0] |= 0x00000010u;
+  
   return ethnicity_source_value_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* PersonInfo::release_ethnicity_source_value() {
   // @@protoc_insertion_point(field_release:PersonInfo.ethnicity_source_value)
-  if (!_internal_has_ethnicity_source_value()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000010u;
-  return ethnicity_source_value_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return ethnicity_source_value_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void PersonInfo::set_allocated_ethnicity_source_value(std::string* ethnicity_source_value) {
   if (ethnicity_source_value != nullptr) {
-    _has_bits_[0] |= 0x00000010u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000010u;
+    
   }
   ethnicity_source_value_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ethnicity_source_value,
       GetArenaForAllocation());
   // @@protoc_insertion_point(field_set_allocated:PersonInfo.ethnicity_source_value)
 }
 
-// optional int32 ethnicity_source_concept_id = 18;
-inline bool PersonInfo::_internal_has_ethnicity_source_concept_id() const {
-  bool value = (_has_bits_[0] & 0x00001000u) != 0;
-  return value;
-}
-inline bool PersonInfo::has_ethnicity_source_concept_id() const {
-  return _internal_has_ethnicity_source_concept_id();
-}
+// int32 ethnicity_source_concept_id = 18;
 inline void PersonInfo::clear_ethnicity_source_concept_id() {
   ethnicity_source_concept_id_ = 0;
-  _has_bits_[0] &= ~0x00001000u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 PersonInfo::_internal_ethnicity_source_concept_id() const {
   return ethnicity_source_concept_id_;
@@ -6070,7 +5521,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 PersonInfo::ethnicity_source_concept_id() 
   return _internal_ethnicity_source_concept_id();
 }
 inline void PersonInfo::_internal_set_ethnicity_source_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00001000u;
+  
   ethnicity_source_concept_id_ = value;
 }
 inline void PersonInfo::set_ethnicity_source_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -6208,17 +5659,9 @@ inline void ConditionOccurrenceInfo::set_condition_type_concept_id(::PROTOBUF_NA
   // @@protoc_insertion_point(field_set:ConditionOccurrenceInfo.condition_type_concept_id)
 }
 
-// optional string condition_start_datetime = 6;
-inline bool ConditionOccurrenceInfo::_internal_has_condition_start_datetime() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool ConditionOccurrenceInfo::has_condition_start_datetime() const {
-  return _internal_has_condition_start_datetime();
-}
+// string condition_start_datetime = 6;
 inline void ConditionOccurrenceInfo::clear_condition_start_datetime() {
   condition_start_datetime_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& ConditionOccurrenceInfo::condition_start_datetime() const {
   // @@protoc_insertion_point(field_get:ConditionOccurrenceInfo.condition_start_datetime)
@@ -6227,7 +5670,7 @@ inline const std::string& ConditionOccurrenceInfo::condition_start_datetime() co
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ConditionOccurrenceInfo::set_condition_start_datetime(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000001u;
+ 
  condition_start_datetime_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:ConditionOccurrenceInfo.condition_start_datetime)
 }
@@ -6240,43 +5683,31 @@ inline const std::string& ConditionOccurrenceInfo::_internal_condition_start_dat
   return condition_start_datetime_.Get();
 }
 inline void ConditionOccurrenceInfo::_internal_set_condition_start_datetime(const std::string& value) {
-  _has_bits_[0] |= 0x00000001u;
+  
   condition_start_datetime_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* ConditionOccurrenceInfo::_internal_mutable_condition_start_datetime() {
-  _has_bits_[0] |= 0x00000001u;
+  
   return condition_start_datetime_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* ConditionOccurrenceInfo::release_condition_start_datetime() {
   // @@protoc_insertion_point(field_release:ConditionOccurrenceInfo.condition_start_datetime)
-  if (!_internal_has_condition_start_datetime()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000001u;
-  return condition_start_datetime_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return condition_start_datetime_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void ConditionOccurrenceInfo::set_allocated_condition_start_datetime(std::string* condition_start_datetime) {
   if (condition_start_datetime != nullptr) {
-    _has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000001u;
+    
   }
   condition_start_datetime_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), condition_start_datetime,
       GetArenaForAllocation());
   // @@protoc_insertion_point(field_set_allocated:ConditionOccurrenceInfo.condition_start_datetime)
 }
 
-// optional string condition_end_date = 7;
-inline bool ConditionOccurrenceInfo::_internal_has_condition_end_date() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool ConditionOccurrenceInfo::has_condition_end_date() const {
-  return _internal_has_condition_end_date();
-}
+// string condition_end_date = 7;
 inline void ConditionOccurrenceInfo::clear_condition_end_date() {
   condition_end_date_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& ConditionOccurrenceInfo::condition_end_date() const {
   // @@protoc_insertion_point(field_get:ConditionOccurrenceInfo.condition_end_date)
@@ -6285,7 +5716,7 @@ inline const std::string& ConditionOccurrenceInfo::condition_end_date() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ConditionOccurrenceInfo::set_condition_end_date(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000002u;
+ 
  condition_end_date_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:ConditionOccurrenceInfo.condition_end_date)
 }
@@ -6298,43 +5729,31 @@ inline const std::string& ConditionOccurrenceInfo::_internal_condition_end_date(
   return condition_end_date_.Get();
 }
 inline void ConditionOccurrenceInfo::_internal_set_condition_end_date(const std::string& value) {
-  _has_bits_[0] |= 0x00000002u;
+  
   condition_end_date_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* ConditionOccurrenceInfo::_internal_mutable_condition_end_date() {
-  _has_bits_[0] |= 0x00000002u;
+  
   return condition_end_date_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* ConditionOccurrenceInfo::release_condition_end_date() {
   // @@protoc_insertion_point(field_release:ConditionOccurrenceInfo.condition_end_date)
-  if (!_internal_has_condition_end_date()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000002u;
-  return condition_end_date_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return condition_end_date_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void ConditionOccurrenceInfo::set_allocated_condition_end_date(std::string* condition_end_date) {
   if (condition_end_date != nullptr) {
-    _has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000002u;
+    
   }
   condition_end_date_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), condition_end_date,
       GetArenaForAllocation());
   // @@protoc_insertion_point(field_set_allocated:ConditionOccurrenceInfo.condition_end_date)
 }
 
-// optional string condition_end_datetime = 8;
-inline bool ConditionOccurrenceInfo::_internal_has_condition_end_datetime() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool ConditionOccurrenceInfo::has_condition_end_datetime() const {
-  return _internal_has_condition_end_datetime();
-}
+// string condition_end_datetime = 8;
 inline void ConditionOccurrenceInfo::clear_condition_end_datetime() {
   condition_end_datetime_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& ConditionOccurrenceInfo::condition_end_datetime() const {
   // @@protoc_insertion_point(field_get:ConditionOccurrenceInfo.condition_end_datetime)
@@ -6343,7 +5762,7 @@ inline const std::string& ConditionOccurrenceInfo::condition_end_datetime() cons
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ConditionOccurrenceInfo::set_condition_end_datetime(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000004u;
+ 
  condition_end_datetime_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:ConditionOccurrenceInfo.condition_end_datetime)
 }
@@ -6356,43 +5775,31 @@ inline const std::string& ConditionOccurrenceInfo::_internal_condition_end_datet
   return condition_end_datetime_.Get();
 }
 inline void ConditionOccurrenceInfo::_internal_set_condition_end_datetime(const std::string& value) {
-  _has_bits_[0] |= 0x00000004u;
+  
   condition_end_datetime_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* ConditionOccurrenceInfo::_internal_mutable_condition_end_datetime() {
-  _has_bits_[0] |= 0x00000004u;
+  
   return condition_end_datetime_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* ConditionOccurrenceInfo::release_condition_end_datetime() {
   // @@protoc_insertion_point(field_release:ConditionOccurrenceInfo.condition_end_datetime)
-  if (!_internal_has_condition_end_datetime()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000004u;
-  return condition_end_datetime_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return condition_end_datetime_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void ConditionOccurrenceInfo::set_allocated_condition_end_datetime(std::string* condition_end_datetime) {
   if (condition_end_datetime != nullptr) {
-    _has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000004u;
+    
   }
   condition_end_datetime_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), condition_end_datetime,
       GetArenaForAllocation());
   // @@protoc_insertion_point(field_set_allocated:ConditionOccurrenceInfo.condition_end_datetime)
 }
 
-// optional int32 condition_status_concept_id = 9;
-inline bool ConditionOccurrenceInfo::_internal_has_condition_status_concept_id() const {
-  bool value = (_has_bits_[0] & 0x00000040u) != 0;
-  return value;
-}
-inline bool ConditionOccurrenceInfo::has_condition_status_concept_id() const {
-  return _internal_has_condition_status_concept_id();
-}
+// int32 condition_status_concept_id = 9;
 inline void ConditionOccurrenceInfo::clear_condition_status_concept_id() {
   condition_status_concept_id_ = 0;
-  _has_bits_[0] &= ~0x00000040u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 ConditionOccurrenceInfo::_internal_condition_status_concept_id() const {
   return condition_status_concept_id_;
@@ -6402,7 +5809,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 ConditionOccurrenceInfo::condition_status_
   return _internal_condition_status_concept_id();
 }
 inline void ConditionOccurrenceInfo::_internal_set_condition_status_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000040u;
+  
   condition_status_concept_id_ = value;
 }
 inline void ConditionOccurrenceInfo::set_condition_status_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -6410,17 +5817,9 @@ inline void ConditionOccurrenceInfo::set_condition_status_concept_id(::PROTOBUF_
   // @@protoc_insertion_point(field_set:ConditionOccurrenceInfo.condition_status_concept_id)
 }
 
-// optional string stop_reason = 10;
-inline bool ConditionOccurrenceInfo::_internal_has_stop_reason() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool ConditionOccurrenceInfo::has_stop_reason() const {
-  return _internal_has_stop_reason();
-}
+// string stop_reason = 10;
 inline void ConditionOccurrenceInfo::clear_stop_reason() {
   stop_reason_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000008u;
 }
 inline const std::string& ConditionOccurrenceInfo::stop_reason() const {
   // @@protoc_insertion_point(field_get:ConditionOccurrenceInfo.stop_reason)
@@ -6429,7 +5828,7 @@ inline const std::string& ConditionOccurrenceInfo::stop_reason() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ConditionOccurrenceInfo::set_stop_reason(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000008u;
+ 
  stop_reason_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:ConditionOccurrenceInfo.stop_reason)
 }
@@ -6442,43 +5841,31 @@ inline const std::string& ConditionOccurrenceInfo::_internal_stop_reason() const
   return stop_reason_.Get();
 }
 inline void ConditionOccurrenceInfo::_internal_set_stop_reason(const std::string& value) {
-  _has_bits_[0] |= 0x00000008u;
+  
   stop_reason_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* ConditionOccurrenceInfo::_internal_mutable_stop_reason() {
-  _has_bits_[0] |= 0x00000008u;
+  
   return stop_reason_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* ConditionOccurrenceInfo::release_stop_reason() {
   // @@protoc_insertion_point(field_release:ConditionOccurrenceInfo.stop_reason)
-  if (!_internal_has_stop_reason()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000008u;
-  return stop_reason_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return stop_reason_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void ConditionOccurrenceInfo::set_allocated_stop_reason(std::string* stop_reason) {
   if (stop_reason != nullptr) {
-    _has_bits_[0] |= 0x00000008u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000008u;
+    
   }
   stop_reason_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), stop_reason,
       GetArenaForAllocation());
   // @@protoc_insertion_point(field_set_allocated:ConditionOccurrenceInfo.stop_reason)
 }
 
-// optional int32 provider_id = 11;
-inline bool ConditionOccurrenceInfo::_internal_has_provider_id() const {
-  bool value = (_has_bits_[0] & 0x00000080u) != 0;
-  return value;
-}
-inline bool ConditionOccurrenceInfo::has_provider_id() const {
-  return _internal_has_provider_id();
-}
+// int32 provider_id = 11;
 inline void ConditionOccurrenceInfo::clear_provider_id() {
   provider_id_ = 0;
-  _has_bits_[0] &= ~0x00000080u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 ConditionOccurrenceInfo::_internal_provider_id() const {
   return provider_id_;
@@ -6488,7 +5875,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 ConditionOccurrenceInfo::provider_id() con
   return _internal_provider_id();
 }
 inline void ConditionOccurrenceInfo::_internal_set_provider_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000080u;
+  
   provider_id_ = value;
 }
 inline void ConditionOccurrenceInfo::set_provider_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -6496,17 +5883,9 @@ inline void ConditionOccurrenceInfo::set_provider_id(::PROTOBUF_NAMESPACE_ID::in
   // @@protoc_insertion_point(field_set:ConditionOccurrenceInfo.provider_id)
 }
 
-// optional int32 visit_occurrence_id = 12;
-inline bool ConditionOccurrenceInfo::_internal_has_visit_occurrence_id() const {
-  bool value = (_has_bits_[0] & 0x00000100u) != 0;
-  return value;
-}
-inline bool ConditionOccurrenceInfo::has_visit_occurrence_id() const {
-  return _internal_has_visit_occurrence_id();
-}
+// int32 visit_occurrence_id = 12;
 inline void ConditionOccurrenceInfo::clear_visit_occurrence_id() {
   visit_occurrence_id_ = 0;
-  _has_bits_[0] &= ~0x00000100u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 ConditionOccurrenceInfo::_internal_visit_occurrence_id() const {
   return visit_occurrence_id_;
@@ -6516,7 +5895,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 ConditionOccurrenceInfo::visit_occurrence_
   return _internal_visit_occurrence_id();
 }
 inline void ConditionOccurrenceInfo::_internal_set_visit_occurrence_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000100u;
+  
   visit_occurrence_id_ = value;
 }
 inline void ConditionOccurrenceInfo::set_visit_occurrence_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -6524,17 +5903,9 @@ inline void ConditionOccurrenceInfo::set_visit_occurrence_id(::PROTOBUF_NAMESPAC
   // @@protoc_insertion_point(field_set:ConditionOccurrenceInfo.visit_occurrence_id)
 }
 
-// optional int32 visit_detail_id = 13;
-inline bool ConditionOccurrenceInfo::_internal_has_visit_detail_id() const {
-  bool value = (_has_bits_[0] & 0x00000200u) != 0;
-  return value;
-}
-inline bool ConditionOccurrenceInfo::has_visit_detail_id() const {
-  return _internal_has_visit_detail_id();
-}
+// int32 visit_detail_id = 13;
 inline void ConditionOccurrenceInfo::clear_visit_detail_id() {
   visit_detail_id_ = 0;
-  _has_bits_[0] &= ~0x00000200u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 ConditionOccurrenceInfo::_internal_visit_detail_id() const {
   return visit_detail_id_;
@@ -6544,7 +5915,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 ConditionOccurrenceInfo::visit_detail_id()
   return _internal_visit_detail_id();
 }
 inline void ConditionOccurrenceInfo::_internal_set_visit_detail_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000200u;
+  
   visit_detail_id_ = value;
 }
 inline void ConditionOccurrenceInfo::set_visit_detail_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -6552,17 +5923,9 @@ inline void ConditionOccurrenceInfo::set_visit_detail_id(::PROTOBUF_NAMESPACE_ID
   // @@protoc_insertion_point(field_set:ConditionOccurrenceInfo.visit_detail_id)
 }
 
-// optional string condition_source_value = 14;
-inline bool ConditionOccurrenceInfo::_internal_has_condition_source_value() const {
-  bool value = (_has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool ConditionOccurrenceInfo::has_condition_source_value() const {
-  return _internal_has_condition_source_value();
-}
+// string condition_source_value = 14;
 inline void ConditionOccurrenceInfo::clear_condition_source_value() {
   condition_source_value_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000010u;
 }
 inline const std::string& ConditionOccurrenceInfo::condition_source_value() const {
   // @@protoc_insertion_point(field_get:ConditionOccurrenceInfo.condition_source_value)
@@ -6571,7 +5934,7 @@ inline const std::string& ConditionOccurrenceInfo::condition_source_value() cons
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ConditionOccurrenceInfo::set_condition_source_value(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000010u;
+ 
  condition_source_value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:ConditionOccurrenceInfo.condition_source_value)
 }
@@ -6584,43 +5947,31 @@ inline const std::string& ConditionOccurrenceInfo::_internal_condition_source_va
   return condition_source_value_.Get();
 }
 inline void ConditionOccurrenceInfo::_internal_set_condition_source_value(const std::string& value) {
-  _has_bits_[0] |= 0x00000010u;
+  
   condition_source_value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* ConditionOccurrenceInfo::_internal_mutable_condition_source_value() {
-  _has_bits_[0] |= 0x00000010u;
+  
   return condition_source_value_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* ConditionOccurrenceInfo::release_condition_source_value() {
   // @@protoc_insertion_point(field_release:ConditionOccurrenceInfo.condition_source_value)
-  if (!_internal_has_condition_source_value()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000010u;
-  return condition_source_value_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return condition_source_value_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void ConditionOccurrenceInfo::set_allocated_condition_source_value(std::string* condition_source_value) {
   if (condition_source_value != nullptr) {
-    _has_bits_[0] |= 0x00000010u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000010u;
+    
   }
   condition_source_value_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), condition_source_value,
       GetArenaForAllocation());
   // @@protoc_insertion_point(field_set_allocated:ConditionOccurrenceInfo.condition_source_value)
 }
 
-// optional int32 condition_source_concept_id = 15;
-inline bool ConditionOccurrenceInfo::_internal_has_condition_source_concept_id() const {
-  bool value = (_has_bits_[0] & 0x00000400u) != 0;
-  return value;
-}
-inline bool ConditionOccurrenceInfo::has_condition_source_concept_id() const {
-  return _internal_has_condition_source_concept_id();
-}
+// int32 condition_source_concept_id = 15;
 inline void ConditionOccurrenceInfo::clear_condition_source_concept_id() {
   condition_source_concept_id_ = 0;
-  _has_bits_[0] &= ~0x00000400u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 ConditionOccurrenceInfo::_internal_condition_source_concept_id() const {
   return condition_source_concept_id_;
@@ -6630,7 +5981,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 ConditionOccurrenceInfo::condition_source_
   return _internal_condition_source_concept_id();
 }
 inline void ConditionOccurrenceInfo::_internal_set_condition_source_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000400u;
+  
   condition_source_concept_id_ = value;
 }
 inline void ConditionOccurrenceInfo::set_condition_source_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -6638,17 +5989,9 @@ inline void ConditionOccurrenceInfo::set_condition_source_concept_id(::PROTOBUF_
   // @@protoc_insertion_point(field_set:ConditionOccurrenceInfo.condition_source_concept_id)
 }
 
-// optional string condition_status_source_value = 16;
-inline bool ConditionOccurrenceInfo::_internal_has_condition_status_source_value() const {
-  bool value = (_has_bits_[0] & 0x00000020u) != 0;
-  return value;
-}
-inline bool ConditionOccurrenceInfo::has_condition_status_source_value() const {
-  return _internal_has_condition_status_source_value();
-}
+// string condition_status_source_value = 16;
 inline void ConditionOccurrenceInfo::clear_condition_status_source_value() {
   condition_status_source_value_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000020u;
 }
 inline const std::string& ConditionOccurrenceInfo::condition_status_source_value() const {
   // @@protoc_insertion_point(field_get:ConditionOccurrenceInfo.condition_status_source_value)
@@ -6657,7 +6000,7 @@ inline const std::string& ConditionOccurrenceInfo::condition_status_source_value
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ConditionOccurrenceInfo::set_condition_status_source_value(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000020u;
+ 
  condition_status_source_value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:ConditionOccurrenceInfo.condition_status_source_value)
 }
@@ -6670,26 +6013,22 @@ inline const std::string& ConditionOccurrenceInfo::_internal_condition_status_so
   return condition_status_source_value_.Get();
 }
 inline void ConditionOccurrenceInfo::_internal_set_condition_status_source_value(const std::string& value) {
-  _has_bits_[0] |= 0x00000020u;
+  
   condition_status_source_value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* ConditionOccurrenceInfo::_internal_mutable_condition_status_source_value() {
-  _has_bits_[0] |= 0x00000020u;
+  
   return condition_status_source_value_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* ConditionOccurrenceInfo::release_condition_status_source_value() {
   // @@protoc_insertion_point(field_release:ConditionOccurrenceInfo.condition_status_source_value)
-  if (!_internal_has_condition_status_source_value()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000020u;
-  return condition_status_source_value_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return condition_status_source_value_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void ConditionOccurrenceInfo::set_allocated_condition_status_source_value(std::string* condition_status_source_value) {
   if (condition_status_source_value != nullptr) {
-    _has_bits_[0] |= 0x00000020u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000020u;
+    
   }
   condition_status_source_value_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), condition_status_source_value,
       GetArenaForAllocation());
@@ -6766,17 +6105,9 @@ inline void DeathInfo::set_allocated_death_date(std::string* death_date) {
   // @@protoc_insertion_point(field_set_allocated:DeathInfo.death_date)
 }
 
-// optional string death_datetime = 3;
-inline bool DeathInfo::_internal_has_death_datetime() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool DeathInfo::has_death_datetime() const {
-  return _internal_has_death_datetime();
-}
+// string death_datetime = 3;
 inline void DeathInfo::clear_death_datetime() {
   death_datetime_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& DeathInfo::death_datetime() const {
   // @@protoc_insertion_point(field_get:DeathInfo.death_datetime)
@@ -6785,7 +6116,7 @@ inline const std::string& DeathInfo::death_datetime() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void DeathInfo::set_death_datetime(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000001u;
+ 
  death_datetime_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:DeathInfo.death_datetime)
 }
@@ -6798,43 +6129,31 @@ inline const std::string& DeathInfo::_internal_death_datetime() const {
   return death_datetime_.Get();
 }
 inline void DeathInfo::_internal_set_death_datetime(const std::string& value) {
-  _has_bits_[0] |= 0x00000001u;
+  
   death_datetime_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* DeathInfo::_internal_mutable_death_datetime() {
-  _has_bits_[0] |= 0x00000001u;
+  
   return death_datetime_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* DeathInfo::release_death_datetime() {
   // @@protoc_insertion_point(field_release:DeathInfo.death_datetime)
-  if (!_internal_has_death_datetime()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000001u;
-  return death_datetime_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return death_datetime_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void DeathInfo::set_allocated_death_datetime(std::string* death_datetime) {
   if (death_datetime != nullptr) {
-    _has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000001u;
+    
   }
   death_datetime_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), death_datetime,
       GetArenaForAllocation());
   // @@protoc_insertion_point(field_set_allocated:DeathInfo.death_datetime)
 }
 
-// optional int32 death_type_concept_id = 4;
-inline bool DeathInfo::_internal_has_death_type_concept_id() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool DeathInfo::has_death_type_concept_id() const {
-  return _internal_has_death_type_concept_id();
-}
+// int32 death_type_concept_id = 4;
 inline void DeathInfo::clear_death_type_concept_id() {
   death_type_concept_id_ = 0;
-  _has_bits_[0] &= ~0x00000008u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 DeathInfo::_internal_death_type_concept_id() const {
   return death_type_concept_id_;
@@ -6844,7 +6163,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 DeathInfo::death_type_concept_id() const {
   return _internal_death_type_concept_id();
 }
 inline void DeathInfo::_internal_set_death_type_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000008u;
+  
   death_type_concept_id_ = value;
 }
 inline void DeathInfo::set_death_type_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -6852,17 +6171,9 @@ inline void DeathInfo::set_death_type_concept_id(::PROTOBUF_NAMESPACE_ID::int32 
   // @@protoc_insertion_point(field_set:DeathInfo.death_type_concept_id)
 }
 
-// optional string cause_concept_id = 5;
-inline bool DeathInfo::_internal_has_cause_concept_id() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool DeathInfo::has_cause_concept_id() const {
-  return _internal_has_cause_concept_id();
-}
+// string cause_concept_id = 5;
 inline void DeathInfo::clear_cause_concept_id() {
   cause_concept_id_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& DeathInfo::cause_concept_id() const {
   // @@protoc_insertion_point(field_get:DeathInfo.cause_concept_id)
@@ -6871,7 +6182,7 @@ inline const std::string& DeathInfo::cause_concept_id() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void DeathInfo::set_cause_concept_id(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000002u;
+ 
  cause_concept_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:DeathInfo.cause_concept_id)
 }
@@ -6884,43 +6195,31 @@ inline const std::string& DeathInfo::_internal_cause_concept_id() const {
   return cause_concept_id_.Get();
 }
 inline void DeathInfo::_internal_set_cause_concept_id(const std::string& value) {
-  _has_bits_[0] |= 0x00000002u;
+  
   cause_concept_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* DeathInfo::_internal_mutable_cause_concept_id() {
-  _has_bits_[0] |= 0x00000002u;
+  
   return cause_concept_id_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* DeathInfo::release_cause_concept_id() {
   // @@protoc_insertion_point(field_release:DeathInfo.cause_concept_id)
-  if (!_internal_has_cause_concept_id()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000002u;
-  return cause_concept_id_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return cause_concept_id_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void DeathInfo::set_allocated_cause_concept_id(std::string* cause_concept_id) {
   if (cause_concept_id != nullptr) {
-    _has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000002u;
+    
   }
   cause_concept_id_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), cause_concept_id,
       GetArenaForAllocation());
   // @@protoc_insertion_point(field_set_allocated:DeathInfo.cause_concept_id)
 }
 
-// optional string cause_source_value = 6;
-inline bool DeathInfo::_internal_has_cause_source_value() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool DeathInfo::has_cause_source_value() const {
-  return _internal_has_cause_source_value();
-}
+// string cause_source_value = 6;
 inline void DeathInfo::clear_cause_source_value() {
   cause_source_value_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& DeathInfo::cause_source_value() const {
   // @@protoc_insertion_point(field_get:DeathInfo.cause_source_value)
@@ -6929,7 +6228,7 @@ inline const std::string& DeathInfo::cause_source_value() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void DeathInfo::set_cause_source_value(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000004u;
+ 
  cause_source_value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:DeathInfo.cause_source_value)
 }
@@ -6942,43 +6241,31 @@ inline const std::string& DeathInfo::_internal_cause_source_value() const {
   return cause_source_value_.Get();
 }
 inline void DeathInfo::_internal_set_cause_source_value(const std::string& value) {
-  _has_bits_[0] |= 0x00000004u;
+  
   cause_source_value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* DeathInfo::_internal_mutable_cause_source_value() {
-  _has_bits_[0] |= 0x00000004u;
+  
   return cause_source_value_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* DeathInfo::release_cause_source_value() {
   // @@protoc_insertion_point(field_release:DeathInfo.cause_source_value)
-  if (!_internal_has_cause_source_value()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000004u;
-  return cause_source_value_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return cause_source_value_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void DeathInfo::set_allocated_cause_source_value(std::string* cause_source_value) {
   if (cause_source_value != nullptr) {
-    _has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000004u;
+    
   }
   cause_source_value_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), cause_source_value,
       GetArenaForAllocation());
   // @@protoc_insertion_point(field_set_allocated:DeathInfo.cause_source_value)
 }
 
-// optional int32 cause_source_concept_id = 7;
-inline bool DeathInfo::_internal_has_cause_source_concept_id() const {
-  bool value = (_has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool DeathInfo::has_cause_source_concept_id() const {
-  return _internal_has_cause_source_concept_id();
-}
+// int32 cause_source_concept_id = 7;
 inline void DeathInfo::clear_cause_source_concept_id() {
   cause_source_concept_id_ = 0;
-  _has_bits_[0] &= ~0x00000010u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 DeathInfo::_internal_cause_source_concept_id() const {
   return cause_source_concept_id_;
@@ -6988,7 +6275,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 DeathInfo::cause_source_concept_id() const
   return _internal_cause_source_concept_id();
 }
 inline void DeathInfo::_internal_set_cause_source_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000010u;
+  
   cause_source_concept_id_ = value;
 }
 inline void DeathInfo::set_cause_source_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -7126,17 +6413,9 @@ inline void DeviceExposureInfo::set_device_type_concept_id(::PROTOBUF_NAMESPACE_
   // @@protoc_insertion_point(field_set:DeviceExposureInfo.device_type_concept_id)
 }
 
-// optional string device_exposure_start_datetime = 6;
-inline bool DeviceExposureInfo::_internal_has_device_exposure_start_datetime() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool DeviceExposureInfo::has_device_exposure_start_datetime() const {
-  return _internal_has_device_exposure_start_datetime();
-}
+// string device_exposure_start_datetime = 6;
 inline void DeviceExposureInfo::clear_device_exposure_start_datetime() {
   device_exposure_start_datetime_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& DeviceExposureInfo::device_exposure_start_datetime() const {
   // @@protoc_insertion_point(field_get:DeviceExposureInfo.device_exposure_start_datetime)
@@ -7145,7 +6424,7 @@ inline const std::string& DeviceExposureInfo::device_exposure_start_datetime() c
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void DeviceExposureInfo::set_device_exposure_start_datetime(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000001u;
+ 
  device_exposure_start_datetime_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:DeviceExposureInfo.device_exposure_start_datetime)
 }
@@ -7158,43 +6437,31 @@ inline const std::string& DeviceExposureInfo::_internal_device_exposure_start_da
   return device_exposure_start_datetime_.Get();
 }
 inline void DeviceExposureInfo::_internal_set_device_exposure_start_datetime(const std::string& value) {
-  _has_bits_[0] |= 0x00000001u;
+  
   device_exposure_start_datetime_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* DeviceExposureInfo::_internal_mutable_device_exposure_start_datetime() {
-  _has_bits_[0] |= 0x00000001u;
+  
   return device_exposure_start_datetime_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* DeviceExposureInfo::release_device_exposure_start_datetime() {
   // @@protoc_insertion_point(field_release:DeviceExposureInfo.device_exposure_start_datetime)
-  if (!_internal_has_device_exposure_start_datetime()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000001u;
-  return device_exposure_start_datetime_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return device_exposure_start_datetime_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void DeviceExposureInfo::set_allocated_device_exposure_start_datetime(std::string* device_exposure_start_datetime) {
   if (device_exposure_start_datetime != nullptr) {
-    _has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000001u;
+    
   }
   device_exposure_start_datetime_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), device_exposure_start_datetime,
       GetArenaForAllocation());
   // @@protoc_insertion_point(field_set_allocated:DeviceExposureInfo.device_exposure_start_datetime)
 }
 
-// optional string device_exposure_end_date = 7;
-inline bool DeviceExposureInfo::_internal_has_device_exposure_end_date() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool DeviceExposureInfo::has_device_exposure_end_date() const {
-  return _internal_has_device_exposure_end_date();
-}
+// string device_exposure_end_date = 7;
 inline void DeviceExposureInfo::clear_device_exposure_end_date() {
   device_exposure_end_date_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& DeviceExposureInfo::device_exposure_end_date() const {
   // @@protoc_insertion_point(field_get:DeviceExposureInfo.device_exposure_end_date)
@@ -7203,7 +6470,7 @@ inline const std::string& DeviceExposureInfo::device_exposure_end_date() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void DeviceExposureInfo::set_device_exposure_end_date(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000002u;
+ 
  device_exposure_end_date_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:DeviceExposureInfo.device_exposure_end_date)
 }
@@ -7216,43 +6483,31 @@ inline const std::string& DeviceExposureInfo::_internal_device_exposure_end_date
   return device_exposure_end_date_.Get();
 }
 inline void DeviceExposureInfo::_internal_set_device_exposure_end_date(const std::string& value) {
-  _has_bits_[0] |= 0x00000002u;
+  
   device_exposure_end_date_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* DeviceExposureInfo::_internal_mutable_device_exposure_end_date() {
-  _has_bits_[0] |= 0x00000002u;
+  
   return device_exposure_end_date_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* DeviceExposureInfo::release_device_exposure_end_date() {
   // @@protoc_insertion_point(field_release:DeviceExposureInfo.device_exposure_end_date)
-  if (!_internal_has_device_exposure_end_date()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000002u;
-  return device_exposure_end_date_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return device_exposure_end_date_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void DeviceExposureInfo::set_allocated_device_exposure_end_date(std::string* device_exposure_end_date) {
   if (device_exposure_end_date != nullptr) {
-    _has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000002u;
+    
   }
   device_exposure_end_date_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), device_exposure_end_date,
       GetArenaForAllocation());
   // @@protoc_insertion_point(field_set_allocated:DeviceExposureInfo.device_exposure_end_date)
 }
 
-// optional string device_exposure_end_datetime = 8;
-inline bool DeviceExposureInfo::_internal_has_device_exposure_end_datetime() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool DeviceExposureInfo::has_device_exposure_end_datetime() const {
-  return _internal_has_device_exposure_end_datetime();
-}
+// string device_exposure_end_datetime = 8;
 inline void DeviceExposureInfo::clear_device_exposure_end_datetime() {
   device_exposure_end_datetime_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& DeviceExposureInfo::device_exposure_end_datetime() const {
   // @@protoc_insertion_point(field_get:DeviceExposureInfo.device_exposure_end_datetime)
@@ -7261,7 +6516,7 @@ inline const std::string& DeviceExposureInfo::device_exposure_end_datetime() con
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void DeviceExposureInfo::set_device_exposure_end_datetime(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000004u;
+ 
  device_exposure_end_datetime_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:DeviceExposureInfo.device_exposure_end_datetime)
 }
@@ -7274,43 +6529,31 @@ inline const std::string& DeviceExposureInfo::_internal_device_exposure_end_date
   return device_exposure_end_datetime_.Get();
 }
 inline void DeviceExposureInfo::_internal_set_device_exposure_end_datetime(const std::string& value) {
-  _has_bits_[0] |= 0x00000004u;
+  
   device_exposure_end_datetime_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* DeviceExposureInfo::_internal_mutable_device_exposure_end_datetime() {
-  _has_bits_[0] |= 0x00000004u;
+  
   return device_exposure_end_datetime_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* DeviceExposureInfo::release_device_exposure_end_datetime() {
   // @@protoc_insertion_point(field_release:DeviceExposureInfo.device_exposure_end_datetime)
-  if (!_internal_has_device_exposure_end_datetime()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000004u;
-  return device_exposure_end_datetime_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return device_exposure_end_datetime_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void DeviceExposureInfo::set_allocated_device_exposure_end_datetime(std::string* device_exposure_end_datetime) {
   if (device_exposure_end_datetime != nullptr) {
-    _has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000004u;
+    
   }
   device_exposure_end_datetime_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), device_exposure_end_datetime,
       GetArenaForAllocation());
   // @@protoc_insertion_point(field_set_allocated:DeviceExposureInfo.device_exposure_end_datetime)
 }
 
-// optional string unique_device_id = 9;
-inline bool DeviceExposureInfo::_internal_has_unique_device_id() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool DeviceExposureInfo::has_unique_device_id() const {
-  return _internal_has_unique_device_id();
-}
+// string unique_device_id = 9;
 inline void DeviceExposureInfo::clear_unique_device_id() {
   unique_device_id_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000008u;
 }
 inline const std::string& DeviceExposureInfo::unique_device_id() const {
   // @@protoc_insertion_point(field_get:DeviceExposureInfo.unique_device_id)
@@ -7319,7 +6562,7 @@ inline const std::string& DeviceExposureInfo::unique_device_id() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void DeviceExposureInfo::set_unique_device_id(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000008u;
+ 
  unique_device_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:DeviceExposureInfo.unique_device_id)
 }
@@ -7332,43 +6575,31 @@ inline const std::string& DeviceExposureInfo::_internal_unique_device_id() const
   return unique_device_id_.Get();
 }
 inline void DeviceExposureInfo::_internal_set_unique_device_id(const std::string& value) {
-  _has_bits_[0] |= 0x00000008u;
+  
   unique_device_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* DeviceExposureInfo::_internal_mutable_unique_device_id() {
-  _has_bits_[0] |= 0x00000008u;
+  
   return unique_device_id_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* DeviceExposureInfo::release_unique_device_id() {
   // @@protoc_insertion_point(field_release:DeviceExposureInfo.unique_device_id)
-  if (!_internal_has_unique_device_id()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000008u;
-  return unique_device_id_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return unique_device_id_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void DeviceExposureInfo::set_allocated_unique_device_id(std::string* unique_device_id) {
   if (unique_device_id != nullptr) {
-    _has_bits_[0] |= 0x00000008u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000008u;
+    
   }
   unique_device_id_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), unique_device_id,
       GetArenaForAllocation());
   // @@protoc_insertion_point(field_set_allocated:DeviceExposureInfo.unique_device_id)
 }
 
-// optional int32 quantity = 10;
-inline bool DeviceExposureInfo::_internal_has_quantity() const {
-  bool value = (_has_bits_[0] & 0x00000020u) != 0;
-  return value;
-}
-inline bool DeviceExposureInfo::has_quantity() const {
-  return _internal_has_quantity();
-}
+// int32 quantity = 10;
 inline void DeviceExposureInfo::clear_quantity() {
   quantity_ = 0;
-  _has_bits_[0] &= ~0x00000020u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 DeviceExposureInfo::_internal_quantity() const {
   return quantity_;
@@ -7378,7 +6609,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 DeviceExposureInfo::quantity() const {
   return _internal_quantity();
 }
 inline void DeviceExposureInfo::_internal_set_quantity(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000020u;
+  
   quantity_ = value;
 }
 inline void DeviceExposureInfo::set_quantity(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -7386,17 +6617,9 @@ inline void DeviceExposureInfo::set_quantity(::PROTOBUF_NAMESPACE_ID::int32 valu
   // @@protoc_insertion_point(field_set:DeviceExposureInfo.quantity)
 }
 
-// optional int32 provider_id = 11;
-inline bool DeviceExposureInfo::_internal_has_provider_id() const {
-  bool value = (_has_bits_[0] & 0x00000040u) != 0;
-  return value;
-}
-inline bool DeviceExposureInfo::has_provider_id() const {
-  return _internal_has_provider_id();
-}
+// int32 provider_id = 11;
 inline void DeviceExposureInfo::clear_provider_id() {
   provider_id_ = 0;
-  _has_bits_[0] &= ~0x00000040u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 DeviceExposureInfo::_internal_provider_id() const {
   return provider_id_;
@@ -7406,7 +6629,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 DeviceExposureInfo::provider_id() const {
   return _internal_provider_id();
 }
 inline void DeviceExposureInfo::_internal_set_provider_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000040u;
+  
   provider_id_ = value;
 }
 inline void DeviceExposureInfo::set_provider_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -7414,17 +6637,9 @@ inline void DeviceExposureInfo::set_provider_id(::PROTOBUF_NAMESPACE_ID::int32 v
   // @@protoc_insertion_point(field_set:DeviceExposureInfo.provider_id)
 }
 
-// optional int32 visit_occurrence_id = 12;
-inline bool DeviceExposureInfo::_internal_has_visit_occurrence_id() const {
-  bool value = (_has_bits_[0] & 0x00000080u) != 0;
-  return value;
-}
-inline bool DeviceExposureInfo::has_visit_occurrence_id() const {
-  return _internal_has_visit_occurrence_id();
-}
+// int32 visit_occurrence_id = 12;
 inline void DeviceExposureInfo::clear_visit_occurrence_id() {
   visit_occurrence_id_ = 0;
-  _has_bits_[0] &= ~0x00000080u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 DeviceExposureInfo::_internal_visit_occurrence_id() const {
   return visit_occurrence_id_;
@@ -7434,7 +6649,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 DeviceExposureInfo::visit_occurrence_id() 
   return _internal_visit_occurrence_id();
 }
 inline void DeviceExposureInfo::_internal_set_visit_occurrence_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000080u;
+  
   visit_occurrence_id_ = value;
 }
 inline void DeviceExposureInfo::set_visit_occurrence_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -7442,17 +6657,9 @@ inline void DeviceExposureInfo::set_visit_occurrence_id(::PROTOBUF_NAMESPACE_ID:
   // @@protoc_insertion_point(field_set:DeviceExposureInfo.visit_occurrence_id)
 }
 
-// optional int32 visit_detail_id = 13;
-inline bool DeviceExposureInfo::_internal_has_visit_detail_id() const {
-  bool value = (_has_bits_[0] & 0x00000100u) != 0;
-  return value;
-}
-inline bool DeviceExposureInfo::has_visit_detail_id() const {
-  return _internal_has_visit_detail_id();
-}
+// int32 visit_detail_id = 13;
 inline void DeviceExposureInfo::clear_visit_detail_id() {
   visit_detail_id_ = 0;
-  _has_bits_[0] &= ~0x00000100u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 DeviceExposureInfo::_internal_visit_detail_id() const {
   return visit_detail_id_;
@@ -7462,7 +6669,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 DeviceExposureInfo::visit_detail_id() cons
   return _internal_visit_detail_id();
 }
 inline void DeviceExposureInfo::_internal_set_visit_detail_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000100u;
+  
   visit_detail_id_ = value;
 }
 inline void DeviceExposureInfo::set_visit_detail_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -7470,17 +6677,9 @@ inline void DeviceExposureInfo::set_visit_detail_id(::PROTOBUF_NAMESPACE_ID::int
   // @@protoc_insertion_point(field_set:DeviceExposureInfo.visit_detail_id)
 }
 
-// optional string device_source_value = 14;
-inline bool DeviceExposureInfo::_internal_has_device_source_value() const {
-  bool value = (_has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool DeviceExposureInfo::has_device_source_value() const {
-  return _internal_has_device_source_value();
-}
+// string device_source_value = 14;
 inline void DeviceExposureInfo::clear_device_source_value() {
   device_source_value_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000010u;
 }
 inline const std::string& DeviceExposureInfo::device_source_value() const {
   // @@protoc_insertion_point(field_get:DeviceExposureInfo.device_source_value)
@@ -7489,7 +6688,7 @@ inline const std::string& DeviceExposureInfo::device_source_value() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void DeviceExposureInfo::set_device_source_value(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000010u;
+ 
  device_source_value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:DeviceExposureInfo.device_source_value)
 }
@@ -7502,43 +6701,31 @@ inline const std::string& DeviceExposureInfo::_internal_device_source_value() co
   return device_source_value_.Get();
 }
 inline void DeviceExposureInfo::_internal_set_device_source_value(const std::string& value) {
-  _has_bits_[0] |= 0x00000010u;
+  
   device_source_value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* DeviceExposureInfo::_internal_mutable_device_source_value() {
-  _has_bits_[0] |= 0x00000010u;
+  
   return device_source_value_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* DeviceExposureInfo::release_device_source_value() {
   // @@protoc_insertion_point(field_release:DeviceExposureInfo.device_source_value)
-  if (!_internal_has_device_source_value()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000010u;
-  return device_source_value_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return device_source_value_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void DeviceExposureInfo::set_allocated_device_source_value(std::string* device_source_value) {
   if (device_source_value != nullptr) {
-    _has_bits_[0] |= 0x00000010u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000010u;
+    
   }
   device_source_value_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), device_source_value,
       GetArenaForAllocation());
   // @@protoc_insertion_point(field_set_allocated:DeviceExposureInfo.device_source_value)
 }
 
-// optional int32 device_source_concept_id = 15;
-inline bool DeviceExposureInfo::_internal_has_device_source_concept_id() const {
-  bool value = (_has_bits_[0] & 0x00000200u) != 0;
-  return value;
-}
-inline bool DeviceExposureInfo::has_device_source_concept_id() const {
-  return _internal_has_device_source_concept_id();
-}
+// int32 device_source_concept_id = 15;
 inline void DeviceExposureInfo::clear_device_source_concept_id() {
   device_source_concept_id_ = 0;
-  _has_bits_[0] &= ~0x00000200u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 DeviceExposureInfo::_internal_device_source_concept_id() const {
   return device_source_concept_id_;
@@ -7548,7 +6735,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 DeviceExposureInfo::device_source_concept_
   return _internal_device_source_concept_id();
 }
 inline void DeviceExposureInfo::_internal_set_device_source_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000200u;
+  
   device_source_concept_id_ = value;
 }
 inline void DeviceExposureInfo::set_device_source_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -7732,17 +6919,9 @@ inline void DrugExposureInfo::set_drug_type_concept_id(::PROTOBUF_NAMESPACE_ID::
   // @@protoc_insertion_point(field_set:DrugExposureInfo.drug_type_concept_id)
 }
 
-// optional string drug_exposure_start_datetime = 7;
-inline bool DrugExposureInfo::_internal_has_drug_exposure_start_datetime() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool DrugExposureInfo::has_drug_exposure_start_datetime() const {
-  return _internal_has_drug_exposure_start_datetime();
-}
+// string drug_exposure_start_datetime = 7;
 inline void DrugExposureInfo::clear_drug_exposure_start_datetime() {
   drug_exposure_start_datetime_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& DrugExposureInfo::drug_exposure_start_datetime() const {
   // @@protoc_insertion_point(field_get:DrugExposureInfo.drug_exposure_start_datetime)
@@ -7751,7 +6930,7 @@ inline const std::string& DrugExposureInfo::drug_exposure_start_datetime() const
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void DrugExposureInfo::set_drug_exposure_start_datetime(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000001u;
+ 
  drug_exposure_start_datetime_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:DrugExposureInfo.drug_exposure_start_datetime)
 }
@@ -7764,43 +6943,31 @@ inline const std::string& DrugExposureInfo::_internal_drug_exposure_start_dateti
   return drug_exposure_start_datetime_.Get();
 }
 inline void DrugExposureInfo::_internal_set_drug_exposure_start_datetime(const std::string& value) {
-  _has_bits_[0] |= 0x00000001u;
+  
   drug_exposure_start_datetime_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* DrugExposureInfo::_internal_mutable_drug_exposure_start_datetime() {
-  _has_bits_[0] |= 0x00000001u;
+  
   return drug_exposure_start_datetime_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* DrugExposureInfo::release_drug_exposure_start_datetime() {
   // @@protoc_insertion_point(field_release:DrugExposureInfo.drug_exposure_start_datetime)
-  if (!_internal_has_drug_exposure_start_datetime()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000001u;
-  return drug_exposure_start_datetime_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return drug_exposure_start_datetime_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void DrugExposureInfo::set_allocated_drug_exposure_start_datetime(std::string* drug_exposure_start_datetime) {
   if (drug_exposure_start_datetime != nullptr) {
-    _has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000001u;
+    
   }
   drug_exposure_start_datetime_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), drug_exposure_start_datetime,
       GetArenaForAllocation());
   // @@protoc_insertion_point(field_set_allocated:DrugExposureInfo.drug_exposure_start_datetime)
 }
 
-// optional string drug_exposure_end_datetime = 8;
-inline bool DrugExposureInfo::_internal_has_drug_exposure_end_datetime() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool DrugExposureInfo::has_drug_exposure_end_datetime() const {
-  return _internal_has_drug_exposure_end_datetime();
-}
+// string drug_exposure_end_datetime = 8;
 inline void DrugExposureInfo::clear_drug_exposure_end_datetime() {
   drug_exposure_end_datetime_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& DrugExposureInfo::drug_exposure_end_datetime() const {
   // @@protoc_insertion_point(field_get:DrugExposureInfo.drug_exposure_end_datetime)
@@ -7809,7 +6976,7 @@ inline const std::string& DrugExposureInfo::drug_exposure_end_datetime() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void DrugExposureInfo::set_drug_exposure_end_datetime(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000002u;
+ 
  drug_exposure_end_datetime_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:DrugExposureInfo.drug_exposure_end_datetime)
 }
@@ -7822,43 +6989,31 @@ inline const std::string& DrugExposureInfo::_internal_drug_exposure_end_datetime
   return drug_exposure_end_datetime_.Get();
 }
 inline void DrugExposureInfo::_internal_set_drug_exposure_end_datetime(const std::string& value) {
-  _has_bits_[0] |= 0x00000002u;
+  
   drug_exposure_end_datetime_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* DrugExposureInfo::_internal_mutable_drug_exposure_end_datetime() {
-  _has_bits_[0] |= 0x00000002u;
+  
   return drug_exposure_end_datetime_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* DrugExposureInfo::release_drug_exposure_end_datetime() {
   // @@protoc_insertion_point(field_release:DrugExposureInfo.drug_exposure_end_datetime)
-  if (!_internal_has_drug_exposure_end_datetime()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000002u;
-  return drug_exposure_end_datetime_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return drug_exposure_end_datetime_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void DrugExposureInfo::set_allocated_drug_exposure_end_datetime(std::string* drug_exposure_end_datetime) {
   if (drug_exposure_end_datetime != nullptr) {
-    _has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000002u;
+    
   }
   drug_exposure_end_datetime_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), drug_exposure_end_datetime,
       GetArenaForAllocation());
   // @@protoc_insertion_point(field_set_allocated:DrugExposureInfo.drug_exposure_end_datetime)
 }
 
-// optional string verbatim_end_date = 9;
-inline bool DrugExposureInfo::_internal_has_verbatim_end_date() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool DrugExposureInfo::has_verbatim_end_date() const {
-  return _internal_has_verbatim_end_date();
-}
+// string verbatim_end_date = 9;
 inline void DrugExposureInfo::clear_verbatim_end_date() {
   verbatim_end_date_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& DrugExposureInfo::verbatim_end_date() const {
   // @@protoc_insertion_point(field_get:DrugExposureInfo.verbatim_end_date)
@@ -7867,7 +7022,7 @@ inline const std::string& DrugExposureInfo::verbatim_end_date() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void DrugExposureInfo::set_verbatim_end_date(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000004u;
+ 
  verbatim_end_date_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:DrugExposureInfo.verbatim_end_date)
 }
@@ -7880,43 +7035,31 @@ inline const std::string& DrugExposureInfo::_internal_verbatim_end_date() const 
   return verbatim_end_date_.Get();
 }
 inline void DrugExposureInfo::_internal_set_verbatim_end_date(const std::string& value) {
-  _has_bits_[0] |= 0x00000004u;
+  
   verbatim_end_date_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* DrugExposureInfo::_internal_mutable_verbatim_end_date() {
-  _has_bits_[0] |= 0x00000004u;
+  
   return verbatim_end_date_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* DrugExposureInfo::release_verbatim_end_date() {
   // @@protoc_insertion_point(field_release:DrugExposureInfo.verbatim_end_date)
-  if (!_internal_has_verbatim_end_date()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000004u;
-  return verbatim_end_date_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return verbatim_end_date_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void DrugExposureInfo::set_allocated_verbatim_end_date(std::string* verbatim_end_date) {
   if (verbatim_end_date != nullptr) {
-    _has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000004u;
+    
   }
   verbatim_end_date_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), verbatim_end_date,
       GetArenaForAllocation());
   // @@protoc_insertion_point(field_set_allocated:DrugExposureInfo.verbatim_end_date)
 }
 
-// optional string stop_reason = 10;
-inline bool DrugExposureInfo::_internal_has_stop_reason() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool DrugExposureInfo::has_stop_reason() const {
-  return _internal_has_stop_reason();
-}
+// string stop_reason = 10;
 inline void DrugExposureInfo::clear_stop_reason() {
   stop_reason_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000008u;
 }
 inline const std::string& DrugExposureInfo::stop_reason() const {
   // @@protoc_insertion_point(field_get:DrugExposureInfo.stop_reason)
@@ -7925,7 +7068,7 @@ inline const std::string& DrugExposureInfo::stop_reason() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void DrugExposureInfo::set_stop_reason(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000008u;
+ 
  stop_reason_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:DrugExposureInfo.stop_reason)
 }
@@ -7938,43 +7081,31 @@ inline const std::string& DrugExposureInfo::_internal_stop_reason() const {
   return stop_reason_.Get();
 }
 inline void DrugExposureInfo::_internal_set_stop_reason(const std::string& value) {
-  _has_bits_[0] |= 0x00000008u;
+  
   stop_reason_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* DrugExposureInfo::_internal_mutable_stop_reason() {
-  _has_bits_[0] |= 0x00000008u;
+  
   return stop_reason_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* DrugExposureInfo::release_stop_reason() {
   // @@protoc_insertion_point(field_release:DrugExposureInfo.stop_reason)
-  if (!_internal_has_stop_reason()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000008u;
-  return stop_reason_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return stop_reason_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void DrugExposureInfo::set_allocated_stop_reason(std::string* stop_reason) {
   if (stop_reason != nullptr) {
-    _has_bits_[0] |= 0x00000008u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000008u;
+    
   }
   stop_reason_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), stop_reason,
       GetArenaForAllocation());
   // @@protoc_insertion_point(field_set_allocated:DrugExposureInfo.stop_reason)
 }
 
-// optional int32 refills = 11;
-inline bool DrugExposureInfo::_internal_has_refills() const {
-  bool value = (_has_bits_[0] & 0x00000200u) != 0;
-  return value;
-}
-inline bool DrugExposureInfo::has_refills() const {
-  return _internal_has_refills();
-}
+// int32 refills = 11;
 inline void DrugExposureInfo::clear_refills() {
   refills_ = 0;
-  _has_bits_[0] &= ~0x00000200u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 DrugExposureInfo::_internal_refills() const {
   return refills_;
@@ -7984,7 +7115,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 DrugExposureInfo::refills() const {
   return _internal_refills();
 }
 inline void DrugExposureInfo::_internal_set_refills(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000200u;
+  
   refills_ = value;
 }
 inline void DrugExposureInfo::set_refills(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -7992,17 +7123,9 @@ inline void DrugExposureInfo::set_refills(::PROTOBUF_NAMESPACE_ID::int32 value) 
   // @@protoc_insertion_point(field_set:DrugExposureInfo.refills)
 }
 
-// optional float quantity = 12;
-inline bool DrugExposureInfo::_internal_has_quantity() const {
-  bool value = (_has_bits_[0] & 0x00000400u) != 0;
-  return value;
-}
-inline bool DrugExposureInfo::has_quantity() const {
-  return _internal_has_quantity();
-}
+// float quantity = 12;
 inline void DrugExposureInfo::clear_quantity() {
   quantity_ = 0;
-  _has_bits_[0] &= ~0x00000400u;
 }
 inline float DrugExposureInfo::_internal_quantity() const {
   return quantity_;
@@ -8012,7 +7135,7 @@ inline float DrugExposureInfo::quantity() const {
   return _internal_quantity();
 }
 inline void DrugExposureInfo::_internal_set_quantity(float value) {
-  _has_bits_[0] |= 0x00000400u;
+  
   quantity_ = value;
 }
 inline void DrugExposureInfo::set_quantity(float value) {
@@ -8020,17 +7143,9 @@ inline void DrugExposureInfo::set_quantity(float value) {
   // @@protoc_insertion_point(field_set:DrugExposureInfo.quantity)
 }
 
-// optional int32 days_supply = 13;
-inline bool DrugExposureInfo::_internal_has_days_supply() const {
-  bool value = (_has_bits_[0] & 0x00000800u) != 0;
-  return value;
-}
-inline bool DrugExposureInfo::has_days_supply() const {
-  return _internal_has_days_supply();
-}
+// int32 days_supply = 13;
 inline void DrugExposureInfo::clear_days_supply() {
   days_supply_ = 0;
-  _has_bits_[0] &= ~0x00000800u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 DrugExposureInfo::_internal_days_supply() const {
   return days_supply_;
@@ -8040,7 +7155,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 DrugExposureInfo::days_supply() const {
   return _internal_days_supply();
 }
 inline void DrugExposureInfo::_internal_set_days_supply(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000800u;
+  
   days_supply_ = value;
 }
 inline void DrugExposureInfo::set_days_supply(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -8048,17 +7163,9 @@ inline void DrugExposureInfo::set_days_supply(::PROTOBUF_NAMESPACE_ID::int32 val
   // @@protoc_insertion_point(field_set:DrugExposureInfo.days_supply)
 }
 
-// optional string sig = 14;
-inline bool DrugExposureInfo::_internal_has_sig() const {
-  bool value = (_has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool DrugExposureInfo::has_sig() const {
-  return _internal_has_sig();
-}
+// string sig = 14;
 inline void DrugExposureInfo::clear_sig() {
   sig_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000010u;
 }
 inline const std::string& DrugExposureInfo::sig() const {
   // @@protoc_insertion_point(field_get:DrugExposureInfo.sig)
@@ -8067,7 +7174,7 @@ inline const std::string& DrugExposureInfo::sig() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void DrugExposureInfo::set_sig(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000010u;
+ 
  sig_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:DrugExposureInfo.sig)
 }
@@ -8080,43 +7187,31 @@ inline const std::string& DrugExposureInfo::_internal_sig() const {
   return sig_.Get();
 }
 inline void DrugExposureInfo::_internal_set_sig(const std::string& value) {
-  _has_bits_[0] |= 0x00000010u;
+  
   sig_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* DrugExposureInfo::_internal_mutable_sig() {
-  _has_bits_[0] |= 0x00000010u;
+  
   return sig_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* DrugExposureInfo::release_sig() {
   // @@protoc_insertion_point(field_release:DrugExposureInfo.sig)
-  if (!_internal_has_sig()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000010u;
-  return sig_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return sig_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void DrugExposureInfo::set_allocated_sig(std::string* sig) {
   if (sig != nullptr) {
-    _has_bits_[0] |= 0x00000010u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000010u;
+    
   }
   sig_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), sig,
       GetArenaForAllocation());
   // @@protoc_insertion_point(field_set_allocated:DrugExposureInfo.sig)
 }
 
-// optional int32 route_concept_id = 15;
-inline bool DrugExposureInfo::_internal_has_route_concept_id() const {
-  bool value = (_has_bits_[0] & 0x00001000u) != 0;
-  return value;
-}
-inline bool DrugExposureInfo::has_route_concept_id() const {
-  return _internal_has_route_concept_id();
-}
+// int32 route_concept_id = 15;
 inline void DrugExposureInfo::clear_route_concept_id() {
   route_concept_id_ = 0;
-  _has_bits_[0] &= ~0x00001000u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 DrugExposureInfo::_internal_route_concept_id() const {
   return route_concept_id_;
@@ -8126,7 +7221,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 DrugExposureInfo::route_concept_id() const
   return _internal_route_concept_id();
 }
 inline void DrugExposureInfo::_internal_set_route_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00001000u;
+  
   route_concept_id_ = value;
 }
 inline void DrugExposureInfo::set_route_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -8134,17 +7229,9 @@ inline void DrugExposureInfo::set_route_concept_id(::PROTOBUF_NAMESPACE_ID::int3
   // @@protoc_insertion_point(field_set:DrugExposureInfo.route_concept_id)
 }
 
-// optional string lot_number = 16;
-inline bool DrugExposureInfo::_internal_has_lot_number() const {
-  bool value = (_has_bits_[0] & 0x00000020u) != 0;
-  return value;
-}
-inline bool DrugExposureInfo::has_lot_number() const {
-  return _internal_has_lot_number();
-}
+// string lot_number = 16;
 inline void DrugExposureInfo::clear_lot_number() {
   lot_number_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000020u;
 }
 inline const std::string& DrugExposureInfo::lot_number() const {
   // @@protoc_insertion_point(field_get:DrugExposureInfo.lot_number)
@@ -8153,7 +7240,7 @@ inline const std::string& DrugExposureInfo::lot_number() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void DrugExposureInfo::set_lot_number(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000020u;
+ 
  lot_number_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:DrugExposureInfo.lot_number)
 }
@@ -8166,43 +7253,31 @@ inline const std::string& DrugExposureInfo::_internal_lot_number() const {
   return lot_number_.Get();
 }
 inline void DrugExposureInfo::_internal_set_lot_number(const std::string& value) {
-  _has_bits_[0] |= 0x00000020u;
+  
   lot_number_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* DrugExposureInfo::_internal_mutable_lot_number() {
-  _has_bits_[0] |= 0x00000020u;
+  
   return lot_number_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* DrugExposureInfo::release_lot_number() {
   // @@protoc_insertion_point(field_release:DrugExposureInfo.lot_number)
-  if (!_internal_has_lot_number()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000020u;
-  return lot_number_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return lot_number_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void DrugExposureInfo::set_allocated_lot_number(std::string* lot_number) {
   if (lot_number != nullptr) {
-    _has_bits_[0] |= 0x00000020u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000020u;
+    
   }
   lot_number_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), lot_number,
       GetArenaForAllocation());
   // @@protoc_insertion_point(field_set_allocated:DrugExposureInfo.lot_number)
 }
 
-// optional int32 provider_id = 17;
-inline bool DrugExposureInfo::_internal_has_provider_id() const {
-  bool value = (_has_bits_[0] & 0x00002000u) != 0;
-  return value;
-}
-inline bool DrugExposureInfo::has_provider_id() const {
-  return _internal_has_provider_id();
-}
+// int32 provider_id = 17;
 inline void DrugExposureInfo::clear_provider_id() {
   provider_id_ = 0;
-  _has_bits_[0] &= ~0x00002000u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 DrugExposureInfo::_internal_provider_id() const {
   return provider_id_;
@@ -8212,7 +7287,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 DrugExposureInfo::provider_id() const {
   return _internal_provider_id();
 }
 inline void DrugExposureInfo::_internal_set_provider_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00002000u;
+  
   provider_id_ = value;
 }
 inline void DrugExposureInfo::set_provider_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -8220,17 +7295,9 @@ inline void DrugExposureInfo::set_provider_id(::PROTOBUF_NAMESPACE_ID::int32 val
   // @@protoc_insertion_point(field_set:DrugExposureInfo.provider_id)
 }
 
-// optional int32 visit_occurrence_id = 18;
-inline bool DrugExposureInfo::_internal_has_visit_occurrence_id() const {
-  bool value = (_has_bits_[0] & 0x00004000u) != 0;
-  return value;
-}
-inline bool DrugExposureInfo::has_visit_occurrence_id() const {
-  return _internal_has_visit_occurrence_id();
-}
+// int32 visit_occurrence_id = 18;
 inline void DrugExposureInfo::clear_visit_occurrence_id() {
   visit_occurrence_id_ = 0;
-  _has_bits_[0] &= ~0x00004000u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 DrugExposureInfo::_internal_visit_occurrence_id() const {
   return visit_occurrence_id_;
@@ -8240,7 +7307,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 DrugExposureInfo::visit_occurrence_id() co
   return _internal_visit_occurrence_id();
 }
 inline void DrugExposureInfo::_internal_set_visit_occurrence_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00004000u;
+  
   visit_occurrence_id_ = value;
 }
 inline void DrugExposureInfo::set_visit_occurrence_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -8248,17 +7315,9 @@ inline void DrugExposureInfo::set_visit_occurrence_id(::PROTOBUF_NAMESPACE_ID::i
   // @@protoc_insertion_point(field_set:DrugExposureInfo.visit_occurrence_id)
 }
 
-// optional int32 visit_detail_id = 19;
-inline bool DrugExposureInfo::_internal_has_visit_detail_id() const {
-  bool value = (_has_bits_[0] & 0x00008000u) != 0;
-  return value;
-}
-inline bool DrugExposureInfo::has_visit_detail_id() const {
-  return _internal_has_visit_detail_id();
-}
+// int32 visit_detail_id = 19;
 inline void DrugExposureInfo::clear_visit_detail_id() {
   visit_detail_id_ = 0;
-  _has_bits_[0] &= ~0x00008000u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 DrugExposureInfo::_internal_visit_detail_id() const {
   return visit_detail_id_;
@@ -8268,7 +7327,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 DrugExposureInfo::visit_detail_id() const 
   return _internal_visit_detail_id();
 }
 inline void DrugExposureInfo::_internal_set_visit_detail_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00008000u;
+  
   visit_detail_id_ = value;
 }
 inline void DrugExposureInfo::set_visit_detail_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -8276,17 +7335,9 @@ inline void DrugExposureInfo::set_visit_detail_id(::PROTOBUF_NAMESPACE_ID::int32
   // @@protoc_insertion_point(field_set:DrugExposureInfo.visit_detail_id)
 }
 
-// optional string drug_source_value = 20;
-inline bool DrugExposureInfo::_internal_has_drug_source_value() const {
-  bool value = (_has_bits_[0] & 0x00000040u) != 0;
-  return value;
-}
-inline bool DrugExposureInfo::has_drug_source_value() const {
-  return _internal_has_drug_source_value();
-}
+// string drug_source_value = 20;
 inline void DrugExposureInfo::clear_drug_source_value() {
   drug_source_value_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000040u;
 }
 inline const std::string& DrugExposureInfo::drug_source_value() const {
   // @@protoc_insertion_point(field_get:DrugExposureInfo.drug_source_value)
@@ -8295,7 +7346,7 @@ inline const std::string& DrugExposureInfo::drug_source_value() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void DrugExposureInfo::set_drug_source_value(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000040u;
+ 
  drug_source_value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:DrugExposureInfo.drug_source_value)
 }
@@ -8308,43 +7359,31 @@ inline const std::string& DrugExposureInfo::_internal_drug_source_value() const 
   return drug_source_value_.Get();
 }
 inline void DrugExposureInfo::_internal_set_drug_source_value(const std::string& value) {
-  _has_bits_[0] |= 0x00000040u;
+  
   drug_source_value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* DrugExposureInfo::_internal_mutable_drug_source_value() {
-  _has_bits_[0] |= 0x00000040u;
+  
   return drug_source_value_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* DrugExposureInfo::release_drug_source_value() {
   // @@protoc_insertion_point(field_release:DrugExposureInfo.drug_source_value)
-  if (!_internal_has_drug_source_value()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000040u;
-  return drug_source_value_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return drug_source_value_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void DrugExposureInfo::set_allocated_drug_source_value(std::string* drug_source_value) {
   if (drug_source_value != nullptr) {
-    _has_bits_[0] |= 0x00000040u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000040u;
+    
   }
   drug_source_value_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), drug_source_value,
       GetArenaForAllocation());
   // @@protoc_insertion_point(field_set_allocated:DrugExposureInfo.drug_source_value)
 }
 
-// optional int32 drug_source_concept_id = 21;
-inline bool DrugExposureInfo::_internal_has_drug_source_concept_id() const {
-  bool value = (_has_bits_[0] & 0x00010000u) != 0;
-  return value;
-}
-inline bool DrugExposureInfo::has_drug_source_concept_id() const {
-  return _internal_has_drug_source_concept_id();
-}
+// int32 drug_source_concept_id = 21;
 inline void DrugExposureInfo::clear_drug_source_concept_id() {
   drug_source_concept_id_ = 0;
-  _has_bits_[0] &= ~0x00010000u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 DrugExposureInfo::_internal_drug_source_concept_id() const {
   return drug_source_concept_id_;
@@ -8354,7 +7393,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 DrugExposureInfo::drug_source_concept_id()
   return _internal_drug_source_concept_id();
 }
 inline void DrugExposureInfo::_internal_set_drug_source_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00010000u;
+  
   drug_source_concept_id_ = value;
 }
 inline void DrugExposureInfo::set_drug_source_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -8362,17 +7401,9 @@ inline void DrugExposureInfo::set_drug_source_concept_id(::PROTOBUF_NAMESPACE_ID
   // @@protoc_insertion_point(field_set:DrugExposureInfo.drug_source_concept_id)
 }
 
-// optional string route_source_value = 22;
-inline bool DrugExposureInfo::_internal_has_route_source_value() const {
-  bool value = (_has_bits_[0] & 0x00000080u) != 0;
-  return value;
-}
-inline bool DrugExposureInfo::has_route_source_value() const {
-  return _internal_has_route_source_value();
-}
+// string route_source_value = 22;
 inline void DrugExposureInfo::clear_route_source_value() {
   route_source_value_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000080u;
 }
 inline const std::string& DrugExposureInfo::route_source_value() const {
   // @@protoc_insertion_point(field_get:DrugExposureInfo.route_source_value)
@@ -8381,7 +7412,7 @@ inline const std::string& DrugExposureInfo::route_source_value() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void DrugExposureInfo::set_route_source_value(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000080u;
+ 
  route_source_value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:DrugExposureInfo.route_source_value)
 }
@@ -8394,43 +7425,31 @@ inline const std::string& DrugExposureInfo::_internal_route_source_value() const
   return route_source_value_.Get();
 }
 inline void DrugExposureInfo::_internal_set_route_source_value(const std::string& value) {
-  _has_bits_[0] |= 0x00000080u;
+  
   route_source_value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* DrugExposureInfo::_internal_mutable_route_source_value() {
-  _has_bits_[0] |= 0x00000080u;
+  
   return route_source_value_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* DrugExposureInfo::release_route_source_value() {
   // @@protoc_insertion_point(field_release:DrugExposureInfo.route_source_value)
-  if (!_internal_has_route_source_value()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000080u;
-  return route_source_value_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return route_source_value_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void DrugExposureInfo::set_allocated_route_source_value(std::string* route_source_value) {
   if (route_source_value != nullptr) {
-    _has_bits_[0] |= 0x00000080u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000080u;
+    
   }
   route_source_value_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), route_source_value,
       GetArenaForAllocation());
   // @@protoc_insertion_point(field_set_allocated:DrugExposureInfo.route_source_value)
 }
 
-// optional string dose_unit_source_value = 23;
-inline bool DrugExposureInfo::_internal_has_dose_unit_source_value() const {
-  bool value = (_has_bits_[0] & 0x00000100u) != 0;
-  return value;
-}
-inline bool DrugExposureInfo::has_dose_unit_source_value() const {
-  return _internal_has_dose_unit_source_value();
-}
+// string dose_unit_source_value = 23;
 inline void DrugExposureInfo::clear_dose_unit_source_value() {
   dose_unit_source_value_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000100u;
 }
 inline const std::string& DrugExposureInfo::dose_unit_source_value() const {
   // @@protoc_insertion_point(field_get:DrugExposureInfo.dose_unit_source_value)
@@ -8439,7 +7458,7 @@ inline const std::string& DrugExposureInfo::dose_unit_source_value() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void DrugExposureInfo::set_dose_unit_source_value(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000100u;
+ 
  dose_unit_source_value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:DrugExposureInfo.dose_unit_source_value)
 }
@@ -8452,26 +7471,22 @@ inline const std::string& DrugExposureInfo::_internal_dose_unit_source_value() c
   return dose_unit_source_value_.Get();
 }
 inline void DrugExposureInfo::_internal_set_dose_unit_source_value(const std::string& value) {
-  _has_bits_[0] |= 0x00000100u;
+  
   dose_unit_source_value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* DrugExposureInfo::_internal_mutable_dose_unit_source_value() {
-  _has_bits_[0] |= 0x00000100u;
+  
   return dose_unit_source_value_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* DrugExposureInfo::release_dose_unit_source_value() {
   // @@protoc_insertion_point(field_release:DrugExposureInfo.dose_unit_source_value)
-  if (!_internal_has_dose_unit_source_value()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000100u;
-  return dose_unit_source_value_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return dose_unit_source_value_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void DrugExposureInfo::set_allocated_dose_unit_source_value(std::string* dose_unit_source_value) {
   if (dose_unit_source_value != nullptr) {
-    _has_bits_[0] |= 0x00000100u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000100u;
+    
   }
   dose_unit_source_value_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), dose_unit_source_value,
       GetArenaForAllocation());
@@ -8608,17 +7623,9 @@ inline void MeasurementInfo::set_measurement_type_concept_id(::PROTOBUF_NAMESPAC
   // @@protoc_insertion_point(field_set:MeasurementInfo.measurement_type_concept_id)
 }
 
-// optional string measurement_datetime = 6;
-inline bool MeasurementInfo::_internal_has_measurement_datetime() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool MeasurementInfo::has_measurement_datetime() const {
-  return _internal_has_measurement_datetime();
-}
+// string measurement_datetime = 6;
 inline void MeasurementInfo::clear_measurement_datetime() {
   measurement_datetime_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& MeasurementInfo::measurement_datetime() const {
   // @@protoc_insertion_point(field_get:MeasurementInfo.measurement_datetime)
@@ -8627,7 +7634,7 @@ inline const std::string& MeasurementInfo::measurement_datetime() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void MeasurementInfo::set_measurement_datetime(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000001u;
+ 
  measurement_datetime_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:MeasurementInfo.measurement_datetime)
 }
@@ -8640,43 +7647,31 @@ inline const std::string& MeasurementInfo::_internal_measurement_datetime() cons
   return measurement_datetime_.Get();
 }
 inline void MeasurementInfo::_internal_set_measurement_datetime(const std::string& value) {
-  _has_bits_[0] |= 0x00000001u;
+  
   measurement_datetime_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* MeasurementInfo::_internal_mutable_measurement_datetime() {
-  _has_bits_[0] |= 0x00000001u;
+  
   return measurement_datetime_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* MeasurementInfo::release_measurement_datetime() {
   // @@protoc_insertion_point(field_release:MeasurementInfo.measurement_datetime)
-  if (!_internal_has_measurement_datetime()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000001u;
-  return measurement_datetime_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return measurement_datetime_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void MeasurementInfo::set_allocated_measurement_datetime(std::string* measurement_datetime) {
   if (measurement_datetime != nullptr) {
-    _has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000001u;
+    
   }
   measurement_datetime_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), measurement_datetime,
       GetArenaForAllocation());
   // @@protoc_insertion_point(field_set_allocated:MeasurementInfo.measurement_datetime)
 }
 
-// optional string measurement_time = 7;
-inline bool MeasurementInfo::_internal_has_measurement_time() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool MeasurementInfo::has_measurement_time() const {
-  return _internal_has_measurement_time();
-}
+// string measurement_time = 7;
 inline void MeasurementInfo::clear_measurement_time() {
   measurement_time_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& MeasurementInfo::measurement_time() const {
   // @@protoc_insertion_point(field_get:MeasurementInfo.measurement_time)
@@ -8685,7 +7680,7 @@ inline const std::string& MeasurementInfo::measurement_time() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void MeasurementInfo::set_measurement_time(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000002u;
+ 
  measurement_time_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:MeasurementInfo.measurement_time)
 }
@@ -8698,43 +7693,31 @@ inline const std::string& MeasurementInfo::_internal_measurement_time() const {
   return measurement_time_.Get();
 }
 inline void MeasurementInfo::_internal_set_measurement_time(const std::string& value) {
-  _has_bits_[0] |= 0x00000002u;
+  
   measurement_time_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* MeasurementInfo::_internal_mutable_measurement_time() {
-  _has_bits_[0] |= 0x00000002u;
+  
   return measurement_time_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* MeasurementInfo::release_measurement_time() {
   // @@protoc_insertion_point(field_release:MeasurementInfo.measurement_time)
-  if (!_internal_has_measurement_time()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000002u;
-  return measurement_time_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return measurement_time_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void MeasurementInfo::set_allocated_measurement_time(std::string* measurement_time) {
   if (measurement_time != nullptr) {
-    _has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000002u;
+    
   }
   measurement_time_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), measurement_time,
       GetArenaForAllocation());
   // @@protoc_insertion_point(field_set_allocated:MeasurementInfo.measurement_time)
 }
 
-// optional int32 operator_concept_id = 8;
-inline bool MeasurementInfo::_internal_has_operator_concept_id() const {
-  bool value = (_has_bits_[0] & 0x00000020u) != 0;
-  return value;
-}
-inline bool MeasurementInfo::has_operator_concept_id() const {
-  return _internal_has_operator_concept_id();
-}
+// int32 operator_concept_id = 8;
 inline void MeasurementInfo::clear_operator_concept_id() {
   operator_concept_id_ = 0;
-  _has_bits_[0] &= ~0x00000020u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 MeasurementInfo::_internal_operator_concept_id() const {
   return operator_concept_id_;
@@ -8744,7 +7727,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 MeasurementInfo::operator_concept_id() con
   return _internal_operator_concept_id();
 }
 inline void MeasurementInfo::_internal_set_operator_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000020u;
+  
   operator_concept_id_ = value;
 }
 inline void MeasurementInfo::set_operator_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -8752,17 +7735,9 @@ inline void MeasurementInfo::set_operator_concept_id(::PROTOBUF_NAMESPACE_ID::in
   // @@protoc_insertion_point(field_set:MeasurementInfo.operator_concept_id)
 }
 
-// optional float value_as_number = 9;
-inline bool MeasurementInfo::_internal_has_value_as_number() const {
-  bool value = (_has_bits_[0] & 0x00000040u) != 0;
-  return value;
-}
-inline bool MeasurementInfo::has_value_as_number() const {
-  return _internal_has_value_as_number();
-}
+// float value_as_number = 9;
 inline void MeasurementInfo::clear_value_as_number() {
   value_as_number_ = 0;
-  _has_bits_[0] &= ~0x00000040u;
 }
 inline float MeasurementInfo::_internal_value_as_number() const {
   return value_as_number_;
@@ -8772,7 +7747,7 @@ inline float MeasurementInfo::value_as_number() const {
   return _internal_value_as_number();
 }
 inline void MeasurementInfo::_internal_set_value_as_number(float value) {
-  _has_bits_[0] |= 0x00000040u;
+  
   value_as_number_ = value;
 }
 inline void MeasurementInfo::set_value_as_number(float value) {
@@ -8780,17 +7755,9 @@ inline void MeasurementInfo::set_value_as_number(float value) {
   // @@protoc_insertion_point(field_set:MeasurementInfo.value_as_number)
 }
 
-// optional int32 value_as_concept_id = 10;
-inline bool MeasurementInfo::_internal_has_value_as_concept_id() const {
-  bool value = (_has_bits_[0] & 0x00000080u) != 0;
-  return value;
-}
-inline bool MeasurementInfo::has_value_as_concept_id() const {
-  return _internal_has_value_as_concept_id();
-}
+// int32 value_as_concept_id = 10;
 inline void MeasurementInfo::clear_value_as_concept_id() {
   value_as_concept_id_ = 0;
-  _has_bits_[0] &= ~0x00000080u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 MeasurementInfo::_internal_value_as_concept_id() const {
   return value_as_concept_id_;
@@ -8800,7 +7767,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 MeasurementInfo::value_as_concept_id() con
   return _internal_value_as_concept_id();
 }
 inline void MeasurementInfo::_internal_set_value_as_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000080u;
+  
   value_as_concept_id_ = value;
 }
 inline void MeasurementInfo::set_value_as_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -8808,17 +7775,9 @@ inline void MeasurementInfo::set_value_as_concept_id(::PROTOBUF_NAMESPACE_ID::in
   // @@protoc_insertion_point(field_set:MeasurementInfo.value_as_concept_id)
 }
 
-// optional int32 unit_concept_id = 11;
-inline bool MeasurementInfo::_internal_has_unit_concept_id() const {
-  bool value = (_has_bits_[0] & 0x00000100u) != 0;
-  return value;
-}
-inline bool MeasurementInfo::has_unit_concept_id() const {
-  return _internal_has_unit_concept_id();
-}
+// int32 unit_concept_id = 11;
 inline void MeasurementInfo::clear_unit_concept_id() {
   unit_concept_id_ = 0;
-  _has_bits_[0] &= ~0x00000100u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 MeasurementInfo::_internal_unit_concept_id() const {
   return unit_concept_id_;
@@ -8828,7 +7787,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 MeasurementInfo::unit_concept_id() const {
   return _internal_unit_concept_id();
 }
 inline void MeasurementInfo::_internal_set_unit_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000100u;
+  
   unit_concept_id_ = value;
 }
 inline void MeasurementInfo::set_unit_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -8836,17 +7795,9 @@ inline void MeasurementInfo::set_unit_concept_id(::PROTOBUF_NAMESPACE_ID::int32 
   // @@protoc_insertion_point(field_set:MeasurementInfo.unit_concept_id)
 }
 
-// optional float range_low = 12;
-inline bool MeasurementInfo::_internal_has_range_low() const {
-  bool value = (_has_bits_[0] & 0x00000200u) != 0;
-  return value;
-}
-inline bool MeasurementInfo::has_range_low() const {
-  return _internal_has_range_low();
-}
+// float range_low = 12;
 inline void MeasurementInfo::clear_range_low() {
   range_low_ = 0;
-  _has_bits_[0] &= ~0x00000200u;
 }
 inline float MeasurementInfo::_internal_range_low() const {
   return range_low_;
@@ -8856,7 +7807,7 @@ inline float MeasurementInfo::range_low() const {
   return _internal_range_low();
 }
 inline void MeasurementInfo::_internal_set_range_low(float value) {
-  _has_bits_[0] |= 0x00000200u;
+  
   range_low_ = value;
 }
 inline void MeasurementInfo::set_range_low(float value) {
@@ -8864,17 +7815,9 @@ inline void MeasurementInfo::set_range_low(float value) {
   // @@protoc_insertion_point(field_set:MeasurementInfo.range_low)
 }
 
-// optional float range_high = 13;
-inline bool MeasurementInfo::_internal_has_range_high() const {
-  bool value = (_has_bits_[0] & 0x00000400u) != 0;
-  return value;
-}
-inline bool MeasurementInfo::has_range_high() const {
-  return _internal_has_range_high();
-}
+// float range_high = 13;
 inline void MeasurementInfo::clear_range_high() {
   range_high_ = 0;
-  _has_bits_[0] &= ~0x00000400u;
 }
 inline float MeasurementInfo::_internal_range_high() const {
   return range_high_;
@@ -8884,7 +7827,7 @@ inline float MeasurementInfo::range_high() const {
   return _internal_range_high();
 }
 inline void MeasurementInfo::_internal_set_range_high(float value) {
-  _has_bits_[0] |= 0x00000400u;
+  
   range_high_ = value;
 }
 inline void MeasurementInfo::set_range_high(float value) {
@@ -8892,17 +7835,9 @@ inline void MeasurementInfo::set_range_high(float value) {
   // @@protoc_insertion_point(field_set:MeasurementInfo.range_high)
 }
 
-// optional int32 provider_id = 14;
-inline bool MeasurementInfo::_internal_has_provider_id() const {
-  bool value = (_has_bits_[0] & 0x00000800u) != 0;
-  return value;
-}
-inline bool MeasurementInfo::has_provider_id() const {
-  return _internal_has_provider_id();
-}
+// int32 provider_id = 14;
 inline void MeasurementInfo::clear_provider_id() {
   provider_id_ = 0;
-  _has_bits_[0] &= ~0x00000800u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 MeasurementInfo::_internal_provider_id() const {
   return provider_id_;
@@ -8912,7 +7847,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 MeasurementInfo::provider_id() const {
   return _internal_provider_id();
 }
 inline void MeasurementInfo::_internal_set_provider_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000800u;
+  
   provider_id_ = value;
 }
 inline void MeasurementInfo::set_provider_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -8920,17 +7855,9 @@ inline void MeasurementInfo::set_provider_id(::PROTOBUF_NAMESPACE_ID::int32 valu
   // @@protoc_insertion_point(field_set:MeasurementInfo.provider_id)
 }
 
-// optional int32 visit_occurrence_id = 15;
-inline bool MeasurementInfo::_internal_has_visit_occurrence_id() const {
-  bool value = (_has_bits_[0] & 0x00001000u) != 0;
-  return value;
-}
-inline bool MeasurementInfo::has_visit_occurrence_id() const {
-  return _internal_has_visit_occurrence_id();
-}
+// int32 visit_occurrence_id = 15;
 inline void MeasurementInfo::clear_visit_occurrence_id() {
   visit_occurrence_id_ = 0;
-  _has_bits_[0] &= ~0x00001000u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 MeasurementInfo::_internal_visit_occurrence_id() const {
   return visit_occurrence_id_;
@@ -8940,7 +7867,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 MeasurementInfo::visit_occurrence_id() con
   return _internal_visit_occurrence_id();
 }
 inline void MeasurementInfo::_internal_set_visit_occurrence_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00001000u;
+  
   visit_occurrence_id_ = value;
 }
 inline void MeasurementInfo::set_visit_occurrence_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -8948,17 +7875,9 @@ inline void MeasurementInfo::set_visit_occurrence_id(::PROTOBUF_NAMESPACE_ID::in
   // @@protoc_insertion_point(field_set:MeasurementInfo.visit_occurrence_id)
 }
 
-// optional int32 visit_detail_id = 16;
-inline bool MeasurementInfo::_internal_has_visit_detail_id() const {
-  bool value = (_has_bits_[0] & 0x00002000u) != 0;
-  return value;
-}
-inline bool MeasurementInfo::has_visit_detail_id() const {
-  return _internal_has_visit_detail_id();
-}
+// int32 visit_detail_id = 16;
 inline void MeasurementInfo::clear_visit_detail_id() {
   visit_detail_id_ = 0;
-  _has_bits_[0] &= ~0x00002000u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 MeasurementInfo::_internal_visit_detail_id() const {
   return visit_detail_id_;
@@ -8968,7 +7887,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 MeasurementInfo::visit_detail_id() const {
   return _internal_visit_detail_id();
 }
 inline void MeasurementInfo::_internal_set_visit_detail_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00002000u;
+  
   visit_detail_id_ = value;
 }
 inline void MeasurementInfo::set_visit_detail_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -8976,17 +7895,9 @@ inline void MeasurementInfo::set_visit_detail_id(::PROTOBUF_NAMESPACE_ID::int32 
   // @@protoc_insertion_point(field_set:MeasurementInfo.visit_detail_id)
 }
 
-// optional string measurement_source_value = 17;
-inline bool MeasurementInfo::_internal_has_measurement_source_value() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool MeasurementInfo::has_measurement_source_value() const {
-  return _internal_has_measurement_source_value();
-}
+// string measurement_source_value = 17;
 inline void MeasurementInfo::clear_measurement_source_value() {
   measurement_source_value_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& MeasurementInfo::measurement_source_value() const {
   // @@protoc_insertion_point(field_get:MeasurementInfo.measurement_source_value)
@@ -8995,7 +7906,7 @@ inline const std::string& MeasurementInfo::measurement_source_value() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void MeasurementInfo::set_measurement_source_value(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000004u;
+ 
  measurement_source_value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:MeasurementInfo.measurement_source_value)
 }
@@ -9008,43 +7919,31 @@ inline const std::string& MeasurementInfo::_internal_measurement_source_value() 
   return measurement_source_value_.Get();
 }
 inline void MeasurementInfo::_internal_set_measurement_source_value(const std::string& value) {
-  _has_bits_[0] |= 0x00000004u;
+  
   measurement_source_value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* MeasurementInfo::_internal_mutable_measurement_source_value() {
-  _has_bits_[0] |= 0x00000004u;
+  
   return measurement_source_value_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* MeasurementInfo::release_measurement_source_value() {
   // @@protoc_insertion_point(field_release:MeasurementInfo.measurement_source_value)
-  if (!_internal_has_measurement_source_value()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000004u;
-  return measurement_source_value_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return measurement_source_value_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void MeasurementInfo::set_allocated_measurement_source_value(std::string* measurement_source_value) {
   if (measurement_source_value != nullptr) {
-    _has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000004u;
+    
   }
   measurement_source_value_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), measurement_source_value,
       GetArenaForAllocation());
   // @@protoc_insertion_point(field_set_allocated:MeasurementInfo.measurement_source_value)
 }
 
-// optional int32 measurement_source_concept_id = 18;
-inline bool MeasurementInfo::_internal_has_measurement_source_concept_id() const {
-  bool value = (_has_bits_[0] & 0x00004000u) != 0;
-  return value;
-}
-inline bool MeasurementInfo::has_measurement_source_concept_id() const {
-  return _internal_has_measurement_source_concept_id();
-}
+// int32 measurement_source_concept_id = 18;
 inline void MeasurementInfo::clear_measurement_source_concept_id() {
   measurement_source_concept_id_ = 0;
-  _has_bits_[0] &= ~0x00004000u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 MeasurementInfo::_internal_measurement_source_concept_id() const {
   return measurement_source_concept_id_;
@@ -9054,7 +7953,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 MeasurementInfo::measurement_source_concep
   return _internal_measurement_source_concept_id();
 }
 inline void MeasurementInfo::_internal_set_measurement_source_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00004000u;
+  
   measurement_source_concept_id_ = value;
 }
 inline void MeasurementInfo::set_measurement_source_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -9062,17 +7961,9 @@ inline void MeasurementInfo::set_measurement_source_concept_id(::PROTOBUF_NAMESP
   // @@protoc_insertion_point(field_set:MeasurementInfo.measurement_source_concept_id)
 }
 
-// optional string unit_source_value = 19;
-inline bool MeasurementInfo::_internal_has_unit_source_value() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool MeasurementInfo::has_unit_source_value() const {
-  return _internal_has_unit_source_value();
-}
+// string unit_source_value = 19;
 inline void MeasurementInfo::clear_unit_source_value() {
   unit_source_value_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000008u;
 }
 inline const std::string& MeasurementInfo::unit_source_value() const {
   // @@protoc_insertion_point(field_get:MeasurementInfo.unit_source_value)
@@ -9081,7 +7972,7 @@ inline const std::string& MeasurementInfo::unit_source_value() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void MeasurementInfo::set_unit_source_value(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000008u;
+ 
  unit_source_value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:MeasurementInfo.unit_source_value)
 }
@@ -9094,43 +7985,31 @@ inline const std::string& MeasurementInfo::_internal_unit_source_value() const {
   return unit_source_value_.Get();
 }
 inline void MeasurementInfo::_internal_set_unit_source_value(const std::string& value) {
-  _has_bits_[0] |= 0x00000008u;
+  
   unit_source_value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* MeasurementInfo::_internal_mutable_unit_source_value() {
-  _has_bits_[0] |= 0x00000008u;
+  
   return unit_source_value_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* MeasurementInfo::release_unit_source_value() {
   // @@protoc_insertion_point(field_release:MeasurementInfo.unit_source_value)
-  if (!_internal_has_unit_source_value()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000008u;
-  return unit_source_value_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return unit_source_value_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void MeasurementInfo::set_allocated_unit_source_value(std::string* unit_source_value) {
   if (unit_source_value != nullptr) {
-    _has_bits_[0] |= 0x00000008u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000008u;
+    
   }
   unit_source_value_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), unit_source_value,
       GetArenaForAllocation());
   // @@protoc_insertion_point(field_set_allocated:MeasurementInfo.unit_source_value)
 }
 
-// optional string value_source_value = 20;
-inline bool MeasurementInfo::_internal_has_value_source_value() const {
-  bool value = (_has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool MeasurementInfo::has_value_source_value() const {
-  return _internal_has_value_source_value();
-}
+// string value_source_value = 20;
 inline void MeasurementInfo::clear_value_source_value() {
   value_source_value_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000010u;
 }
 inline const std::string& MeasurementInfo::value_source_value() const {
   // @@protoc_insertion_point(field_get:MeasurementInfo.value_source_value)
@@ -9139,7 +8018,7 @@ inline const std::string& MeasurementInfo::value_source_value() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void MeasurementInfo::set_value_source_value(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000010u;
+ 
  value_source_value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:MeasurementInfo.value_source_value)
 }
@@ -9152,26 +8031,22 @@ inline const std::string& MeasurementInfo::_internal_value_source_value() const 
   return value_source_value_.Get();
 }
 inline void MeasurementInfo::_internal_set_value_source_value(const std::string& value) {
-  _has_bits_[0] |= 0x00000010u;
+  
   value_source_value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* MeasurementInfo::_internal_mutable_value_source_value() {
-  _has_bits_[0] |= 0x00000010u;
+  
   return value_source_value_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* MeasurementInfo::release_value_source_value() {
   // @@protoc_insertion_point(field_release:MeasurementInfo.value_source_value)
-  if (!_internal_has_value_source_value()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000010u;
-  return value_source_value_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return value_source_value_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void MeasurementInfo::set_allocated_value_source_value(std::string* value_source_value) {
   if (value_source_value != nullptr) {
-    _has_bits_[0] |= 0x00000010u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000010u;
+    
   }
   value_source_value_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value_source_value,
       GetArenaForAllocation());
@@ -9464,17 +8339,9 @@ inline void ObservationInfo::set_observation_type_concept_id(::PROTOBUF_NAMESPAC
   // @@protoc_insertion_point(field_set:ObservationInfo.observation_type_concept_id)
 }
 
-// optional string observation_datetime = 6;
-inline bool ObservationInfo::_internal_has_observation_datetime() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool ObservationInfo::has_observation_datetime() const {
-  return _internal_has_observation_datetime();
-}
+// string observation_datetime = 6;
 inline void ObservationInfo::clear_observation_datetime() {
   observation_datetime_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& ObservationInfo::observation_datetime() const {
   // @@protoc_insertion_point(field_get:ObservationInfo.observation_datetime)
@@ -9483,7 +8350,7 @@ inline const std::string& ObservationInfo::observation_datetime() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ObservationInfo::set_observation_datetime(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000001u;
+ 
  observation_datetime_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:ObservationInfo.observation_datetime)
 }
@@ -9496,43 +8363,31 @@ inline const std::string& ObservationInfo::_internal_observation_datetime() cons
   return observation_datetime_.Get();
 }
 inline void ObservationInfo::_internal_set_observation_datetime(const std::string& value) {
-  _has_bits_[0] |= 0x00000001u;
+  
   observation_datetime_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* ObservationInfo::_internal_mutable_observation_datetime() {
-  _has_bits_[0] |= 0x00000001u;
+  
   return observation_datetime_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* ObservationInfo::release_observation_datetime() {
   // @@protoc_insertion_point(field_release:ObservationInfo.observation_datetime)
-  if (!_internal_has_observation_datetime()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000001u;
-  return observation_datetime_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return observation_datetime_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void ObservationInfo::set_allocated_observation_datetime(std::string* observation_datetime) {
   if (observation_datetime != nullptr) {
-    _has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000001u;
+    
   }
   observation_datetime_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), observation_datetime,
       GetArenaForAllocation());
   // @@protoc_insertion_point(field_set_allocated:ObservationInfo.observation_datetime)
 }
 
-// optional float value_as_number = 7;
-inline bool ObservationInfo::_internal_has_value_as_number() const {
-  bool value = (_has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool ObservationInfo::has_value_as_number() const {
-  return _internal_has_value_as_number();
-}
+// float value_as_number = 7;
 inline void ObservationInfo::clear_value_as_number() {
   value_as_number_ = 0;
-  _has_bits_[0] &= ~0x00000010u;
 }
 inline float ObservationInfo::_internal_value_as_number() const {
   return value_as_number_;
@@ -9542,7 +8397,7 @@ inline float ObservationInfo::value_as_number() const {
   return _internal_value_as_number();
 }
 inline void ObservationInfo::_internal_set_value_as_number(float value) {
-  _has_bits_[0] |= 0x00000010u;
+  
   value_as_number_ = value;
 }
 inline void ObservationInfo::set_value_as_number(float value) {
@@ -9550,17 +8405,9 @@ inline void ObservationInfo::set_value_as_number(float value) {
   // @@protoc_insertion_point(field_set:ObservationInfo.value_as_number)
 }
 
-// optional string value_as_string = 8;
-inline bool ObservationInfo::_internal_has_value_as_string() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool ObservationInfo::has_value_as_string() const {
-  return _internal_has_value_as_string();
-}
+// string value_as_string = 8;
 inline void ObservationInfo::clear_value_as_string() {
   value_as_string_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& ObservationInfo::value_as_string() const {
   // @@protoc_insertion_point(field_get:ObservationInfo.value_as_string)
@@ -9569,7 +8416,7 @@ inline const std::string& ObservationInfo::value_as_string() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ObservationInfo::set_value_as_string(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000002u;
+ 
  value_as_string_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:ObservationInfo.value_as_string)
 }
@@ -9582,43 +8429,31 @@ inline const std::string& ObservationInfo::_internal_value_as_string() const {
   return value_as_string_.Get();
 }
 inline void ObservationInfo::_internal_set_value_as_string(const std::string& value) {
-  _has_bits_[0] |= 0x00000002u;
+  
   value_as_string_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* ObservationInfo::_internal_mutable_value_as_string() {
-  _has_bits_[0] |= 0x00000002u;
+  
   return value_as_string_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* ObservationInfo::release_value_as_string() {
   // @@protoc_insertion_point(field_release:ObservationInfo.value_as_string)
-  if (!_internal_has_value_as_string()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000002u;
-  return value_as_string_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return value_as_string_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void ObservationInfo::set_allocated_value_as_string(std::string* value_as_string) {
   if (value_as_string != nullptr) {
-    _has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000002u;
+    
   }
   value_as_string_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value_as_string,
       GetArenaForAllocation());
   // @@protoc_insertion_point(field_set_allocated:ObservationInfo.value_as_string)
 }
 
-// optional int32 value_as_concept_id = 9;
-inline bool ObservationInfo::_internal_has_value_as_concept_id() const {
-  bool value = (_has_bits_[0] & 0x00000020u) != 0;
-  return value;
-}
-inline bool ObservationInfo::has_value_as_concept_id() const {
-  return _internal_has_value_as_concept_id();
-}
+// int32 value_as_concept_id = 9;
 inline void ObservationInfo::clear_value_as_concept_id() {
   value_as_concept_id_ = 0;
-  _has_bits_[0] &= ~0x00000020u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 ObservationInfo::_internal_value_as_concept_id() const {
   return value_as_concept_id_;
@@ -9628,7 +8463,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 ObservationInfo::value_as_concept_id() con
   return _internal_value_as_concept_id();
 }
 inline void ObservationInfo::_internal_set_value_as_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000020u;
+  
   value_as_concept_id_ = value;
 }
 inline void ObservationInfo::set_value_as_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -9636,17 +8471,9 @@ inline void ObservationInfo::set_value_as_concept_id(::PROTOBUF_NAMESPACE_ID::in
   // @@protoc_insertion_point(field_set:ObservationInfo.value_as_concept_id)
 }
 
-// optional int32 qualifier_concept_id = 10;
-inline bool ObservationInfo::_internal_has_qualifier_concept_id() const {
-  bool value = (_has_bits_[0] & 0x00000040u) != 0;
-  return value;
-}
-inline bool ObservationInfo::has_qualifier_concept_id() const {
-  return _internal_has_qualifier_concept_id();
-}
+// int32 qualifier_concept_id = 10;
 inline void ObservationInfo::clear_qualifier_concept_id() {
   qualifier_concept_id_ = 0;
-  _has_bits_[0] &= ~0x00000040u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 ObservationInfo::_internal_qualifier_concept_id() const {
   return qualifier_concept_id_;
@@ -9656,7 +8483,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 ObservationInfo::qualifier_concept_id() co
   return _internal_qualifier_concept_id();
 }
 inline void ObservationInfo::_internal_set_qualifier_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000040u;
+  
   qualifier_concept_id_ = value;
 }
 inline void ObservationInfo::set_qualifier_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -9664,17 +8491,9 @@ inline void ObservationInfo::set_qualifier_concept_id(::PROTOBUF_NAMESPACE_ID::i
   // @@protoc_insertion_point(field_set:ObservationInfo.qualifier_concept_id)
 }
 
-// optional int32 unit_concept_id = 11;
-inline bool ObservationInfo::_internal_has_unit_concept_id() const {
-  bool value = (_has_bits_[0] & 0x00000080u) != 0;
-  return value;
-}
-inline bool ObservationInfo::has_unit_concept_id() const {
-  return _internal_has_unit_concept_id();
-}
+// int32 unit_concept_id = 11;
 inline void ObservationInfo::clear_unit_concept_id() {
   unit_concept_id_ = 0;
-  _has_bits_[0] &= ~0x00000080u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 ObservationInfo::_internal_unit_concept_id() const {
   return unit_concept_id_;
@@ -9684,7 +8503,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 ObservationInfo::unit_concept_id() const {
   return _internal_unit_concept_id();
 }
 inline void ObservationInfo::_internal_set_unit_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000080u;
+  
   unit_concept_id_ = value;
 }
 inline void ObservationInfo::set_unit_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -9692,17 +8511,9 @@ inline void ObservationInfo::set_unit_concept_id(::PROTOBUF_NAMESPACE_ID::int32 
   // @@protoc_insertion_point(field_set:ObservationInfo.unit_concept_id)
 }
 
-// optional int32 provider_id = 12;
-inline bool ObservationInfo::_internal_has_provider_id() const {
-  bool value = (_has_bits_[0] & 0x00000100u) != 0;
-  return value;
-}
-inline bool ObservationInfo::has_provider_id() const {
-  return _internal_has_provider_id();
-}
+// int32 provider_id = 12;
 inline void ObservationInfo::clear_provider_id() {
   provider_id_ = 0;
-  _has_bits_[0] &= ~0x00000100u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 ObservationInfo::_internal_provider_id() const {
   return provider_id_;
@@ -9712,7 +8523,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 ObservationInfo::provider_id() const {
   return _internal_provider_id();
 }
 inline void ObservationInfo::_internal_set_provider_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000100u;
+  
   provider_id_ = value;
 }
 inline void ObservationInfo::set_provider_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -9720,17 +8531,9 @@ inline void ObservationInfo::set_provider_id(::PROTOBUF_NAMESPACE_ID::int32 valu
   // @@protoc_insertion_point(field_set:ObservationInfo.provider_id)
 }
 
-// optional int32 visit_occurrence_id = 13;
-inline bool ObservationInfo::_internal_has_visit_occurrence_id() const {
-  bool value = (_has_bits_[0] & 0x00000200u) != 0;
-  return value;
-}
-inline bool ObservationInfo::has_visit_occurrence_id() const {
-  return _internal_has_visit_occurrence_id();
-}
+// int32 visit_occurrence_id = 13;
 inline void ObservationInfo::clear_visit_occurrence_id() {
   visit_occurrence_id_ = 0;
-  _has_bits_[0] &= ~0x00000200u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 ObservationInfo::_internal_visit_occurrence_id() const {
   return visit_occurrence_id_;
@@ -9740,7 +8543,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 ObservationInfo::visit_occurrence_id() con
   return _internal_visit_occurrence_id();
 }
 inline void ObservationInfo::_internal_set_visit_occurrence_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000200u;
+  
   visit_occurrence_id_ = value;
 }
 inline void ObservationInfo::set_visit_occurrence_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -9748,17 +8551,9 @@ inline void ObservationInfo::set_visit_occurrence_id(::PROTOBUF_NAMESPACE_ID::in
   // @@protoc_insertion_point(field_set:ObservationInfo.visit_occurrence_id)
 }
 
-// optional int32 visit_detail_id = 14;
-inline bool ObservationInfo::_internal_has_visit_detail_id() const {
-  bool value = (_has_bits_[0] & 0x00000400u) != 0;
-  return value;
-}
-inline bool ObservationInfo::has_visit_detail_id() const {
-  return _internal_has_visit_detail_id();
-}
+// int32 visit_detail_id = 14;
 inline void ObservationInfo::clear_visit_detail_id() {
   visit_detail_id_ = 0;
-  _has_bits_[0] &= ~0x00000400u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 ObservationInfo::_internal_visit_detail_id() const {
   return visit_detail_id_;
@@ -9768,7 +8563,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 ObservationInfo::visit_detail_id() const {
   return _internal_visit_detail_id();
 }
 inline void ObservationInfo::_internal_set_visit_detail_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000400u;
+  
   visit_detail_id_ = value;
 }
 inline void ObservationInfo::set_visit_detail_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -9776,17 +8571,9 @@ inline void ObservationInfo::set_visit_detail_id(::PROTOBUF_NAMESPACE_ID::int32 
   // @@protoc_insertion_point(field_set:ObservationInfo.visit_detail_id)
 }
 
-// optional string observation_source_value = 15;
-inline bool ObservationInfo::_internal_has_observation_source_value() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool ObservationInfo::has_observation_source_value() const {
-  return _internal_has_observation_source_value();
-}
+// string observation_source_value = 15;
 inline void ObservationInfo::clear_observation_source_value() {
   observation_source_value_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& ObservationInfo::observation_source_value() const {
   // @@protoc_insertion_point(field_get:ObservationInfo.observation_source_value)
@@ -9795,7 +8582,7 @@ inline const std::string& ObservationInfo::observation_source_value() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ObservationInfo::set_observation_source_value(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000004u;
+ 
  observation_source_value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:ObservationInfo.observation_source_value)
 }
@@ -9808,43 +8595,31 @@ inline const std::string& ObservationInfo::_internal_observation_source_value() 
   return observation_source_value_.Get();
 }
 inline void ObservationInfo::_internal_set_observation_source_value(const std::string& value) {
-  _has_bits_[0] |= 0x00000004u;
+  
   observation_source_value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* ObservationInfo::_internal_mutable_observation_source_value() {
-  _has_bits_[0] |= 0x00000004u;
+  
   return observation_source_value_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* ObservationInfo::release_observation_source_value() {
   // @@protoc_insertion_point(field_release:ObservationInfo.observation_source_value)
-  if (!_internal_has_observation_source_value()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000004u;
-  return observation_source_value_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return observation_source_value_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void ObservationInfo::set_allocated_observation_source_value(std::string* observation_source_value) {
   if (observation_source_value != nullptr) {
-    _has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000004u;
+    
   }
   observation_source_value_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), observation_source_value,
       GetArenaForAllocation());
   // @@protoc_insertion_point(field_set_allocated:ObservationInfo.observation_source_value)
 }
 
-// optional int32 observation_source_concept_id = 16;
-inline bool ObservationInfo::_internal_has_observation_source_concept_id() const {
-  bool value = (_has_bits_[0] & 0x00000800u) != 0;
-  return value;
-}
-inline bool ObservationInfo::has_observation_source_concept_id() const {
-  return _internal_has_observation_source_concept_id();
-}
+// int32 observation_source_concept_id = 16;
 inline void ObservationInfo::clear_observation_source_concept_id() {
   observation_source_concept_id_ = 0;
-  _has_bits_[0] &= ~0x00000800u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 ObservationInfo::_internal_observation_source_concept_id() const {
   return observation_source_concept_id_;
@@ -9854,7 +8629,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 ObservationInfo::observation_source_concep
   return _internal_observation_source_concept_id();
 }
 inline void ObservationInfo::_internal_set_observation_source_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000800u;
+  
   observation_source_concept_id_ = value;
 }
 inline void ObservationInfo::set_observation_source_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -9862,17 +8637,9 @@ inline void ObservationInfo::set_observation_source_concept_id(::PROTOBUF_NAMESP
   // @@protoc_insertion_point(field_set:ObservationInfo.observation_source_concept_id)
 }
 
-// optional string unit_source_value = 17;
-inline bool ObservationInfo::_internal_has_unit_source_value() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool ObservationInfo::has_unit_source_value() const {
-  return _internal_has_unit_source_value();
-}
+// string unit_source_value = 17;
 inline void ObservationInfo::clear_unit_source_value() {
   unit_source_value_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000008u;
 }
 inline const std::string& ObservationInfo::unit_source_value() const {
   // @@protoc_insertion_point(field_get:ObservationInfo.unit_source_value)
@@ -9881,7 +8648,7 @@ inline const std::string& ObservationInfo::unit_source_value() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ObservationInfo::set_unit_source_value(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000008u;
+ 
  unit_source_value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:ObservationInfo.unit_source_value)
 }
@@ -9894,43 +8661,31 @@ inline const std::string& ObservationInfo::_internal_unit_source_value() const {
   return unit_source_value_.Get();
 }
 inline void ObservationInfo::_internal_set_unit_source_value(const std::string& value) {
-  _has_bits_[0] |= 0x00000008u;
+  
   unit_source_value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* ObservationInfo::_internal_mutable_unit_source_value() {
-  _has_bits_[0] |= 0x00000008u;
+  
   return unit_source_value_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* ObservationInfo::release_unit_source_value() {
   // @@protoc_insertion_point(field_release:ObservationInfo.unit_source_value)
-  if (!_internal_has_unit_source_value()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000008u;
-  return unit_source_value_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return unit_source_value_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void ObservationInfo::set_allocated_unit_source_value(std::string* unit_source_value) {
   if (unit_source_value != nullptr) {
-    _has_bits_[0] |= 0x00000008u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000008u;
+    
   }
   unit_source_value_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), unit_source_value,
       GetArenaForAllocation());
   // @@protoc_insertion_point(field_set_allocated:ObservationInfo.unit_source_value)
 }
 
-// optional int32 qualifier_source_value = 18;
-inline bool ObservationInfo::_internal_has_qualifier_source_value() const {
-  bool value = (_has_bits_[0] & 0x00001000u) != 0;
-  return value;
-}
-inline bool ObservationInfo::has_qualifier_source_value() const {
-  return _internal_has_qualifier_source_value();
-}
+// int32 qualifier_source_value = 18;
 inline void ObservationInfo::clear_qualifier_source_value() {
   qualifier_source_value_ = 0;
-  _has_bits_[0] &= ~0x00001000u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 ObservationInfo::_internal_qualifier_source_value() const {
   return qualifier_source_value_;
@@ -9940,7 +8695,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 ObservationInfo::qualifier_source_value() 
   return _internal_qualifier_source_value();
 }
 inline void ObservationInfo::_internal_set_qualifier_source_value(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00001000u;
+  
   qualifier_source_value_ = value;
 }
 inline void ObservationInfo::set_qualifier_source_value(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -10078,17 +8833,9 @@ inline void ProcedureOccurrenceInfo::set_procedure_type_concept_id(::PROTOBUF_NA
   // @@protoc_insertion_point(field_set:ProcedureOccurrenceInfo.procedure_type_concept_id)
 }
 
-// optional string procedure_datetime = 6;
-inline bool ProcedureOccurrenceInfo::_internal_has_procedure_datetime() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool ProcedureOccurrenceInfo::has_procedure_datetime() const {
-  return _internal_has_procedure_datetime();
-}
+// string procedure_datetime = 6;
 inline void ProcedureOccurrenceInfo::clear_procedure_datetime() {
   procedure_datetime_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& ProcedureOccurrenceInfo::procedure_datetime() const {
   // @@protoc_insertion_point(field_get:ProcedureOccurrenceInfo.procedure_datetime)
@@ -10097,7 +8844,7 @@ inline const std::string& ProcedureOccurrenceInfo::procedure_datetime() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ProcedureOccurrenceInfo::set_procedure_datetime(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000001u;
+ 
  procedure_datetime_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:ProcedureOccurrenceInfo.procedure_datetime)
 }
@@ -10110,43 +8857,31 @@ inline const std::string& ProcedureOccurrenceInfo::_internal_procedure_datetime(
   return procedure_datetime_.Get();
 }
 inline void ProcedureOccurrenceInfo::_internal_set_procedure_datetime(const std::string& value) {
-  _has_bits_[0] |= 0x00000001u;
+  
   procedure_datetime_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* ProcedureOccurrenceInfo::_internal_mutable_procedure_datetime() {
-  _has_bits_[0] |= 0x00000001u;
+  
   return procedure_datetime_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* ProcedureOccurrenceInfo::release_procedure_datetime() {
   // @@protoc_insertion_point(field_release:ProcedureOccurrenceInfo.procedure_datetime)
-  if (!_internal_has_procedure_datetime()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000001u;
-  return procedure_datetime_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return procedure_datetime_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void ProcedureOccurrenceInfo::set_allocated_procedure_datetime(std::string* procedure_datetime) {
   if (procedure_datetime != nullptr) {
-    _has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000001u;
+    
   }
   procedure_datetime_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), procedure_datetime,
       GetArenaForAllocation());
   // @@protoc_insertion_point(field_set_allocated:ProcedureOccurrenceInfo.procedure_datetime)
 }
 
-// optional int32 modifier_concept_id = 7;
-inline bool ProcedureOccurrenceInfo::_internal_has_modifier_concept_id() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool ProcedureOccurrenceInfo::has_modifier_concept_id() const {
-  return _internal_has_modifier_concept_id();
-}
+// int32 modifier_concept_id = 7;
 inline void ProcedureOccurrenceInfo::clear_modifier_concept_id() {
   modifier_concept_id_ = 0;
-  _has_bits_[0] &= ~0x00000008u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 ProcedureOccurrenceInfo::_internal_modifier_concept_id() const {
   return modifier_concept_id_;
@@ -10156,7 +8891,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 ProcedureOccurrenceInfo::modifier_concept_
   return _internal_modifier_concept_id();
 }
 inline void ProcedureOccurrenceInfo::_internal_set_modifier_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000008u;
+  
   modifier_concept_id_ = value;
 }
 inline void ProcedureOccurrenceInfo::set_modifier_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -10164,17 +8899,9 @@ inline void ProcedureOccurrenceInfo::set_modifier_concept_id(::PROTOBUF_NAMESPAC
   // @@protoc_insertion_point(field_set:ProcedureOccurrenceInfo.modifier_concept_id)
 }
 
-// optional int32 quantity = 8;
-inline bool ProcedureOccurrenceInfo::_internal_has_quantity() const {
-  bool value = (_has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool ProcedureOccurrenceInfo::has_quantity() const {
-  return _internal_has_quantity();
-}
+// int32 quantity = 8;
 inline void ProcedureOccurrenceInfo::clear_quantity() {
   quantity_ = 0;
-  _has_bits_[0] &= ~0x00000010u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 ProcedureOccurrenceInfo::_internal_quantity() const {
   return quantity_;
@@ -10184,7 +8911,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 ProcedureOccurrenceInfo::quantity() const 
   return _internal_quantity();
 }
 inline void ProcedureOccurrenceInfo::_internal_set_quantity(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000010u;
+  
   quantity_ = value;
 }
 inline void ProcedureOccurrenceInfo::set_quantity(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -10192,17 +8919,9 @@ inline void ProcedureOccurrenceInfo::set_quantity(::PROTOBUF_NAMESPACE_ID::int32
   // @@protoc_insertion_point(field_set:ProcedureOccurrenceInfo.quantity)
 }
 
-// optional int32 provider_id = 9;
-inline bool ProcedureOccurrenceInfo::_internal_has_provider_id() const {
-  bool value = (_has_bits_[0] & 0x00000020u) != 0;
-  return value;
-}
-inline bool ProcedureOccurrenceInfo::has_provider_id() const {
-  return _internal_has_provider_id();
-}
+// int32 provider_id = 9;
 inline void ProcedureOccurrenceInfo::clear_provider_id() {
   provider_id_ = 0;
-  _has_bits_[0] &= ~0x00000020u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 ProcedureOccurrenceInfo::_internal_provider_id() const {
   return provider_id_;
@@ -10212,7 +8931,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 ProcedureOccurrenceInfo::provider_id() con
   return _internal_provider_id();
 }
 inline void ProcedureOccurrenceInfo::_internal_set_provider_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000020u;
+  
   provider_id_ = value;
 }
 inline void ProcedureOccurrenceInfo::set_provider_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -10220,17 +8939,9 @@ inline void ProcedureOccurrenceInfo::set_provider_id(::PROTOBUF_NAMESPACE_ID::in
   // @@protoc_insertion_point(field_set:ProcedureOccurrenceInfo.provider_id)
 }
 
-// optional int32 visit_occurrence_id = 10;
-inline bool ProcedureOccurrenceInfo::_internal_has_visit_occurrence_id() const {
-  bool value = (_has_bits_[0] & 0x00000040u) != 0;
-  return value;
-}
-inline bool ProcedureOccurrenceInfo::has_visit_occurrence_id() const {
-  return _internal_has_visit_occurrence_id();
-}
+// int32 visit_occurrence_id = 10;
 inline void ProcedureOccurrenceInfo::clear_visit_occurrence_id() {
   visit_occurrence_id_ = 0;
-  _has_bits_[0] &= ~0x00000040u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 ProcedureOccurrenceInfo::_internal_visit_occurrence_id() const {
   return visit_occurrence_id_;
@@ -10240,7 +8951,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 ProcedureOccurrenceInfo::visit_occurrence_
   return _internal_visit_occurrence_id();
 }
 inline void ProcedureOccurrenceInfo::_internal_set_visit_occurrence_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000040u;
+  
   visit_occurrence_id_ = value;
 }
 inline void ProcedureOccurrenceInfo::set_visit_occurrence_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -10248,17 +8959,9 @@ inline void ProcedureOccurrenceInfo::set_visit_occurrence_id(::PROTOBUF_NAMESPAC
   // @@protoc_insertion_point(field_set:ProcedureOccurrenceInfo.visit_occurrence_id)
 }
 
-// optional int32 visit_detail_id = 11;
-inline bool ProcedureOccurrenceInfo::_internal_has_visit_detail_id() const {
-  bool value = (_has_bits_[0] & 0x00000080u) != 0;
-  return value;
-}
-inline bool ProcedureOccurrenceInfo::has_visit_detail_id() const {
-  return _internal_has_visit_detail_id();
-}
+// int32 visit_detail_id = 11;
 inline void ProcedureOccurrenceInfo::clear_visit_detail_id() {
   visit_detail_id_ = 0;
-  _has_bits_[0] &= ~0x00000080u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 ProcedureOccurrenceInfo::_internal_visit_detail_id() const {
   return visit_detail_id_;
@@ -10268,7 +8971,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 ProcedureOccurrenceInfo::visit_detail_id()
   return _internal_visit_detail_id();
 }
 inline void ProcedureOccurrenceInfo::_internal_set_visit_detail_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000080u;
+  
   visit_detail_id_ = value;
 }
 inline void ProcedureOccurrenceInfo::set_visit_detail_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -10276,17 +8979,9 @@ inline void ProcedureOccurrenceInfo::set_visit_detail_id(::PROTOBUF_NAMESPACE_ID
   // @@protoc_insertion_point(field_set:ProcedureOccurrenceInfo.visit_detail_id)
 }
 
-// optional string procedure_source_value = 12;
-inline bool ProcedureOccurrenceInfo::_internal_has_procedure_source_value() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool ProcedureOccurrenceInfo::has_procedure_source_value() const {
-  return _internal_has_procedure_source_value();
-}
+// string procedure_source_value = 12;
 inline void ProcedureOccurrenceInfo::clear_procedure_source_value() {
   procedure_source_value_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& ProcedureOccurrenceInfo::procedure_source_value() const {
   // @@protoc_insertion_point(field_get:ProcedureOccurrenceInfo.procedure_source_value)
@@ -10295,7 +8990,7 @@ inline const std::string& ProcedureOccurrenceInfo::procedure_source_value() cons
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ProcedureOccurrenceInfo::set_procedure_source_value(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000002u;
+ 
  procedure_source_value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:ProcedureOccurrenceInfo.procedure_source_value)
 }
@@ -10308,43 +9003,31 @@ inline const std::string& ProcedureOccurrenceInfo::_internal_procedure_source_va
   return procedure_source_value_.Get();
 }
 inline void ProcedureOccurrenceInfo::_internal_set_procedure_source_value(const std::string& value) {
-  _has_bits_[0] |= 0x00000002u;
+  
   procedure_source_value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* ProcedureOccurrenceInfo::_internal_mutable_procedure_source_value() {
-  _has_bits_[0] |= 0x00000002u;
+  
   return procedure_source_value_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* ProcedureOccurrenceInfo::release_procedure_source_value() {
   // @@protoc_insertion_point(field_release:ProcedureOccurrenceInfo.procedure_source_value)
-  if (!_internal_has_procedure_source_value()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000002u;
-  return procedure_source_value_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return procedure_source_value_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void ProcedureOccurrenceInfo::set_allocated_procedure_source_value(std::string* procedure_source_value) {
   if (procedure_source_value != nullptr) {
-    _has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000002u;
+    
   }
   procedure_source_value_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), procedure_source_value,
       GetArenaForAllocation());
   // @@protoc_insertion_point(field_set_allocated:ProcedureOccurrenceInfo.procedure_source_value)
 }
 
-// optional int32 procedure_source_concept_id = 13;
-inline bool ProcedureOccurrenceInfo::_internal_has_procedure_source_concept_id() const {
-  bool value = (_has_bits_[0] & 0x00000100u) != 0;
-  return value;
-}
-inline bool ProcedureOccurrenceInfo::has_procedure_source_concept_id() const {
-  return _internal_has_procedure_source_concept_id();
-}
+// int32 procedure_source_concept_id = 13;
 inline void ProcedureOccurrenceInfo::clear_procedure_source_concept_id() {
   procedure_source_concept_id_ = 0;
-  _has_bits_[0] &= ~0x00000100u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 ProcedureOccurrenceInfo::_internal_procedure_source_concept_id() const {
   return procedure_source_concept_id_;
@@ -10354,7 +9037,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 ProcedureOccurrenceInfo::procedure_source_
   return _internal_procedure_source_concept_id();
 }
 inline void ProcedureOccurrenceInfo::_internal_set_procedure_source_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000100u;
+  
   procedure_source_concept_id_ = value;
 }
 inline void ProcedureOccurrenceInfo::set_procedure_source_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -10362,17 +9045,9 @@ inline void ProcedureOccurrenceInfo::set_procedure_source_concept_id(::PROTOBUF_
   // @@protoc_insertion_point(field_set:ProcedureOccurrenceInfo.procedure_source_concept_id)
 }
 
-// optional string modifier_source_value = 14;
-inline bool ProcedureOccurrenceInfo::_internal_has_modifier_source_value() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool ProcedureOccurrenceInfo::has_modifier_source_value() const {
-  return _internal_has_modifier_source_value();
-}
+// string modifier_source_value = 14;
 inline void ProcedureOccurrenceInfo::clear_modifier_source_value() {
   modifier_source_value_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& ProcedureOccurrenceInfo::modifier_source_value() const {
   // @@protoc_insertion_point(field_get:ProcedureOccurrenceInfo.modifier_source_value)
@@ -10381,7 +9056,7 @@ inline const std::string& ProcedureOccurrenceInfo::modifier_source_value() const
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void ProcedureOccurrenceInfo::set_modifier_source_value(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000004u;
+ 
  modifier_source_value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:ProcedureOccurrenceInfo.modifier_source_value)
 }
@@ -10394,26 +9069,22 @@ inline const std::string& ProcedureOccurrenceInfo::_internal_modifier_source_val
   return modifier_source_value_.Get();
 }
 inline void ProcedureOccurrenceInfo::_internal_set_modifier_source_value(const std::string& value) {
-  _has_bits_[0] |= 0x00000004u;
+  
   modifier_source_value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* ProcedureOccurrenceInfo::_internal_mutable_modifier_source_value() {
-  _has_bits_[0] |= 0x00000004u;
+  
   return modifier_source_value_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* ProcedureOccurrenceInfo::release_modifier_source_value() {
   // @@protoc_insertion_point(field_release:ProcedureOccurrenceInfo.modifier_source_value)
-  if (!_internal_has_modifier_source_value()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000004u;
-  return modifier_source_value_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return modifier_source_value_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void ProcedureOccurrenceInfo::set_allocated_modifier_source_value(std::string* modifier_source_value) {
   if (modifier_source_value != nullptr) {
-    _has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000004u;
+    
   }
   modifier_source_value_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), modifier_source_value,
       GetArenaForAllocation());
@@ -10596,17 +9267,9 @@ inline void VisitOccurrenceInfo::set_visit_type_concept_id(::PROTOBUF_NAMESPACE_
   // @@protoc_insertion_point(field_set:VisitOccurrenceInfo.visit_type_concept_id)
 }
 
-// optional string visit_start_datetime = 7;
-inline bool VisitOccurrenceInfo::_internal_has_visit_start_datetime() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool VisitOccurrenceInfo::has_visit_start_datetime() const {
-  return _internal_has_visit_start_datetime();
-}
+// string visit_start_datetime = 7;
 inline void VisitOccurrenceInfo::clear_visit_start_datetime() {
   visit_start_datetime_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& VisitOccurrenceInfo::visit_start_datetime() const {
   // @@protoc_insertion_point(field_get:VisitOccurrenceInfo.visit_start_datetime)
@@ -10615,7 +9278,7 @@ inline const std::string& VisitOccurrenceInfo::visit_start_datetime() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void VisitOccurrenceInfo::set_visit_start_datetime(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000001u;
+ 
  visit_start_datetime_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:VisitOccurrenceInfo.visit_start_datetime)
 }
@@ -10628,43 +9291,31 @@ inline const std::string& VisitOccurrenceInfo::_internal_visit_start_datetime() 
   return visit_start_datetime_.Get();
 }
 inline void VisitOccurrenceInfo::_internal_set_visit_start_datetime(const std::string& value) {
-  _has_bits_[0] |= 0x00000001u;
+  
   visit_start_datetime_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* VisitOccurrenceInfo::_internal_mutable_visit_start_datetime() {
-  _has_bits_[0] |= 0x00000001u;
+  
   return visit_start_datetime_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* VisitOccurrenceInfo::release_visit_start_datetime() {
   // @@protoc_insertion_point(field_release:VisitOccurrenceInfo.visit_start_datetime)
-  if (!_internal_has_visit_start_datetime()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000001u;
-  return visit_start_datetime_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return visit_start_datetime_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void VisitOccurrenceInfo::set_allocated_visit_start_datetime(std::string* visit_start_datetime) {
   if (visit_start_datetime != nullptr) {
-    _has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000001u;
+    
   }
   visit_start_datetime_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), visit_start_datetime,
       GetArenaForAllocation());
   // @@protoc_insertion_point(field_set_allocated:VisitOccurrenceInfo.visit_start_datetime)
 }
 
-// optional string visit_end_datetime = 8;
-inline bool VisitOccurrenceInfo::_internal_has_visit_end_datetime() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool VisitOccurrenceInfo::has_visit_end_datetime() const {
-  return _internal_has_visit_end_datetime();
-}
+// string visit_end_datetime = 8;
 inline void VisitOccurrenceInfo::clear_visit_end_datetime() {
   visit_end_datetime_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000002u;
 }
 inline const std::string& VisitOccurrenceInfo::visit_end_datetime() const {
   // @@protoc_insertion_point(field_get:VisitOccurrenceInfo.visit_end_datetime)
@@ -10673,7 +9324,7 @@ inline const std::string& VisitOccurrenceInfo::visit_end_datetime() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void VisitOccurrenceInfo::set_visit_end_datetime(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000002u;
+ 
  visit_end_datetime_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:VisitOccurrenceInfo.visit_end_datetime)
 }
@@ -10686,43 +9337,31 @@ inline const std::string& VisitOccurrenceInfo::_internal_visit_end_datetime() co
   return visit_end_datetime_.Get();
 }
 inline void VisitOccurrenceInfo::_internal_set_visit_end_datetime(const std::string& value) {
-  _has_bits_[0] |= 0x00000002u;
+  
   visit_end_datetime_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* VisitOccurrenceInfo::_internal_mutable_visit_end_datetime() {
-  _has_bits_[0] |= 0x00000002u;
+  
   return visit_end_datetime_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* VisitOccurrenceInfo::release_visit_end_datetime() {
   // @@protoc_insertion_point(field_release:VisitOccurrenceInfo.visit_end_datetime)
-  if (!_internal_has_visit_end_datetime()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000002u;
-  return visit_end_datetime_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return visit_end_datetime_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void VisitOccurrenceInfo::set_allocated_visit_end_datetime(std::string* visit_end_datetime) {
   if (visit_end_datetime != nullptr) {
-    _has_bits_[0] |= 0x00000002u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000002u;
+    
   }
   visit_end_datetime_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), visit_end_datetime,
       GetArenaForAllocation());
   // @@protoc_insertion_point(field_set_allocated:VisitOccurrenceInfo.visit_end_datetime)
 }
 
-// optional int32 provider_id = 9;
-inline bool VisitOccurrenceInfo::_internal_has_provider_id() const {
-  bool value = (_has_bits_[0] & 0x00000020u) != 0;
-  return value;
-}
-inline bool VisitOccurrenceInfo::has_provider_id() const {
-  return _internal_has_provider_id();
-}
+// int32 provider_id = 9;
 inline void VisitOccurrenceInfo::clear_provider_id() {
   provider_id_ = 0;
-  _has_bits_[0] &= ~0x00000020u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 VisitOccurrenceInfo::_internal_provider_id() const {
   return provider_id_;
@@ -10732,7 +9371,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 VisitOccurrenceInfo::provider_id() const {
   return _internal_provider_id();
 }
 inline void VisitOccurrenceInfo::_internal_set_provider_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000020u;
+  
   provider_id_ = value;
 }
 inline void VisitOccurrenceInfo::set_provider_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -10740,17 +9379,9 @@ inline void VisitOccurrenceInfo::set_provider_id(::PROTOBUF_NAMESPACE_ID::int32 
   // @@protoc_insertion_point(field_set:VisitOccurrenceInfo.provider_id)
 }
 
-// optional int32 care_site_id = 10;
-inline bool VisitOccurrenceInfo::_internal_has_care_site_id() const {
-  bool value = (_has_bits_[0] & 0x00000040u) != 0;
-  return value;
-}
-inline bool VisitOccurrenceInfo::has_care_site_id() const {
-  return _internal_has_care_site_id();
-}
+// int32 care_site_id = 10;
 inline void VisitOccurrenceInfo::clear_care_site_id() {
   care_site_id_ = 0;
-  _has_bits_[0] &= ~0x00000040u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 VisitOccurrenceInfo::_internal_care_site_id() const {
   return care_site_id_;
@@ -10760,7 +9391,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 VisitOccurrenceInfo::care_site_id() const 
   return _internal_care_site_id();
 }
 inline void VisitOccurrenceInfo::_internal_set_care_site_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000040u;
+  
   care_site_id_ = value;
 }
 inline void VisitOccurrenceInfo::set_care_site_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -10768,17 +9399,9 @@ inline void VisitOccurrenceInfo::set_care_site_id(::PROTOBUF_NAMESPACE_ID::int32
   // @@protoc_insertion_point(field_set:VisitOccurrenceInfo.care_site_id)
 }
 
-// optional string visit_source_value = 11;
-inline bool VisitOccurrenceInfo::_internal_has_visit_source_value() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool VisitOccurrenceInfo::has_visit_source_value() const {
-  return _internal_has_visit_source_value();
-}
+// string visit_source_value = 11;
 inline void VisitOccurrenceInfo::clear_visit_source_value() {
   visit_source_value_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000004u;
 }
 inline const std::string& VisitOccurrenceInfo::visit_source_value() const {
   // @@protoc_insertion_point(field_get:VisitOccurrenceInfo.visit_source_value)
@@ -10787,7 +9410,7 @@ inline const std::string& VisitOccurrenceInfo::visit_source_value() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void VisitOccurrenceInfo::set_visit_source_value(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000004u;
+ 
  visit_source_value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:VisitOccurrenceInfo.visit_source_value)
 }
@@ -10800,43 +9423,31 @@ inline const std::string& VisitOccurrenceInfo::_internal_visit_source_value() co
   return visit_source_value_.Get();
 }
 inline void VisitOccurrenceInfo::_internal_set_visit_source_value(const std::string& value) {
-  _has_bits_[0] |= 0x00000004u;
+  
   visit_source_value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* VisitOccurrenceInfo::_internal_mutable_visit_source_value() {
-  _has_bits_[0] |= 0x00000004u;
+  
   return visit_source_value_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* VisitOccurrenceInfo::release_visit_source_value() {
   // @@protoc_insertion_point(field_release:VisitOccurrenceInfo.visit_source_value)
-  if (!_internal_has_visit_source_value()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000004u;
-  return visit_source_value_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return visit_source_value_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void VisitOccurrenceInfo::set_allocated_visit_source_value(std::string* visit_source_value) {
   if (visit_source_value != nullptr) {
-    _has_bits_[0] |= 0x00000004u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000004u;
+    
   }
   visit_source_value_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), visit_source_value,
       GetArenaForAllocation());
   // @@protoc_insertion_point(field_set_allocated:VisitOccurrenceInfo.visit_source_value)
 }
 
-// optional int32 visit_source_concept_id = 12;
-inline bool VisitOccurrenceInfo::_internal_has_visit_source_concept_id() const {
-  bool value = (_has_bits_[0] & 0x00000080u) != 0;
-  return value;
-}
-inline bool VisitOccurrenceInfo::has_visit_source_concept_id() const {
-  return _internal_has_visit_source_concept_id();
-}
+// int32 visit_source_concept_id = 12;
 inline void VisitOccurrenceInfo::clear_visit_source_concept_id() {
   visit_source_concept_id_ = 0;
-  _has_bits_[0] &= ~0x00000080u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 VisitOccurrenceInfo::_internal_visit_source_concept_id() const {
   return visit_source_concept_id_;
@@ -10846,7 +9457,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 VisitOccurrenceInfo::visit_source_concept_
   return _internal_visit_source_concept_id();
 }
 inline void VisitOccurrenceInfo::_internal_set_visit_source_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000080u;
+  
   visit_source_concept_id_ = value;
 }
 inline void VisitOccurrenceInfo::set_visit_source_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -10854,17 +9465,9 @@ inline void VisitOccurrenceInfo::set_visit_source_concept_id(::PROTOBUF_NAMESPAC
   // @@protoc_insertion_point(field_set:VisitOccurrenceInfo.visit_source_concept_id)
 }
 
-// optional int32 admitting_source_concept_id = 13;
-inline bool VisitOccurrenceInfo::_internal_has_admitting_source_concept_id() const {
-  bool value = (_has_bits_[0] & 0x00000100u) != 0;
-  return value;
-}
-inline bool VisitOccurrenceInfo::has_admitting_source_concept_id() const {
-  return _internal_has_admitting_source_concept_id();
-}
+// int32 admitting_source_concept_id = 13;
 inline void VisitOccurrenceInfo::clear_admitting_source_concept_id() {
   admitting_source_concept_id_ = 0;
-  _has_bits_[0] &= ~0x00000100u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 VisitOccurrenceInfo::_internal_admitting_source_concept_id() const {
   return admitting_source_concept_id_;
@@ -10874,7 +9477,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 VisitOccurrenceInfo::admitting_source_conc
   return _internal_admitting_source_concept_id();
 }
 inline void VisitOccurrenceInfo::_internal_set_admitting_source_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000100u;
+  
   admitting_source_concept_id_ = value;
 }
 inline void VisitOccurrenceInfo::set_admitting_source_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -10882,17 +9485,9 @@ inline void VisitOccurrenceInfo::set_admitting_source_concept_id(::PROTOBUF_NAME
   // @@protoc_insertion_point(field_set:VisitOccurrenceInfo.admitting_source_concept_id)
 }
 
-// optional string admitting_source_value = 14;
-inline bool VisitOccurrenceInfo::_internal_has_admitting_source_value() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool VisitOccurrenceInfo::has_admitting_source_value() const {
-  return _internal_has_admitting_source_value();
-}
+// string admitting_source_value = 14;
 inline void VisitOccurrenceInfo::clear_admitting_source_value() {
   admitting_source_value_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000008u;
 }
 inline const std::string& VisitOccurrenceInfo::admitting_source_value() const {
   // @@protoc_insertion_point(field_get:VisitOccurrenceInfo.admitting_source_value)
@@ -10901,7 +9496,7 @@ inline const std::string& VisitOccurrenceInfo::admitting_source_value() const {
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void VisitOccurrenceInfo::set_admitting_source_value(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000008u;
+ 
  admitting_source_value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:VisitOccurrenceInfo.admitting_source_value)
 }
@@ -10914,43 +9509,31 @@ inline const std::string& VisitOccurrenceInfo::_internal_admitting_source_value(
   return admitting_source_value_.Get();
 }
 inline void VisitOccurrenceInfo::_internal_set_admitting_source_value(const std::string& value) {
-  _has_bits_[0] |= 0x00000008u;
+  
   admitting_source_value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* VisitOccurrenceInfo::_internal_mutable_admitting_source_value() {
-  _has_bits_[0] |= 0x00000008u;
+  
   return admitting_source_value_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* VisitOccurrenceInfo::release_admitting_source_value() {
   // @@protoc_insertion_point(field_release:VisitOccurrenceInfo.admitting_source_value)
-  if (!_internal_has_admitting_source_value()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000008u;
-  return admitting_source_value_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return admitting_source_value_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void VisitOccurrenceInfo::set_allocated_admitting_source_value(std::string* admitting_source_value) {
   if (admitting_source_value != nullptr) {
-    _has_bits_[0] |= 0x00000008u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000008u;
+    
   }
   admitting_source_value_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), admitting_source_value,
       GetArenaForAllocation());
   // @@protoc_insertion_point(field_set_allocated:VisitOccurrenceInfo.admitting_source_value)
 }
 
-// optional int32 discharge_to_concept_id = 15;
-inline bool VisitOccurrenceInfo::_internal_has_discharge_to_concept_id() const {
-  bool value = (_has_bits_[0] & 0x00000200u) != 0;
-  return value;
-}
-inline bool VisitOccurrenceInfo::has_discharge_to_concept_id() const {
-  return _internal_has_discharge_to_concept_id();
-}
+// int32 discharge_to_concept_id = 15;
 inline void VisitOccurrenceInfo::clear_discharge_to_concept_id() {
   discharge_to_concept_id_ = 0;
-  _has_bits_[0] &= ~0x00000200u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 VisitOccurrenceInfo::_internal_discharge_to_concept_id() const {
   return discharge_to_concept_id_;
@@ -10960,7 +9543,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 VisitOccurrenceInfo::discharge_to_concept_
   return _internal_discharge_to_concept_id();
 }
 inline void VisitOccurrenceInfo::_internal_set_discharge_to_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000200u;
+  
   discharge_to_concept_id_ = value;
 }
 inline void VisitOccurrenceInfo::set_discharge_to_concept_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -10968,17 +9551,9 @@ inline void VisitOccurrenceInfo::set_discharge_to_concept_id(::PROTOBUF_NAMESPAC
   // @@protoc_insertion_point(field_set:VisitOccurrenceInfo.discharge_to_concept_id)
 }
 
-// optional string discharge_to_source_value = 16;
-inline bool VisitOccurrenceInfo::_internal_has_discharge_to_source_value() const {
-  bool value = (_has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool VisitOccurrenceInfo::has_discharge_to_source_value() const {
-  return _internal_has_discharge_to_source_value();
-}
+// string discharge_to_source_value = 16;
 inline void VisitOccurrenceInfo::clear_discharge_to_source_value() {
   discharge_to_source_value_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000010u;
 }
 inline const std::string& VisitOccurrenceInfo::discharge_to_source_value() const {
   // @@protoc_insertion_point(field_get:VisitOccurrenceInfo.discharge_to_source_value)
@@ -10987,7 +9562,7 @@ inline const std::string& VisitOccurrenceInfo::discharge_to_source_value() const
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
 void VisitOccurrenceInfo::set_discharge_to_source_value(ArgT0&& arg0, ArgT... args) {
- _has_bits_[0] |= 0x00000010u;
+ 
  discharge_to_source_value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:VisitOccurrenceInfo.discharge_to_source_value)
 }
@@ -11000,43 +9575,31 @@ inline const std::string& VisitOccurrenceInfo::_internal_discharge_to_source_val
   return discharge_to_source_value_.Get();
 }
 inline void VisitOccurrenceInfo::_internal_set_discharge_to_source_value(const std::string& value) {
-  _has_bits_[0] |= 0x00000010u;
+  
   discharge_to_source_value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
 }
 inline std::string* VisitOccurrenceInfo::_internal_mutable_discharge_to_source_value() {
-  _has_bits_[0] |= 0x00000010u;
+  
   return discharge_to_source_value_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
 }
 inline std::string* VisitOccurrenceInfo::release_discharge_to_source_value() {
   // @@protoc_insertion_point(field_release:VisitOccurrenceInfo.discharge_to_source_value)
-  if (!_internal_has_discharge_to_source_value()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000010u;
-  return discharge_to_source_value_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+  return discharge_to_source_value_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
 }
 inline void VisitOccurrenceInfo::set_allocated_discharge_to_source_value(std::string* discharge_to_source_value) {
   if (discharge_to_source_value != nullptr) {
-    _has_bits_[0] |= 0x00000010u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000010u;
+    
   }
   discharge_to_source_value_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), discharge_to_source_value,
       GetArenaForAllocation());
   // @@protoc_insertion_point(field_set_allocated:VisitOccurrenceInfo.discharge_to_source_value)
 }
 
-// optional int32 preceding_visit_occurrence_id = 17;
-inline bool VisitOccurrenceInfo::_internal_has_preceding_visit_occurrence_id() const {
-  bool value = (_has_bits_[0] & 0x00000400u) != 0;
-  return value;
-}
-inline bool VisitOccurrenceInfo::has_preceding_visit_occurrence_id() const {
-  return _internal_has_preceding_visit_occurrence_id();
-}
+// int32 preceding_visit_occurrence_id = 17;
 inline void VisitOccurrenceInfo::clear_preceding_visit_occurrence_id() {
   preceding_visit_occurrence_id_ = 0;
-  _has_bits_[0] &= ~0x00000400u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 VisitOccurrenceInfo::_internal_preceding_visit_occurrence_id() const {
   return preceding_visit_occurrence_id_;
@@ -11046,7 +9609,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 VisitOccurrenceInfo::preceding_visit_occur
   return _internal_preceding_visit_occurrence_id();
 }
 inline void VisitOccurrenceInfo::_internal_set_preceding_visit_occurrence_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000400u;
+  
   preceding_visit_occurrence_id_ = value;
 }
 inline void VisitOccurrenceInfo::set_preceding_visit_occurrence_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
