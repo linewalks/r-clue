@@ -137,6 +137,13 @@ class CLUE final {
     std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::VisitOccurrenceInfo>> PrepareAsyncGetCohortVisitOccurrenceTable(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::VisitOccurrenceInfo>>(PrepareAsyncGetCohortVisitOccurrenceTableRaw(context, cq));
     }
+    virtual ::grpc::Status GetCohortComparison(::grpc::ClientContext* context, const ::RequestComparison& request, ::ResponseComparison* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ResponseComparison>> AsyncGetCohortComparison(::grpc::ClientContext* context, const ::RequestComparison& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ResponseComparison>>(AsyncGetCohortComparisonRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ResponseComparison>> PrepareAsyncGetCohortComparison(::grpc::ClientContext* context, const ::RequestComparison& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ResponseComparison>>(PrepareAsyncGetCohortComparisonRaw(context, request, cq));
+    }
     class async_interface {
      public:
       virtual ~async_interface() {}
@@ -154,6 +161,8 @@ class CLUE final {
       virtual void GetCohortObservationTable(::grpc::ClientContext* context, ::grpc::ClientBidiReactor< ::RequestCohortStream,::ObservationInfo>* reactor) = 0;
       virtual void GetCohortProcedureOccurrenceTable(::grpc::ClientContext* context, ::grpc::ClientBidiReactor< ::RequestCohortStream,::ProcedureOccurrenceInfo>* reactor) = 0;
       virtual void GetCohortVisitOccurrenceTable(::grpc::ClientContext* context, ::grpc::ClientBidiReactor< ::RequestCohortStream,::VisitOccurrenceInfo>* reactor) = 0;
+      virtual void GetCohortComparison(::grpc::ClientContext* context, const ::RequestComparison* request, ::ResponseComparison* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void GetCohortComparison(::grpc::ClientContext* context, const ::RequestComparison* request, ::ResponseComparison* response, ::grpc::ClientUnaryReactor* reactor) = 0;
     };
     typedef class async_interface experimental_async_interface;
     virtual class async_interface* async() { return nullptr; }
@@ -193,6 +202,8 @@ class CLUE final {
     virtual ::grpc::ClientReaderWriterInterface< ::RequestCohortStream, ::VisitOccurrenceInfo>* GetCohortVisitOccurrenceTableRaw(::grpc::ClientContext* context) = 0;
     virtual ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::VisitOccurrenceInfo>* AsyncGetCohortVisitOccurrenceTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) = 0;
     virtual ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::VisitOccurrenceInfo>* PrepareAsyncGetCohortVisitOccurrenceTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::ResponseComparison>* AsyncGetCohortComparisonRaw(::grpc::ClientContext* context, const ::RequestComparison& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::ResponseComparison>* PrepareAsyncGetCohortComparisonRaw(::grpc::ClientContext* context, const ::RequestComparison& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
    public:
@@ -301,6 +312,13 @@ class CLUE final {
     std::unique_ptr<  ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::VisitOccurrenceInfo>> PrepareAsyncGetCohortVisitOccurrenceTable(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::VisitOccurrenceInfo>>(PrepareAsyncGetCohortVisitOccurrenceTableRaw(context, cq));
     }
+    ::grpc::Status GetCohortComparison(::grpc::ClientContext* context, const ::RequestComparison& request, ::ResponseComparison* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ResponseComparison>> AsyncGetCohortComparison(::grpc::ClientContext* context, const ::RequestComparison& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ResponseComparison>>(AsyncGetCohortComparisonRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ResponseComparison>> PrepareAsyncGetCohortComparison(::grpc::ClientContext* context, const ::RequestComparison& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ResponseComparison>>(PrepareAsyncGetCohortComparisonRaw(context, request, cq));
+    }
     class async final :
       public StubInterface::async_interface {
      public:
@@ -318,6 +336,8 @@ class CLUE final {
       void GetCohortObservationTable(::grpc::ClientContext* context, ::grpc::ClientBidiReactor< ::RequestCohortStream,::ObservationInfo>* reactor) override;
       void GetCohortProcedureOccurrenceTable(::grpc::ClientContext* context, ::grpc::ClientBidiReactor< ::RequestCohortStream,::ProcedureOccurrenceInfo>* reactor) override;
       void GetCohortVisitOccurrenceTable(::grpc::ClientContext* context, ::grpc::ClientBidiReactor< ::RequestCohortStream,::VisitOccurrenceInfo>* reactor) override;
+      void GetCohortComparison(::grpc::ClientContext* context, const ::RequestComparison* request, ::ResponseComparison* response, std::function<void(::grpc::Status)>) override;
+      void GetCohortComparison(::grpc::ClientContext* context, const ::RequestComparison* request, ::ResponseComparison* response, ::grpc::ClientUnaryReactor* reactor) override;
      private:
       friend class Stub;
       explicit async(Stub* stub): stub_(stub) { }
@@ -363,6 +383,8 @@ class CLUE final {
     ::grpc::ClientReaderWriter< ::RequestCohortStream, ::VisitOccurrenceInfo>* GetCohortVisitOccurrenceTableRaw(::grpc::ClientContext* context) override;
     ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::VisitOccurrenceInfo>* AsyncGetCohortVisitOccurrenceTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) override;
     ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::VisitOccurrenceInfo>* PrepareAsyncGetCohortVisitOccurrenceTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::ResponseComparison>* AsyncGetCohortComparisonRaw(::grpc::ClientContext* context, const ::RequestComparison& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::ResponseComparison>* PrepareAsyncGetCohortComparisonRaw(::grpc::ClientContext* context, const ::RequestComparison& request, ::grpc::CompletionQueue* cq) override;
     const ::grpc::internal::RpcMethod rpcmethod_AuthLogin_;
     const ::grpc::internal::RpcMethod rpcmethod_GetCohortList_;
     const ::grpc::internal::RpcMethod rpcmethod_GetCohortPersonTable_;
@@ -375,6 +397,7 @@ class CLUE final {
     const ::grpc::internal::RpcMethod rpcmethod_GetCohortObservationTable_;
     const ::grpc::internal::RpcMethod rpcmethod_GetCohortProcedureOccurrenceTable_;
     const ::grpc::internal::RpcMethod rpcmethod_GetCohortVisitOccurrenceTable_;
+    const ::grpc::internal::RpcMethod rpcmethod_GetCohortComparison_;
   };
   static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
 
@@ -394,6 +417,7 @@ class CLUE final {
     virtual ::grpc::Status GetCohortObservationTable(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::ObservationInfo, ::RequestCohortStream>* stream);
     virtual ::grpc::Status GetCohortProcedureOccurrenceTable(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::ProcedureOccurrenceInfo, ::RequestCohortStream>* stream);
     virtual ::grpc::Status GetCohortVisitOccurrenceTable(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::VisitOccurrenceInfo, ::RequestCohortStream>* stream);
+    virtual ::grpc::Status GetCohortComparison(::grpc::ServerContext* context, const ::RequestComparison* request, ::ResponseComparison* response);
   };
   template <class BaseClass>
   class WithAsyncMethod_AuthLogin : public BaseClass {
@@ -635,7 +659,27 @@ class CLUE final {
       ::grpc::Service::RequestAsyncBidiStreaming(11, context, stream, new_call_cq, notification_cq, tag);
     }
   };
-  typedef WithAsyncMethod_AuthLogin<WithAsyncMethod_GetCohortList<WithAsyncMethod_GetCohortPersonTable<WithAsyncMethod_GetCohortConditionOccurrenceTable<WithAsyncMethod_GetCohortDeathTable<WithAsyncMethod_GetCohortDeviceExposureTable<WithAsyncMethod_GetCohortDrugExposureTable<WithAsyncMethod_GetCohortMeasurementTable<WithAsyncMethod_GetCohortObservationPeriodTable<WithAsyncMethod_GetCohortObservationTable<WithAsyncMethod_GetCohortProcedureOccurrenceTable<WithAsyncMethod_GetCohortVisitOccurrenceTable<Service > > > > > > > > > > > > AsyncService;
+  template <class BaseClass>
+  class WithAsyncMethod_GetCohortComparison : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_GetCohortComparison() {
+      ::grpc::Service::MarkMethodAsync(12);
+    }
+    ~WithAsyncMethod_GetCohortComparison() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortComparison(::grpc::ServerContext* /*context*/, const ::RequestComparison* /*request*/, ::ResponseComparison* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetCohortComparison(::grpc::ServerContext* context, ::RequestComparison* request, ::grpc::ServerAsyncResponseWriter< ::ResponseComparison>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(12, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  typedef WithAsyncMethod_AuthLogin<WithAsyncMethod_GetCohortList<WithAsyncMethod_GetCohortPersonTable<WithAsyncMethod_GetCohortConditionOccurrenceTable<WithAsyncMethod_GetCohortDeathTable<WithAsyncMethod_GetCohortDeviceExposureTable<WithAsyncMethod_GetCohortDrugExposureTable<WithAsyncMethod_GetCohortMeasurementTable<WithAsyncMethod_GetCohortObservationPeriodTable<WithAsyncMethod_GetCohortObservationTable<WithAsyncMethod_GetCohortProcedureOccurrenceTable<WithAsyncMethod_GetCohortVisitOccurrenceTable<WithAsyncMethod_GetCohortComparison<Service > > > > > > > > > > > > > AsyncService;
   template <class BaseClass>
   class WithCallbackMethod_AuthLogin : public BaseClass {
    private:
@@ -920,7 +964,34 @@ class CLUE final {
       ::grpc::CallbackServerContext* /*context*/)
       { return nullptr; }
   };
-  typedef WithCallbackMethod_AuthLogin<WithCallbackMethod_GetCohortList<WithCallbackMethod_GetCohortPersonTable<WithCallbackMethod_GetCohortConditionOccurrenceTable<WithCallbackMethod_GetCohortDeathTable<WithCallbackMethod_GetCohortDeviceExposureTable<WithCallbackMethod_GetCohortDrugExposureTable<WithCallbackMethod_GetCohortMeasurementTable<WithCallbackMethod_GetCohortObservationPeriodTable<WithCallbackMethod_GetCohortObservationTable<WithCallbackMethod_GetCohortProcedureOccurrenceTable<WithCallbackMethod_GetCohortVisitOccurrenceTable<Service > > > > > > > > > > > > CallbackService;
+  template <class BaseClass>
+  class WithCallbackMethod_GetCohortComparison : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_GetCohortComparison() {
+      ::grpc::Service::MarkMethodCallback(12,
+          new ::grpc::internal::CallbackUnaryHandler< ::RequestComparison, ::ResponseComparison>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::RequestComparison* request, ::ResponseComparison* response) { return this->GetCohortComparison(context, request, response); }));}
+    void SetMessageAllocatorFor_GetCohortComparison(
+        ::grpc::MessageAllocator< ::RequestComparison, ::ResponseComparison>* allocator) {
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(12);
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::RequestComparison, ::ResponseComparison>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~WithCallbackMethod_GetCohortComparison() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortComparison(::grpc::ServerContext* /*context*/, const ::RequestComparison* /*request*/, ::ResponseComparison* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* GetCohortComparison(
+      ::grpc::CallbackServerContext* /*context*/, const ::RequestComparison* /*request*/, ::ResponseComparison* /*response*/)  { return nullptr; }
+  };
+  typedef WithCallbackMethod_AuthLogin<WithCallbackMethod_GetCohortList<WithCallbackMethod_GetCohortPersonTable<WithCallbackMethod_GetCohortConditionOccurrenceTable<WithCallbackMethod_GetCohortDeathTable<WithCallbackMethod_GetCohortDeviceExposureTable<WithCallbackMethod_GetCohortDrugExposureTable<WithCallbackMethod_GetCohortMeasurementTable<WithCallbackMethod_GetCohortObservationPeriodTable<WithCallbackMethod_GetCohortObservationTable<WithCallbackMethod_GetCohortProcedureOccurrenceTable<WithCallbackMethod_GetCohortVisitOccurrenceTable<WithCallbackMethod_GetCohortComparison<Service > > > > > > > > > > > > > CallbackService;
   typedef CallbackService ExperimentalCallbackService;
   template <class BaseClass>
   class WithGenericMethod_AuthLogin : public BaseClass {
@@ -1122,6 +1193,23 @@ class CLUE final {
     }
     // disable synchronous version of this method
     ::grpc::Status GetCohortVisitOccurrenceTable(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::VisitOccurrenceInfo, ::RequestCohortStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_GetCohortComparison : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_GetCohortComparison() {
+      ::grpc::Service::MarkMethodGeneric(12);
+    }
+    ~WithGenericMethod_GetCohortComparison() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortComparison(::grpc::ServerContext* /*context*/, const ::RequestComparison* /*request*/, ::ResponseComparison* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1364,6 +1452,26 @@ class CLUE final {
     }
     void RequestGetCohortVisitOccurrenceTable(::grpc::ServerContext* context, ::grpc::ServerAsyncReaderWriter< ::grpc::ByteBuffer, ::grpc::ByteBuffer>* stream, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncBidiStreaming(11, context, stream, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_GetCohortComparison : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_GetCohortComparison() {
+      ::grpc::Service::MarkMethodRaw(12);
+    }
+    ~WithRawMethod_GetCohortComparison() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortComparison(::grpc::ServerContext* /*context*/, const ::RequestComparison* /*request*/, ::ResponseComparison* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetCohortComparison(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(12, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -1641,6 +1749,28 @@ class CLUE final {
       { return nullptr; }
   };
   template <class BaseClass>
+  class WithRawCallbackMethod_GetCohortComparison : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_GetCohortComparison() {
+      ::grpc::Service::MarkMethodRawCallback(12,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetCohortComparison(context, request, response); }));
+    }
+    ~WithRawCallbackMethod_GetCohortComparison() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetCohortComparison(::grpc::ServerContext* /*context*/, const ::RequestComparison* /*request*/, ::ResponseComparison* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* GetCohortComparison(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
   class WithStreamedUnaryMethod_AuthLogin : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
@@ -1694,9 +1824,36 @@ class CLUE final {
     // replace default version of method with streamed unary
     virtual ::grpc::Status StreamedGetCohortList(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::RequestCohortList,::ResponseCohortList>* server_unary_streamer) = 0;
   };
-  typedef WithStreamedUnaryMethod_AuthLogin<WithStreamedUnaryMethod_GetCohortList<Service > > StreamedUnaryService;
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_GetCohortComparison : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithStreamedUnaryMethod_GetCohortComparison() {
+      ::grpc::Service::MarkMethodStreamed(12,
+        new ::grpc::internal::StreamedUnaryHandler<
+          ::RequestComparison, ::ResponseComparison>(
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
+                     ::RequestComparison, ::ResponseComparison>* streamer) {
+                       return this->StreamedGetCohortComparison(context,
+                         streamer);
+                  }));
+    }
+    ~WithStreamedUnaryMethod_GetCohortComparison() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status GetCohortComparison(::grpc::ServerContext* /*context*/, const ::RequestComparison* /*request*/, ::ResponseComparison* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedGetCohortComparison(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::RequestComparison,::ResponseComparison>* server_unary_streamer) = 0;
+  };
+  typedef WithStreamedUnaryMethod_AuthLogin<WithStreamedUnaryMethod_GetCohortList<WithStreamedUnaryMethod_GetCohortComparison<Service > > > StreamedUnaryService;
   typedef Service SplitStreamedService;
-  typedef WithStreamedUnaryMethod_AuthLogin<WithStreamedUnaryMethod_GetCohortList<Service > > StreamedService;
+  typedef WithStreamedUnaryMethod_AuthLogin<WithStreamedUnaryMethod_GetCohortList<WithStreamedUnaryMethod_GetCohortComparison<Service > > > StreamedService;
 };
 
 

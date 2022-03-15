@@ -3,6 +3,7 @@
 #include <connection.h>
 #include "stream.h"
 #include "utils.h"
+#include "comparison.h"
 
 using namespace Rcpp;
 
@@ -37,6 +38,11 @@ class Connection {
     GET_COHORT_TABLE_R(ObservationPeriod)
     GET_COHORT_TABLE_R(ProcedureOccurrence)
     GET_COHORT_TABLE_R(VisitOccurrence)
+
+    DataFrame GetCohortComparison(int comparison_id) {
+      ResponseComparison response = connection_->GetCohortComparison(comparison_id);
+      return convert_comparison(response);
+    }
 
   protected:
     std::shared_ptr<clue::Connection> connection_;

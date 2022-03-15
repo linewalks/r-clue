@@ -46,7 +46,7 @@ struct TableStruct_clue_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxiliaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[16]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[20]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -56,6 +56,12 @@ extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table
 class CohortInfo;
 struct CohortInfoDefaultTypeInternal;
 extern CohortInfoDefaultTypeInternal _CohortInfo_default_instance_;
+class ComparisonCohortInfo;
+struct ComparisonCohortInfoDefaultTypeInternal;
+extern ComparisonCohortInfoDefaultTypeInternal _ComparisonCohortInfo_default_instance_;
+class ComparisonRowInfo;
+struct ComparisonRowInfoDefaultTypeInternal;
+extern ComparisonRowInfoDefaultTypeInternal _ComparisonRowInfo_default_instance_;
 class ConditionOccurrenceInfo;
 struct ConditionOccurrenceInfoDefaultTypeInternal;
 extern ConditionOccurrenceInfoDefaultTypeInternal _ConditionOccurrenceInfo_default_instance_;
@@ -89,12 +95,18 @@ extern RequestCohortListDefaultTypeInternal _RequestCohortList_default_instance_
 class RequestCohortStream;
 struct RequestCohortStreamDefaultTypeInternal;
 extern RequestCohortStreamDefaultTypeInternal _RequestCohortStream_default_instance_;
+class RequestComparison;
+struct RequestComparisonDefaultTypeInternal;
+extern RequestComparisonDefaultTypeInternal _RequestComparison_default_instance_;
 class RequestLogin;
 struct RequestLoginDefaultTypeInternal;
 extern RequestLoginDefaultTypeInternal _RequestLogin_default_instance_;
 class ResponseCohortList;
 struct ResponseCohortListDefaultTypeInternal;
 extern ResponseCohortListDefaultTypeInternal _ResponseCohortList_default_instance_;
+class ResponseComparison;
+struct ResponseComparisonDefaultTypeInternal;
+extern ResponseComparisonDefaultTypeInternal _ResponseComparison_default_instance_;
 class ResponseLogin;
 struct ResponseLoginDefaultTypeInternal;
 extern ResponseLoginDefaultTypeInternal _ResponseLogin_default_instance_;
@@ -103,6 +115,8 @@ struct VisitOccurrenceInfoDefaultTypeInternal;
 extern VisitOccurrenceInfoDefaultTypeInternal _VisitOccurrenceInfo_default_instance_;
 PROTOBUF_NAMESPACE_OPEN
 template<> ::CohortInfo* Arena::CreateMaybeMessage<::CohortInfo>(Arena*);
+template<> ::ComparisonCohortInfo* Arena::CreateMaybeMessage<::ComparisonCohortInfo>(Arena*);
+template<> ::ComparisonRowInfo* Arena::CreateMaybeMessage<::ComparisonRowInfo>(Arena*);
 template<> ::ConditionOccurrenceInfo* Arena::CreateMaybeMessage<::ConditionOccurrenceInfo>(Arena*);
 template<> ::DeathInfo* Arena::CreateMaybeMessage<::DeathInfo>(Arena*);
 template<> ::DeviceExposureInfo* Arena::CreateMaybeMessage<::DeviceExposureInfo>(Arena*);
@@ -114,8 +128,10 @@ template<> ::PersonInfo* Arena::CreateMaybeMessage<::PersonInfo>(Arena*);
 template<> ::ProcedureOccurrenceInfo* Arena::CreateMaybeMessage<::ProcedureOccurrenceInfo>(Arena*);
 template<> ::RequestCohortList* Arena::CreateMaybeMessage<::RequestCohortList>(Arena*);
 template<> ::RequestCohortStream* Arena::CreateMaybeMessage<::RequestCohortStream>(Arena*);
+template<> ::RequestComparison* Arena::CreateMaybeMessage<::RequestComparison>(Arena*);
 template<> ::RequestLogin* Arena::CreateMaybeMessage<::RequestLogin>(Arena*);
 template<> ::ResponseCohortList* Arena::CreateMaybeMessage<::ResponseCohortList>(Arena*);
+template<> ::ResponseComparison* Arena::CreateMaybeMessage<::ResponseComparison>(Arena*);
 template<> ::ResponseLogin* Arena::CreateMaybeMessage<::ResponseLogin>(Arena*);
 template<> ::VisitOccurrenceInfo* Arena::CreateMaybeMessage<::VisitOccurrenceInfo>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
@@ -4433,6 +4449,719 @@ class VisitOccurrenceInfo final :
   ::PROTOBUF_NAMESPACE_ID::int32 admitting_source_concept_id_;
   ::PROTOBUF_NAMESPACE_ID::int32 discharge_to_concept_id_;
   ::PROTOBUF_NAMESPACE_ID::int32 preceding_visit_occurrence_id_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_clue_2eproto;
+};
+// -------------------------------------------------------------------
+
+class RequestComparison final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:RequestComparison) */ {
+ public:
+  inline RequestComparison() : RequestComparison(nullptr) {}
+  ~RequestComparison() override;
+  explicit constexpr RequestComparison(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  RequestComparison(const RequestComparison& from);
+  RequestComparison(RequestComparison&& from) noexcept
+    : RequestComparison() {
+    *this = ::std::move(from);
+  }
+
+  inline RequestComparison& operator=(const RequestComparison& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline RequestComparison& operator=(RequestComparison&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const RequestComparison& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const RequestComparison* internal_default_instance() {
+    return reinterpret_cast<const RequestComparison*>(
+               &_RequestComparison_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    16;
+
+  friend void swap(RequestComparison& a, RequestComparison& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(RequestComparison* other) {
+    if (other == this) return;
+    if (GetOwningArena() == other->GetOwningArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(RequestComparison* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline RequestComparison* New() const final {
+    return new RequestComparison();
+  }
+
+  RequestComparison* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<RequestComparison>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const RequestComparison& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const RequestComparison& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(RequestComparison* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "RequestComparison";
+  }
+  protected:
+  explicit RequestComparison(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kComparisonIdFieldNumber = 1,
+  };
+  // int32 comparison_id = 1;
+  void clear_comparison_id();
+  ::PROTOBUF_NAMESPACE_ID::int32 comparison_id() const;
+  void set_comparison_id(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_comparison_id() const;
+  void _internal_set_comparison_id(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:RequestComparison)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::int32 comparison_id_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_clue_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ComparisonCohortInfo final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ComparisonCohortInfo) */ {
+ public:
+  inline ComparisonCohortInfo() : ComparisonCohortInfo(nullptr) {}
+  ~ComparisonCohortInfo() override;
+  explicit constexpr ComparisonCohortInfo(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  ComparisonCohortInfo(const ComparisonCohortInfo& from);
+  ComparisonCohortInfo(ComparisonCohortInfo&& from) noexcept
+    : ComparisonCohortInfo() {
+    *this = ::std::move(from);
+  }
+
+  inline ComparisonCohortInfo& operator=(const ComparisonCohortInfo& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ComparisonCohortInfo& operator=(ComparisonCohortInfo&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ComparisonCohortInfo& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ComparisonCohortInfo* internal_default_instance() {
+    return reinterpret_cast<const ComparisonCohortInfo*>(
+               &_ComparisonCohortInfo_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    17;
+
+  friend void swap(ComparisonCohortInfo& a, ComparisonCohortInfo& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ComparisonCohortInfo* other) {
+    if (other == this) return;
+    if (GetOwningArena() == other->GetOwningArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ComparisonCohortInfo* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline ComparisonCohortInfo* New() const final {
+    return new ComparisonCohortInfo();
+  }
+
+  ComparisonCohortInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<ComparisonCohortInfo>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const ComparisonCohortInfo& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const ComparisonCohortInfo& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ComparisonCohortInfo* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ComparisonCohortInfo";
+  }
+  protected:
+  explicit ComparisonCohortInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kNameFieldNumber = 2,
+    kIdFieldNumber = 1,
+    kPersonCountFieldNumber = 3,
+  };
+  // string name = 2;
+  void clear_name();
+  const std::string& name() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_name(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_name();
+  PROTOBUF_MUST_USE_RESULT std::string* release_name();
+  void set_allocated_name(std::string* name);
+  private:
+  const std::string& _internal_name() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(const std::string& value);
+  std::string* _internal_mutable_name();
+  public:
+
+  // int32 id = 1;
+  void clear_id();
+  ::PROTOBUF_NAMESPACE_ID::int32 id() const;
+  void set_id(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_id() const;
+  void _internal_set_id(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // int32 person_count = 3;
+  void clear_person_count();
+  ::PROTOBUF_NAMESPACE_ID::int32 person_count() const;
+  void set_person_count(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_person_count() const;
+  void _internal_set_person_count(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:ComparisonCohortInfo)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
+  ::PROTOBUF_NAMESPACE_ID::int32 id_;
+  ::PROTOBUF_NAMESPACE_ID::int32 person_count_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_clue_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ComparisonRowInfo final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ComparisonRowInfo) */ {
+ public:
+  inline ComparisonRowInfo() : ComparisonRowInfo(nullptr) {}
+  ~ComparisonRowInfo() override;
+  explicit constexpr ComparisonRowInfo(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  ComparisonRowInfo(const ComparisonRowInfo& from);
+  ComparisonRowInfo(ComparisonRowInfo&& from) noexcept
+    : ComparisonRowInfo() {
+    *this = ::std::move(from);
+  }
+
+  inline ComparisonRowInfo& operator=(const ComparisonRowInfo& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ComparisonRowInfo& operator=(ComparisonRowInfo&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ComparisonRowInfo& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ComparisonRowInfo* internal_default_instance() {
+    return reinterpret_cast<const ComparisonRowInfo*>(
+               &_ComparisonRowInfo_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    18;
+
+  friend void swap(ComparisonRowInfo& a, ComparisonRowInfo& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ComparisonRowInfo* other) {
+    if (other == this) return;
+    if (GetOwningArena() == other->GetOwningArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ComparisonRowInfo* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline ComparisonRowInfo* New() const final {
+    return new ComparisonRowInfo();
+  }
+
+  ComparisonRowInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<ComparisonRowInfo>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const ComparisonRowInfo& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const ComparisonRowInfo& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ComparisonRowInfo* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ComparisonRowInfo";
+  }
+  protected:
+  explicit ComparisonRowInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kValuesFieldNumber = 3,
+    kCategory1FieldNumber = 1,
+    kCategory2FieldNumber = 2,
+    kPValueFieldNumber = 4,
+    kPValueIsGroupFieldNumber = 5,
+  };
+  // repeated string values = 3;
+  int values_size() const;
+  private:
+  int _internal_values_size() const;
+  public:
+  void clear_values();
+  const std::string& values(int index) const;
+  std::string* mutable_values(int index);
+  void set_values(int index, const std::string& value);
+  void set_values(int index, std::string&& value);
+  void set_values(int index, const char* value);
+  void set_values(int index, const char* value, size_t size);
+  std::string* add_values();
+  void add_values(const std::string& value);
+  void add_values(std::string&& value);
+  void add_values(const char* value);
+  void add_values(const char* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& values() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_values();
+  private:
+  const std::string& _internal_values(int index) const;
+  std::string* _internal_add_values();
+  public:
+
+  // string category1 = 1;
+  void clear_category1();
+  const std::string& category1() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_category1(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_category1();
+  PROTOBUF_MUST_USE_RESULT std::string* release_category1();
+  void set_allocated_category1(std::string* category1);
+  private:
+  const std::string& _internal_category1() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_category1(const std::string& value);
+  std::string* _internal_mutable_category1();
+  public:
+
+  // string category2 = 2;
+  void clear_category2();
+  const std::string& category2() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_category2(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_category2();
+  PROTOBUF_MUST_USE_RESULT std::string* release_category2();
+  void set_allocated_category2(std::string* category2);
+  private:
+  const std::string& _internal_category2() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_category2(const std::string& value);
+  std::string* _internal_mutable_category2();
+  public:
+
+  // float p_value = 4;
+  void clear_p_value();
+  float p_value() const;
+  void set_p_value(float value);
+  private:
+  float _internal_p_value() const;
+  void _internal_set_p_value(float value);
+  public:
+
+  // bool p_value_is_group = 5;
+  void clear_p_value_is_group();
+  bool p_value_is_group() const;
+  void set_p_value_is_group(bool value);
+  private:
+  bool _internal_p_value_is_group() const;
+  void _internal_set_p_value_is_group(bool value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:ComparisonRowInfo)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> values_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr category1_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr category2_;
+  float p_value_;
+  bool p_value_is_group_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_clue_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ResponseComparison final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ResponseComparison) */ {
+ public:
+  inline ResponseComparison() : ResponseComparison(nullptr) {}
+  ~ResponseComparison() override;
+  explicit constexpr ResponseComparison(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  ResponseComparison(const ResponseComparison& from);
+  ResponseComparison(ResponseComparison&& from) noexcept
+    : ResponseComparison() {
+    *this = ::std::move(from);
+  }
+
+  inline ResponseComparison& operator=(const ResponseComparison& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ResponseComparison& operator=(ResponseComparison&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ResponseComparison& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ResponseComparison* internal_default_instance() {
+    return reinterpret_cast<const ResponseComparison*>(
+               &_ResponseComparison_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    19;
+
+  friend void swap(ResponseComparison& a, ResponseComparison& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ResponseComparison* other) {
+    if (other == this) return;
+    if (GetOwningArena() == other->GetOwningArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ResponseComparison* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline ResponseComparison* New() const final {
+    return new ResponseComparison();
+  }
+
+  ResponseComparison* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<ResponseComparison>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const ResponseComparison& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const ResponseComparison& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ResponseComparison* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ResponseComparison";
+  }
+  protected:
+  explicit ResponseComparison(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kCohortListFieldNumber = 2,
+    kRowListFieldNumber = 3,
+    kNameFieldNumber = 1,
+  };
+  // repeated .ComparisonCohortInfo cohort_list = 2;
+  int cohort_list_size() const;
+  private:
+  int _internal_cohort_list_size() const;
+  public:
+  void clear_cohort_list();
+  ::ComparisonCohortInfo* mutable_cohort_list(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ComparisonCohortInfo >*
+      mutable_cohort_list();
+  private:
+  const ::ComparisonCohortInfo& _internal_cohort_list(int index) const;
+  ::ComparisonCohortInfo* _internal_add_cohort_list();
+  public:
+  const ::ComparisonCohortInfo& cohort_list(int index) const;
+  ::ComparisonCohortInfo* add_cohort_list();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ComparisonCohortInfo >&
+      cohort_list() const;
+
+  // repeated .ComparisonRowInfo row_list = 3;
+  int row_list_size() const;
+  private:
+  int _internal_row_list_size() const;
+  public:
+  void clear_row_list();
+  ::ComparisonRowInfo* mutable_row_list(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ComparisonRowInfo >*
+      mutable_row_list();
+  private:
+  const ::ComparisonRowInfo& _internal_row_list(int index) const;
+  ::ComparisonRowInfo* _internal_add_row_list();
+  public:
+  const ::ComparisonRowInfo& row_list(int index) const;
+  ::ComparisonRowInfo* add_row_list();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ComparisonRowInfo >&
+      row_list() const;
+
+  // string name = 1;
+  void clear_name();
+  const std::string& name() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_name(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_name();
+  PROTOBUF_MUST_USE_RESULT std::string* release_name();
+  void set_allocated_name(std::string* name);
+  private:
+  const std::string& _internal_name() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_name(const std::string& value);
+  std::string* _internal_mutable_name();
+  public:
+
+  // @@protoc_insertion_point(class_scope:ResponseComparison)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ComparisonCohortInfo > cohort_list_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ComparisonRowInfo > row_list_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_clue_2eproto;
 };
@@ -9617,9 +10346,472 @@ inline void VisitOccurrenceInfo::set_preceding_visit_occurrence_id(::PROTOBUF_NA
   // @@protoc_insertion_point(field_set:VisitOccurrenceInfo.preceding_visit_occurrence_id)
 }
 
+// -------------------------------------------------------------------
+
+// RequestComparison
+
+// int32 comparison_id = 1;
+inline void RequestComparison::clear_comparison_id() {
+  comparison_id_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 RequestComparison::_internal_comparison_id() const {
+  return comparison_id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 RequestComparison::comparison_id() const {
+  // @@protoc_insertion_point(field_get:RequestComparison.comparison_id)
+  return _internal_comparison_id();
+}
+inline void RequestComparison::_internal_set_comparison_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  comparison_id_ = value;
+}
+inline void RequestComparison::set_comparison_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_comparison_id(value);
+  // @@protoc_insertion_point(field_set:RequestComparison.comparison_id)
+}
+
+// -------------------------------------------------------------------
+
+// ComparisonCohortInfo
+
+// int32 id = 1;
+inline void ComparisonCohortInfo::clear_id() {
+  id_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 ComparisonCohortInfo::_internal_id() const {
+  return id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 ComparisonCohortInfo::id() const {
+  // @@protoc_insertion_point(field_get:ComparisonCohortInfo.id)
+  return _internal_id();
+}
+inline void ComparisonCohortInfo::_internal_set_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  id_ = value;
+}
+inline void ComparisonCohortInfo::set_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_id(value);
+  // @@protoc_insertion_point(field_set:ComparisonCohortInfo.id)
+}
+
+// string name = 2;
+inline void ComparisonCohortInfo::clear_name() {
+  name_.ClearToEmpty();
+}
+inline const std::string& ComparisonCohortInfo::name() const {
+  // @@protoc_insertion_point(field_get:ComparisonCohortInfo.name)
+  return _internal_name();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ComparisonCohortInfo::set_name(ArgT0&& arg0, ArgT... args) {
+ 
+ name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ComparisonCohortInfo.name)
+}
+inline std::string* ComparisonCohortInfo::mutable_name() {
+  std::string* _s = _internal_mutable_name();
+  // @@protoc_insertion_point(field_mutable:ComparisonCohortInfo.name)
+  return _s;
+}
+inline const std::string& ComparisonCohortInfo::_internal_name() const {
+  return name_.Get();
+}
+inline void ComparisonCohortInfo::_internal_set_name(const std::string& value) {
+  
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* ComparisonCohortInfo::_internal_mutable_name() {
+  
+  return name_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* ComparisonCohortInfo::release_name() {
+  // @@protoc_insertion_point(field_release:ComparisonCohortInfo.name)
+  return name_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+}
+inline void ComparisonCohortInfo::set_allocated_name(std::string* name) {
+  if (name != nullptr) {
+    
+  } else {
+    
+  }
+  name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), name,
+      GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set_allocated:ComparisonCohortInfo.name)
+}
+
+// int32 person_count = 3;
+inline void ComparisonCohortInfo::clear_person_count() {
+  person_count_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 ComparisonCohortInfo::_internal_person_count() const {
+  return person_count_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 ComparisonCohortInfo::person_count() const {
+  // @@protoc_insertion_point(field_get:ComparisonCohortInfo.person_count)
+  return _internal_person_count();
+}
+inline void ComparisonCohortInfo::_internal_set_person_count(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  person_count_ = value;
+}
+inline void ComparisonCohortInfo::set_person_count(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_person_count(value);
+  // @@protoc_insertion_point(field_set:ComparisonCohortInfo.person_count)
+}
+
+// -------------------------------------------------------------------
+
+// ComparisonRowInfo
+
+// string category1 = 1;
+inline void ComparisonRowInfo::clear_category1() {
+  category1_.ClearToEmpty();
+}
+inline const std::string& ComparisonRowInfo::category1() const {
+  // @@protoc_insertion_point(field_get:ComparisonRowInfo.category1)
+  return _internal_category1();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ComparisonRowInfo::set_category1(ArgT0&& arg0, ArgT... args) {
+ 
+ category1_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ComparisonRowInfo.category1)
+}
+inline std::string* ComparisonRowInfo::mutable_category1() {
+  std::string* _s = _internal_mutable_category1();
+  // @@protoc_insertion_point(field_mutable:ComparisonRowInfo.category1)
+  return _s;
+}
+inline const std::string& ComparisonRowInfo::_internal_category1() const {
+  return category1_.Get();
+}
+inline void ComparisonRowInfo::_internal_set_category1(const std::string& value) {
+  
+  category1_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* ComparisonRowInfo::_internal_mutable_category1() {
+  
+  return category1_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* ComparisonRowInfo::release_category1() {
+  // @@protoc_insertion_point(field_release:ComparisonRowInfo.category1)
+  return category1_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+}
+inline void ComparisonRowInfo::set_allocated_category1(std::string* category1) {
+  if (category1 != nullptr) {
+    
+  } else {
+    
+  }
+  category1_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), category1,
+      GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set_allocated:ComparisonRowInfo.category1)
+}
+
+// string category2 = 2;
+inline void ComparisonRowInfo::clear_category2() {
+  category2_.ClearToEmpty();
+}
+inline const std::string& ComparisonRowInfo::category2() const {
+  // @@protoc_insertion_point(field_get:ComparisonRowInfo.category2)
+  return _internal_category2();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ComparisonRowInfo::set_category2(ArgT0&& arg0, ArgT... args) {
+ 
+ category2_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ComparisonRowInfo.category2)
+}
+inline std::string* ComparisonRowInfo::mutable_category2() {
+  std::string* _s = _internal_mutable_category2();
+  // @@protoc_insertion_point(field_mutable:ComparisonRowInfo.category2)
+  return _s;
+}
+inline const std::string& ComparisonRowInfo::_internal_category2() const {
+  return category2_.Get();
+}
+inline void ComparisonRowInfo::_internal_set_category2(const std::string& value) {
+  
+  category2_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* ComparisonRowInfo::_internal_mutable_category2() {
+  
+  return category2_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* ComparisonRowInfo::release_category2() {
+  // @@protoc_insertion_point(field_release:ComparisonRowInfo.category2)
+  return category2_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+}
+inline void ComparisonRowInfo::set_allocated_category2(std::string* category2) {
+  if (category2 != nullptr) {
+    
+  } else {
+    
+  }
+  category2_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), category2,
+      GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set_allocated:ComparisonRowInfo.category2)
+}
+
+// repeated string values = 3;
+inline int ComparisonRowInfo::_internal_values_size() const {
+  return values_.size();
+}
+inline int ComparisonRowInfo::values_size() const {
+  return _internal_values_size();
+}
+inline void ComparisonRowInfo::clear_values() {
+  values_.Clear();
+}
+inline std::string* ComparisonRowInfo::add_values() {
+  std::string* _s = _internal_add_values();
+  // @@protoc_insertion_point(field_add_mutable:ComparisonRowInfo.values)
+  return _s;
+}
+inline const std::string& ComparisonRowInfo::_internal_values(int index) const {
+  return values_.Get(index);
+}
+inline const std::string& ComparisonRowInfo::values(int index) const {
+  // @@protoc_insertion_point(field_get:ComparisonRowInfo.values)
+  return _internal_values(index);
+}
+inline std::string* ComparisonRowInfo::mutable_values(int index) {
+  // @@protoc_insertion_point(field_mutable:ComparisonRowInfo.values)
+  return values_.Mutable(index);
+}
+inline void ComparisonRowInfo::set_values(int index, const std::string& value) {
+  values_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set:ComparisonRowInfo.values)
+}
+inline void ComparisonRowInfo::set_values(int index, std::string&& value) {
+  values_.Mutable(index)->assign(std::move(value));
+  // @@protoc_insertion_point(field_set:ComparisonRowInfo.values)
+}
+inline void ComparisonRowInfo::set_values(int index, const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  values_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:ComparisonRowInfo.values)
+}
+inline void ComparisonRowInfo::set_values(int index, const char* value, size_t size) {
+  values_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:ComparisonRowInfo.values)
+}
+inline std::string* ComparisonRowInfo::_internal_add_values() {
+  return values_.Add();
+}
+inline void ComparisonRowInfo::add_values(const std::string& value) {
+  values_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:ComparisonRowInfo.values)
+}
+inline void ComparisonRowInfo::add_values(std::string&& value) {
+  values_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:ComparisonRowInfo.values)
+}
+inline void ComparisonRowInfo::add_values(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  values_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:ComparisonRowInfo.values)
+}
+inline void ComparisonRowInfo::add_values(const char* value, size_t size) {
+  values_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:ComparisonRowInfo.values)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
+ComparisonRowInfo::values() const {
+  // @@protoc_insertion_point(field_list:ComparisonRowInfo.values)
+  return values_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
+ComparisonRowInfo::mutable_values() {
+  // @@protoc_insertion_point(field_mutable_list:ComparisonRowInfo.values)
+  return &values_;
+}
+
+// float p_value = 4;
+inline void ComparisonRowInfo::clear_p_value() {
+  p_value_ = 0;
+}
+inline float ComparisonRowInfo::_internal_p_value() const {
+  return p_value_;
+}
+inline float ComparisonRowInfo::p_value() const {
+  // @@protoc_insertion_point(field_get:ComparisonRowInfo.p_value)
+  return _internal_p_value();
+}
+inline void ComparisonRowInfo::_internal_set_p_value(float value) {
+  
+  p_value_ = value;
+}
+inline void ComparisonRowInfo::set_p_value(float value) {
+  _internal_set_p_value(value);
+  // @@protoc_insertion_point(field_set:ComparisonRowInfo.p_value)
+}
+
+// bool p_value_is_group = 5;
+inline void ComparisonRowInfo::clear_p_value_is_group() {
+  p_value_is_group_ = false;
+}
+inline bool ComparisonRowInfo::_internal_p_value_is_group() const {
+  return p_value_is_group_;
+}
+inline bool ComparisonRowInfo::p_value_is_group() const {
+  // @@protoc_insertion_point(field_get:ComparisonRowInfo.p_value_is_group)
+  return _internal_p_value_is_group();
+}
+inline void ComparisonRowInfo::_internal_set_p_value_is_group(bool value) {
+  
+  p_value_is_group_ = value;
+}
+inline void ComparisonRowInfo::set_p_value_is_group(bool value) {
+  _internal_set_p_value_is_group(value);
+  // @@protoc_insertion_point(field_set:ComparisonRowInfo.p_value_is_group)
+}
+
+// -------------------------------------------------------------------
+
+// ResponseComparison
+
+// string name = 1;
+inline void ResponseComparison::clear_name() {
+  name_.ClearToEmpty();
+}
+inline const std::string& ResponseComparison::name() const {
+  // @@protoc_insertion_point(field_get:ResponseComparison.name)
+  return _internal_name();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void ResponseComparison::set_name(ArgT0&& arg0, ArgT... args) {
+ 
+ name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:ResponseComparison.name)
+}
+inline std::string* ResponseComparison::mutable_name() {
+  std::string* _s = _internal_mutable_name();
+  // @@protoc_insertion_point(field_mutable:ResponseComparison.name)
+  return _s;
+}
+inline const std::string& ResponseComparison::_internal_name() const {
+  return name_.Get();
+}
+inline void ResponseComparison::_internal_set_name(const std::string& value) {
+  
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* ResponseComparison::_internal_mutable_name() {
+  
+  return name_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* ResponseComparison::release_name() {
+  // @@protoc_insertion_point(field_release:ResponseComparison.name)
+  return name_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+}
+inline void ResponseComparison::set_allocated_name(std::string* name) {
+  if (name != nullptr) {
+    
+  } else {
+    
+  }
+  name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), name,
+      GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set_allocated:ResponseComparison.name)
+}
+
+// repeated .ComparisonCohortInfo cohort_list = 2;
+inline int ResponseComparison::_internal_cohort_list_size() const {
+  return cohort_list_.size();
+}
+inline int ResponseComparison::cohort_list_size() const {
+  return _internal_cohort_list_size();
+}
+inline void ResponseComparison::clear_cohort_list() {
+  cohort_list_.Clear();
+}
+inline ::ComparisonCohortInfo* ResponseComparison::mutable_cohort_list(int index) {
+  // @@protoc_insertion_point(field_mutable:ResponseComparison.cohort_list)
+  return cohort_list_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ComparisonCohortInfo >*
+ResponseComparison::mutable_cohort_list() {
+  // @@protoc_insertion_point(field_mutable_list:ResponseComparison.cohort_list)
+  return &cohort_list_;
+}
+inline const ::ComparisonCohortInfo& ResponseComparison::_internal_cohort_list(int index) const {
+  return cohort_list_.Get(index);
+}
+inline const ::ComparisonCohortInfo& ResponseComparison::cohort_list(int index) const {
+  // @@protoc_insertion_point(field_get:ResponseComparison.cohort_list)
+  return _internal_cohort_list(index);
+}
+inline ::ComparisonCohortInfo* ResponseComparison::_internal_add_cohort_list() {
+  return cohort_list_.Add();
+}
+inline ::ComparisonCohortInfo* ResponseComparison::add_cohort_list() {
+  ::ComparisonCohortInfo* _add = _internal_add_cohort_list();
+  // @@protoc_insertion_point(field_add:ResponseComparison.cohort_list)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ComparisonCohortInfo >&
+ResponseComparison::cohort_list() const {
+  // @@protoc_insertion_point(field_list:ResponseComparison.cohort_list)
+  return cohort_list_;
+}
+
+// repeated .ComparisonRowInfo row_list = 3;
+inline int ResponseComparison::_internal_row_list_size() const {
+  return row_list_.size();
+}
+inline int ResponseComparison::row_list_size() const {
+  return _internal_row_list_size();
+}
+inline void ResponseComparison::clear_row_list() {
+  row_list_.Clear();
+}
+inline ::ComparisonRowInfo* ResponseComparison::mutable_row_list(int index) {
+  // @@protoc_insertion_point(field_mutable:ResponseComparison.row_list)
+  return row_list_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ComparisonRowInfo >*
+ResponseComparison::mutable_row_list() {
+  // @@protoc_insertion_point(field_mutable_list:ResponseComparison.row_list)
+  return &row_list_;
+}
+inline const ::ComparisonRowInfo& ResponseComparison::_internal_row_list(int index) const {
+  return row_list_.Get(index);
+}
+inline const ::ComparisonRowInfo& ResponseComparison::row_list(int index) const {
+  // @@protoc_insertion_point(field_get:ResponseComparison.row_list)
+  return _internal_row_list(index);
+}
+inline ::ComparisonRowInfo* ResponseComparison::_internal_add_row_list() {
+  return row_list_.Add();
+}
+inline ::ComparisonRowInfo* ResponseComparison::add_row_list() {
+  ::ComparisonRowInfo* _add = _internal_add_row_list();
+  // @@protoc_insertion_point(field_add:ResponseComparison.row_list)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ComparisonRowInfo >&
+ResponseComparison::row_list() const {
+  // @@protoc_insertion_point(field_list:ResponseComparison.row_list)
+  return row_list_;
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
