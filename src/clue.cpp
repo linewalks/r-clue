@@ -56,6 +56,8 @@ RCPP_MODULE(CLUE) {
     COHORT_TABLE_METHOD(ObservationPeriod)
     COHORT_TABLE_METHOD(ProcedureOccurrence)
     COHORT_TABLE_METHOD(VisitOccurrence)
+
+    .method("GetCohortComparison", &Connection::GetCohortComparison)
     ;
 
   class_<CLUEWrapper>("CLUEWrapper")
