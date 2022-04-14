@@ -46,7 +46,7 @@ struct TableStruct_clue_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxiliaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[20]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[25]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -74,6 +74,12 @@ extern DeviceExposureInfoDefaultTypeInternal _DeviceExposureInfo_default_instanc
 class DrugExposureInfo;
 struct DrugExposureInfoDefaultTypeInternal;
 extern DrugExposureInfoDefaultTypeInternal _DrugExposureInfo_default_instance_;
+class IncidenceRateRawInfo;
+struct IncidenceRateRawInfoDefaultTypeInternal;
+extern IncidenceRateRawInfoDefaultTypeInternal _IncidenceRateRawInfo_default_instance_;
+class IncidenceRateResultRowInfo;
+struct IncidenceRateResultRowInfoDefaultTypeInternal;
+extern IncidenceRateResultRowInfoDefaultTypeInternal _IncidenceRateResultRowInfo_default_instance_;
 class MeasurementInfo;
 struct MeasurementInfoDefaultTypeInternal;
 extern MeasurementInfoDefaultTypeInternal _MeasurementInfo_default_instance_;
@@ -98,6 +104,12 @@ extern RequestCohortStreamDefaultTypeInternal _RequestCohortStream_default_insta
 class RequestComparison;
 struct RequestComparisonDefaultTypeInternal;
 extern RequestComparisonDefaultTypeInternal _RequestComparison_default_instance_;
+class RequestIncidenceRate;
+struct RequestIncidenceRateDefaultTypeInternal;
+extern RequestIncidenceRateDefaultTypeInternal _RequestIncidenceRate_default_instance_;
+class RequestIncidenceRateStream;
+struct RequestIncidenceRateStreamDefaultTypeInternal;
+extern RequestIncidenceRateStreamDefaultTypeInternal _RequestIncidenceRateStream_default_instance_;
 class RequestLogin;
 struct RequestLoginDefaultTypeInternal;
 extern RequestLoginDefaultTypeInternal _RequestLogin_default_instance_;
@@ -107,6 +119,9 @@ extern ResponseCohortListDefaultTypeInternal _ResponseCohortList_default_instanc
 class ResponseComparison;
 struct ResponseComparisonDefaultTypeInternal;
 extern ResponseComparisonDefaultTypeInternal _ResponseComparison_default_instance_;
+class ResponseIncidenceRateResult;
+struct ResponseIncidenceRateResultDefaultTypeInternal;
+extern ResponseIncidenceRateResultDefaultTypeInternal _ResponseIncidenceRateResult_default_instance_;
 class ResponseLogin;
 struct ResponseLoginDefaultTypeInternal;
 extern ResponseLoginDefaultTypeInternal _ResponseLogin_default_instance_;
@@ -121,6 +136,8 @@ template<> ::ConditionOccurrenceInfo* Arena::CreateMaybeMessage<::ConditionOccur
 template<> ::DeathInfo* Arena::CreateMaybeMessage<::DeathInfo>(Arena*);
 template<> ::DeviceExposureInfo* Arena::CreateMaybeMessage<::DeviceExposureInfo>(Arena*);
 template<> ::DrugExposureInfo* Arena::CreateMaybeMessage<::DrugExposureInfo>(Arena*);
+template<> ::IncidenceRateRawInfo* Arena::CreateMaybeMessage<::IncidenceRateRawInfo>(Arena*);
+template<> ::IncidenceRateResultRowInfo* Arena::CreateMaybeMessage<::IncidenceRateResultRowInfo>(Arena*);
 template<> ::MeasurementInfo* Arena::CreateMaybeMessage<::MeasurementInfo>(Arena*);
 template<> ::ObservationInfo* Arena::CreateMaybeMessage<::ObservationInfo>(Arena*);
 template<> ::ObservationPeriodInfo* Arena::CreateMaybeMessage<::ObservationPeriodInfo>(Arena*);
@@ -129,9 +146,12 @@ template<> ::ProcedureOccurrenceInfo* Arena::CreateMaybeMessage<::ProcedureOccur
 template<> ::RequestCohortList* Arena::CreateMaybeMessage<::RequestCohortList>(Arena*);
 template<> ::RequestCohortStream* Arena::CreateMaybeMessage<::RequestCohortStream>(Arena*);
 template<> ::RequestComparison* Arena::CreateMaybeMessage<::RequestComparison>(Arena*);
+template<> ::RequestIncidenceRate* Arena::CreateMaybeMessage<::RequestIncidenceRate>(Arena*);
+template<> ::RequestIncidenceRateStream* Arena::CreateMaybeMessage<::RequestIncidenceRateStream>(Arena*);
 template<> ::RequestLogin* Arena::CreateMaybeMessage<::RequestLogin>(Arena*);
 template<> ::ResponseCohortList* Arena::CreateMaybeMessage<::ResponseCohortList>(Arena*);
 template<> ::ResponseComparison* Arena::CreateMaybeMessage<::ResponseComparison>(Arena*);
+template<> ::ResponseIncidenceRateResult* Arena::CreateMaybeMessage<::ResponseIncidenceRateResult>(Arena*);
 template<> ::ResponseLogin* Arena::CreateMaybeMessage<::ResponseLogin>(Arena*);
 template<> ::VisitOccurrenceInfo* Arena::CreateMaybeMessage<::VisitOccurrenceInfo>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
@@ -5162,6 +5182,1072 @@ class ResponseComparison final :
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ComparisonCohortInfo > cohort_list_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::ComparisonRowInfo > row_list_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_clue_2eproto;
+};
+// -------------------------------------------------------------------
+
+class RequestIncidenceRate final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:RequestIncidenceRate) */ {
+ public:
+  inline RequestIncidenceRate() : RequestIncidenceRate(nullptr) {}
+  ~RequestIncidenceRate() override;
+  explicit constexpr RequestIncidenceRate(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  RequestIncidenceRate(const RequestIncidenceRate& from);
+  RequestIncidenceRate(RequestIncidenceRate&& from) noexcept
+    : RequestIncidenceRate() {
+    *this = ::std::move(from);
+  }
+
+  inline RequestIncidenceRate& operator=(const RequestIncidenceRate& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline RequestIncidenceRate& operator=(RequestIncidenceRate&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const RequestIncidenceRate& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const RequestIncidenceRate* internal_default_instance() {
+    return reinterpret_cast<const RequestIncidenceRate*>(
+               &_RequestIncidenceRate_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    20;
+
+  friend void swap(RequestIncidenceRate& a, RequestIncidenceRate& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(RequestIncidenceRate* other) {
+    if (other == this) return;
+    if (GetOwningArena() == other->GetOwningArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(RequestIncidenceRate* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline RequestIncidenceRate* New() const final {
+    return new RequestIncidenceRate();
+  }
+
+  RequestIncidenceRate* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<RequestIncidenceRate>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const RequestIncidenceRate& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const RequestIncidenceRate& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(RequestIncidenceRate* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "RequestIncidenceRate";
+  }
+  protected:
+  explicit RequestIncidenceRate(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kIncidenceRateIdFieldNumber = 1,
+  };
+  // int32 incidence_rate_id = 1;
+  void clear_incidence_rate_id();
+  ::PROTOBUF_NAMESPACE_ID::int32 incidence_rate_id() const;
+  void set_incidence_rate_id(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_incidence_rate_id() const;
+  void _internal_set_incidence_rate_id(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:RequestIncidenceRate)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::int32 incidence_rate_id_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_clue_2eproto;
+};
+// -------------------------------------------------------------------
+
+class IncidenceRateResultRowInfo final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:IncidenceRateResultRowInfo) */ {
+ public:
+  inline IncidenceRateResultRowInfo() : IncidenceRateResultRowInfo(nullptr) {}
+  ~IncidenceRateResultRowInfo() override;
+  explicit constexpr IncidenceRateResultRowInfo(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  IncidenceRateResultRowInfo(const IncidenceRateResultRowInfo& from);
+  IncidenceRateResultRowInfo(IncidenceRateResultRowInfo&& from) noexcept
+    : IncidenceRateResultRowInfo() {
+    *this = ::std::move(from);
+  }
+
+  inline IncidenceRateResultRowInfo& operator=(const IncidenceRateResultRowInfo& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline IncidenceRateResultRowInfo& operator=(IncidenceRateResultRowInfo&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const IncidenceRateResultRowInfo& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const IncidenceRateResultRowInfo* internal_default_instance() {
+    return reinterpret_cast<const IncidenceRateResultRowInfo*>(
+               &_IncidenceRateResultRowInfo_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    21;
+
+  friend void swap(IncidenceRateResultRowInfo& a, IncidenceRateResultRowInfo& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(IncidenceRateResultRowInfo* other) {
+    if (other == this) return;
+    if (GetOwningArena() == other->GetOwningArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(IncidenceRateResultRowInfo* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline IncidenceRateResultRowInfo* New() const final {
+    return new IncidenceRateResultRowInfo();
+  }
+
+  IncidenceRateResultRowInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<IncidenceRateResultRowInfo>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const IncidenceRateResultRowInfo& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const IncidenceRateResultRowInfo& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(IncidenceRateResultRowInfo* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "IncidenceRateResultRowInfo";
+  }
+  protected:
+  explicit IncidenceRateResultRowInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kTargetCohortIdFieldNumber = 1,
+    kOutcomeCohortIdFieldNumber = 2,
+    kTargetCohortPersonCountFieldNumber = 3,
+    kPersonCountFieldNumber = 4,
+    kCasesOutcomeFieldNumber = 5,
+    kProportionPer100PersonsFieldNumber = 6,
+    kProportionPer1KPersonsFieldNumber = 7,
+    kProportionPer10KPersonsFieldNumber = 8,
+    kTimeAtRiskYearsFieldNumber = 9,
+    kRatePer100PersonsYearsFieldNumber = 10,
+    kRatePer1KPersonsYearsFieldNumber = 11,
+    kRatePer10KPersonsYearsFieldNumber = 12,
+  };
+  // int32 target_cohort_id = 1;
+  void clear_target_cohort_id();
+  ::PROTOBUF_NAMESPACE_ID::int32 target_cohort_id() const;
+  void set_target_cohort_id(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_target_cohort_id() const;
+  void _internal_set_target_cohort_id(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // int32 outcome_cohort_id = 2;
+  void clear_outcome_cohort_id();
+  ::PROTOBUF_NAMESPACE_ID::int32 outcome_cohort_id() const;
+  void set_outcome_cohort_id(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_outcome_cohort_id() const;
+  void _internal_set_outcome_cohort_id(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // int32 target_cohort_person_count = 3;
+  void clear_target_cohort_person_count();
+  ::PROTOBUF_NAMESPACE_ID::int32 target_cohort_person_count() const;
+  void set_target_cohort_person_count(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_target_cohort_person_count() const;
+  void _internal_set_target_cohort_person_count(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // int32 person_count = 4;
+  void clear_person_count();
+  ::PROTOBUF_NAMESPACE_ID::int32 person_count() const;
+  void set_person_count(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_person_count() const;
+  void _internal_set_person_count(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // int32 cases_outcome = 5;
+  void clear_cases_outcome();
+  ::PROTOBUF_NAMESPACE_ID::int32 cases_outcome() const;
+  void set_cases_outcome(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_cases_outcome() const;
+  void _internal_set_cases_outcome(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // float proportion_per_100_persons = 6;
+  void clear_proportion_per_100_persons();
+  float proportion_per_100_persons() const;
+  void set_proportion_per_100_persons(float value);
+  private:
+  float _internal_proportion_per_100_persons() const;
+  void _internal_set_proportion_per_100_persons(float value);
+  public:
+
+  // float proportion_per_1k_persons = 7;
+  void clear_proportion_per_1k_persons();
+  float proportion_per_1k_persons() const;
+  void set_proportion_per_1k_persons(float value);
+  private:
+  float _internal_proportion_per_1k_persons() const;
+  void _internal_set_proportion_per_1k_persons(float value);
+  public:
+
+  // float proportion_per_10k_persons = 8;
+  void clear_proportion_per_10k_persons();
+  float proportion_per_10k_persons() const;
+  void set_proportion_per_10k_persons(float value);
+  private:
+  float _internal_proportion_per_10k_persons() const;
+  void _internal_set_proportion_per_10k_persons(float value);
+  public:
+
+  // float time_at_risk_years = 9;
+  void clear_time_at_risk_years();
+  float time_at_risk_years() const;
+  void set_time_at_risk_years(float value);
+  private:
+  float _internal_time_at_risk_years() const;
+  void _internal_set_time_at_risk_years(float value);
+  public:
+
+  // float rate_per_100_persons_years = 10;
+  void clear_rate_per_100_persons_years();
+  float rate_per_100_persons_years() const;
+  void set_rate_per_100_persons_years(float value);
+  private:
+  float _internal_rate_per_100_persons_years() const;
+  void _internal_set_rate_per_100_persons_years(float value);
+  public:
+
+  // float rate_per_1k_persons_years = 11;
+  void clear_rate_per_1k_persons_years();
+  float rate_per_1k_persons_years() const;
+  void set_rate_per_1k_persons_years(float value);
+  private:
+  float _internal_rate_per_1k_persons_years() const;
+  void _internal_set_rate_per_1k_persons_years(float value);
+  public:
+
+  // float rate_per_10k_persons_years = 12;
+  void clear_rate_per_10k_persons_years();
+  float rate_per_10k_persons_years() const;
+  void set_rate_per_10k_persons_years(float value);
+  private:
+  float _internal_rate_per_10k_persons_years() const;
+  void _internal_set_rate_per_10k_persons_years(float value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:IncidenceRateResultRowInfo)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::int32 target_cohort_id_;
+  ::PROTOBUF_NAMESPACE_ID::int32 outcome_cohort_id_;
+  ::PROTOBUF_NAMESPACE_ID::int32 target_cohort_person_count_;
+  ::PROTOBUF_NAMESPACE_ID::int32 person_count_;
+  ::PROTOBUF_NAMESPACE_ID::int32 cases_outcome_;
+  float proportion_per_100_persons_;
+  float proportion_per_1k_persons_;
+  float proportion_per_10k_persons_;
+  float time_at_risk_years_;
+  float rate_per_100_persons_years_;
+  float rate_per_1k_persons_years_;
+  float rate_per_10k_persons_years_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_clue_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ResponseIncidenceRateResult final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ResponseIncidenceRateResult) */ {
+ public:
+  inline ResponseIncidenceRateResult() : ResponseIncidenceRateResult(nullptr) {}
+  ~ResponseIncidenceRateResult() override;
+  explicit constexpr ResponseIncidenceRateResult(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  ResponseIncidenceRateResult(const ResponseIncidenceRateResult& from);
+  ResponseIncidenceRateResult(ResponseIncidenceRateResult&& from) noexcept
+    : ResponseIncidenceRateResult() {
+    *this = ::std::move(from);
+  }
+
+  inline ResponseIncidenceRateResult& operator=(const ResponseIncidenceRateResult& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ResponseIncidenceRateResult& operator=(ResponseIncidenceRateResult&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const ResponseIncidenceRateResult& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const ResponseIncidenceRateResult* internal_default_instance() {
+    return reinterpret_cast<const ResponseIncidenceRateResult*>(
+               &_ResponseIncidenceRateResult_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    22;
+
+  friend void swap(ResponseIncidenceRateResult& a, ResponseIncidenceRateResult& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ResponseIncidenceRateResult* other) {
+    if (other == this) return;
+    if (GetOwningArena() == other->GetOwningArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ResponseIncidenceRateResult* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline ResponseIncidenceRateResult* New() const final {
+    return new ResponseIncidenceRateResult();
+  }
+
+  ResponseIncidenceRateResult* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<ResponseIncidenceRateResult>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const ResponseIncidenceRateResult& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const ResponseIncidenceRateResult& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ResponseIncidenceRateResult* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "ResponseIncidenceRateResult";
+  }
+  protected:
+  explicit ResponseIncidenceRateResult(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kRowListFieldNumber = 1,
+  };
+  // repeated .IncidenceRateResultRowInfo row_list = 1;
+  int row_list_size() const;
+  private:
+  int _internal_row_list_size() const;
+  public:
+  void clear_row_list();
+  ::IncidenceRateResultRowInfo* mutable_row_list(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::IncidenceRateResultRowInfo >*
+      mutable_row_list();
+  private:
+  const ::IncidenceRateResultRowInfo& _internal_row_list(int index) const;
+  ::IncidenceRateResultRowInfo* _internal_add_row_list();
+  public:
+  const ::IncidenceRateResultRowInfo& row_list(int index) const;
+  ::IncidenceRateResultRowInfo* add_row_list();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::IncidenceRateResultRowInfo >&
+      row_list() const;
+
+  // @@protoc_insertion_point(class_scope:ResponseIncidenceRateResult)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::IncidenceRateResultRowInfo > row_list_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_clue_2eproto;
+};
+// -------------------------------------------------------------------
+
+class RequestIncidenceRateStream final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:RequestIncidenceRateStream) */ {
+ public:
+  inline RequestIncidenceRateStream() : RequestIncidenceRateStream(nullptr) {}
+  ~RequestIncidenceRateStream() override;
+  explicit constexpr RequestIncidenceRateStream(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  RequestIncidenceRateStream(const RequestIncidenceRateStream& from);
+  RequestIncidenceRateStream(RequestIncidenceRateStream&& from) noexcept
+    : RequestIncidenceRateStream() {
+    *this = ::std::move(from);
+  }
+
+  inline RequestIncidenceRateStream& operator=(const RequestIncidenceRateStream& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline RequestIncidenceRateStream& operator=(RequestIncidenceRateStream&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const RequestIncidenceRateStream& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const RequestIncidenceRateStream* internal_default_instance() {
+    return reinterpret_cast<const RequestIncidenceRateStream*>(
+               &_RequestIncidenceRateStream_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    23;
+
+  friend void swap(RequestIncidenceRateStream& a, RequestIncidenceRateStream& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(RequestIncidenceRateStream* other) {
+    if (other == this) return;
+    if (GetOwningArena() == other->GetOwningArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(RequestIncidenceRateStream* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline RequestIncidenceRateStream* New() const final {
+    return new RequestIncidenceRateStream();
+  }
+
+  RequestIncidenceRateStream* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<RequestIncidenceRateStream>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const RequestIncidenceRateStream& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const RequestIncidenceRateStream& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(RequestIncidenceRateStream* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "RequestIncidenceRateStream";
+  }
+  protected:
+  explicit RequestIncidenceRateStream(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kFetchNumFieldNumber = 1,
+    kIncidenceRateIdFieldNumber = 2,
+  };
+  // int32 fetch_num = 1;
+  void clear_fetch_num();
+  ::PROTOBUF_NAMESPACE_ID::int32 fetch_num() const;
+  void set_fetch_num(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_fetch_num() const;
+  void _internal_set_fetch_num(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // int32 incidence_rate_id = 2;
+  void clear_incidence_rate_id();
+  ::PROTOBUF_NAMESPACE_ID::int32 incidence_rate_id() const;
+  void set_incidence_rate_id(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_incidence_rate_id() const;
+  void _internal_set_incidence_rate_id(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:RequestIncidenceRateStream)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::int32 fetch_num_;
+  ::PROTOBUF_NAMESPACE_ID::int32 incidence_rate_id_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_clue_2eproto;
+};
+// -------------------------------------------------------------------
+
+class IncidenceRateRawInfo final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:IncidenceRateRawInfo) */ {
+ public:
+  inline IncidenceRateRawInfo() : IncidenceRateRawInfo(nullptr) {}
+  ~IncidenceRateRawInfo() override;
+  explicit constexpr IncidenceRateRawInfo(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  IncidenceRateRawInfo(const IncidenceRateRawInfo& from);
+  IncidenceRateRawInfo(IncidenceRateRawInfo&& from) noexcept
+    : IncidenceRateRawInfo() {
+    *this = ::std::move(from);
+  }
+
+  inline IncidenceRateRawInfo& operator=(const IncidenceRateRawInfo& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline IncidenceRateRawInfo& operator=(IncidenceRateRawInfo&& from) noexcept {
+    if (this == &from) return *this;
+    if (GetOwningArena() == from.GetOwningArena()
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+        && GetOwningArena() != nullptr
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  static const IncidenceRateRawInfo& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const IncidenceRateRawInfo* internal_default_instance() {
+    return reinterpret_cast<const IncidenceRateRawInfo*>(
+               &_IncidenceRateRawInfo_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    24;
+
+  friend void swap(IncidenceRateRawInfo& a, IncidenceRateRawInfo& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(IncidenceRateRawInfo* other) {
+    if (other == this) return;
+    if (GetOwningArena() == other->GetOwningArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(IncidenceRateRawInfo* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline IncidenceRateRawInfo* New() const final {
+    return new IncidenceRateRawInfo();
+  }
+
+  IncidenceRateRawInfo* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<IncidenceRateRawInfo>(arena);
+  }
+  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
+  void CopyFrom(const IncidenceRateRawInfo& from);
+  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
+  void MergeFrom(const IncidenceRateRawInfo& from);
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to, const ::PROTOBUF_NAMESPACE_ID::Message& from);
+  public:
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(IncidenceRateRawInfo* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "IncidenceRateRawInfo";
+  }
+  protected:
+  explicit IncidenceRateRawInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  static const ClassData _class_data_;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kIndexDateEarliestFieldNumber = 6,
+    kIndexDateLatestFieldNumber = 7,
+    kTarStartDateFieldNumber = 8,
+    kTarEndDateFieldNumber = 9,
+    kCohortEndDateFieldNumber = 10,
+    kObservationPeriodEndDateFieldNumber = 11,
+    kDeathDateFieldNumber = 12,
+    kCensorDateFieldNumber = 13,
+    kOMinDateFieldNumber = 14,
+    kTargetCohortIdFieldNumber = 1,
+    kOutcomeCohortIdFieldNumber = 2,
+    kPersonIdFieldNumber = 3,
+    kPersonNFieldNumber = 4,
+    kPriorOutcomeYnFieldNumber = 5,
+    kOTimeFieldNumber = 15,
+    kOStatusFieldNumber = 16,
+  };
+  // string index_date_earliest = 6;
+  void clear_index_date_earliest();
+  const std::string& index_date_earliest() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_index_date_earliest(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_index_date_earliest();
+  PROTOBUF_MUST_USE_RESULT std::string* release_index_date_earliest();
+  void set_allocated_index_date_earliest(std::string* index_date_earliest);
+  private:
+  const std::string& _internal_index_date_earliest() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_index_date_earliest(const std::string& value);
+  std::string* _internal_mutable_index_date_earliest();
+  public:
+
+  // string index_date_latest = 7;
+  void clear_index_date_latest();
+  const std::string& index_date_latest() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_index_date_latest(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_index_date_latest();
+  PROTOBUF_MUST_USE_RESULT std::string* release_index_date_latest();
+  void set_allocated_index_date_latest(std::string* index_date_latest);
+  private:
+  const std::string& _internal_index_date_latest() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_index_date_latest(const std::string& value);
+  std::string* _internal_mutable_index_date_latest();
+  public:
+
+  // string tar_start_date = 8;
+  void clear_tar_start_date();
+  const std::string& tar_start_date() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_tar_start_date(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_tar_start_date();
+  PROTOBUF_MUST_USE_RESULT std::string* release_tar_start_date();
+  void set_allocated_tar_start_date(std::string* tar_start_date);
+  private:
+  const std::string& _internal_tar_start_date() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_tar_start_date(const std::string& value);
+  std::string* _internal_mutable_tar_start_date();
+  public:
+
+  // string tar_end_date = 9;
+  void clear_tar_end_date();
+  const std::string& tar_end_date() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_tar_end_date(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_tar_end_date();
+  PROTOBUF_MUST_USE_RESULT std::string* release_tar_end_date();
+  void set_allocated_tar_end_date(std::string* tar_end_date);
+  private:
+  const std::string& _internal_tar_end_date() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_tar_end_date(const std::string& value);
+  std::string* _internal_mutable_tar_end_date();
+  public:
+
+  // string cohort_end_date = 10;
+  void clear_cohort_end_date();
+  const std::string& cohort_end_date() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_cohort_end_date(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_cohort_end_date();
+  PROTOBUF_MUST_USE_RESULT std::string* release_cohort_end_date();
+  void set_allocated_cohort_end_date(std::string* cohort_end_date);
+  private:
+  const std::string& _internal_cohort_end_date() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_cohort_end_date(const std::string& value);
+  std::string* _internal_mutable_cohort_end_date();
+  public:
+
+  // string observation_period_end_date = 11;
+  void clear_observation_period_end_date();
+  const std::string& observation_period_end_date() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_observation_period_end_date(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_observation_period_end_date();
+  PROTOBUF_MUST_USE_RESULT std::string* release_observation_period_end_date();
+  void set_allocated_observation_period_end_date(std::string* observation_period_end_date);
+  private:
+  const std::string& _internal_observation_period_end_date() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_observation_period_end_date(const std::string& value);
+  std::string* _internal_mutable_observation_period_end_date();
+  public:
+
+  // string death_date = 12;
+  void clear_death_date();
+  const std::string& death_date() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_death_date(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_death_date();
+  PROTOBUF_MUST_USE_RESULT std::string* release_death_date();
+  void set_allocated_death_date(std::string* death_date);
+  private:
+  const std::string& _internal_death_date() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_death_date(const std::string& value);
+  std::string* _internal_mutable_death_date();
+  public:
+
+  // string censor_date = 13;
+  void clear_censor_date();
+  const std::string& censor_date() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_censor_date(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_censor_date();
+  PROTOBUF_MUST_USE_RESULT std::string* release_censor_date();
+  void set_allocated_censor_date(std::string* censor_date);
+  private:
+  const std::string& _internal_censor_date() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_censor_date(const std::string& value);
+  std::string* _internal_mutable_censor_date();
+  public:
+
+  // string o_min_date = 14;
+  void clear_o_min_date();
+  const std::string& o_min_date() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_o_min_date(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_o_min_date();
+  PROTOBUF_MUST_USE_RESULT std::string* release_o_min_date();
+  void set_allocated_o_min_date(std::string* o_min_date);
+  private:
+  const std::string& _internal_o_min_date() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_o_min_date(const std::string& value);
+  std::string* _internal_mutable_o_min_date();
+  public:
+
+  // int32 target_cohort_id = 1;
+  void clear_target_cohort_id();
+  ::PROTOBUF_NAMESPACE_ID::int32 target_cohort_id() const;
+  void set_target_cohort_id(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_target_cohort_id() const;
+  void _internal_set_target_cohort_id(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // int32 outcome_cohort_id = 2;
+  void clear_outcome_cohort_id();
+  ::PROTOBUF_NAMESPACE_ID::int32 outcome_cohort_id() const;
+  void set_outcome_cohort_id(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_outcome_cohort_id() const;
+  void _internal_set_outcome_cohort_id(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // int32 person_id = 3;
+  void clear_person_id();
+  ::PROTOBUF_NAMESPACE_ID::int32 person_id() const;
+  void set_person_id(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_person_id() const;
+  void _internal_set_person_id(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // int32 person_n = 4;
+  void clear_person_n();
+  ::PROTOBUF_NAMESPACE_ID::int32 person_n() const;
+  void set_person_n(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_person_n() const;
+  void _internal_set_person_n(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // int32 prior_outcome_yn = 5;
+  void clear_prior_outcome_yn();
+  ::PROTOBUF_NAMESPACE_ID::int32 prior_outcome_yn() const;
+  void set_prior_outcome_yn(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_prior_outcome_yn() const;
+  void _internal_set_prior_outcome_yn(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // int32 o_time = 15;
+  void clear_o_time();
+  ::PROTOBUF_NAMESPACE_ID::int32 o_time() const;
+  void set_o_time(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_o_time() const;
+  void _internal_set_o_time(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // int32 o_status = 16;
+  void clear_o_status();
+  ::PROTOBUF_NAMESPACE_ID::int32 o_status() const;
+  void set_o_status(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_o_status() const;
+  void _internal_set_o_status(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:IncidenceRateRawInfo)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr index_date_earliest_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr index_date_latest_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr tar_start_date_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr tar_end_date_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr cohort_end_date_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr observation_period_end_date_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr death_date_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr censor_date_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr o_min_date_;
+  ::PROTOBUF_NAMESPACE_ID::int32 target_cohort_id_;
+  ::PROTOBUF_NAMESPACE_ID::int32 outcome_cohort_id_;
+  ::PROTOBUF_NAMESPACE_ID::int32 person_id_;
+  ::PROTOBUF_NAMESPACE_ID::int32 person_n_;
+  ::PROTOBUF_NAMESPACE_ID::int32 prior_outcome_yn_;
+  ::PROTOBUF_NAMESPACE_ID::int32 o_time_;
+  ::PROTOBUF_NAMESPACE_ID::int32 o_status_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_clue_2eproto;
 };
@@ -10801,9 +11887,933 @@ ResponseComparison::row_list() const {
   return row_list_;
 }
 
+// -------------------------------------------------------------------
+
+// RequestIncidenceRate
+
+// int32 incidence_rate_id = 1;
+inline void RequestIncidenceRate::clear_incidence_rate_id() {
+  incidence_rate_id_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 RequestIncidenceRate::_internal_incidence_rate_id() const {
+  return incidence_rate_id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 RequestIncidenceRate::incidence_rate_id() const {
+  // @@protoc_insertion_point(field_get:RequestIncidenceRate.incidence_rate_id)
+  return _internal_incidence_rate_id();
+}
+inline void RequestIncidenceRate::_internal_set_incidence_rate_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  incidence_rate_id_ = value;
+}
+inline void RequestIncidenceRate::set_incidence_rate_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_incidence_rate_id(value);
+  // @@protoc_insertion_point(field_set:RequestIncidenceRate.incidence_rate_id)
+}
+
+// -------------------------------------------------------------------
+
+// IncidenceRateResultRowInfo
+
+// int32 target_cohort_id = 1;
+inline void IncidenceRateResultRowInfo::clear_target_cohort_id() {
+  target_cohort_id_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 IncidenceRateResultRowInfo::_internal_target_cohort_id() const {
+  return target_cohort_id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 IncidenceRateResultRowInfo::target_cohort_id() const {
+  // @@protoc_insertion_point(field_get:IncidenceRateResultRowInfo.target_cohort_id)
+  return _internal_target_cohort_id();
+}
+inline void IncidenceRateResultRowInfo::_internal_set_target_cohort_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  target_cohort_id_ = value;
+}
+inline void IncidenceRateResultRowInfo::set_target_cohort_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_target_cohort_id(value);
+  // @@protoc_insertion_point(field_set:IncidenceRateResultRowInfo.target_cohort_id)
+}
+
+// int32 outcome_cohort_id = 2;
+inline void IncidenceRateResultRowInfo::clear_outcome_cohort_id() {
+  outcome_cohort_id_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 IncidenceRateResultRowInfo::_internal_outcome_cohort_id() const {
+  return outcome_cohort_id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 IncidenceRateResultRowInfo::outcome_cohort_id() const {
+  // @@protoc_insertion_point(field_get:IncidenceRateResultRowInfo.outcome_cohort_id)
+  return _internal_outcome_cohort_id();
+}
+inline void IncidenceRateResultRowInfo::_internal_set_outcome_cohort_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  outcome_cohort_id_ = value;
+}
+inline void IncidenceRateResultRowInfo::set_outcome_cohort_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_outcome_cohort_id(value);
+  // @@protoc_insertion_point(field_set:IncidenceRateResultRowInfo.outcome_cohort_id)
+}
+
+// int32 target_cohort_person_count = 3;
+inline void IncidenceRateResultRowInfo::clear_target_cohort_person_count() {
+  target_cohort_person_count_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 IncidenceRateResultRowInfo::_internal_target_cohort_person_count() const {
+  return target_cohort_person_count_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 IncidenceRateResultRowInfo::target_cohort_person_count() const {
+  // @@protoc_insertion_point(field_get:IncidenceRateResultRowInfo.target_cohort_person_count)
+  return _internal_target_cohort_person_count();
+}
+inline void IncidenceRateResultRowInfo::_internal_set_target_cohort_person_count(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  target_cohort_person_count_ = value;
+}
+inline void IncidenceRateResultRowInfo::set_target_cohort_person_count(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_target_cohort_person_count(value);
+  // @@protoc_insertion_point(field_set:IncidenceRateResultRowInfo.target_cohort_person_count)
+}
+
+// int32 person_count = 4;
+inline void IncidenceRateResultRowInfo::clear_person_count() {
+  person_count_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 IncidenceRateResultRowInfo::_internal_person_count() const {
+  return person_count_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 IncidenceRateResultRowInfo::person_count() const {
+  // @@protoc_insertion_point(field_get:IncidenceRateResultRowInfo.person_count)
+  return _internal_person_count();
+}
+inline void IncidenceRateResultRowInfo::_internal_set_person_count(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  person_count_ = value;
+}
+inline void IncidenceRateResultRowInfo::set_person_count(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_person_count(value);
+  // @@protoc_insertion_point(field_set:IncidenceRateResultRowInfo.person_count)
+}
+
+// int32 cases_outcome = 5;
+inline void IncidenceRateResultRowInfo::clear_cases_outcome() {
+  cases_outcome_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 IncidenceRateResultRowInfo::_internal_cases_outcome() const {
+  return cases_outcome_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 IncidenceRateResultRowInfo::cases_outcome() const {
+  // @@protoc_insertion_point(field_get:IncidenceRateResultRowInfo.cases_outcome)
+  return _internal_cases_outcome();
+}
+inline void IncidenceRateResultRowInfo::_internal_set_cases_outcome(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  cases_outcome_ = value;
+}
+inline void IncidenceRateResultRowInfo::set_cases_outcome(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_cases_outcome(value);
+  // @@protoc_insertion_point(field_set:IncidenceRateResultRowInfo.cases_outcome)
+}
+
+// float proportion_per_100_persons = 6;
+inline void IncidenceRateResultRowInfo::clear_proportion_per_100_persons() {
+  proportion_per_100_persons_ = 0;
+}
+inline float IncidenceRateResultRowInfo::_internal_proportion_per_100_persons() const {
+  return proportion_per_100_persons_;
+}
+inline float IncidenceRateResultRowInfo::proportion_per_100_persons() const {
+  // @@protoc_insertion_point(field_get:IncidenceRateResultRowInfo.proportion_per_100_persons)
+  return _internal_proportion_per_100_persons();
+}
+inline void IncidenceRateResultRowInfo::_internal_set_proportion_per_100_persons(float value) {
+  
+  proportion_per_100_persons_ = value;
+}
+inline void IncidenceRateResultRowInfo::set_proportion_per_100_persons(float value) {
+  _internal_set_proportion_per_100_persons(value);
+  // @@protoc_insertion_point(field_set:IncidenceRateResultRowInfo.proportion_per_100_persons)
+}
+
+// float proportion_per_1k_persons = 7;
+inline void IncidenceRateResultRowInfo::clear_proportion_per_1k_persons() {
+  proportion_per_1k_persons_ = 0;
+}
+inline float IncidenceRateResultRowInfo::_internal_proportion_per_1k_persons() const {
+  return proportion_per_1k_persons_;
+}
+inline float IncidenceRateResultRowInfo::proportion_per_1k_persons() const {
+  // @@protoc_insertion_point(field_get:IncidenceRateResultRowInfo.proportion_per_1k_persons)
+  return _internal_proportion_per_1k_persons();
+}
+inline void IncidenceRateResultRowInfo::_internal_set_proportion_per_1k_persons(float value) {
+  
+  proportion_per_1k_persons_ = value;
+}
+inline void IncidenceRateResultRowInfo::set_proportion_per_1k_persons(float value) {
+  _internal_set_proportion_per_1k_persons(value);
+  // @@protoc_insertion_point(field_set:IncidenceRateResultRowInfo.proportion_per_1k_persons)
+}
+
+// float proportion_per_10k_persons = 8;
+inline void IncidenceRateResultRowInfo::clear_proportion_per_10k_persons() {
+  proportion_per_10k_persons_ = 0;
+}
+inline float IncidenceRateResultRowInfo::_internal_proportion_per_10k_persons() const {
+  return proportion_per_10k_persons_;
+}
+inline float IncidenceRateResultRowInfo::proportion_per_10k_persons() const {
+  // @@protoc_insertion_point(field_get:IncidenceRateResultRowInfo.proportion_per_10k_persons)
+  return _internal_proportion_per_10k_persons();
+}
+inline void IncidenceRateResultRowInfo::_internal_set_proportion_per_10k_persons(float value) {
+  
+  proportion_per_10k_persons_ = value;
+}
+inline void IncidenceRateResultRowInfo::set_proportion_per_10k_persons(float value) {
+  _internal_set_proportion_per_10k_persons(value);
+  // @@protoc_insertion_point(field_set:IncidenceRateResultRowInfo.proportion_per_10k_persons)
+}
+
+// float time_at_risk_years = 9;
+inline void IncidenceRateResultRowInfo::clear_time_at_risk_years() {
+  time_at_risk_years_ = 0;
+}
+inline float IncidenceRateResultRowInfo::_internal_time_at_risk_years() const {
+  return time_at_risk_years_;
+}
+inline float IncidenceRateResultRowInfo::time_at_risk_years() const {
+  // @@protoc_insertion_point(field_get:IncidenceRateResultRowInfo.time_at_risk_years)
+  return _internal_time_at_risk_years();
+}
+inline void IncidenceRateResultRowInfo::_internal_set_time_at_risk_years(float value) {
+  
+  time_at_risk_years_ = value;
+}
+inline void IncidenceRateResultRowInfo::set_time_at_risk_years(float value) {
+  _internal_set_time_at_risk_years(value);
+  // @@protoc_insertion_point(field_set:IncidenceRateResultRowInfo.time_at_risk_years)
+}
+
+// float rate_per_100_persons_years = 10;
+inline void IncidenceRateResultRowInfo::clear_rate_per_100_persons_years() {
+  rate_per_100_persons_years_ = 0;
+}
+inline float IncidenceRateResultRowInfo::_internal_rate_per_100_persons_years() const {
+  return rate_per_100_persons_years_;
+}
+inline float IncidenceRateResultRowInfo::rate_per_100_persons_years() const {
+  // @@protoc_insertion_point(field_get:IncidenceRateResultRowInfo.rate_per_100_persons_years)
+  return _internal_rate_per_100_persons_years();
+}
+inline void IncidenceRateResultRowInfo::_internal_set_rate_per_100_persons_years(float value) {
+  
+  rate_per_100_persons_years_ = value;
+}
+inline void IncidenceRateResultRowInfo::set_rate_per_100_persons_years(float value) {
+  _internal_set_rate_per_100_persons_years(value);
+  // @@protoc_insertion_point(field_set:IncidenceRateResultRowInfo.rate_per_100_persons_years)
+}
+
+// float rate_per_1k_persons_years = 11;
+inline void IncidenceRateResultRowInfo::clear_rate_per_1k_persons_years() {
+  rate_per_1k_persons_years_ = 0;
+}
+inline float IncidenceRateResultRowInfo::_internal_rate_per_1k_persons_years() const {
+  return rate_per_1k_persons_years_;
+}
+inline float IncidenceRateResultRowInfo::rate_per_1k_persons_years() const {
+  // @@protoc_insertion_point(field_get:IncidenceRateResultRowInfo.rate_per_1k_persons_years)
+  return _internal_rate_per_1k_persons_years();
+}
+inline void IncidenceRateResultRowInfo::_internal_set_rate_per_1k_persons_years(float value) {
+  
+  rate_per_1k_persons_years_ = value;
+}
+inline void IncidenceRateResultRowInfo::set_rate_per_1k_persons_years(float value) {
+  _internal_set_rate_per_1k_persons_years(value);
+  // @@protoc_insertion_point(field_set:IncidenceRateResultRowInfo.rate_per_1k_persons_years)
+}
+
+// float rate_per_10k_persons_years = 12;
+inline void IncidenceRateResultRowInfo::clear_rate_per_10k_persons_years() {
+  rate_per_10k_persons_years_ = 0;
+}
+inline float IncidenceRateResultRowInfo::_internal_rate_per_10k_persons_years() const {
+  return rate_per_10k_persons_years_;
+}
+inline float IncidenceRateResultRowInfo::rate_per_10k_persons_years() const {
+  // @@protoc_insertion_point(field_get:IncidenceRateResultRowInfo.rate_per_10k_persons_years)
+  return _internal_rate_per_10k_persons_years();
+}
+inline void IncidenceRateResultRowInfo::_internal_set_rate_per_10k_persons_years(float value) {
+  
+  rate_per_10k_persons_years_ = value;
+}
+inline void IncidenceRateResultRowInfo::set_rate_per_10k_persons_years(float value) {
+  _internal_set_rate_per_10k_persons_years(value);
+  // @@protoc_insertion_point(field_set:IncidenceRateResultRowInfo.rate_per_10k_persons_years)
+}
+
+// -------------------------------------------------------------------
+
+// ResponseIncidenceRateResult
+
+// repeated .IncidenceRateResultRowInfo row_list = 1;
+inline int ResponseIncidenceRateResult::_internal_row_list_size() const {
+  return row_list_.size();
+}
+inline int ResponseIncidenceRateResult::row_list_size() const {
+  return _internal_row_list_size();
+}
+inline void ResponseIncidenceRateResult::clear_row_list() {
+  row_list_.Clear();
+}
+inline ::IncidenceRateResultRowInfo* ResponseIncidenceRateResult::mutable_row_list(int index) {
+  // @@protoc_insertion_point(field_mutable:ResponseIncidenceRateResult.row_list)
+  return row_list_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::IncidenceRateResultRowInfo >*
+ResponseIncidenceRateResult::mutable_row_list() {
+  // @@protoc_insertion_point(field_mutable_list:ResponseIncidenceRateResult.row_list)
+  return &row_list_;
+}
+inline const ::IncidenceRateResultRowInfo& ResponseIncidenceRateResult::_internal_row_list(int index) const {
+  return row_list_.Get(index);
+}
+inline const ::IncidenceRateResultRowInfo& ResponseIncidenceRateResult::row_list(int index) const {
+  // @@protoc_insertion_point(field_get:ResponseIncidenceRateResult.row_list)
+  return _internal_row_list(index);
+}
+inline ::IncidenceRateResultRowInfo* ResponseIncidenceRateResult::_internal_add_row_list() {
+  return row_list_.Add();
+}
+inline ::IncidenceRateResultRowInfo* ResponseIncidenceRateResult::add_row_list() {
+  ::IncidenceRateResultRowInfo* _add = _internal_add_row_list();
+  // @@protoc_insertion_point(field_add:ResponseIncidenceRateResult.row_list)
+  return _add;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::IncidenceRateResultRowInfo >&
+ResponseIncidenceRateResult::row_list() const {
+  // @@protoc_insertion_point(field_list:ResponseIncidenceRateResult.row_list)
+  return row_list_;
+}
+
+// -------------------------------------------------------------------
+
+// RequestIncidenceRateStream
+
+// int32 fetch_num = 1;
+inline void RequestIncidenceRateStream::clear_fetch_num() {
+  fetch_num_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 RequestIncidenceRateStream::_internal_fetch_num() const {
+  return fetch_num_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 RequestIncidenceRateStream::fetch_num() const {
+  // @@protoc_insertion_point(field_get:RequestIncidenceRateStream.fetch_num)
+  return _internal_fetch_num();
+}
+inline void RequestIncidenceRateStream::_internal_set_fetch_num(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  fetch_num_ = value;
+}
+inline void RequestIncidenceRateStream::set_fetch_num(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_fetch_num(value);
+  // @@protoc_insertion_point(field_set:RequestIncidenceRateStream.fetch_num)
+}
+
+// int32 incidence_rate_id = 2;
+inline void RequestIncidenceRateStream::clear_incidence_rate_id() {
+  incidence_rate_id_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 RequestIncidenceRateStream::_internal_incidence_rate_id() const {
+  return incidence_rate_id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 RequestIncidenceRateStream::incidence_rate_id() const {
+  // @@protoc_insertion_point(field_get:RequestIncidenceRateStream.incidence_rate_id)
+  return _internal_incidence_rate_id();
+}
+inline void RequestIncidenceRateStream::_internal_set_incidence_rate_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  incidence_rate_id_ = value;
+}
+inline void RequestIncidenceRateStream::set_incidence_rate_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_incidence_rate_id(value);
+  // @@protoc_insertion_point(field_set:RequestIncidenceRateStream.incidence_rate_id)
+}
+
+// -------------------------------------------------------------------
+
+// IncidenceRateRawInfo
+
+// int32 target_cohort_id = 1;
+inline void IncidenceRateRawInfo::clear_target_cohort_id() {
+  target_cohort_id_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 IncidenceRateRawInfo::_internal_target_cohort_id() const {
+  return target_cohort_id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 IncidenceRateRawInfo::target_cohort_id() const {
+  // @@protoc_insertion_point(field_get:IncidenceRateRawInfo.target_cohort_id)
+  return _internal_target_cohort_id();
+}
+inline void IncidenceRateRawInfo::_internal_set_target_cohort_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  target_cohort_id_ = value;
+}
+inline void IncidenceRateRawInfo::set_target_cohort_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_target_cohort_id(value);
+  // @@protoc_insertion_point(field_set:IncidenceRateRawInfo.target_cohort_id)
+}
+
+// int32 outcome_cohort_id = 2;
+inline void IncidenceRateRawInfo::clear_outcome_cohort_id() {
+  outcome_cohort_id_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 IncidenceRateRawInfo::_internal_outcome_cohort_id() const {
+  return outcome_cohort_id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 IncidenceRateRawInfo::outcome_cohort_id() const {
+  // @@protoc_insertion_point(field_get:IncidenceRateRawInfo.outcome_cohort_id)
+  return _internal_outcome_cohort_id();
+}
+inline void IncidenceRateRawInfo::_internal_set_outcome_cohort_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  outcome_cohort_id_ = value;
+}
+inline void IncidenceRateRawInfo::set_outcome_cohort_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_outcome_cohort_id(value);
+  // @@protoc_insertion_point(field_set:IncidenceRateRawInfo.outcome_cohort_id)
+}
+
+// int32 person_id = 3;
+inline void IncidenceRateRawInfo::clear_person_id() {
+  person_id_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 IncidenceRateRawInfo::_internal_person_id() const {
+  return person_id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 IncidenceRateRawInfo::person_id() const {
+  // @@protoc_insertion_point(field_get:IncidenceRateRawInfo.person_id)
+  return _internal_person_id();
+}
+inline void IncidenceRateRawInfo::_internal_set_person_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  person_id_ = value;
+}
+inline void IncidenceRateRawInfo::set_person_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_person_id(value);
+  // @@protoc_insertion_point(field_set:IncidenceRateRawInfo.person_id)
+}
+
+// int32 person_n = 4;
+inline void IncidenceRateRawInfo::clear_person_n() {
+  person_n_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 IncidenceRateRawInfo::_internal_person_n() const {
+  return person_n_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 IncidenceRateRawInfo::person_n() const {
+  // @@protoc_insertion_point(field_get:IncidenceRateRawInfo.person_n)
+  return _internal_person_n();
+}
+inline void IncidenceRateRawInfo::_internal_set_person_n(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  person_n_ = value;
+}
+inline void IncidenceRateRawInfo::set_person_n(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_person_n(value);
+  // @@protoc_insertion_point(field_set:IncidenceRateRawInfo.person_n)
+}
+
+// int32 prior_outcome_yn = 5;
+inline void IncidenceRateRawInfo::clear_prior_outcome_yn() {
+  prior_outcome_yn_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 IncidenceRateRawInfo::_internal_prior_outcome_yn() const {
+  return prior_outcome_yn_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 IncidenceRateRawInfo::prior_outcome_yn() const {
+  // @@protoc_insertion_point(field_get:IncidenceRateRawInfo.prior_outcome_yn)
+  return _internal_prior_outcome_yn();
+}
+inline void IncidenceRateRawInfo::_internal_set_prior_outcome_yn(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  prior_outcome_yn_ = value;
+}
+inline void IncidenceRateRawInfo::set_prior_outcome_yn(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_prior_outcome_yn(value);
+  // @@protoc_insertion_point(field_set:IncidenceRateRawInfo.prior_outcome_yn)
+}
+
+// string index_date_earliest = 6;
+inline void IncidenceRateRawInfo::clear_index_date_earliest() {
+  index_date_earliest_.ClearToEmpty();
+}
+inline const std::string& IncidenceRateRawInfo::index_date_earliest() const {
+  // @@protoc_insertion_point(field_get:IncidenceRateRawInfo.index_date_earliest)
+  return _internal_index_date_earliest();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void IncidenceRateRawInfo::set_index_date_earliest(ArgT0&& arg0, ArgT... args) {
+ 
+ index_date_earliest_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:IncidenceRateRawInfo.index_date_earliest)
+}
+inline std::string* IncidenceRateRawInfo::mutable_index_date_earliest() {
+  std::string* _s = _internal_mutable_index_date_earliest();
+  // @@protoc_insertion_point(field_mutable:IncidenceRateRawInfo.index_date_earliest)
+  return _s;
+}
+inline const std::string& IncidenceRateRawInfo::_internal_index_date_earliest() const {
+  return index_date_earliest_.Get();
+}
+inline void IncidenceRateRawInfo::_internal_set_index_date_earliest(const std::string& value) {
+  
+  index_date_earliest_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* IncidenceRateRawInfo::_internal_mutable_index_date_earliest() {
+  
+  return index_date_earliest_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* IncidenceRateRawInfo::release_index_date_earliest() {
+  // @@protoc_insertion_point(field_release:IncidenceRateRawInfo.index_date_earliest)
+  return index_date_earliest_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+}
+inline void IncidenceRateRawInfo::set_allocated_index_date_earliest(std::string* index_date_earliest) {
+  if (index_date_earliest != nullptr) {
+    
+  } else {
+    
+  }
+  index_date_earliest_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), index_date_earliest,
+      GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set_allocated:IncidenceRateRawInfo.index_date_earliest)
+}
+
+// string index_date_latest = 7;
+inline void IncidenceRateRawInfo::clear_index_date_latest() {
+  index_date_latest_.ClearToEmpty();
+}
+inline const std::string& IncidenceRateRawInfo::index_date_latest() const {
+  // @@protoc_insertion_point(field_get:IncidenceRateRawInfo.index_date_latest)
+  return _internal_index_date_latest();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void IncidenceRateRawInfo::set_index_date_latest(ArgT0&& arg0, ArgT... args) {
+ 
+ index_date_latest_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:IncidenceRateRawInfo.index_date_latest)
+}
+inline std::string* IncidenceRateRawInfo::mutable_index_date_latest() {
+  std::string* _s = _internal_mutable_index_date_latest();
+  // @@protoc_insertion_point(field_mutable:IncidenceRateRawInfo.index_date_latest)
+  return _s;
+}
+inline const std::string& IncidenceRateRawInfo::_internal_index_date_latest() const {
+  return index_date_latest_.Get();
+}
+inline void IncidenceRateRawInfo::_internal_set_index_date_latest(const std::string& value) {
+  
+  index_date_latest_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* IncidenceRateRawInfo::_internal_mutable_index_date_latest() {
+  
+  return index_date_latest_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* IncidenceRateRawInfo::release_index_date_latest() {
+  // @@protoc_insertion_point(field_release:IncidenceRateRawInfo.index_date_latest)
+  return index_date_latest_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+}
+inline void IncidenceRateRawInfo::set_allocated_index_date_latest(std::string* index_date_latest) {
+  if (index_date_latest != nullptr) {
+    
+  } else {
+    
+  }
+  index_date_latest_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), index_date_latest,
+      GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set_allocated:IncidenceRateRawInfo.index_date_latest)
+}
+
+// string tar_start_date = 8;
+inline void IncidenceRateRawInfo::clear_tar_start_date() {
+  tar_start_date_.ClearToEmpty();
+}
+inline const std::string& IncidenceRateRawInfo::tar_start_date() const {
+  // @@protoc_insertion_point(field_get:IncidenceRateRawInfo.tar_start_date)
+  return _internal_tar_start_date();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void IncidenceRateRawInfo::set_tar_start_date(ArgT0&& arg0, ArgT... args) {
+ 
+ tar_start_date_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:IncidenceRateRawInfo.tar_start_date)
+}
+inline std::string* IncidenceRateRawInfo::mutable_tar_start_date() {
+  std::string* _s = _internal_mutable_tar_start_date();
+  // @@protoc_insertion_point(field_mutable:IncidenceRateRawInfo.tar_start_date)
+  return _s;
+}
+inline const std::string& IncidenceRateRawInfo::_internal_tar_start_date() const {
+  return tar_start_date_.Get();
+}
+inline void IncidenceRateRawInfo::_internal_set_tar_start_date(const std::string& value) {
+  
+  tar_start_date_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* IncidenceRateRawInfo::_internal_mutable_tar_start_date() {
+  
+  return tar_start_date_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* IncidenceRateRawInfo::release_tar_start_date() {
+  // @@protoc_insertion_point(field_release:IncidenceRateRawInfo.tar_start_date)
+  return tar_start_date_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+}
+inline void IncidenceRateRawInfo::set_allocated_tar_start_date(std::string* tar_start_date) {
+  if (tar_start_date != nullptr) {
+    
+  } else {
+    
+  }
+  tar_start_date_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), tar_start_date,
+      GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set_allocated:IncidenceRateRawInfo.tar_start_date)
+}
+
+// string tar_end_date = 9;
+inline void IncidenceRateRawInfo::clear_tar_end_date() {
+  tar_end_date_.ClearToEmpty();
+}
+inline const std::string& IncidenceRateRawInfo::tar_end_date() const {
+  // @@protoc_insertion_point(field_get:IncidenceRateRawInfo.tar_end_date)
+  return _internal_tar_end_date();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void IncidenceRateRawInfo::set_tar_end_date(ArgT0&& arg0, ArgT... args) {
+ 
+ tar_end_date_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:IncidenceRateRawInfo.tar_end_date)
+}
+inline std::string* IncidenceRateRawInfo::mutable_tar_end_date() {
+  std::string* _s = _internal_mutable_tar_end_date();
+  // @@protoc_insertion_point(field_mutable:IncidenceRateRawInfo.tar_end_date)
+  return _s;
+}
+inline const std::string& IncidenceRateRawInfo::_internal_tar_end_date() const {
+  return tar_end_date_.Get();
+}
+inline void IncidenceRateRawInfo::_internal_set_tar_end_date(const std::string& value) {
+  
+  tar_end_date_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* IncidenceRateRawInfo::_internal_mutable_tar_end_date() {
+  
+  return tar_end_date_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* IncidenceRateRawInfo::release_tar_end_date() {
+  // @@protoc_insertion_point(field_release:IncidenceRateRawInfo.tar_end_date)
+  return tar_end_date_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+}
+inline void IncidenceRateRawInfo::set_allocated_tar_end_date(std::string* tar_end_date) {
+  if (tar_end_date != nullptr) {
+    
+  } else {
+    
+  }
+  tar_end_date_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), tar_end_date,
+      GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set_allocated:IncidenceRateRawInfo.tar_end_date)
+}
+
+// string cohort_end_date = 10;
+inline void IncidenceRateRawInfo::clear_cohort_end_date() {
+  cohort_end_date_.ClearToEmpty();
+}
+inline const std::string& IncidenceRateRawInfo::cohort_end_date() const {
+  // @@protoc_insertion_point(field_get:IncidenceRateRawInfo.cohort_end_date)
+  return _internal_cohort_end_date();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void IncidenceRateRawInfo::set_cohort_end_date(ArgT0&& arg0, ArgT... args) {
+ 
+ cohort_end_date_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:IncidenceRateRawInfo.cohort_end_date)
+}
+inline std::string* IncidenceRateRawInfo::mutable_cohort_end_date() {
+  std::string* _s = _internal_mutable_cohort_end_date();
+  // @@protoc_insertion_point(field_mutable:IncidenceRateRawInfo.cohort_end_date)
+  return _s;
+}
+inline const std::string& IncidenceRateRawInfo::_internal_cohort_end_date() const {
+  return cohort_end_date_.Get();
+}
+inline void IncidenceRateRawInfo::_internal_set_cohort_end_date(const std::string& value) {
+  
+  cohort_end_date_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* IncidenceRateRawInfo::_internal_mutable_cohort_end_date() {
+  
+  return cohort_end_date_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* IncidenceRateRawInfo::release_cohort_end_date() {
+  // @@protoc_insertion_point(field_release:IncidenceRateRawInfo.cohort_end_date)
+  return cohort_end_date_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+}
+inline void IncidenceRateRawInfo::set_allocated_cohort_end_date(std::string* cohort_end_date) {
+  if (cohort_end_date != nullptr) {
+    
+  } else {
+    
+  }
+  cohort_end_date_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), cohort_end_date,
+      GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set_allocated:IncidenceRateRawInfo.cohort_end_date)
+}
+
+// string observation_period_end_date = 11;
+inline void IncidenceRateRawInfo::clear_observation_period_end_date() {
+  observation_period_end_date_.ClearToEmpty();
+}
+inline const std::string& IncidenceRateRawInfo::observation_period_end_date() const {
+  // @@protoc_insertion_point(field_get:IncidenceRateRawInfo.observation_period_end_date)
+  return _internal_observation_period_end_date();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void IncidenceRateRawInfo::set_observation_period_end_date(ArgT0&& arg0, ArgT... args) {
+ 
+ observation_period_end_date_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:IncidenceRateRawInfo.observation_period_end_date)
+}
+inline std::string* IncidenceRateRawInfo::mutable_observation_period_end_date() {
+  std::string* _s = _internal_mutable_observation_period_end_date();
+  // @@protoc_insertion_point(field_mutable:IncidenceRateRawInfo.observation_period_end_date)
+  return _s;
+}
+inline const std::string& IncidenceRateRawInfo::_internal_observation_period_end_date() const {
+  return observation_period_end_date_.Get();
+}
+inline void IncidenceRateRawInfo::_internal_set_observation_period_end_date(const std::string& value) {
+  
+  observation_period_end_date_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* IncidenceRateRawInfo::_internal_mutable_observation_period_end_date() {
+  
+  return observation_period_end_date_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* IncidenceRateRawInfo::release_observation_period_end_date() {
+  // @@protoc_insertion_point(field_release:IncidenceRateRawInfo.observation_period_end_date)
+  return observation_period_end_date_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+}
+inline void IncidenceRateRawInfo::set_allocated_observation_period_end_date(std::string* observation_period_end_date) {
+  if (observation_period_end_date != nullptr) {
+    
+  } else {
+    
+  }
+  observation_period_end_date_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), observation_period_end_date,
+      GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set_allocated:IncidenceRateRawInfo.observation_period_end_date)
+}
+
+// string death_date = 12;
+inline void IncidenceRateRawInfo::clear_death_date() {
+  death_date_.ClearToEmpty();
+}
+inline const std::string& IncidenceRateRawInfo::death_date() const {
+  // @@protoc_insertion_point(field_get:IncidenceRateRawInfo.death_date)
+  return _internal_death_date();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void IncidenceRateRawInfo::set_death_date(ArgT0&& arg0, ArgT... args) {
+ 
+ death_date_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:IncidenceRateRawInfo.death_date)
+}
+inline std::string* IncidenceRateRawInfo::mutable_death_date() {
+  std::string* _s = _internal_mutable_death_date();
+  // @@protoc_insertion_point(field_mutable:IncidenceRateRawInfo.death_date)
+  return _s;
+}
+inline const std::string& IncidenceRateRawInfo::_internal_death_date() const {
+  return death_date_.Get();
+}
+inline void IncidenceRateRawInfo::_internal_set_death_date(const std::string& value) {
+  
+  death_date_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* IncidenceRateRawInfo::_internal_mutable_death_date() {
+  
+  return death_date_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* IncidenceRateRawInfo::release_death_date() {
+  // @@protoc_insertion_point(field_release:IncidenceRateRawInfo.death_date)
+  return death_date_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+}
+inline void IncidenceRateRawInfo::set_allocated_death_date(std::string* death_date) {
+  if (death_date != nullptr) {
+    
+  } else {
+    
+  }
+  death_date_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), death_date,
+      GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set_allocated:IncidenceRateRawInfo.death_date)
+}
+
+// string censor_date = 13;
+inline void IncidenceRateRawInfo::clear_censor_date() {
+  censor_date_.ClearToEmpty();
+}
+inline const std::string& IncidenceRateRawInfo::censor_date() const {
+  // @@protoc_insertion_point(field_get:IncidenceRateRawInfo.censor_date)
+  return _internal_censor_date();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void IncidenceRateRawInfo::set_censor_date(ArgT0&& arg0, ArgT... args) {
+ 
+ censor_date_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:IncidenceRateRawInfo.censor_date)
+}
+inline std::string* IncidenceRateRawInfo::mutable_censor_date() {
+  std::string* _s = _internal_mutable_censor_date();
+  // @@protoc_insertion_point(field_mutable:IncidenceRateRawInfo.censor_date)
+  return _s;
+}
+inline const std::string& IncidenceRateRawInfo::_internal_censor_date() const {
+  return censor_date_.Get();
+}
+inline void IncidenceRateRawInfo::_internal_set_censor_date(const std::string& value) {
+  
+  censor_date_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* IncidenceRateRawInfo::_internal_mutable_censor_date() {
+  
+  return censor_date_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* IncidenceRateRawInfo::release_censor_date() {
+  // @@protoc_insertion_point(field_release:IncidenceRateRawInfo.censor_date)
+  return censor_date_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+}
+inline void IncidenceRateRawInfo::set_allocated_censor_date(std::string* censor_date) {
+  if (censor_date != nullptr) {
+    
+  } else {
+    
+  }
+  censor_date_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), censor_date,
+      GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set_allocated:IncidenceRateRawInfo.censor_date)
+}
+
+// string o_min_date = 14;
+inline void IncidenceRateRawInfo::clear_o_min_date() {
+  o_min_date_.ClearToEmpty();
+}
+inline const std::string& IncidenceRateRawInfo::o_min_date() const {
+  // @@protoc_insertion_point(field_get:IncidenceRateRawInfo.o_min_date)
+  return _internal_o_min_date();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void IncidenceRateRawInfo::set_o_min_date(ArgT0&& arg0, ArgT... args) {
+ 
+ o_min_date_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:IncidenceRateRawInfo.o_min_date)
+}
+inline std::string* IncidenceRateRawInfo::mutable_o_min_date() {
+  std::string* _s = _internal_mutable_o_min_date();
+  // @@protoc_insertion_point(field_mutable:IncidenceRateRawInfo.o_min_date)
+  return _s;
+}
+inline const std::string& IncidenceRateRawInfo::_internal_o_min_date() const {
+  return o_min_date_.Get();
+}
+inline void IncidenceRateRawInfo::_internal_set_o_min_date(const std::string& value) {
+  
+  o_min_date_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArenaForAllocation());
+}
+inline std::string* IncidenceRateRawInfo::_internal_mutable_o_min_date() {
+  
+  return o_min_date_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArenaForAllocation());
+}
+inline std::string* IncidenceRateRawInfo::release_o_min_date() {
+  // @@protoc_insertion_point(field_release:IncidenceRateRawInfo.o_min_date)
+  return o_min_date_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArenaForAllocation());
+}
+inline void IncidenceRateRawInfo::set_allocated_o_min_date(std::string* o_min_date) {
+  if (o_min_date != nullptr) {
+    
+  } else {
+    
+  }
+  o_min_date_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), o_min_date,
+      GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set_allocated:IncidenceRateRawInfo.o_min_date)
+}
+
+// int32 o_time = 15;
+inline void IncidenceRateRawInfo::clear_o_time() {
+  o_time_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 IncidenceRateRawInfo::_internal_o_time() const {
+  return o_time_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 IncidenceRateRawInfo::o_time() const {
+  // @@protoc_insertion_point(field_get:IncidenceRateRawInfo.o_time)
+  return _internal_o_time();
+}
+inline void IncidenceRateRawInfo::_internal_set_o_time(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  o_time_ = value;
+}
+inline void IncidenceRateRawInfo::set_o_time(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_o_time(value);
+  // @@protoc_insertion_point(field_set:IncidenceRateRawInfo.o_time)
+}
+
+// int32 o_status = 16;
+inline void IncidenceRateRawInfo::clear_o_status() {
+  o_status_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 IncidenceRateRawInfo::_internal_o_status() const {
+  return o_status_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 IncidenceRateRawInfo::o_status() const {
+  // @@protoc_insertion_point(field_get:IncidenceRateRawInfo.o_status)
+  return _internal_o_status();
+}
+inline void IncidenceRateRawInfo::_internal_set_o_status(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  o_status_ = value;
+}
+inline void IncidenceRateRawInfo::set_o_status(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_o_status(value);
+  // @@protoc_insertion_point(field_set:IncidenceRateRawInfo.o_status)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

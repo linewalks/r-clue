@@ -20,7 +20,6 @@ class Connection {
     DataFrame GetCohortList(int page, int length, string term) {
       ResponseCohortList response = connection_->GetCohortList(page, length, term);
       int cohort_size = response.cohort_list_size();
-
       std::vector<CohortInfo> cohort_vector;
       for (int i = 0; i < cohort_size; ++i) {
         cohort_vector.push_back(response.cohort_list()[i]);
@@ -42,6 +41,20 @@ class Connection {
     DataFrame GetCohortComparison(int comparison_id) {
       ResponseComparison response = connection_->GetCohortComparison(comparison_id);
       return convert_comparison(response);
+    }
+
+    DataFrame GetIncidenceRateResult(int incidence_rate_id) {
+      ResponseIncidenceRateResult response = connection_->GetIncidenceRateResult(incidence_rate_id);
+      int row_size = response.row_list_size();
+      std::vector<IncidenceRateResultRowInfo> row_vector;
+      for (int i = 0; i < row_size; ++i) {
+        row_vector.push_back(response.row_list()[i]);
+      }
+      return convert_to_dataframe<IncidenceRateResult>(row_vector);
+    }
+
+    Stream<RequestIncidenceRateStream, IncidenceRateRawInfo> GetIncidenceRateRaw(int incidence_rate_id) {
+      return Stream<RequestIncidenceRateStream, IncidenceRateRawInfo>(connection_->GetIncidenceRateRaw(incidence_rate_id));
     }
 
   protected:
