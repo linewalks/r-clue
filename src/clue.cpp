@@ -13,6 +13,7 @@ using namespace Rcpp;
 
 #define STREAM_CLASS(t) class_<t>(""#t"") \
   .method("Fetch", &t::Fetch) \
+  .method("FetchAll", &t::FetchAll) \
   .method("Close", &t::Close); \
 
 #define STREAM_COHORT_CLASS(t) STREAM_CLASS(StreamCohort##t##Info)
