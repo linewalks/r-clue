@@ -12,8 +12,16 @@ print(clue)
 conn <- clue$Connect()
 print(conn)
 
-res <- conn$GetCohortComparison(1924)
-print(res)
+stream <- conn$GetIncidenceRateRaw(282)
+print(stream)
+print(stream$Fetch(5))
+stream$Close()
+
+# res <- conn$GetIncidenceRateResult(282)
+# print(res)
+
+# res <- conn$GetCohortComparison(1750)
+# print(res)
 
 # res <- conn$GetCohortList(1, 10, "")
 # print(res)

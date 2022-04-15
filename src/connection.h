@@ -7,8 +7,8 @@
 
 using namespace Rcpp;
 
-#define GET_COHORT_TABLE_R(t) Stream<RequestCohortStream, INFO(t)> FUNC(t)(int cohort_id) { \
-  return Stream<RequestCohortStream, INFO(t)>(connection_->FUNC(t)(cohort_id)); \
+#define GET_COHORT_TABLE_R(t) Stream<clue::RequestCohortCreator, RequestCohortStream, INFO(t)> FUNC(t)(int cohort_id) { \
+  return Stream<clue::RequestCohortCreator, RequestCohortStream, INFO(t)>(connection_->FUNC(t)(cohort_id)); \
 }
 
 class Connection {
@@ -50,11 +50,11 @@ class Connection {
       for (int i = 0; i < row_size; ++i) {
         row_vector.push_back(response.row_list()[i]);
       }
-      return convert_to_dataframe<IncidenceRateResult>(row_vector);
+      return convert_to_dataframe<IncidenceRateResultRowInfo>(row_vector);
     }
 
-    Stream<RequestIncidenceRateStream, IncidenceRateRawInfo> GetIncidenceRateRaw(int incidence_rate_id) {
-      return Stream<RequestIncidenceRateStream, IncidenceRateRawInfo>(connection_->GetIncidenceRateRaw(incidence_rate_id));
+    Stream<clue::RequestIncidenceRateCreator, RequestIncidenceRateStream, IncidenceRateRawInfo> GetIncidenceRateRaw(int incidence_rate_id) {
+      return Stream<clue::RequestIncidenceRateCreator, RequestIncidenceRateStream, IncidenceRateRawInfo>(connection_->GetIncidenceRateRaw(incidence_rate_id));
     }
 
   protected:
