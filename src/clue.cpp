@@ -5,44 +5,48 @@
 
 using namespace Rcpp;
 
-#define FUNC_STRING(t) "GetCohort" #t "Table"
-#define COHORT_TABLE_METHOD(t) .method(FUNC_STRING(t), &Connection::FUNC(t))
+#define COHORT_FUNC_STRING(t) "GetCohort" #t "Table"
+#define COHORT_TABLE_METHOD(t) .method(COHORT_FUNC_STRING(t), &Connection::FUNC(t))
 
-#define STREAM_TYPE_NAME Stream##t##Info
-#define EXPOSE_STREAM(t) typedef Stream<RequestCohortStream, t##Info> Stream##t##Info; RCPP_EXPOSED_CLASS_NODECL(Stream##t##Info)
+#define EXPOSE_COHORT_STREAM(t) typedef Stream<clue::RequestCohortCreator, RequestCohortStream, t##Info> StreamCohort##t##Info; \
+  RCPP_EXPOSED_CLASS_NODECL(StreamCohort##t##Info)
 
-#define STREAM_CLASS_STRING(t) "Stream" #t "Info"
-#define STREAM_CLASS(t) class_<Stream##t##Info>(STREAM_CLASS_STRING(t)) \
-    .method("Fetch", &Stream##t##Info::Fetch) \
-    .method("Close", &Stream##t##Info::Close) \
-    ;
+#define STREAM_CLASS(t) class_<t>(""#t"") \
+  .method("Fetch", &t::Fetch) \
+  .method("Close", &t::Close); \
 
-EXPOSE_STREAM(Person)
-EXPOSE_STREAM(ConditionOccurrence)
-EXPOSE_STREAM(Death)
-EXPOSE_STREAM(DeviceExposure)
-EXPOSE_STREAM(DrugExposure)
-EXPOSE_STREAM(Measurement)
-EXPOSE_STREAM(Observation)
-EXPOSE_STREAM(ObservationPeriod)
-EXPOSE_STREAM(ProcedureOccurrence)
-EXPOSE_STREAM(VisitOccurrence)
+#define STREAM_COHORT_CLASS(t) STREAM_CLASS(StreamCohort##t##Info)
+
+EXPOSE_COHORT_STREAM(Person)
+EXPOSE_COHORT_STREAM(ConditionOccurrence)
+EXPOSE_COHORT_STREAM(Death)
+EXPOSE_COHORT_STREAM(DeviceExposure)
+EXPOSE_COHORT_STREAM(DrugExposure)
+EXPOSE_COHORT_STREAM(Measurement)
+EXPOSE_COHORT_STREAM(Observation)
+EXPOSE_COHORT_STREAM(ObservationPeriod)
+EXPOSE_COHORT_STREAM(ProcedureOccurrence)
+EXPOSE_COHORT_STREAM(VisitOccurrence)
+
+typedef Stream<clue::RequestIncidenceRateCreator, RequestIncidenceRateStream, IncidenceRateRawInfo> StreamIncidenceRateRawInfo;
+RCPP_EXPOSED_CLASS_NODECL(StreamIncidenceRateRawInfo)
 
 RCPP_EXPOSED_CLASS(Connection)
 RCPP_EXPOSED_CLASS(CLUEWrapper)
 
 RCPP_MODULE(CLUE) {
 
-  STREAM_CLASS(Person);
-  STREAM_CLASS(ConditionOccurrence)
-  STREAM_CLASS(Death)
-  STREAM_CLASS(DeviceExposure)
-  STREAM_CLASS(DrugExposure)
-  STREAM_CLASS(Measurement)
-  STREAM_CLASS(Observation)
-  STREAM_CLASS(ObservationPeriod)
-  STREAM_CLASS(ProcedureOccurrence)
-  STREAM_CLASS(VisitOccurrence)
+  STREAM_COHORT_CLASS(Person);
+  STREAM_COHORT_CLASS(ConditionOccurrence)
+  STREAM_COHORT_CLASS(Death)
+  STREAM_COHORT_CLASS(DeviceExposure)
+  STREAM_COHORT_CLASS(DrugExposure)
+  STREAM_COHORT_CLASS(Measurement)
+  STREAM_COHORT_CLASS(Observation)
+  STREAM_COHORT_CLASS(ObservationPeriod)
+  STREAM_COHORT_CLASS(ProcedureOccurrence)
+  STREAM_COHORT_CLASS(VisitOccurrence)
+  STREAM_CLASS(StreamIncidenceRateRawInfo)
 
   class_<Connection>("Connection")
     .method("GetCohortList", &Connection::GetCohortList)
@@ -58,6 +62,8 @@ RCPP_MODULE(CLUE) {
     COHORT_TABLE_METHOD(VisitOccurrence)
 
     .method("GetCohortComparison", &Connection::GetCohortComparison)
+    .method("GetIncidenceRateResult", &Connection::GetIncidenceRateResult)
+    .method("GetIncidenceRateRaw", &Connection::GetIncidenceRateRaw)
     ;
 
   class_<CLUEWrapper>("CLUEWrapper")
