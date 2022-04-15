@@ -4,6 +4,7 @@
 #include <functional>
 #include <mutex>
 #include <queue>
+#include <stdexcept>
 #include <vector>
 #include <grpcpp/grpcpp.h>
 #include "clue.grpc.pb.h"
@@ -14,30 +15,41 @@ using grpc::ClientReaderWriter;
 
 namespace clue {
 
-template <class Request, class Response>
+template <class RequestCreator, class Request, class Response>
 class Stream : public grpc::ClientBidiReactor<Request, Response> {
   public:
-    Stream(CLUE::Stub* stub, int cohort_id)
-        : cohort_id_(cohort_id),
-          stop_(false) {}
+    Stream(CLUE::Stub* stub, RequestCreator creator)
+        : request_creator_(creator),
+          stop_(false),
+          wait_count_(0) {}
 
     void Start() {
       this->AddHold();
       this->StartCall();
     }
 
-    Response FetchOne() {
+    std::shared_ptr<Response> FetchOne() {
       AddFetchNum(1);
       return ReadNext();
     }
 
-    std::vector<Response> FetchMany(int num) {
+    void FetchMany(int num, std::vector<std::shared_ptr<Response>>* result) {
       AddFetchNum(num);
-      std::vector<Response> result;
       for (int i = 0; i < num; ++i) {
-        result.push_back(ReadNext());
+        std::shared_ptr<Response> response = ReadNext();
+        result->push_back(response);
       }
-      return result;
+    }
+
+    void FetchAll(std::vector<std::shared_ptr<Response>>* result) {
+      AddFetchNum(0);
+      while (true) {
+        std::shared_ptr<Response> response = ReadNext();
+        if (response == NULL) {
+          break;
+        }
+        result->push_back(response);
+      }
     }
 
     void OnDone(const Status& s) override {
@@ -45,14 +57,21 @@ class Stream : public grpc::ClientBidiReactor<Request, Response> {
       stop_ = true;
       response_condition_.notify_one();
     }
+
     void OnReadDone(bool ok) override {
       std::unique_lock<std::mutex> lock(mutex_);
-      response_queue_.push(temp_response_);
+      --wait_count_;
+      if (!ok) {
+        stop_ = true;
+      }
       response_condition_.notify_one();
     }
+
     void Close() {
       this->RemoveHold();
-      this->StartWritesDone();
+      if (!stop_) {
+        this->StartWritesDone();
+      }
     }
 
   protected:
@@ -61,37 +80,34 @@ class Stream : public grpc::ClientBidiReactor<Request, Response> {
       response_queue_.pop();
       return response;
     }
-    Response ReadNext() {
+
+    std::shared_ptr<Response> ReadNext() {
       std::unique_lock<std::mutex> lock(mutex_);
 
-      if (!response_queue_.empty()) {
-        return PopResponse();
-      } else {
-        this->StartRead(&temp_response_);
-        response_condition_.wait(lock, [this] { return !response_queue_.empty() || stop_; });
-        return PopResponse();
-      }      
+      std::shared_ptr<Response> response(new Response());
+      ++wait_count_;
+      this->StartRead(response.get());
+      response_condition_.wait(lock, [this] { return wait_count_ <= 0 || stop_; });
+
+      return stop_ ? NULL : response;
     }
 
     void AddFetchNum(int fetch_num) {
-      Request request;
-      // TODO
-      // 임시 코드임.
-      // set_cohort_id가 항상 있을거라고 보장할 수 없음
-      request.set_cohort_id(cohort_id_);
-      request.set_fetch_num(fetch_num);
-      this->StartWrite(&request);
+      std::shared_ptr<Request> request = request_creator_.get(fetch_num);
+      this->StartWrite(request.get());
     }
 
-    int cohort_id_;
+    RequestCreator request_creator_;
 
     std::mutex mutex_;
     std::condition_variable response_condition_;
 
+    std::queue<std::shared_ptr<Response>> send_response_queue_;
     std::queue<Response> response_queue_;
     Response temp_response_;
 
     bool stop_;
+    int wait_count_;
 };
 
 }

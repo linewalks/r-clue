@@ -144,6 +144,22 @@ class CLUE final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ResponseComparison>> PrepareAsyncGetCohortComparison(::grpc::ClientContext* context, const ::RequestComparison& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ResponseComparison>>(PrepareAsyncGetCohortComparisonRaw(context, request, cq));
     }
+    virtual ::grpc::Status GetIncidenceRateResult(::grpc::ClientContext* context, const ::RequestIncidenceRate& request, ::ResponseIncidenceRateResult* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ResponseIncidenceRateResult>> AsyncGetIncidenceRateResult(::grpc::ClientContext* context, const ::RequestIncidenceRate& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ResponseIncidenceRateResult>>(AsyncGetIncidenceRateResultRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ResponseIncidenceRateResult>> PrepareAsyncGetIncidenceRateResult(::grpc::ClientContext* context, const ::RequestIncidenceRate& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::ResponseIncidenceRateResult>>(PrepareAsyncGetIncidenceRateResultRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientReaderWriterInterface< ::RequestIncidenceRateStream, ::IncidenceRateRawInfo>> GetIncidenceRateRaw(::grpc::ClientContext* context) {
+      return std::unique_ptr< ::grpc::ClientReaderWriterInterface< ::RequestIncidenceRateStream, ::IncidenceRateRawInfo>>(GetIncidenceRateRawRaw(context));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::RequestIncidenceRateStream, ::IncidenceRateRawInfo>> AsyncGetIncidenceRateRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::RequestIncidenceRateStream, ::IncidenceRateRawInfo>>(AsyncGetIncidenceRateRawRaw(context, cq, tag));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::RequestIncidenceRateStream, ::IncidenceRateRawInfo>> PrepareAsyncGetIncidenceRateRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderWriterInterface< ::RequestIncidenceRateStream, ::IncidenceRateRawInfo>>(PrepareAsyncGetIncidenceRateRawRaw(context, cq));
+    }
     class async_interface {
      public:
       virtual ~async_interface() {}
@@ -163,6 +179,9 @@ class CLUE final {
       virtual void GetCohortVisitOccurrenceTable(::grpc::ClientContext* context, ::grpc::ClientBidiReactor< ::RequestCohortStream,::VisitOccurrenceInfo>* reactor) = 0;
       virtual void GetCohortComparison(::grpc::ClientContext* context, const ::RequestComparison* request, ::ResponseComparison* response, std::function<void(::grpc::Status)>) = 0;
       virtual void GetCohortComparison(::grpc::ClientContext* context, const ::RequestComparison* request, ::ResponseComparison* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void GetIncidenceRateResult(::grpc::ClientContext* context, const ::RequestIncidenceRate* request, ::ResponseIncidenceRateResult* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void GetIncidenceRateResult(::grpc::ClientContext* context, const ::RequestIncidenceRate* request, ::ResponseIncidenceRateResult* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void GetIncidenceRateRaw(::grpc::ClientContext* context, ::grpc::ClientBidiReactor< ::RequestIncidenceRateStream,::IncidenceRateRawInfo>* reactor) = 0;
     };
     typedef class async_interface experimental_async_interface;
     virtual class async_interface* async() { return nullptr; }
@@ -204,6 +223,11 @@ class CLUE final {
     virtual ::grpc::ClientAsyncReaderWriterInterface< ::RequestCohortStream, ::VisitOccurrenceInfo>* PrepareAsyncGetCohortVisitOccurrenceTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::ResponseComparison>* AsyncGetCohortComparisonRaw(::grpc::ClientContext* context, const ::RequestComparison& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::ResponseComparison>* PrepareAsyncGetCohortComparisonRaw(::grpc::ClientContext* context, const ::RequestComparison& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::ResponseIncidenceRateResult>* AsyncGetIncidenceRateResultRaw(::grpc::ClientContext* context, const ::RequestIncidenceRate& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::ResponseIncidenceRateResult>* PrepareAsyncGetIncidenceRateResultRaw(::grpc::ClientContext* context, const ::RequestIncidenceRate& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientReaderWriterInterface< ::RequestIncidenceRateStream, ::IncidenceRateRawInfo>* GetIncidenceRateRawRaw(::grpc::ClientContext* context) = 0;
+    virtual ::grpc::ClientAsyncReaderWriterInterface< ::RequestIncidenceRateStream, ::IncidenceRateRawInfo>* AsyncGetIncidenceRateRawRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) = 0;
+    virtual ::grpc::ClientAsyncReaderWriterInterface< ::RequestIncidenceRateStream, ::IncidenceRateRawInfo>* PrepareAsyncGetIncidenceRateRawRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
    public:
@@ -319,6 +343,22 @@ class CLUE final {
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ResponseComparison>> PrepareAsyncGetCohortComparison(::grpc::ClientContext* context, const ::RequestComparison& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ResponseComparison>>(PrepareAsyncGetCohortComparisonRaw(context, request, cq));
     }
+    ::grpc::Status GetIncidenceRateResult(::grpc::ClientContext* context, const ::RequestIncidenceRate& request, ::ResponseIncidenceRateResult* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ResponseIncidenceRateResult>> AsyncGetIncidenceRateResult(::grpc::ClientContext* context, const ::RequestIncidenceRate& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ResponseIncidenceRateResult>>(AsyncGetIncidenceRateResultRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ResponseIncidenceRateResult>> PrepareAsyncGetIncidenceRateResult(::grpc::ClientContext* context, const ::RequestIncidenceRate& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::ResponseIncidenceRateResult>>(PrepareAsyncGetIncidenceRateResultRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientReaderWriter< ::RequestIncidenceRateStream, ::IncidenceRateRawInfo>> GetIncidenceRateRaw(::grpc::ClientContext* context) {
+      return std::unique_ptr< ::grpc::ClientReaderWriter< ::RequestIncidenceRateStream, ::IncidenceRateRawInfo>>(GetIncidenceRateRawRaw(context));
+    }
+    std::unique_ptr<  ::grpc::ClientAsyncReaderWriter< ::RequestIncidenceRateStream, ::IncidenceRateRawInfo>> AsyncGetIncidenceRateRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderWriter< ::RequestIncidenceRateStream, ::IncidenceRateRawInfo>>(AsyncGetIncidenceRateRawRaw(context, cq, tag));
+    }
+    std::unique_ptr<  ::grpc::ClientAsyncReaderWriter< ::RequestIncidenceRateStream, ::IncidenceRateRawInfo>> PrepareAsyncGetIncidenceRateRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderWriter< ::RequestIncidenceRateStream, ::IncidenceRateRawInfo>>(PrepareAsyncGetIncidenceRateRawRaw(context, cq));
+    }
     class async final :
       public StubInterface::async_interface {
      public:
@@ -338,6 +378,9 @@ class CLUE final {
       void GetCohortVisitOccurrenceTable(::grpc::ClientContext* context, ::grpc::ClientBidiReactor< ::RequestCohortStream,::VisitOccurrenceInfo>* reactor) override;
       void GetCohortComparison(::grpc::ClientContext* context, const ::RequestComparison* request, ::ResponseComparison* response, std::function<void(::grpc::Status)>) override;
       void GetCohortComparison(::grpc::ClientContext* context, const ::RequestComparison* request, ::ResponseComparison* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void GetIncidenceRateResult(::grpc::ClientContext* context, const ::RequestIncidenceRate* request, ::ResponseIncidenceRateResult* response, std::function<void(::grpc::Status)>) override;
+      void GetIncidenceRateResult(::grpc::ClientContext* context, const ::RequestIncidenceRate* request, ::ResponseIncidenceRateResult* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void GetIncidenceRateRaw(::grpc::ClientContext* context, ::grpc::ClientBidiReactor< ::RequestIncidenceRateStream,::IncidenceRateRawInfo>* reactor) override;
      private:
       friend class Stub;
       explicit async(Stub* stub): stub_(stub) { }
@@ -385,6 +428,11 @@ class CLUE final {
     ::grpc::ClientAsyncReaderWriter< ::RequestCohortStream, ::VisitOccurrenceInfo>* PrepareAsyncGetCohortVisitOccurrenceTableRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::ResponseComparison>* AsyncGetCohortComparisonRaw(::grpc::ClientContext* context, const ::RequestComparison& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::ResponseComparison>* PrepareAsyncGetCohortComparisonRaw(::grpc::ClientContext* context, const ::RequestComparison& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::ResponseIncidenceRateResult>* AsyncGetIncidenceRateResultRaw(::grpc::ClientContext* context, const ::RequestIncidenceRate& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::ResponseIncidenceRateResult>* PrepareAsyncGetIncidenceRateResultRaw(::grpc::ClientContext* context, const ::RequestIncidenceRate& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientReaderWriter< ::RequestIncidenceRateStream, ::IncidenceRateRawInfo>* GetIncidenceRateRawRaw(::grpc::ClientContext* context) override;
+    ::grpc::ClientAsyncReaderWriter< ::RequestIncidenceRateStream, ::IncidenceRateRawInfo>* AsyncGetIncidenceRateRawRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq, void* tag) override;
+    ::grpc::ClientAsyncReaderWriter< ::RequestIncidenceRateStream, ::IncidenceRateRawInfo>* PrepareAsyncGetIncidenceRateRawRaw(::grpc::ClientContext* context, ::grpc::CompletionQueue* cq) override;
     const ::grpc::internal::RpcMethod rpcmethod_AuthLogin_;
     const ::grpc::internal::RpcMethod rpcmethod_GetCohortList_;
     const ::grpc::internal::RpcMethod rpcmethod_GetCohortPersonTable_;
@@ -398,6 +446,8 @@ class CLUE final {
     const ::grpc::internal::RpcMethod rpcmethod_GetCohortProcedureOccurrenceTable_;
     const ::grpc::internal::RpcMethod rpcmethod_GetCohortVisitOccurrenceTable_;
     const ::grpc::internal::RpcMethod rpcmethod_GetCohortComparison_;
+    const ::grpc::internal::RpcMethod rpcmethod_GetIncidenceRateResult_;
+    const ::grpc::internal::RpcMethod rpcmethod_GetIncidenceRateRaw_;
   };
   static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
 
@@ -418,6 +468,8 @@ class CLUE final {
     virtual ::grpc::Status GetCohortProcedureOccurrenceTable(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::ProcedureOccurrenceInfo, ::RequestCohortStream>* stream);
     virtual ::grpc::Status GetCohortVisitOccurrenceTable(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::VisitOccurrenceInfo, ::RequestCohortStream>* stream);
     virtual ::grpc::Status GetCohortComparison(::grpc::ServerContext* context, const ::RequestComparison* request, ::ResponseComparison* response);
+    virtual ::grpc::Status GetIncidenceRateResult(::grpc::ServerContext* context, const ::RequestIncidenceRate* request, ::ResponseIncidenceRateResult* response);
+    virtual ::grpc::Status GetIncidenceRateRaw(::grpc::ServerContext* context, ::grpc::ServerReaderWriter< ::IncidenceRateRawInfo, ::RequestIncidenceRateStream>* stream);
   };
   template <class BaseClass>
   class WithAsyncMethod_AuthLogin : public BaseClass {
@@ -679,7 +731,47 @@ class CLUE final {
       ::grpc::Service::RequestAsyncUnary(12, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
-  typedef WithAsyncMethod_AuthLogin<WithAsyncMethod_GetCohortList<WithAsyncMethod_GetCohortPersonTable<WithAsyncMethod_GetCohortConditionOccurrenceTable<WithAsyncMethod_GetCohortDeathTable<WithAsyncMethod_GetCohortDeviceExposureTable<WithAsyncMethod_GetCohortDrugExposureTable<WithAsyncMethod_GetCohortMeasurementTable<WithAsyncMethod_GetCohortObservationPeriodTable<WithAsyncMethod_GetCohortObservationTable<WithAsyncMethod_GetCohortProcedureOccurrenceTable<WithAsyncMethod_GetCohortVisitOccurrenceTable<WithAsyncMethod_GetCohortComparison<Service > > > > > > > > > > > > > AsyncService;
+  template <class BaseClass>
+  class WithAsyncMethod_GetIncidenceRateResult : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_GetIncidenceRateResult() {
+      ::grpc::Service::MarkMethodAsync(13);
+    }
+    ~WithAsyncMethod_GetIncidenceRateResult() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetIncidenceRateResult(::grpc::ServerContext* /*context*/, const ::RequestIncidenceRate* /*request*/, ::ResponseIncidenceRateResult* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetIncidenceRateResult(::grpc::ServerContext* context, ::RequestIncidenceRate* request, ::grpc::ServerAsyncResponseWriter< ::ResponseIncidenceRateResult>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(13, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_GetIncidenceRateRaw : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithAsyncMethod_GetIncidenceRateRaw() {
+      ::grpc::Service::MarkMethodAsync(14);
+    }
+    ~WithAsyncMethod_GetIncidenceRateRaw() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetIncidenceRateRaw(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::IncidenceRateRawInfo, ::RequestIncidenceRateStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetIncidenceRateRaw(::grpc::ServerContext* context, ::grpc::ServerAsyncReaderWriter< ::IncidenceRateRawInfo, ::RequestIncidenceRateStream>* stream, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncBidiStreaming(14, context, stream, new_call_cq, notification_cq, tag);
+    }
+  };
+  typedef WithAsyncMethod_AuthLogin<WithAsyncMethod_GetCohortList<WithAsyncMethod_GetCohortPersonTable<WithAsyncMethod_GetCohortConditionOccurrenceTable<WithAsyncMethod_GetCohortDeathTable<WithAsyncMethod_GetCohortDeviceExposureTable<WithAsyncMethod_GetCohortDrugExposureTable<WithAsyncMethod_GetCohortMeasurementTable<WithAsyncMethod_GetCohortObservationPeriodTable<WithAsyncMethod_GetCohortObservationTable<WithAsyncMethod_GetCohortProcedureOccurrenceTable<WithAsyncMethod_GetCohortVisitOccurrenceTable<WithAsyncMethod_GetCohortComparison<WithAsyncMethod_GetIncidenceRateResult<WithAsyncMethod_GetIncidenceRateRaw<Service > > > > > > > > > > > > > > > AsyncService;
   template <class BaseClass>
   class WithCallbackMethod_AuthLogin : public BaseClass {
    private:
@@ -991,7 +1083,57 @@ class CLUE final {
     virtual ::grpc::ServerUnaryReactor* GetCohortComparison(
       ::grpc::CallbackServerContext* /*context*/, const ::RequestComparison* /*request*/, ::ResponseComparison* /*response*/)  { return nullptr; }
   };
-  typedef WithCallbackMethod_AuthLogin<WithCallbackMethod_GetCohortList<WithCallbackMethod_GetCohortPersonTable<WithCallbackMethod_GetCohortConditionOccurrenceTable<WithCallbackMethod_GetCohortDeathTable<WithCallbackMethod_GetCohortDeviceExposureTable<WithCallbackMethod_GetCohortDrugExposureTable<WithCallbackMethod_GetCohortMeasurementTable<WithCallbackMethod_GetCohortObservationPeriodTable<WithCallbackMethod_GetCohortObservationTable<WithCallbackMethod_GetCohortProcedureOccurrenceTable<WithCallbackMethod_GetCohortVisitOccurrenceTable<WithCallbackMethod_GetCohortComparison<Service > > > > > > > > > > > > > CallbackService;
+  template <class BaseClass>
+  class WithCallbackMethod_GetIncidenceRateResult : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_GetIncidenceRateResult() {
+      ::grpc::Service::MarkMethodCallback(13,
+          new ::grpc::internal::CallbackUnaryHandler< ::RequestIncidenceRate, ::ResponseIncidenceRateResult>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::RequestIncidenceRate* request, ::ResponseIncidenceRateResult* response) { return this->GetIncidenceRateResult(context, request, response); }));}
+    void SetMessageAllocatorFor_GetIncidenceRateResult(
+        ::grpc::MessageAllocator< ::RequestIncidenceRate, ::ResponseIncidenceRateResult>* allocator) {
+      ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(13);
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::RequestIncidenceRate, ::ResponseIncidenceRateResult>*>(handler)
+              ->SetMessageAllocator(allocator);
+    }
+    ~WithCallbackMethod_GetIncidenceRateResult() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetIncidenceRateResult(::grpc::ServerContext* /*context*/, const ::RequestIncidenceRate* /*request*/, ::ResponseIncidenceRateResult* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* GetIncidenceRateResult(
+      ::grpc::CallbackServerContext* /*context*/, const ::RequestIncidenceRate* /*request*/, ::ResponseIncidenceRateResult* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithCallbackMethod_GetIncidenceRateRaw : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithCallbackMethod_GetIncidenceRateRaw() {
+      ::grpc::Service::MarkMethodCallback(14,
+          new ::grpc::internal::CallbackBidiHandler< ::RequestIncidenceRateStream, ::IncidenceRateRawInfo>(
+            [this](
+                   ::grpc::CallbackServerContext* context) { return this->GetIncidenceRateRaw(context); }));
+    }
+    ~WithCallbackMethod_GetIncidenceRateRaw() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetIncidenceRateRaw(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::IncidenceRateRawInfo, ::RequestIncidenceRateStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerBidiReactor< ::RequestIncidenceRateStream, ::IncidenceRateRawInfo>* GetIncidenceRateRaw(
+      ::grpc::CallbackServerContext* /*context*/)
+      { return nullptr; }
+  };
+  typedef WithCallbackMethod_AuthLogin<WithCallbackMethod_GetCohortList<WithCallbackMethod_GetCohortPersonTable<WithCallbackMethod_GetCohortConditionOccurrenceTable<WithCallbackMethod_GetCohortDeathTable<WithCallbackMethod_GetCohortDeviceExposureTable<WithCallbackMethod_GetCohortDrugExposureTable<WithCallbackMethod_GetCohortMeasurementTable<WithCallbackMethod_GetCohortObservationPeriodTable<WithCallbackMethod_GetCohortObservationTable<WithCallbackMethod_GetCohortProcedureOccurrenceTable<WithCallbackMethod_GetCohortVisitOccurrenceTable<WithCallbackMethod_GetCohortComparison<WithCallbackMethod_GetIncidenceRateResult<WithCallbackMethod_GetIncidenceRateRaw<Service > > > > > > > > > > > > > > > CallbackService;
   typedef CallbackService ExperimentalCallbackService;
   template <class BaseClass>
   class WithGenericMethod_AuthLogin : public BaseClass {
@@ -1210,6 +1352,40 @@ class CLUE final {
     }
     // disable synchronous version of this method
     ::grpc::Status GetCohortComparison(::grpc::ServerContext* /*context*/, const ::RequestComparison* /*request*/, ::ResponseComparison* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_GetIncidenceRateResult : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_GetIncidenceRateResult() {
+      ::grpc::Service::MarkMethodGeneric(13);
+    }
+    ~WithGenericMethod_GetIncidenceRateResult() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetIncidenceRateResult(::grpc::ServerContext* /*context*/, const ::RequestIncidenceRate* /*request*/, ::ResponseIncidenceRateResult* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_GetIncidenceRateRaw : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithGenericMethod_GetIncidenceRateRaw() {
+      ::grpc::Service::MarkMethodGeneric(14);
+    }
+    ~WithGenericMethod_GetIncidenceRateRaw() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetIncidenceRateRaw(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::IncidenceRateRawInfo, ::RequestIncidenceRateStream>* /*stream*/)  override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1472,6 +1648,46 @@ class CLUE final {
     }
     void RequestGetCohortComparison(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(12, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_GetIncidenceRateResult : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_GetIncidenceRateResult() {
+      ::grpc::Service::MarkMethodRaw(13);
+    }
+    ~WithRawMethod_GetIncidenceRateResult() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetIncidenceRateResult(::grpc::ServerContext* /*context*/, const ::RequestIncidenceRate* /*request*/, ::ResponseIncidenceRateResult* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetIncidenceRateResult(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(13, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithRawMethod_GetIncidenceRateRaw : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawMethod_GetIncidenceRateRaw() {
+      ::grpc::Service::MarkMethodRaw(14);
+    }
+    ~WithRawMethod_GetIncidenceRateRaw() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetIncidenceRateRaw(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::IncidenceRateRawInfo, ::RequestIncidenceRateStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void RequestGetIncidenceRateRaw(::grpc::ServerContext* context, ::grpc::ServerAsyncReaderWriter< ::grpc::ByteBuffer, ::grpc::ByteBuffer>* stream, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncBidiStreaming(14, context, stream, new_call_cq, notification_cq, tag);
     }
   };
   template <class BaseClass>
@@ -1771,6 +1987,51 @@ class CLUE final {
       ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
   };
   template <class BaseClass>
+  class WithRawCallbackMethod_GetIncidenceRateResult : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_GetIncidenceRateResult() {
+      ::grpc::Service::MarkMethodRawCallback(13,
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->GetIncidenceRateResult(context, request, response); }));
+    }
+    ~WithRawCallbackMethod_GetIncidenceRateResult() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetIncidenceRateResult(::grpc::ServerContext* /*context*/, const ::RequestIncidenceRate* /*request*/, ::ResponseIncidenceRateResult* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerUnaryReactor* GetIncidenceRateResult(
+      ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)  { return nullptr; }
+  };
+  template <class BaseClass>
+  class WithRawCallbackMethod_GetIncidenceRateRaw : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithRawCallbackMethod_GetIncidenceRateRaw() {
+      ::grpc::Service::MarkMethodRawCallback(14,
+          new ::grpc::internal::CallbackBidiHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+            [this](
+                   ::grpc::CallbackServerContext* context) { return this->GetIncidenceRateRaw(context); }));
+    }
+    ~WithRawCallbackMethod_GetIncidenceRateRaw() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status GetIncidenceRateRaw(::grpc::ServerContext* /*context*/, ::grpc::ServerReaderWriter< ::IncidenceRateRawInfo, ::RequestIncidenceRateStream>* /*stream*/)  override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    virtual ::grpc::ServerBidiReactor< ::grpc::ByteBuffer, ::grpc::ByteBuffer>* GetIncidenceRateRaw(
+      ::grpc::CallbackServerContext* /*context*/)
+      { return nullptr; }
+  };
+  template <class BaseClass>
   class WithStreamedUnaryMethod_AuthLogin : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
@@ -1851,9 +2112,36 @@ class CLUE final {
     // replace default version of method with streamed unary
     virtual ::grpc::Status StreamedGetCohortComparison(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::RequestComparison,::ResponseComparison>* server_unary_streamer) = 0;
   };
-  typedef WithStreamedUnaryMethod_AuthLogin<WithStreamedUnaryMethod_GetCohortList<WithStreamedUnaryMethod_GetCohortComparison<Service > > > StreamedUnaryService;
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_GetIncidenceRateResult : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
+   public:
+    WithStreamedUnaryMethod_GetIncidenceRateResult() {
+      ::grpc::Service::MarkMethodStreamed(13,
+        new ::grpc::internal::StreamedUnaryHandler<
+          ::RequestIncidenceRate, ::ResponseIncidenceRateResult>(
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
+                     ::RequestIncidenceRate, ::ResponseIncidenceRateResult>* streamer) {
+                       return this->StreamedGetIncidenceRateResult(context,
+                         streamer);
+                  }));
+    }
+    ~WithStreamedUnaryMethod_GetIncidenceRateResult() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status GetIncidenceRateResult(::grpc::ServerContext* /*context*/, const ::RequestIncidenceRate* /*request*/, ::ResponseIncidenceRateResult* /*response*/) override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status StreamedGetIncidenceRateResult(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::RequestIncidenceRate,::ResponseIncidenceRateResult>* server_unary_streamer) = 0;
+  };
+  typedef WithStreamedUnaryMethod_AuthLogin<WithStreamedUnaryMethod_GetCohortList<WithStreamedUnaryMethod_GetCohortComparison<WithStreamedUnaryMethod_GetIncidenceRateResult<Service > > > > StreamedUnaryService;
   typedef Service SplitStreamedService;
-  typedef WithStreamedUnaryMethod_AuthLogin<WithStreamedUnaryMethod_GetCohortList<WithStreamedUnaryMethod_GetCohortComparison<Service > > > StreamedService;
+  typedef WithStreamedUnaryMethod_AuthLogin<WithStreamedUnaryMethod_GetCohortList<WithStreamedUnaryMethod_GetCohortComparison<WithStreamedUnaryMethod_GetIncidenceRateResult<Service > > > > StreamedService;
 };
 
 
