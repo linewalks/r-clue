@@ -17,6 +17,12 @@ class Stream {
       return convert_ptr_to_dataframe<Response>(response_vector);
     }
 
+    DataFrame FetchAll() {
+      std::vector<std::shared_ptr<Response>> response_vector;
+      stream_->FetchAll(&response_vector);
+      return convert_ptr_to_dataframe<Response>(response_vector);
+    }
+
     void Close() {
       stream_->Close();
     }

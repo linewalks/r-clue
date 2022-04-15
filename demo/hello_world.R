@@ -15,6 +15,7 @@ print(conn)
 stream <- conn$GetIncidenceRateRaw(282)
 print(stream)
 print(stream$Fetch(5))
+# print(stream$FetchAll())
 stream$Close()
 
 # res <- conn$GetIncidenceRateResult(282)
